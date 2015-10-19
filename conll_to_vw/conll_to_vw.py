@@ -20,7 +20,7 @@ if __name__ == '__main__':
     args = docopt(__doc__)
 
     data_out = codecs.open(args['<output>'], 'w', encoding='utf-8')
-    data_in = codecs.open(args['<input>'], encoding='utf-8')John Tøndering
+    data_in = codecs.open(args['<input>'], encoding='utf-8')
 
     features_for_token = {
         'taskar12': taskar12,
