@@ -1,0 +1,21 @@
+Fine-grained POS embeddings:
+- Brug metoden fra "Cross-lingual Transfer for Unsupervised Dependency Parsing Without Parallel Data"
+- Brug SPRML data
+
+God ide at 
+
+Coarse-graind embeddings
+Fine-graind embeddings
+
+-> Experimenter med at skifte hver anden target med hhv. coarse-graind og fine-grained embeddings. 
+
+
+Universal dependencies
+@misc{11234/LRT-1478,	
+ title = {Universal Dependencies 1.1},	
+ author = {Agi{\'c}, {\v Z}eljko and Aranzabe, Maria Jesus and Atutxa, Aitziber and Bosco, Cristina and Choi, Jinho and de Marneffe, Marie-Catherine and Dozat, Timothy and Farkas, Rich{\'a}rd and Foster, Jennifer and Ginter, Filip and Goenaga, Iakes and Gojenola, Koldo and Goldberg, Yoav and Haji{\v c}, Jan and Johannsen, Anders Tr{\ae}rup and Kanerva, Jenna and Kuokkala, Juha and Laippala, Veronika and Lenci, Alessandro and Lind{\'e}n, Krister and Ljube{\v s}i{\'c}, Nikola and Lynn, Teresa and Manning, Christopher and Mart{\'i}nez, H{\'e}ctor Alonso and {McDonald}, Ryan and Missil{\"a}, Anna and Montemagni, Simonetta and Nivre, Joakim and Nurmi, Hanna and Osenova, Petya and Petrov, Slav and Piitulainen, Jussi and Plank, Barbara and Prokopidis, Prokopis and Pyysalo, Sampo and Seeker, Wolfgang and Seraji, Mojgan and Silveira, Natalia and Simi, Maria and Simov, Kiril and Smith, Aaron and Tsarfaty, Reut and Vincze, Veronika and Zeman, Daniel},	
+ url = {http://hdl.handle.net/11234/LRT-1478},	
+ note = {{LINDAT}/{CLARIN} digital library at Institute of Formal and Applied Linguistics, Charles University in Prague},	
+ copyright = {Licence Universal Dependencies v1.1},	
+ year = {2015}	
+}
