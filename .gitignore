@@ -1,6 +1,9 @@
 #Ignore folders
 
-Universal*/*
-lit/*
-SPRML/*
-hanstholm/*
+Universal*/
+lit/
+SPRML/
+hanstholm/
+
+*.md
+*.conll*
