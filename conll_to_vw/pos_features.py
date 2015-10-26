@@ -104,7 +104,6 @@ def honnibal13_groups(words, cpos_tags, i):
 
     return feats
 
-
 def dependency(words, cpos_tags, i):
     feats = []
     word = words[i]
@@ -114,6 +113,6 @@ def dependency(words, cpos_tags, i):
 
     return feats
 
-def dependency_morph(words_ cpos_tags, i):
+def dependency_morph(words, cpos_tags, i):
     feats = []
     
