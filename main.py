@@ -11,7 +11,7 @@ from numpy import random
 
 en_train = "Universal Dependencies/ud-treebanks-v1.1/UD_English/en-ud-train.conllu"
 en_test = "Universal Dependencies/ud-treebanks-v1.1/UD_English/en-ud-test.conllu"
-en_output = "Data/en-ud-train.vw"
+#en_output = "Data/en-ud-train.vw"
 
 random.seed(1)
 logging.basicConfig(
@@ -37,17 +37,22 @@ class Thesis:
 
     """
 
-    def __init__(self, train_file, test_file, output_file, DATA="UD", METHOD="mvectors", P=[0.8,0.2]):
+    def __init__(self, train_file, test_file, DATA="UD", METHOD="mvectors", P=[0.8,0.2]):
         
+        #"Initialized" variables
         self.text = []
         self.cpos = []
         self.fpos = []
         self.all_pos = []
         self.model = []
 
+        #Files
         self.train_file = train_file
         self.test_file = test_file
-        self.output_file = output_file
+        
+        #Parameters
+        self.DATA = DATA
+        self.METHOD = METHOD
         self.P = P
 
 
@@ -156,10 +161,10 @@ class Thesis:
 
     def enrichment(self):
 
-        with codecs.open(train_file)
-        for line in self.text:
-            print line
-
+        if self.DATA == "UD":
+            train_out = "Data_vw/UD/"+self.train_file[-18:-6]+"vw"
+            test_out = "Data_vw/UD/"+self.test_file[-17:-6]+"vw"
+            print train_out,test_out
 
 
 
@@ -174,4 +179,4 @@ print both_pos[0]
 model = w2v.Word2Vec(
     both_pos, context=True, min_count=0, sampler=random_sampler, workers=4, size=10)
 """
-T1 = Thesis(en_train,en_test,en_output)
+T1 = Thesis(en_train,en_test)
