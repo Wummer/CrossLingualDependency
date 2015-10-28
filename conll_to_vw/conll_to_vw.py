@@ -1,5 +1,5 @@
 # coding: utf-8
-"""Create Rungsted compatible feature files from treebanks
+"""Create Hanstholm compatible feature files from treebanks
 
 Usage:
   conll_to_vw.py <input> <output> [--feature-set NAME] [--name NAME] [--coarse]
