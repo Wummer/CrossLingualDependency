@@ -26,7 +26,7 @@ class Thesis:
         + UD 
         + SPMRL
     feature creation:
-        - fpos vectors
+        + fpos vectors
         - baseline
         - competing method
     output to data:
@@ -37,8 +37,8 @@ class Thesis:
 
     """
 
-    def __init__(self, train_file, test_file, DATA="UD", METHOD="mvectors", P=[0.8,0.2]):
-        
+    def __init__(self, train_file, test_file, DATA="UD", METHOD="mvectors", P=[0.8, 0.2]):
+
         #"Initialized" variables
         self.text = []
         self.cpos = []
@@ -46,23 +46,20 @@ class Thesis:
         self.all_pos = []
         self.model = []
 
-        #Files
+        # Files
         self.train_file = train_file
         self.test_file = test_file
-        
-        #Parameters
+
+        # Parameters
         self.DATA = DATA
         self.METHOD = METHOD
         self.P = P
-
-
-
 
         """ DATA """
         self.read_input(train_file, DATA)
 
         """ FEATURE CREATION """
-        #self.feature_creation()
+        # self.feature_creation()
 
         """ ENRICHMENT """
         self.enrichment()
@@ -79,7 +76,7 @@ class Thesis:
         text, cpos, fpos = [], [], []
         t_cpos, t_fpos, t_text, all_pos = [], [], [], []
 
-        if dataset == "UD":
+        if dataset == "UD" or "SPMRL":
             for line in f:
             # First check if line is not 'empty' and then create our strings
             # text, cpos and fpos
@@ -89,7 +86,8 @@ class Thesis:
                     if t_text == [] and t_cpos == [] and t_fpos == []:
                         t_text.append(tline[1])
                         t_cpos.append(tline[3])
-                        t_fpos.append(tline[4])
+                        t_fpos.append(tline[4] if dataset == "UD"
+                                      else tline[4] + "+" + tline[5].replace("|", "+"))
                     else:
                         t_text.append(tline[1])
                         t_cpos.append(tline[3])
@@ -100,24 +98,6 @@ class Thesis:
                     text.append(t_text)
                     cpos.append(t_cpos)
                     fpos.append(t_fpos)
-                    t_text, t_cpos, t_fpos = [], [], []
-
-        elif dataset == "SPMRL":
-            for line in f:
-
-                if line != "\n":
-                    tline = line.strip("\n").strip().lower().split("\t")
-
-                    if t_text == [] and t_cpos == [] and t_fpos == []:
-                        t_text.append(tline[1])
-                        t_cpos.append(tline[3])
-                        t_fpos.append(
-                            tline[4] + "+" + tline[5].replace("|", "+"))
-
-                if line == "\n":
-                    all_pos.append(self.shuffle_list(t_fpos, t_cpos))
-                    text.append(t_text)
-                    cpos.append(t_cpos)
                     t_text, t_cpos, t_fpos = [], [], []
 
         else:
@@ -149,8 +129,8 @@ class Thesis:
         vectors = []
         if METHOD == "mvectors":
             model = w2v.Word2Vec(
-                self.all_pos, context=True, min_count=0,sampler=random_sampler,
-                workers=workers, size=size,p=self.P)
+                self.all_pos, context=True, min_count=0, sampler=random_sampler,
+                workers=workers, size=size, p=self.P)
             self.model = model
 
             """ 
@@ -162,13 +142,15 @@ class Thesis:
     def enrichment(self):
 
         if self.DATA == "UD":
-            train_out = "Data_vw/UD/"+self.train_file[-18:-6]+"vw"
-            test_out = "Data_vw/UD/"+self.test_file[-17:-6]+"vw"
-            print train_out,test_out
+            train = "Data_vw/UD/" + self.train_file[-18:-7] + ".vw"
+            test = "Data_vw/UD/" + self.test_file[-17:-7] + ".vw"
 
-
-
-        "blah blah"
+        with codecs.open(train[:-3] + "-mvectors.vw", "w") as f:
+            for line in codecs.open(train):
+                temp = line.split(" ")
+                print temp
+                break
+                # line=+"g {a}:{b}".format(a=)
 
 
 """
@@ -179,4 +161,4 @@ print both_pos[0]
 model = w2v.Word2Vec(
     both_pos, context=True, min_count=0, sampler=random_sampler, workers=4, size=10)
 """
-T1 = Thesis(en_train,en_test)
+T1 = Thesis(en_train, en_test)

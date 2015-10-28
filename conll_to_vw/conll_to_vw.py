@@ -32,32 +32,25 @@ if __name__ == '__main__':
     def output_sentence(sent):
         label_key = 'cpos' if args['--coarse'] else 'pos'
 
-        if args['--feature-set'] == "dependency":
-            for i in xrange(len(sent["word"])):
-                print >>data_out, "{label} '{name}-{sent_i}-{token_i}|".format(
-                    label=normalize_label(sent['dependency'][i]),
-                    name=args['--name'],
-                    sent_i=sent_i,
-                    token_i=i + 1),
-                print >>data_out, u" ".join(
-                    features_for_token(sent['word'], sent[label_key], i))
-        else:
-            for i in range(len(sent['word'])):
-                print >>data_out, "{label} '{name}-{sent_i}-{token_i}|".format(
-                    label=normalize_label(sent[label_key][i]),
-                    name=args['--name'],
-                    sent_i=sent_i,
-                    token_i=i + 1),
-                print >>data_out, u" ".join(
-                    features_for_token(sent['word'], sent[label_key], i))
+        #if args['--feature-set'] == "dependency":
+        for i in xrange(len(sent["word"])):
+            print >>data_out, "{label} '{name}-{sent_i}-{token_i}|".format(
+                label=normalize_label(sent['dependency'][i]
+                                      if args['--feature-set'] == "dependency"
+                                      else sent[label_key][i]),
+                name=args['--name'],
+                sent_i=sent_i,
+                token_i=i + 1),
+            print >>data_out, u" ".join(
+                features_for_token(sent['word'], sent[label_key], i))
 
     # Process one sentence at a time
     sent = defaultdict(list)
     sent_i = 1
     for line in data_in:
         parts = line.strip().split()
-        
-        if parts[0] == "#":
+
+        if len(parts) > 1 and parts[0] == "#":
             continue
 
         elif len(parts) == 10:
@@ -71,7 +64,7 @@ if __name__ == '__main__':
 
             sent['word'].append(word)
             sent['cpos'].append(parts[3])
-            sent['pos'].append(parts[4])    
+            sent['pos'].append(parts[4])
             sent['dependency'].append(str(int(parts[6]) - 1) + "-" + parts[7])
 
         elif len(parts) == 0:
@@ -80,14 +73,12 @@ if __name__ == '__main__':
             output_sentence(sent)
             sent_i += 1
             sent = defaultdict(list)
-        
 
         else:
             raise ValueError("Invalid input format")
 
     if len(sent['word']):
         output_sentence(sent)
-
 
 """
 -1-root '1-0|w call |p VERB |g 0:0.000946125935946 1:0.00115843318564 2:0.00164611628065 3:0.99040
