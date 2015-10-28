@@ -11,6 +11,9 @@ from numpy import random
 
 en_train = "Universal Dependencies/ud-treebanks-v1.1/UD_English/en-ud-train.conllu"
 en_test = "Universal Dependencies/ud-treebanks-v1.1/UD_English/en-ud-test.conllu"
+
+bg_train = "Universal Dependencies/ud-treebanks-v1.1/UD_Bulgarian/bg-ud-train.conllu"
+bg_test = "Universal Dependencies/ud-treebanks-v1.1/UD_Bulgarian/bg-ud-test.conllu"
 #en_output = "Data/en-ud-train.vw"
 
 random.seed(1)
@@ -30,7 +33,7 @@ class Thesis:
         - baseline
         - competing method
     output to data:
-        - vectors
+        + vectors
 
     parser?
         - hanstholm
@@ -82,7 +85,10 @@ class Thesis:
             for line in f:
             # First check if line is not 'empty' and then create our strings
             # text, cpos and fpos
-                if line != "\n":
+                if line[0] == "#":
+                    continue
+                    
+                elif line != "\n":
                     tline = line.strip("\n").strip().lower().split("\t")
 
                     if t_text == [] and t_cpos == [] and t_fpos == []:
@@ -181,3 +187,5 @@ model = w2v.Word2Vec(
     both_pos, context=True, min_count=0, sampler=random_sampler, workers=4, size=10)
 """
 T1 = Thesis(en_train, en_test)
+
+T2 = Thesis(bg_train,bg_test)
