@@ -108,8 +108,8 @@ def dependency(words, cpos_tags, i):
     feats = []
     word = words[i]
     norm = normalize_word(word.lower())
-    feats.append("w {} |".format(norm))
-    feats.append("p {} |".format(cpos_tags[i]))
+    feats.append(u"w {} |".format(norm))
+    feats.append(u"p {} |".format(cpos_tags[i]))
 
     return feats
 

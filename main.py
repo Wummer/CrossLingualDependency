@@ -11,6 +11,7 @@ from numpy import random
 
 en_train = "Universal Dependencies/ud-treebanks-v1.1/UD_English/en-ud-train.conllu"
 en_test = "Universal Dependencies/ud-treebanks-v1.1/UD_English/en-ud-test.conllu"
+en_output = "Data/en-ud-train.vw"
 
 random.seed(1)
 logging.basicConfig(
@@ -23,7 +24,7 @@ class Thesis:
 
     reading method:
         + UD 
-        - SPMRL
+        + SPMRL
     feature creation:
         - fpos vectors
         - baseline
@@ -36,28 +37,37 @@ class Thesis:
 
     """
 
-    def __init__(self, train_file, test_file, output_file, DATA="UD", METHOD="mvectors", P=[]):
-        self.train_file = train_file
-
+    def __init__(self, train_file, test_file, output_file, DATA="UD", METHOD="mvectors", P=[0.8,0.2]):
+        
         self.text = []
         self.cpos = []
         self.fpos = []
         self.all_pos = []
         self.model = []
 
+        self.train_file = train_file
+        self.test_file = test_file
+        self.output_file = output_file
+        self.P = P
+
+
+
+
         """ DATA """
         self.read_input(train_file, DATA)
 
         """ FEATURE CREATION """
-        self.feature_creation()
+        #self.feature_creation()
 
         """ ENRICHMENT """
+        self.enrichment()
 
         """ PARSER """
 
     def read_input(self, file, dataset):
         """
-        Read the Universal Dependencies files and extract the text, cPOS, fPOS and shuffled POS lists.
+        Reads the dataset files and extract the text, cPOS, fPOS and shuffled POS lists.
+        Currently only support .conll-x files and dataset as 'UD' or 'SPMRL'.
         """
         f = codecs.open(file)
 
@@ -120,6 +130,10 @@ class Thesis:
         f.close()
 
     def shuffle_list(self, a, b):
+        """shuffle_list(a,b) takes two lists as input.
+        Then shuffles the list such that each index element from a
+         is followed by the same index element from b
+        """
         c = [None] * (len(a) + len(b))
         c[::2] = a
         c[1::2] = b
@@ -131,7 +145,7 @@ class Thesis:
         if METHOD == "mvectors":
             model = w2v.Word2Vec(
                 self.all_pos, context=True, min_count=0,sampler=random_sampler,
-                workers=workers, size=size,p=P)
+                workers=workers, size=size,p=self.P)
             self.model = model
 
             """ 
@@ -140,13 +154,12 @@ class Thesis:
         else:
             raise ValueError("Unknown method. Did you mean 'mvectors'?")
 
-    def enrichment(self,train_file,test_file):
+    def enrichment(self):
 
-        f = codecs.open(train_file)
-        f1 = codecs.open(test_file)
+        with codecs.open(train_file)
+        for line in self.text:
+            print line
 
-        for line in f:
-            
 
 
 
@@ -161,8 +174,4 @@ print both_pos[0]
 model = w2v.Word2Vec(
     both_pos, context=True, min_count=0, sampler=random_sampler, workers=4, size=10)
 """
-T1 = Thesis(eng_data)
-
-print T1.fpos[10]
-print T1.model["nnp"]
-print T1.model.most_similar("nn")
+T1 = Thesis(en_train,en_test,en_output)

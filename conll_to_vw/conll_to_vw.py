@@ -56,7 +56,11 @@ if __name__ == '__main__':
     sent_i = 1
     for line in data_in:
         parts = line.strip().split()
-        if len(parts) == 10:
+        
+        if parts[0] == "#":
+            continue
+
+        elif len(parts) == 10:
             word = parts[1]
             if word.isdigit():
                 number = int(word)
@@ -67,8 +71,7 @@ if __name__ == '__main__':
 
             sent['word'].append(word)
             sent['cpos'].append(parts[3])
-            sent['pos'].append(parts[4])
-            print parts[6], parts[7]
+            sent['pos'].append(parts[4])    
             sent['dependency'].append(str(int(parts[6]) - 1) + "-" + parts[7])
 
         elif len(parts) == 0:
@@ -77,8 +80,10 @@ if __name__ == '__main__':
             output_sentence(sent)
             sent_i += 1
             sent = defaultdict(list)
+        
+
         else:
-            raise "Invalid input format"
+            raise ValueError("Invalid input format")
 
     if len(sent['word']):
         output_sentence(sent)
