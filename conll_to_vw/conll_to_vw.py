@@ -65,7 +65,8 @@ if __name__ == '__main__':
             sent['word'].append(word)
             sent['cpos'].append(parts[3])
             sent['pos'].append(parts[4])
-            sent['dependency'].append(str(int(parts[6]) - 1) + "-" + parts[7])
+            if args['feature-set'] == "dependency":
+                sent['dependency'].append(str(int(parts[6]) - 1) + "-" + parts[7])
 
         elif len(parts) == 0:
             if sent_i > 1:

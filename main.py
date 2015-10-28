@@ -56,17 +56,19 @@ class Thesis:
         self.P = P
 
         """ DATA """
-        self.read_input(train_file, DATA)
+        self.train_fpos, self.train_all_pos = self.read_input(train_file)
+        self.test_fpos, self.test_all_pos = self.read_input(train_file)
+
 
         """ FEATURE CREATION """
-        # self.feature_creation()
+        self.feature_creation()
 
         """ ENRICHMENT """
         self.enrichment()
 
         """ PARSER """
 
-    def read_input(self, file, dataset):
+    def read_input(self, file):
         """
         Reads the dataset files and extract the text, cPOS, fPOS and shuffled POS lists.
         Currently only support .conll-x files and dataset as 'UD' or 'SPMRL'.
@@ -76,7 +78,7 @@ class Thesis:
         text, cpos, fpos = [], [], []
         t_cpos, t_fpos, t_text, all_pos = [], [], [], []
 
-        if dataset == "UD" or "SPMRL":
+        if self.DATA == "UD" or self.DATA == "SPMRL":
             for line in f:
             # First check if line is not 'empty' and then create our strings
             # text, cpos and fpos
@@ -86,7 +88,7 @@ class Thesis:
                     if t_text == [] and t_cpos == [] and t_fpos == []:
                         t_text.append(tline[1])
                         t_cpos.append(tline[3])
-                        t_fpos.append(tline[4] if dataset == "UD"
+                        t_fpos.append(tline[4] if self.DATA == "UD"
                                       else tline[4] + "+" + tline[5].replace("|", "+"))
                     else:
                         t_text.append(tline[1])
@@ -105,12 +107,12 @@ class Thesis:
                 "Unknown data set.Use UD for Universal Dependencies" +
                 " or SPMRL for Statistical Parsing of Morphologically Rich Languages")
 
-        self.text = text
-        self.cpos = cpos
-        self.fpos = fpos
-        self.all_pos = all_pos
+        #self.text = text
+        #self.cpos = cpos
+        #self.fpos = fpos
+        #self.all_pos = all_pos
 
-        # return text, cpos, fpos, all_pos
+        return fpos, all_pos
 
         f.close()
 
@@ -129,7 +131,7 @@ class Thesis:
         vectors = []
         if METHOD == "mvectors":
             model = w2v.Word2Vec(
-                self.all_pos, context=True, min_count=0, sampler=random_sampler,
+                self.train_all_pos, context=True, min_count=0, sampler=random_sampler,
                 workers=workers, size=size, p=self.P)
             self.model = model
 
@@ -144,20 +146,37 @@ class Thesis:
         if self.DATA == "UD":
             train = "Data_vw/UD/" + self.train_file[-18:-7] + ".vw"
             test = "Data_vw/UD/" + self.test_file[-17:-7] + ".vw"
+        
+        files = [train,test]
+        pos = [self.train_fpos,self.test_fpos]
 
-        with codecs.open(train[:-3] + "-mvectors.vw", "w") as f:
-            for line in codecs.open(train):
-                temp = line.split(" ")
-                print temp
-                break
-                # line=+"g {a}:{b}".format(a=)
+        for idx in xrange(len(files)):
+            with codecs.open(files[idx][:-3] + "-mvectors.vw", "w") as f:
+                sent_tracker = 0
+                idx_tracker = 0
+                for line in codecs.open(train):
+                    if line == "\n":
+                        sent_tracker += 1
+                        idx_tracker = 0
+                        print >> f
+                        continue
+
+                    try:
+                        vec = self.model[pos[idx][sent_tracker][idx_tracker]]
+                        tline = line[:-1] + " g " + " ".join(
+                            str(x) + ":" + str(y) for x, y in enumerate(vec))
+                        print >> f, tline
+                    except KeyError:
+                        print >> f, line
+                    finally:
+                        idx_tracker += 1
 
 
 """
 train, cpos, fpos, both_pos = read_conll(eng_data)
 
 print both_pos[0]
-
+    
 model = w2v.Word2Vec(
     both_pos, context=True, min_count=0, sampler=random_sampler, workers=4, size=10)
 """
