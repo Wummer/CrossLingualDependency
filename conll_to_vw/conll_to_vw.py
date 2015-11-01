@@ -1,5 +1,6 @@
 # coding: utf-8
 """Create Hanstholm compatible feature files from treebanks
+Credit to Anders Johannsen, Post.doc @ CST, KU.
 
 Usage:
   conll_to_vw.py <input> <output> [--feature-set NAME] [--name NAME] [--coarse]
@@ -37,7 +38,7 @@ if __name__ == '__main__':
                 print >>data_out,u"{label} '{sent_i}-{token_i}{features}".format(
                     label=normalize_label(sent['dependency'][i]),
                     sent_i=sent_i,
-                    token_i=i + 1,
+                    token_i=i,
                     features=u" ".join(features_for_token(sent['word'], sent[label_key], i)))
         else:
             for i in xrange(len(sent["word"])):
@@ -86,14 +87,3 @@ if __name__ == '__main__':
 
     if len(sent['word']):
         output_sentence(sent)
-
-"""
--1-root '1-0|w call |p VERB |g 0:0.000946125935946 1:0.00115843318564 2:0.00164611628065 3:0.99040
-5596025 4:0.0518654057144 5:0.00323278463435 6:-0.000540941484706 7:0.0127166846253 8:0.0010138855
-9676 9:0.00151462919182 10:0.000696873548268 11:0.000625316857231 12:0.00122827888005 13:0.0004846
-99254127 14:0.00285206378997 15:0.00245394984848 16:0.0054327172697 17:0.000817775603701 18:0.0006
-85274226885 19:0.000360483031162 20:0.000407179297901 21:0.00161160153102 22:0.00088030983554 23:0
-.0028693018232 24:0.0 25:0.00121155747785 26:0.000313526864102 27:0.000406572976426 28:0.002389942
-28043 29:0.000518259912703 30:0.00170511525402 31:0.000396755447007 32:0.000363933090702 33:0.0016
-1160153102
-"""

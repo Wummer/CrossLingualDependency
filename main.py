@@ -1,4 +1,4 @@
-
+# define NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION
 import codecs
 import logging
 import subprocess
@@ -7,19 +7,9 @@ from w2v.sampler import random_sampler, sample_word2vec
 import numpy as np
 from numpy import random
 
-# define NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION
-
-en_train = "Universal Dependencies/ud-treebanks-v1.1/UD_English/en-ud-train.conllu"
-en_test = "Universal Dependencies/ud-treebanks-v1.1/UD_English/en-ud-test.conllu"
-
-bg_train = "Universal Dependencies/ud-treebanks-v1.1/UD_Bulgarian/bg-ud-train.conllu"
-bg_test = "Universal Dependencies/ud-treebanks-v1.1/UD_Bulgarian/bg-ud-test.conllu"
-#en_output = "Data/en-ud-train.vw"
-
 random.seed(1)
 logging.basicConfig(
     format='%(asctime)s : %(levelname)s : %(message)s', level=logging.INFO)
-
 
 class Thesis:
 
@@ -95,7 +85,7 @@ class Thesis:
                         t_text.append(tline[1])
                         t_cpos.append(tline[3])
                         t_fpos.append(tline[4] if self.DATA == "UD"
-                                      else tline[4] + "+" + tline[5].replace("|", "+"))
+                                      else tline[4] + "+" + tline[5].replace("|", "-"))
                     else:
                         t_text.append(tline[1])
                         t_cpos.append(tline[3])
@@ -169,7 +159,7 @@ class Thesis:
 
                     try:
                         vec = self.model[pos[idx][sent_tracker][idx_tracker]]
-                        tline = line[:-1] + " g " + " ".join(
+                        tline = line[:-1] + "|g " + " ".join(
                             str(x) + ":" + str(y) for x, y in enumerate(vec))
                         print >> f, tline
                     except KeyError:
@@ -186,6 +176,15 @@ print both_pos[0]
 model = w2v.Word2Vec(
     both_pos, context=True, min_count=0, sampler=random_sampler, workers=4, size=10)
 """
+
+
+en_train = "Universal Dependencies/ud-treebanks-v1.1/UD_English/en-ud-train.conllu"
+en_test = "Universal Dependencies/ud-treebanks-v1.1/UD_English/en-ud-test.conllu"
+
+bg_train = "Universal Dependencies/ud-treebanks-v1.1/UD_Bulgarian/bg-ud-train.conllu"
+bg_test = "Universal Dependencies/ud-treebanks-v1.1/UD_Bulgarian/bg-ud-test.conllu"
+#en_output = "Data/en-ud-train.vw"
+
 T1 = Thesis(en_train, en_test)
 
 T2 = Thesis(bg_train,bg_test)
