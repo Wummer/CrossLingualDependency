@@ -2,9 +2,11 @@
 import codecs
 import logging
 import subprocess
+import universal_tags
 import w2v.word2vec as w2v
-from w2v.sampler import random_sampler, sample_word2vec
 import numpy as np
+from w2v.sampler import random_sampler, sample_word2vec
+
 from numpy import random
 
 random.seed(1)
@@ -100,8 +102,8 @@ class Thesis:
 
         else:
             raise ValueError(
-                "Unknown data set.Use UD for Universal Dependencies" +
-                " or SPMRL for Statistical Parsing of Morphologically Rich Languages")
+                "Unknown data set.\nUse UD for Universal Dependencies\n" +
+                "or SPMRL for Statistical Parsing of Morphologically Rich Languages")
 
         #self.text = text
         #self.cpos = cpos

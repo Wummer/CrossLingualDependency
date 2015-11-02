@@ -10,6 +10,19 @@ Fine-graind embeddings
 -> Experimenter med at skifte hver anden target med hhv. coarse-graind og fine-grained embeddings. 
 
 
+POS ændringer:
+=======================
+
+SPMRL:
+-----------------------
+Arabic:	Not adequate mapping
+Basque: No mapping
+German: Included $LRB as . and NNE as NOUN tags ($LRB was already included as $*LRB*, NN and NE were both NOUN so NNE must be too)
+French: Included P+PRO as ADP (guessed it was equal to P+PRON), X added as X, PC added as ADP cus P, UNK added as X, 7 added as X (only 2 cases)
+Hebrew: No mapping
+Hungarian: V as Verb (Va and Vm were verbs), T as DET (Tf and Ti were DET), N as NOUN (Nc and Np were NOUN), , as . (had PUNCT as morph feature), : as . (had PUNCT as morph feature), R as ADV
+
+
 Universal dependencies
 @misc{11234/LRT-1478,	
  title = {Universal Dependencies 1.1},	
