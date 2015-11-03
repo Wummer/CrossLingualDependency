@@ -13,14 +13,45 @@ Fine-graind embeddings
 POS ændringer:
 =======================
 
-SPMRL:
+SPMRL adaption:
 -----------------------
-Arabic:	Not adequate mapping
+Arabic:	No adequate mapping
+
 Basque: No mapping
-German: Included $LRB as . and NNE as NOUN tags ($LRB was already included as $*LRB*, NN and NE were both NOUN so NNE must be too)
-French: Included P+PRO as ADP (guessed it was equal to P+PRON), X added as X, PC added as ADP cus P, UNK added as X, 7 added as X (only 2 cases)
+
+German: Included $LRB as . ($LRB was already included as $*LRB*)
+		NNE as NOUN tags NN and NE were both NOUN so NNE must be too)
+
+French: Included P+PRO as ADP (guessed it was equal to P+PRON),
+		X added as X,
+		PC added as ADP cus P (shaky),
+		UNK added as X,
+		7 added as X (only 2 cases)
+
 Hebrew: No mapping
-Hungarian: V as Verb (Va and Vm were verbs), T as DET (Tf and Ti were DET), N as NOUN (Nc and Np were NOUN), , as . (had PUNCT as morph feature), : as . (had PUNCT as morph feature), R as ADV
+
+Hungarian:	V as Verb (Va and Vm were verbs)
+			T as DET (Tf and Ti were DET),
+			N as NOUN (Nc and Np were NOUN),
+			, as . (had PUNCT as morph feature),
+			: as . (had PUNCT as morph feature),
+			R as ADV,
+			C as CONJ (Cs and Cc were CONJ and it had PUNCT as morph feature),
+			P as PRON (All P. were all PRON)
+			A as ADV as Af was ADV
+			. as . as (had PUNCT as morph feature)
+			M as NUM (M. were all NUM)
+			S as ADP as St was ADP
+			K as . (had PUNCT as morph feature)
+			O as X (all O. were X)
+			; as .
+			? as .
+
+Korean:	no mapping
+
+Polish:	perfect fit
+
+Swedish:	
 
 
 Universal dependencies

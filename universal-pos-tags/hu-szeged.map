@@ -1,8 +1,12 @@
+A	ADJ
 Af	ADJ
+C	CONJ
 Cc	CONJ
 Cs	CONJ
 I	X
 Io	X
+K	.
+M	NUM
 Mc	NUM
 Md	NUM
 Mf	NUM
@@ -10,9 +14,11 @@ Mo	NUM
 N	NOUN
 Nc	NOUN
 Np	NOUN
+O	X
 Oh	X
 Oi	X
 On	X
+P	PRON
 Pd	PRON
 Pg	PRON
 Pi	PRON
@@ -34,6 +40,7 @@ Rr	ADV
 Rv	ADV
 Rx	ADV
 SPUNCT	.
+S	ADP
 St	ADP
 T	DET
 Tf	DET
@@ -46,4 +53,9 @@ X	X
 Y	X
 Z	X
 ,	.
+;	.
 :	.
+.	.
+?	.
+!	.
+-	.
