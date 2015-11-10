@@ -1,12 +1,19 @@
 def normalize_word(word):
-    return word.replace(":", "COL")
+    return word.replace("``", "O_QUOT")\
+        .replace("''", "C_QUOT")\
+        .replace("'", "S_QUOT")\
+        .replace(':', 'COL')\
+        .replace('?', 'QMARK')\
+        .replace('|', 'BAR')
+
 
 def normalize_label(label):
     norm_label = label.replace("``", "O_QUOT")\
         .replace("''", "C_QUOT")\
         .replace("'", "S_QUOT")\
         .replace(':', 'COL')\
-        .replace('?', 'QMARK')
+        .replace('?', 'QMARK')\
+        .replace('|', 'BAR')
 
     if not len(norm_label):
         norm_label = "*EMPTY*"
@@ -104,14 +111,14 @@ def honnibal13_groups(words, cpos_tags, i):
 
     return feats
 
-def dependency(words, cpos_tags, i):
+def dependency(words, pos_tags, i):
     feats = []
     word = words[i]
     norm = normalize_word(word.lower())
+    pos = normalize_label(pos_tags[i])
     feats.append(u"|w {}".format(norm))
-    feats.append(u"|p {}".format(cpos_tags[i]))
+    feats.append(u"|p {}".format(pos))
 
-    print 
     return feats
 
 def dependency_morph(words, cpos_tags, i):

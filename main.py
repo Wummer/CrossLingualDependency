@@ -32,7 +32,7 @@ class Thesis:
 
     """
 
-    def __init__(self, train_file, test_file, DATA="UD", METHOD="mvectors", P=[0.8, 0.2]):
+    def __init__(self, train_file, test_file, DATA="UD", FEAT=True, METHOD="mvectors", P=[0.8, 0.2]):
 
         #"Initialized" variables
         self.text = []
@@ -47,13 +47,14 @@ class Thesis:
 
         # Parameters
         self.DATA = DATA
+        self.FEAT = FEAT
         self.METHOD = METHOD
         self.P = P
 
         """ DATA """
+        
         self.train_fpos, self.train_all_pos = self.read_input(train_file)
-        self.test_fpos, self.test_all_pos = self.read_input(train_file)
-
+        self.test_fpos, self.test_all_pos = self.read_input(test_file)
 
         """ FEATURE CREATION """
         self.feature_creation()
@@ -81,19 +82,14 @@ class Thesis:
                     continue
                     
                 elif line != "\n":
-                    tline = line.strip("\n").strip().lower().split("\t")
+                    tline = line.strip("\n").lower().split("\t")
 
-                    if t_text == [] and t_cpos == [] and t_fpos == []:
-                        t_text.append(tline[1])
-                        t_cpos.append(tline[3])
-                        t_fpos.append(tline[4] if self.DATA == "UD"
-                                      else tline[4] + "+" + tline[5].replace("|", "-"))
-                    else:
-                        t_text.append(tline[1])
-                        t_cpos.append(tline[3])
-                        t_fpos.append(tline[4])
+                    t_text.append(tline[1])
+                    t_cpos.append(tline[3])
+                    t_fpos.append(tline[4] if self.FEAT== False
+                                  else tline[4] + "+" + "+".join(sorted(tline[5].split("|"))))
 
-                if line == "\n":
+                elif line == "\n":
                     all_pos.append(self.shuffle_list(t_fpos, t_cpos))
                     text.append(t_text)
                     cpos.append(t_cpos)
@@ -134,7 +130,7 @@ class Thesis:
             self.model = model
 
             """ 
-            ############## NEEDS TO BE IMPLEMENTED ####################
+            ############## DO I EVEN NEED MORE? ####################
             """
         else:
             raise ValueError("Unknown method. Did you mean 'mvectors'?")
@@ -145,14 +141,15 @@ class Thesis:
             train = "Data_vw/UD/" + self.train_file[-18:-7] + ".vw"
             test = "Data_vw/UD/" + self.test_file[-17:-7] + ".vw"
         
-        files = [train,test]
+        write_files = [train,test]
+        read_files = [self.train_file,self.test_file]
         pos = [self.train_fpos,self.test_fpos]
 
-        for idx in xrange(len(files)):
-            with codecs.open(files[idx][:-3] + "-mvectors.vw", "w") as f:
+        for idx in xrange(len(write_files)):
+            with codecs.open(write_files[idx][:-3] + "-mvectors.vw", "w") as f:
                 sent_tracker = 0
                 idx_tracker = 0
-                for line in codecs.open(train):
+                for line in codecs.open(write_files[idx]):
                     if line == "\n":
                         sent_tracker += 1
                         idx_tracker = 0
@@ -169,15 +166,6 @@ class Thesis:
                     finally:
                         idx_tracker += 1
 
-
-"""
-train, cpos, fpos, both_pos = read_conll(eng_data)
-
-print both_pos[0]
-    
-model = w2v.Word2Vec(
-    both_pos, context=True, min_count=0, sampler=random_sampler, workers=4, size=10)
-"""
 
 
 en_train = "Universal Dependencies/ud-treebanks-v1.1/UD_English/en-ud-train.conllu"
