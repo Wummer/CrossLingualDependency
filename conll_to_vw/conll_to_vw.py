@@ -53,12 +53,12 @@ if __name__ == '__main__':
     # Process one sentence at a time
     sent = defaultdict(list)
     sent_i = 1
-    repeat = False #used for dependency
+    repeat = False  # used for dependency
     for line in data_in:
         parts = line.strip().split()
 
         # Comments handling
-        if len(parts) > 1 and parts[0] == "#":
+        if len(parts) > 1 and parts[0].startswith("#") or line.startswith("#"):
             continue
 
         elif len(parts) == 10:
@@ -80,11 +80,12 @@ if __name__ == '__main__':
 
                     to_append = u"" + str(int(parts[6]) - 1) + "-" + parts[7]
                     # The if statement is for notations such as 2-3, where
-                    # there are no morph features. We therefore reapeat the
+                    # there are no morph features. We therefore repeat the
                     # previous statement
                     if repeat:
                         to_append = u"" + \
                             str(int(parts[6]) - 1) + "-" + parts[7]
+                        sent['dependency'].append(to_append)
                         repeat = False
                     sent['dependency'].append(to_append)
                 else:
@@ -98,6 +99,8 @@ if __name__ == '__main__':
             sent = defaultdict(list)
 
         else:
+            print line
+            print parts
             raise ValueError("Invalid input format")
 
     if len(sent['word']):

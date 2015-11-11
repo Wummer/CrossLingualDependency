@@ -10,6 +10,7 @@ from w2v.sampler import random_sampler, sample_word2vec
 from numpy import random
 
 random.seed(1)
+np.random.seed(1)
 logging.basicConfig(
     format='%(asctime)s : %(levelname)s : %(message)s', level=logging.INFO)
 
@@ -53,8 +54,8 @@ class Thesis:
 
         """ DATA """
         
-        self.train_fpos, self.train_all_pos = self.read_input(train_file)
-        self.test_fpos, self.test_all_pos = self.read_input(test_file)
+        self.train_cpos,self.train_fpos, self.train_all_pos = self.read_input(train_file)
+        self.test_cpos,self.test_fpos, self.test_all_pos = self.read_input(test_file)
 
         """ FEATURE CREATION """
         self.feature_creation()
@@ -85,12 +86,20 @@ class Thesis:
                     tline = line.strip("\n").lower().split("\t")
 
                     t_text.append(tline[1])
-                    t_cpos.append(tline[3])
-                    t_fpos.append(tline[4] if self.FEAT== False
-                                  else tline[4] + "+" + "+".join(sorted(tline[5].split("|"))))
+                    t_cpos.append(tline[3].replace("|","+"))
+
+                    if tline[4] != "_":
+                        t_fpos.append(tline[4].replace("|","+") if self.FEAT== False 
+                                else "+".join(sorted(tline[4].split("|"))) + "+" + "+".join(sorted(tline[5].split("|"))))
+
+                    elif tline[4] == "_" and self.FEAT==True:
+                        t_fpos.append("+".join(sorted(tline[3].split("|")))+ "+" + "+".join(sorted(tline[5].split("|"))))
+
+                    else:
+                        raise ValueError("This dataset does not have fPOS. You must set FEAT=True")
 
                 elif line == "\n":
-                    all_pos.append(self.shuffle_list(t_fpos, t_cpos))
+                    all_pos.append(self.shuffle_list(t_cpos,t_fpos))
                     text.append(t_text)
                     cpos.append(t_cpos)
                     fpos.append(t_fpos)
@@ -101,14 +110,7 @@ class Thesis:
                 "Unknown data set.\nUse UD for Universal Dependencies\n" +
                 "or SPMRL for Statistical Parsing of Morphologically Rich Languages")
 
-        #self.text = text
-        #self.cpos = cpos
-        #self.fpos = fpos
-        #self.all_pos = all_pos
-
-        return fpos, all_pos
-
-        f.close()
+        return cpos, fpos, all_pos
 
     def shuffle_list(self, a, b):
         """shuffle_list(a,b) takes two lists as input.
@@ -138,12 +140,12 @@ class Thesis:
     def enrichment(self):
 
         if self.DATA == "UD":
-            train = "Data_vw/UD/" + self.train_file[-18:-7] + ".vw"
-            test = "Data_vw/UD/" + self.test_file[-17:-7] + ".vw"
+            train = "Data_vw/UD/" + self.train_file.split("/")[-1][:-7] + ".vw"
+            test = "Data_vw/UD/" + self.test_file.split("/")[-1][:-7] + ".vw"
         
         write_files = [train,test]
         read_files = [self.train_file,self.test_file]
-        pos = [self.train_fpos,self.test_fpos]
+        pos = [self.train_cpos,self.test_cpos]
 
         for idx in xrange(len(write_files)):
             with codecs.open(write_files[idx][:-3] + "-mvectors.vw", "w") as f:
@@ -168,10 +170,10 @@ class Thesis:
 
 
 
-en_train = "Universal Dependencies/ud-treebanks-v1.1/UD_English/en-ud-train.conllu"
+en_train = "Universal Dependencies/ud-treebanks-v1.1/UD_English/en_vsrest-ud-train.conllu"
 en_test = "Universal Dependencies/ud-treebanks-v1.1/UD_English/en-ud-test.conllu"
 
-bg_train = "Universal Dependencies/ud-treebanks-v1.1/UD_Bulgarian/bg-ud-train.conllu"
+bg_train = "Universal Dependencies/ud-treebanks-v1.1/UD_Bulgarian/bg_vsrest-ud-train.conllu"
 bg_test = "Universal Dependencies/ud-treebanks-v1.1/UD_Bulgarian/bg-ud-test.conllu"
 #en_output = "Data/en-ud-train.vw"
 
