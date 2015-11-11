@@ -35,7 +35,7 @@ if __name__ == '__main__':
 
         if args['--feature-set'] == "dependency":
             for i in xrange(len(sent["word"])):
-                print >>data_out,u"{label} '{sent_i}-{token_i}{features}".format(
+                print >>data_out, u"{label} '{sent_i}-{token_i}{features}".format(
                     label=normalize_label(sent['dependency'][i]),
                     sent_i=sent_i,
                     token_i=i,
@@ -53,6 +53,7 @@ if __name__ == '__main__':
     # Process one sentence at a time
     sent = defaultdict(list)
     sent_i = 1
+    repeat = False #used for dependency
     for line in data_in:
         parts = line.strip().split()
 
@@ -73,7 +74,21 @@ if __name__ == '__main__':
             sent['cpos'].append(parts[3])
             sent['pos'].append(parts[4])
             if args['--feature-set'] == "dependency":
-                sent['dependency'].append(str(int(parts[6]) - 1) + "-" + parts[7])
+                if parts[6] != "_" and parts[7] != "_":
+                    # As UD counts root as 0 and hanstholm uses -1 as root we
+                    # have to convert to int so we can -1
+
+                    to_append = u"" + str(int(parts[6]) - 1) + "-" + parts[7]
+                    # The if statement is for notations such as 2-3, where
+                    # there are no morph features. We therefore reapeat the
+                    # previous statement
+                    if repeat:
+                        to_append = u"" + \
+                            str(int(parts[6]) - 1) + "-" + parts[7]
+                        repeat = False
+                    sent['dependency'].append(to_append)
+                else:
+                    repeat = True
 
         elif len(parts) == 0:
             if sent_i > 1:

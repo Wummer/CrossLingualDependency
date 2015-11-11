@@ -53,6 +53,31 @@ Polish:	perfect fit
 
 Swedish:	
 
+======================
+
+List of compatbility with UD data (aka not only cPOS):
+
+Basque:		cPOS
+Bulgarian:	cPOS+fPOS+morph
+Croatian:	cPOS+morph
+Czech:		cPOS+fPOS+morph
+Danish:		cPOS+morph
+English:	cPOS+fPOS+morph
+Finnish:	cPOS+fPOS+morph
+Finnishftb:	cPOS+fPOS+morph
+French:		cPOS
+German:		cPOS
+Greek:		cPOS+morph
+Hebrew:		cPOS+morph
+Hungarian:	cPOS+morph
+Indonesian:	cPOS
+Irish:		cPOS
+Italian:	cPOS+fPOS+morph
+Persian:	cPOS+fPOS+morph
+Spanish:	cPOS
+Swedish:	cPOS+fPOS+morph
+
+----------------------
 
 Universal dependencies
 @misc{11234/LRT-1478,	

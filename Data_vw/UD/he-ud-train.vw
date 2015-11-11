@@ -1,0 +1,15 @@
+1-detCOLdef '1-0|w הקהל |p _
+2-nsubj '1-1|w ה |p DET
+-1-root '1-2|w קהל |p NOUN
+2-advmod '1-3|w איתר |p VERB
+3-mwe '1-4|w סוף |p NOUN
+2-dobj '1-5|w סוף |p NOUN
+2-cc '1-6|w ערבי |p NOUN
+8-nsubj '1-7|w ויהודים |p _
+2-conj '1-8|w ו |p CONJ
+10-case '1-9|w יהודים |p NOUN
+8-iobj '1-10|w חבטו |p VERB
+12-case '1-11|w בו |p _
+8-nmod '1-12|w בו |p ADP
+12-nmodCOLsmixut '1-13|w הוא_ |p PRON
+2-punct '1-14|w עד |p ADP
