@@ -1,5 +1,5 @@
 import glob
-import subprocess
+import subprocess32 as subprocess
 import random
 import codecs
 
@@ -42,19 +42,17 @@ for i in xrange(len(train)):
     with codecs.open(true_train,"w") as outfile:
     	for infilename in a:
     		with codecs.open(infilename)  as infile:
-    			outfile.write(infile.read())
+    			for line in infile:
+    				outfile.write(line)
 
-    p = subprocess.Popen(["python", "conll_to_vw/conll_to_vw.py", true_train, "Data_vw/UD/" +
+    subprocess.call(["python", "conll_to_vw/conll_to_vw.py", true_train, "Data_vw/UD/" +
                       true_train.split("/")[-1][:-6] + "vw", "--feature-set", "dependency", "--coarse"])
-    p.kill()
 
     # Creating the dev and test file are straightforward
-    p = subprocess.Popen(["python", "conll_to_vw/conll_to_vw.py", dev[i], "Data_vw/UD/" +
+    subprocess.call(["python", "conll_to_vw/conll_to_vw.py", dev[i], "Data_vw/UD/" +
                       dev[i].split("/")[-1][:-6] + "vw", "--feature-set", "dependency", "--coarse"])
-    p.kill()
 
-    p = subprocess.Popen(["python", "conll_to_vw/conll_to_vw.py", test[i], "Data_vw/UD/" +
+    subprocess.call(["python", "conll_to_vw/conll_to_vw.py", test[i], "Data_vw/UD/" +
                       test[i].split("/")[-1][:-6] + "vw", "--feature-set", "dependency", "--coarse"])
-    p.kill()
 
 raise SystemExit

@@ -33,7 +33,7 @@ class Thesis:
 
     """
 
-    def __init__(self, train_file, test_file, DATA="UD", FEAT=True, METHOD="mvectors", P=[0.8, 0.2]):
+    def __init__(self, train_file, test_file, DATA="UD", FEAT=True, METHOD="mvectors", P=[0.2, 0.8],SIZE=25,WINDOW=2,WORKERS=4):
 
         #"Initialized" variables
         self.text = []
@@ -51,6 +51,9 @@ class Thesis:
         self.FEAT = FEAT
         self.METHOD = METHOD
         self.P = P
+        self.WINDOW = WINDOW
+        self.SIZE = SIZE
+        self.WORKERS = WORKERS
 
         """ DATA """
         
@@ -92,14 +95,14 @@ class Thesis:
                         t_fpos.append(tline[4].replace("|","+") if self.FEAT== False 
                                 else "+".join(sorted(tline[4].split("|"))) + "+" + "+".join(sorted(tline[5].split("|"))))
 
-                    elif tline[4] == "_" and self.FEAT==True:
+                    elif tline[4] == "_":
                         t_fpos.append("+".join(sorted(tline[3].split("|")))+ "+" + "+".join(sorted(tline[5].split("|"))))
 
                     else:
                         raise ValueError("This dataset does not have fPOS. You must set FEAT=True")
 
                 elif line == "\n":
-                    all_pos.append(self.shuffle_list(t_cpos,t_fpos))
+                    all_pos.append(self.shuffle_list(t_fpos,t_cpos))
                     text.append(t_text)
                     cpos.append(t_cpos)
                     fpos.append(t_fpos)
@@ -122,13 +125,12 @@ class Thesis:
         c[1::2] = b
         return c
 
-    def feature_creation(self, METHOD="mvectors", size=10, workers=4):
-
+    def feature_creation(self, METHOD="mvectors"):
         vectors = []
         if METHOD == "mvectors":
             model = w2v.Word2Vec(
                 self.train_all_pos, context=True, min_count=0, sampler=random_sampler,
-                workers=workers, size=size, p=self.P)
+                size=self.SIZE, workers=self.WORKERS, window=self.WINDOW, p=self.P)
             self.model = model
 
             """ 
@@ -145,10 +147,10 @@ class Thesis:
         
         write_files = [train,test]
         read_files = [self.train_file,self.test_file]
-        pos = [self.train_cpos,self.test_cpos]
+        pos = [self.train_fpos,self.test_fpos]
 
         for idx in xrange(len(write_files)):
-            with codecs.open(write_files[idx][:-3] + "-mvectors.vw", "w") as f:
+            with codecs.open(write_files[idx][:-3] + ("-feats" if self.FEAT==True else "")+ "-mvectors.vw", "w") as f:
                 sent_tracker = 0
                 idx_tracker = 0
                 for line in codecs.open(write_files[idx]):
@@ -164,19 +166,6 @@ class Thesis:
                             str(x) + ":" + str(y) for x, y in enumerate(vec))
                         print >> f, tline
                     except KeyError:
-                        print >> f, line
+                        print >> f, line.strip("\n")
                     finally:
                         idx_tracker += 1
-
-
-
-en_train = "Universal Dependencies/ud-treebanks-v1.1/UD_English/en_vsrest-ud-train.conllu"
-en_test = "Universal Dependencies/ud-treebanks-v1.1/UD_English/en-ud-test.conllu"
-
-bg_train = "Universal Dependencies/ud-treebanks-v1.1/UD_Bulgarian/bg_vsrest-ud-train.conllu"
-bg_test = "Universal Dependencies/ud-treebanks-v1.1/UD_Bulgarian/bg-ud-test.conllu"
-#en_output = "Data/en-ud-train.vw"
-
-T1 = Thesis(en_train, en_test)
-
-T2 = Thesis(bg_train,bg_test)
