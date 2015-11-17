@@ -1,4 +1,4 @@
-# define NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION
+from __future__ import division
 import codecs
 import logging
 import subprocess
@@ -9,10 +9,14 @@ from w2v.sampler import random_sampler, sample_word2vec
 
 from numpy import random
 
+
+# define NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION
+
 random.seed(1)
 np.random.seed(1)
 logging.basicConfig(
     format='%(asctime)s : %(levelname)s : %(message)s', level=logging.INFO)
+
 
 class Thesis:
 
@@ -33,7 +37,8 @@ class Thesis:
 
     """
 
-    def __init__(self, train_file, test_file, DATA="UD", FEAT=True, METHOD="mvectors", P=[0.2, 0.8],SIZE=25,WINDOW=2,WORKERS=4):
+    def __init__(self, train_file, test_file, DATA="UD", FEAT=True,
+                 METHOD="mvectors", P=[0.2, 0.8], SIZE=25, WINDOW=2, WORKERS=4):
 
         #"Initialized" variables
         self.text = []
@@ -56,9 +61,11 @@ class Thesis:
         self.WORKERS = WORKERS
 
         """ DATA """
-        
-        self.train_cpos,self.train_fpos, self.train_all_pos = self.read_input(train_file)
-        self.test_cpos,self.test_fpos, self.test_all_pos = self.read_input(test_file)
+
+        self.train_cpos, self.train_fpos, self.train_all_pos = self.read_input(
+            train_file)
+        self.test_cpos, self.test_fpos, self.test_all_pos = self.read_input(
+            test_file)
 
         """ FEATURE CREATION """
         self.feature_creation()
@@ -84,25 +91,29 @@ class Thesis:
             # text, cpos and fpos
                 if line[0] == "#":
                     continue
-                    
+
                 elif line != "\n":
                     tline = line.strip("\n").lower().split("\t")
 
                     t_text.append(tline[1])
-                    t_cpos.append(tline[3].replace("|","+"))
+                    t_cpos.append(tline[3].replace("|", "+"))
 
                     if tline[4] != "_":
-                        t_fpos.append(tline[4].replace("|","+") if self.FEAT== False 
-                                else "+".join(sorted(tline[4].split("|"))) + "+" + "+".join(sorted(tline[5].split("|"))))
+                        t_fpos.append(tline[4].replace("|", "+") if self.FEAT == False
+                                      else "+".join(sorted(tline[4].split("|"))) +
+                                      "+" + "+".join(sorted(tline[5].split("|"))))
 
                     elif tline[4] == "_":
-                        t_fpos.append("+".join(sorted(tline[3].split("|")))+ "+" + "+".join(sorted(tline[5].split("|"))))
+                        t_fpos.append(
+                            "+".join(sorted(tline[3].split("|"))) +
+                            "+" + "+".join(sorted(tline[5].split("|"))))
 
                     else:
-                        raise ValueError("This dataset does not have fPOS. You must set FEAT=True")
+                        raise ValueError(
+                            "This dataset does not have fPOS. You must set FEAT=True")
 
                 elif line == "\n":
-                    all_pos.append(self.shuffle_list(t_fpos,t_cpos))
+                    all_pos.append(self.shuffle_list(t_fpos, t_cpos))
                     text.append(t_text)
                     cpos.append(t_cpos)
                     fpos.append(t_fpos)
@@ -132,6 +143,10 @@ class Thesis:
                 self.train_all_pos, context=True, min_count=0, sampler=random_sampler,
                 size=self.SIZE, workers=self.WORKERS, window=self.WINDOW, p=self.P)
             self.model = model
+            full_vocab = np.array([model[x] for x in model.vocab.keys()])
+            self.mean_vector = np.mean(full_vocab, axis=0)
+            self.std_vector = np.std(full_vocab, axis=0)
+            del full_vocab
 
             """ 
             ############## DO I EVEN NEED MORE? ####################
@@ -144,13 +159,15 @@ class Thesis:
         if self.DATA == "UD":
             train = "Data_vw/UD/" + self.train_file.split("/")[-1][:-7] + ".vw"
             test = "Data_vw/UD/" + self.test_file.split("/")[-1][:-7] + ".vw"
-        
-        write_files = [train,test]
-        read_files = [self.train_file,self.test_file]
-        pos = [self.train_fpos,self.test_fpos]
+
+        write_files = [train, test]
+        read_files = [self.train_file, self.test_file]
+        pos = [self.train_fpos, self.test_fpos]
+        cpos = [self.train_cpos, self.test_cpos]
 
         for idx in xrange(len(write_files)):
-            with codecs.open(write_files[idx][:-3] + ("-feats" if self.FEAT==True else "")+ "-mvectors.vw", "w") as f:
+            with codecs.open(write_files[idx][:-3] + ("-feats" if self.FEAT == True else "")
+                             + "-mvectors" + str(self.SIZE) + ".vw", "w") as f:
                 sent_tracker = 0
                 idx_tracker = 0
                 for line in codecs.open(write_files[idx]):
@@ -161,11 +178,18 @@ class Thesis:
                         continue
 
                     try:
-                        vec = self.model[pos[idx][sent_tracker][idx_tracker]]
-                        tline = line[:-1] + "|g " + " ".join(
+                        vec = (self.model[pos[idx][sent_tracker][
+                               idx_tracker]] - self.mean_vector) / self.std_vector * 1e-4
+                        tline = line[:-1] + " |g " + " ".join(
                             str(x) + ":" + str(y) for x, y in enumerate(vec))
                         print >> f, tline
+
                     except KeyError:
-                        print >> f, line.strip("\n")
+                        vec = (self.model[cpos[idx][sent_tracker][
+                            idx_tracker]] - self.mean_vector) / self.std_vector * 1e-4
+                        tline = line[:-1] + " |g " + " ".join(
+                            str(x) + ":" + str(y) for x,y in enumerate(vec))
+                        print >> f, tline
+
                     finally:
                         idx_tracker += 1

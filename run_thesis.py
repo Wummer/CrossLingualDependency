@@ -14,7 +14,7 @@ test =  sorted("-ud-test".join(x.split("_vsrest-ud-train")) for x in train)
 for i in xrange(1):
 	print train[i]
 	print test[i]
-	T = Thesis(train[i],test[i],FEAT=True)
+	T = Thesis(train[i],test[i],FEAT=False,SIZE=25)
 	del T
 
 """

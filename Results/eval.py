@@ -40,14 +40,28 @@ def LAS(eval_file):
 print "="*20,"UD RESULTS","="*20
 print "-"*20,"Baselines","-"*20
 for f in sorted(glob.glob("UD/*-baseline.tsv")):
-	print "Results for",(f.split("-")[0][3:])
+	print "Results for",(f[3:])
+	print "UAS: ",UAS(f),"%"
+	print "LAS: ",LAS(f),"%"
+	print
+
+print "-"*20,"MVec25","-"*20
+for f in sorted(glob.glob("UD/*-mvectors25.tsv")):
+	print "Results for",(f[3:])
+	print "UAS: ",UAS(f),"%"
+	print "LAS: ",LAS(f),"%"
+	print
+
+print "-"*20,"MVec25 + cpos","-"*20
+for f in sorted(glob.glob("UD/*-mvec25.tsv")):
+	print "Results for",(f[3:])
 	print "UAS: ",UAS(f),"%"
 	print "LAS: ",LAS(f),"%"
 	print
 
 
-
-print "-"*20,"MVec25","-"*20
-print "Results for MVecFeats25 on UD_Bulgarian:"
-print "UAS: ",UAS("UD/bg_vsrest-ud-feats-mvectors-25.tsv"),"%"
-print "LAS: ",LAS("UD/bg_vsrest-ud-feats-mvectors-25.tsv"),"%"
+print "-"*20,"MVecFeats25"
+for f in sorted(glob.glob("UD/*-feats-mvectors25.tsv")):
+	print "Reults for",(f.split("-")[0][3:])
+	print "UAS: ",UAS(f),"%"
+	print "LAS: ",LAS(f),"%"
