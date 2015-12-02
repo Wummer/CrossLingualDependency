@@ -26,7 +26,7 @@ def sample_word2vec(sentence, window=5):
 
 
 """ My "random" cPOS/fPOS sampler """
-def random_sampler(sentence, window=5,p=[0.8,0.2]):
+def random_sampler(sentence, window=1,p=[0.2,0.8]):
     pairs = []
     context = sentence[1::2]
     sentence = sentence[::2]
@@ -54,7 +54,7 @@ def random_sampler(sentence, window=5,p=[0.8,0.2]):
 """@randomizer takes 3 inputs:
  - sentence | the current sentence of cPOS
  - index    | the index of the sentence
- - fpos     | the corresponding fPOS list 
+ - fpos     | the corresponding fPOS list   
 
  returns either the original cPOS  or the corresponding fPOS at the index. 
 """
@@ -64,3 +64,8 @@ def randomizer(word,context,p):
         return word
     elif choice == 1:
         return context
+
+
+a = ["DT","DET","NN","NOUN","VBD","VERB","DT", "DET", "NN", "NOUN","TO","PART","VB","VERB","NNS","NOUN",".", "NOUN"]
+
+print random_sampler(a)

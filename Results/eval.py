@@ -45,14 +45,14 @@ for f in sorted(glob.glob("UD/*-baseline.tsv")):
 	print "LAS: ",LAS(f),"%"
 	print
 
-print "-"*20,"MVec25","-"*20
-for f in sorted(glob.glob("UD/*-mvectors25.tsv")):
+print "-"*20,"MVec10","-"*20
+for f in sorted(glob.glob("UD/*-mvec10.tsv")):
 	print "Results for",(f[3:])
 	print "UAS: ",UAS(f),"%"
 	print "LAS: ",LAS(f),"%"
 	print
 
-print "-"*20,"MVec25 + cpos","-"*20
+print "-"*20,"MVec25","-"*20
 for f in sorted(glob.glob("UD/*-mvec25.tsv")):
 	print "Results for",(f[3:])
 	print "UAS: ",UAS(f),"%"
@@ -60,8 +60,8 @@ for f in sorted(glob.glob("UD/*-mvec25.tsv")):
 	print
 
 
-print "-"*20,"MVecFeats25"
-for f in sorted(glob.glob("UD/*-feats-mvectors25.tsv")):
-	print "Reults for",(f.split("-")[0][3:])
+print "-"*20,"MVec50"
+for f in sorted(glob.glob("UD/*-mvec50.tsv")):
+	print "Results for",(f.split("-")[0][3:])
 	print "UAS: ",UAS(f),"%"
 	print "LAS: ",LAS(f),"%"

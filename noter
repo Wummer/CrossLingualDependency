@@ -9,6 +9,17 @@ Fine-graind embeddings
 
 -> Experimenter med at skifte hver anden target med hhv. coarse-graind og fine-grained embeddings. 
 
+Udvælg Dansk som dev. Vælg parametre ud fra det.
+Grundet jeg har intuition om dansk, da jeg er dansk x).
+
+Prøv at udskifte fpos sætning med cpos en gang i mellem.
+
+Alternativt:
+
+Bi-lingual word embeddings?
+
+POS embeddings og word embeddings via retrofitting.
+
 
 POS ændringer:
 =======================

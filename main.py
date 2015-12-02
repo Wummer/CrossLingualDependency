@@ -5,8 +5,15 @@ import subprocess
 import universal_tags
 import w2v.word2vec as w2v
 import numpy as np
-from w2v.sampler import random_sampler, sample_word2vec
+import argparse
+import gzip
+import math
+import numpy
+import re
+import sys
 
+from copy import deepcopy
+from w2v.sampler import random_sampler, sample_word2vec
 from numpy import random
 
 
@@ -38,7 +45,7 @@ class Thesis:
     """
 
     def __init__(self, train_file, test_file, DATA="UD", FEAT=True,
-                 METHOD="mvectors", P=[0.2, 0.8], SIZE=25, WINDOW=2, WORKERS=4):
+                 METHOD="mvectors", LOADMODEL=False, P=[0.2, 0.8], SIZE=25, WINDOW=2, WORKERS=4):
 
         #"Initialized" variables
         self.text = []
@@ -59,6 +66,12 @@ class Thesis:
         self.WINDOW = WINDOW
         self.SIZE = SIZE
         self.WORKERS = WORKERS
+        self.MODELFILE = "Vectors/" + \
+            self.train_file.split("/")[-1][:-7] + str(self.SIZE)
+        self.LOADMODEL = LOADMODEL
+
+        # Settings
+        self.isNumber = re.compile(r'\d+.*')
 
         """ DATA """
 
@@ -139,13 +152,19 @@ class Thesis:
     def feature_creation(self, METHOD="mvectors"):
         vectors = []
         if METHOD == "mvectors":
-            model = w2v.Word2Vec(
-                self.train_all_pos, context=True, min_count=0, sampler=random_sampler,
-                size=self.SIZE, workers=self.WORKERS, window=self.WINDOW, p=self.P)
+            if self.LOADMODEL == True:
+                model = w2v.Word2Vec.load_word2vec_format(self.MODELFILE)
+            else:
+                model = w2v.Word2Vec(
+                    self.train_all_pos, context=True, min_count=0, sampler=random_sampler,
+                    size=self.SIZE, workers=self.WORKERS, window=self.WINDOW, p=self.P)
             self.model = model
+            model.save_word2vec_format(self.MODELFILE)
             full_vocab = np.array([model[x] for x in model.vocab.keys()])
-            self.mean_vector = np.mean(full_vocab, axis=0)
-            self.std_vector = np.std(full_vocab, axis=0)
+            # np.mean(full_vocab, axis=0)
+            self.mean_vector = full_vocab.min(axis=0)
+            # np.std(full_vocab, axis=0)
+            self.std_vector = full_vocab.max(axis=0)
             del full_vocab
 
             """ 
@@ -188,8 +207,107 @@ class Thesis:
                         vec = (self.model[cpos[idx][sent_tracker][
                             idx_tracker]] - self.mean_vector) / self.std_vector * 1e-4
                         tline = line[:-1] + " |g " + " ".join(
-                            str(x) + ":" + str(y) for x,y in enumerate(vec))
+                            str(x) + ":" + str(y) for x, y in enumerate(vec))
                         print >> f, tline
 
                     finally:
                         idx_tracker += 1
+
+    """
+    The following functions are taken from the Retrofitting repo. 
+    All credits go to Manaal Faruqui, mfaruqui@cs.cmu.edu
+    """
+
+    def norm_word(self, word):
+        if self.isNumber.search(word.lower()):
+            return '---num---'
+        elif re.sub(r'\W+', '', word) == '':
+            return '---punc---'
+        else:
+            return word.lower()
+
+    ''' Read all the word vectors and normalize them '''
+
+    def read_word_vecs(self, filename):
+        wordVectors = {}
+        if filename.endswith('.gz'):
+            fileObject = gzip.open(filename, 'r')
+        else:
+            fileObject = open(filename, 'r')
+
+        for line in fileObject:
+            line = line.strip().lower()
+            word = line.split()[0]
+            wordVectors[word] = numpy.zeros(len(line.split()) - 1, dtype=float)
+            for index, vecVal in enumerate(line.split()[1:]):
+                wordVectors[word][index] = float(vecVal)
+            ''' normalize weight vector '''
+            wordVectors[word] /= math.sqrt((wordVectors[word]**2).sum() + 1e-6)
+
+        sys.stderr.write("Vectors read from: " + filename + " \n")
+        return wordVectors
+
+    ''' Write word vectors to file '''
+
+    def print_word_vecs(self, wordVectors, outFileName):
+        sys.stderr.write('\nWriting down the vectors in ' + outFileName + '\n')
+        outFile = open(outFileName, 'w')
+        for word, values in wordVectors.iteritems():
+            outFile.write(word + ' ')
+            for val in wordVectors[word]:
+                outFile.write('%.4f' % (val) + ' ')
+            outFile.write('\n')
+        outFile.close()
+
+    ''' Read the PPDB word relations as a dictionary '''
+
+    def read_lexicon(self, filename, wordVecs):
+        lexicon = {}
+        for line in open(filename, 'r'):
+            words = line.lower().strip().split()
+            lexicon[norm_word(words[0])] = [norm_word(word)
+                                            for word in words[1:]]
+        return lexicon
+
+    ''' Retrofit word vectors to a lexicon '''
+
+    def retrofit(self, wordVecs, lexicon, numIters):
+        newWordVecs = deepcopy(wordVecs)
+        wvVocab = set(newWordVecs.keys())
+        loopVocab = wvVocab.intersection(set(lexicon.keys()))
+        for it in range(numIters):
+            # loop through every node also in ontology (else just use data
+            # estimate)
+            for word in loopVocab:
+                wordNeighbours = set(lexicon[word]).intersection(wvVocab)
+                numNeighbours = len(wordNeighbours)
+                # no neighbours, pass - use data estimate
+                if numNeighbours == 0:
+                    continue
+                # the weight of the data estimate if the number of neighbours
+                newVec = numNeighbours * wordVecs[word]
+                # loop over neighbours and add to new vector (currently with
+                # weight 1)
+                for ppWord in wordNeighbours:
+                    newVec += newWordVecs[ppWord]
+                newWordVecs[word] = newVec / (2 * numNeighbours)
+        return newWordVecs
+"""
+if __name__=='__main__':
+
+  parser = argparse.ArgumentParser()
+  parser.add_argument("-i", "--input", type=str, default=None, help="Input word vecs")
+  parser.add_argument("-l", "--lexicon", type=str, default=None, help="Lexicon file name")
+  parser.add_argument("-o", "--output", type=str, help="Output word vecs")
+  parser.add_argument("-n", "--numiter", type=int, default=10, help="Num iterations")
+  args = parser.parse_args()
+
+  wordVecs = read_word_vecs(args.input)
+  lexicon = read_lexicon(args.lexicon, wordVecs)
+  numIter = int(args.numiter)
+  outFileName = args.output
+  
+  ''' Enrich the word vectors using ppdb and print the enriched vectors '''
+  print_word_vecs(retrofit(wordVecs, lexicon, numIter), outFileName) 
+
+"""
