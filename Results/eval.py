@@ -59,9 +59,23 @@ for f in sorted(glob.glob("UD/*-mvec25.tsv")):
 	print "LAS: ",LAS(f),"%"
 	print
 
-
-print "-"*20,"MVec50"
-for f in sorted(glob.glob("UD/*-mvec50.tsv")):
-	print "Results for",(f.split("-")[0][3:])
+print "-"*20,"MVec25Retro","-"*20
+for f in sorted(glob.glob("UD/*-mvec25retro.tsv")):
+	print "Results for",(f[3:])
 	print "UAS: ",UAS(f),"%"
 	print "LAS: ",LAS(f),"%"
+	print
+
+print "-"*20,"MVec50","-"*20
+for f in sorted(glob.glob("UD/*-mvec50.tsv")):
+	print "Results for",(f[3:])
+	print "UAS: ",UAS(f),"%"
+	print "LAS: ",LAS(f),"%"
+	print
+
+print "-"*20,"MVecDev","-"*20
+for f in sorted(glob.glob("UD/da-dev-*.tsv")):
+	print "Results for",(f[3:])
+	print "UAS: ",UAS(f),"%"
+	print "LAS: ",LAS(f),"%"
+	print

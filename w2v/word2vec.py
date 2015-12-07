@@ -54,6 +54,7 @@ import heapq
 import time
 import itertools
 import threading
+import codecs
 from multiprocessing.pool import ThreadPool
 from Queue import Queue
 
@@ -324,7 +325,7 @@ class Word2Vec(utils.SaveLoad):
         """
         logger.info("storing %sx%s projection weights into %s" % (len(self.vocab), self.layer1_size, fname))
         assert (len(self.vocab), self.layer1_size) == self.syn0.shape
-        with open(fname, 'wb') as fout:
+        with codecs.open(fname, 'wb') as fout:
             fout.write("%s %s\n" % self.syn0.shape)
             # store in sorted order: most frequent words at the top
             for word, vocab in sorted(self.vocab.iteritems(), key=lambda item: -item[1].count):
@@ -347,7 +348,7 @@ class Word2Vec(utils.SaveLoad):
 
         """
         logger.info("loading projection weights from %s" % (fname))
-        with open(fname) as fin:
+        with codecs.open(fname) as fin:
             header = fin.readline()
             vocab_size, layer1_size = map(int, header.split())  # throws for invalid file format
             result = Word2Vec(size=layer1_size)
@@ -370,7 +371,8 @@ class Word2Vec(utils.SaveLoad):
             else:
                 for line_no, line in enumerate(fin):
                     parts = line.split()
-                    assert len(parts) == layer1_size + 1
+                    if len(parts) != layer1_size + 1:
+                        continue
                     word, weights = parts[0], map(REAL, parts[1:])
                     result.vocab[word] = Vocab(index=line_no, count=vocab_size - line_no)
                     result.index2word.append(word)
@@ -511,7 +513,7 @@ class Word2Vec(utils.SaveLoad):
                     correct, correct + incorrect))
 
         sections, section = [], None
-        for line_no, line in enumerate(open(questions)):
+        for line_no, line in enumerate(codecs.open(questions)):
             # TODO: use level3 BLAS (=evaluate multiple questions at once), for speed
             if line.startswith(': '):
                 # a new section starts => store the old section
@@ -566,7 +568,7 @@ class BrownCorpus(object):
             fname = os.path.join(self.dirname, fname)
             if not os.path.isfile(fname):
                 continue
-            for line in open(fname):
+            for line in codecs.open(fname):
                 # each file line is a single sentence in the Brown corpus
                 # each token is WORD/POS_TAG
                 token_tags = [t.split('/') for t in line.split() if len(t.split('/')) == 2]
@@ -586,7 +588,7 @@ class Text8Corpus(object):
         # the entire corpus is one gigantic line -- there are no sentence marks at all
         # so just split the sequence of tokens arbitrarily: 1 sentence = 1000 tokens
         sentence, rest, max_sentence_length = [], '', 1000
-        with open(self.fname) as fin:
+        with codecs.open(self.fname) as fin:
             while True:
                 text = rest + fin.read(8192)  # avoid loading the entire file (=1 line) into RAM
                 if text == rest:  # EOF
@@ -608,7 +610,7 @@ class LineSentence(object):
         self.fname = fname
 
     def __iter__(self):
-        for line in open(self.fname):
+        for line in codecs.open(self.fname):
             yield line.split()
 
 # Example: ./word2vec.py ~/workspace/word2vec/text8 ~/workspace/word2vec/questions-words.txt ./text8

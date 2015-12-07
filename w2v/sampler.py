@@ -45,7 +45,8 @@ def random_sampler(sentence, window=1,p=[0.2,0.8]):
         for j in range(j, k):
             if j == i or sentence[j] is None:
                 continue
-            pairs.append((sentence[i], randomizer(sentence[j],context[j],p)))
+            pairs.append((sentence[i],
+             randomizer(sentence[j],context[j],p)))
 
     #logging.info("{} samples generated from len {} sentence".format(len(pairs), len(sentence)))
 
@@ -64,8 +65,3 @@ def randomizer(word,context,p):
         return word
     elif choice == 1:
         return context
-
-
-a = ["DT","DET","NN","NOUN","VBD","VERB","DT", "DET", "NN", "NOUN","TO","PART","VB","VERB","NNS","NOUN",".", "NOUN"]
-
-print random_sampler(a)

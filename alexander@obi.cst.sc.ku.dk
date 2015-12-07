@@ -249,6 +249,8 @@ class Thesis:
 
         print all_count,"pos tags were parsed"
         print "Of these",fpos_count,"were fPOS and",cpos_count,"were cPOS"
+        print used_fpos
+
 
     def create_lexicon(self,cpos,fpos):
         lex = {}
