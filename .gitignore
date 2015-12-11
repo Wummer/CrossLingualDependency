@@ -6,6 +6,7 @@ SP*/
 hanstholm/
 #Data_vw/
 
+*.tsv
 *.md
 *.conll*
 *.vw
