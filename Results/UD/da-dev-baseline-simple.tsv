@@ -1,8 +1,8 @@
 1-0	3-dep	1-advmod
 1-1	5-root	5-root
 1-2	1-nsubj	1-dobj
-1-3	1-nmodCOLloc	5-root
-1-4	1-punct	3-punct
+1-3	1-nmodCOLloc	4-case
+1-4	1-punct	1-punct
 
 2-0	1-nsubj	1-nsubj
 2-1	21-root	21-root
@@ -58,8 +58,8 @@
 4-16	9-aux	18-aux
 4-17	16-dobj	18-nsubj
 4-18	16-dep	1-ccomp
-4-19	18-dep	21-root
-4-20	1-punct	19-punct
+4-19	18-dep	20-case
+4-20	1-punct	1-punct
 
 5-0	7-nsubj	1-name
 5-1	0-name	4-nsubj
@@ -80,14 +80,14 @@
 6-6	7-amod	7-amod
 6-7	9-nmod	9-nsubj
 6-8	9-aux	9-aux
-6-9	0-conj	38-root
+6-9	0-conj	32-advcl
 6-10	16-det	12-det
 6-11	16-amod	12-amod
 6-12	16-dep	9-dobj
 6-13	16-dep	12-cc
 6-14	16-det	16-det
 6-15	16-det	16-det
-6-16	9-dobj	12-nmod
+6-16	9-dobj	9-dobj
 6-17	18-case	18-case
 6-18	16-nmod	16-nmod
 6-19	20-case	20-case
@@ -103,12 +103,12 @@
 6-29	24-cc	24-cc
 6-30	33-nsubj	32-mark
 6-31	32-nsubj	32-nsubj
-6-32	24-conj	9-ccomp
+6-32	24-conj	38-root
 6-33	32-dep	32-conj
 6-34	33-iobj	36-nsubj
 6-35	36-amod	36-amod
 6-36	33-dobj	33-nmod
-6-37	0-punct	9-punct
+6-37	0-punct	32-punct
 
 7-0	1-nsubj	1-nmod
 7-1	13-root	13-root
@@ -142,12 +142,12 @@
 10-0	2-punct	2-punct
 10-1	2-nsubj	2-nsubj
 10-2	9-root	9-root
-10-3	2-iobj	9-root
+10-3	2-iobj	5-nsubj
 10-4	5-det	5-det
-10-5	2-dobj	9-root
+10-5	2-dobj	2-dobj
 10-6	7-case	7-case
 10-7	5-nmod	5-nmod
-10-8	2-punct	5-punct
+10-8	2-punct	2-punct
 
 11-0	6-punct	1-punct
 11-1	6-nsubj	3-name
@@ -168,7 +168,7 @@
 11-16	13-nmod	13-nmod
 11-17	6-punct	6-punct
 
-12-0	3-nsubj	29-root
+12-0	3-nsubj	6-nsubj
 12-1	3-cop	3-aux
 12-2	3-advmod	3-advmod
 12-3	29-root	6-amod
@@ -199,18 +199,18 @@
 12-28	3-punct	18-punct
 
 13-0	8-dep	31-root
-13-1	0-nsubj	8-nsubj
+13-1	0-nsubj	4-nsubj
 13-2	4-amod	4-amod
 13-3	4-amod	4-amod
-13-4	0-nmodCOLloc	8-nsubj
-13-5	0-punct	4-punct
+13-4	0-nmodCOLloc	0-nmod
+13-5	0-punct	0-punct
 13-6	8-aux	8-aux
 13-7	8-nsubj	8-nsubj
 13-8	31-root	0-ccomp
 13-9	10-det	10-det
 13-10	8-dobj	8-dobj
 13-11	12-case	12-case
-13-12	10-nmod	10-nmod
+13-12	10-nmod	8-dobj
 13-13	18-case	14-case
 13-14	17-nmodCOLposs	24-nsubj
 13-15	14-nmodCOLposs	14-nmod
@@ -276,10 +276,10 @@
 15-9	6-dobj	6-dobj
 15-10	5-punct	6-punct
 15-11	0-cc	6-cc
-15-12	0-conj	17-discourse
+15-12	0-conj	14-dep
 15-13	14-case	14-case
-15-14	12-nmod	17-nsubj
-15-15	17-punct	14-punct
+15-14	12-nmod	6-nmod
+15-15	17-punct	6-punct
 15-16	17-nsubj	17-mark
 15-17	14-aclCOLrelcl	5-ccomp
 15-18	19-det	19-det
@@ -308,11 +308,11 @@
 17-7	9-amod	9-amod
 17-8	9-det	9-det
 17-9	3-nmod	5-nmod
-17-10	9-punct	15-punct
-17-11	13-nsubj	15-root
+17-10	9-punct	13-punct
+17-11	13-nsubj	13-dobj
 17-12	13-aux	13-aux
-17-13	9-aux	14-aux
-17-14	3-punct	11-punct
+17-13	9-aux	3-aux
+17-14	3-punct	3-punct
 
 18-0	3-nsubj	3-nsubj
 18-1	3-aux	3-aux
@@ -344,19 +344,19 @@
 20-8	6-nmod	4-nmod
 20-9	6-punct	4-punct
 
-21-0	5-nsubj	28-root
-21-1	3-cop	28-aux
-21-2	3-det	28-det
-21-3	0-amod	28-root
+21-0	5-nsubj	10-neg
+21-1	3-cop	10-aux
+21-2	3-det	10-det
+21-3	0-amod	10-amod
 21-4	5-cop	5-aux
 21-5	28-root	3-conj
 21-6	5-punct	5-punct
 21-7	5-dep	5-nmod
 21-8	7-dep	9-case
-21-9	10-dep	10-foreign
-21-10	8-amod	7-appos
-21-11	7-punct	5-punct
-21-12	5-cc	5-cc
+21-9	10-dep	10-dep
+21-10	8-amod	26-nsubj
+21-11	7-punct	10-punct
+21-12	5-cc	10-cc
 21-13	19-nsubj	26-mark
 21-14	16-cop	26-aux
 21-15	16-amod	16-amod
@@ -370,30 +370,30 @@
 21-23	26-punct	26-punct
 21-24	26-nsubj	26-nsubj
 21-25	26-aux	26-aux
-21-26	19-aclCOLrelcl	3-conj
-21-27	5-punct	3-punct
+21-26	19-aclCOLrelcl	28-root
+21-27	5-punct	26-punct
 
-22-0	30-root	30-root
+22-0	30-root	5-advcl
 22-1	0-punct	5-punct
 22-2	26-nsubj	5-nsubj
 22-3	26-aux	5-aux
 22-4	26-advmod	5-advmod
-22-5	26-dep	0-conj
-22-6	5-dep	0-conj
+22-5	26-dep	30-root
+22-6	5-dep	5-ccomp
 22-7	8-det	8-det
 22-8	6-dobj	6-dobj
 22-9	11-case	11-case
 22-10	11-det	11-det
 22-11	6-nmod	8-nmod
-22-12	26-punct	6-punct
-22-13	26-cc	6-cc
+22-12	26-punct	5-punct
+22-13	26-cc	5-cc
 22-14	18-mark	18-mark
 22-15	18-nsubj	18-nsubj
 22-16	17-det	17-det
 22-17	18-dep	18-nsubj
-22-18	26-mark	0-conj
+22-18	26-mark	5-ccomp
 22-19	20-det	20-det
-22-20	18-dobj	18-dobj
+22-20	18-dobj	18-nmod
 22-21	18-punct	26-punct
 22-22	26-advmod	26-advmod
 22-23	26-aux	26-aux
@@ -402,11 +402,11 @@
 22-26	0-list	18-conj
 22-27	26-dobj	28-dobj
 22-28	26-dep	26-advmod
-22-29	0-punct	0-punct
+22-29	0-punct	5-punct
 
 23-0	2-nsubj	2-nsubj
 23-1	2-aux	2-aux
-23-2	27-root	27-root
+23-2	27-root	18-advcl
 23-3	4-punct	6-punct
 23-4	18-mark	6-mark
 23-5	6-det	6-det
@@ -422,7 +422,7 @@
 23-15	9-punct	13-punct
 23-16	9-punct	13-punct
 23-17	18-advmod	18-advmod
-23-18	2-dobj	2-xcomp
+23-18	2-dobj	27-root
 23-19	23-punct	23-punct
 23-20	23-mark	23-mark
 23-21	23-nsubj	23-nsubj
@@ -439,7 +439,7 @@
 24-4	1-cc	1-cc
 24-5	1-conj	1-ccomp
 24-6	7-case	7-case
-24-7	5-nmod	5-dobj
+24-7	5-nmod	5-nmod
 24-8	7-cc	7-cc
 24-9	7-conj	11-advmod
 24-10	5-dobj	11-mark
@@ -455,7 +455,7 @@
 25-3	4-det	4-det
 25-4	6-nsubjpass	6-nsubj
 25-5	6-auxpass	6-aux
-25-6	1-dep	35-root
+25-6	1-dep	21-advcl
 25-7	9-case	8-case
 25-8	9-nmodCOLposs	14-nsubj
 25-9	6-nmod	8-nmod
@@ -470,14 +470,14 @@
 25-18	16-nmod	21-nsubj
 25-19	16-punct	18-punct
 25-20	21-nsubj	21-mark
-25-21	16-dep	6-ccomp
+25-21	16-dep	35-root
 25-22	24-det	23-det
 25-23	24-dep	35-root
 25-24	21-dobj	23-dobj
 25-25	28-case	28-case
 25-26	28-det	28-det
 25-27	28-amod	28-amod
-25-28	24-nmod	24-nmod
+25-28	24-nmod	23-dobj
 25-29	21-dep	31-case
 25-30	29-dep	31-mark
 25-31	30-dep	23-ccomp
@@ -485,7 +485,7 @@
 25-33	31-nmod	31-nmod
 25-34	0-punct	23-punct
 
-26-0	2-nsubj	2-nsubj
+26-0	2-nsubj	1-name
 26-1	0-name	2-nsubj
 26-2	4-root	4-root
 26-3	2-punct	2-punct
@@ -501,12 +501,12 @@
 28-3	4-case	4-case
 28-4	0-nmod	0-nmod
 28-5	0-punct	0-punct
-28-6	9-case	24-root
+28-6	9-case	8-case
 28-7	9-det	8-det
 28-8	9-dep	24-root
 28-9	0-nmod	8-dobj
 28-10	11-case	11-case
-28-11	9-nmod	9-nmod
+28-11	9-nmod	8-nmod
 28-12	6-punct	8-punct
 28-13	17-aux	17-aux
 28-14	17-nsubj	17-nsubj
@@ -545,34 +545,34 @@
 30-2	1-punct	1-punct
 
 31-0	1-expl	1-mark
-31-1	58-root	48-advcl
+31-1	58-root	14-cop
 31-2	3-det	3-det
 31-3	1-dobj	1-dobj
 31-4	6-case	5-case
-31-5	6-nmodCOLposs	26-nsubj
+31-5	6-nmodCOLposs	9-nsubj
 31-6	3-nmod	5-nmod
-31-7	6-dep	14-case
+31-7	6-dep	9-case
 31-8	7-dep	9-mark
 31-9	8-dep	14-cop
-31-10	9-dobj	9-dobj
+31-10	9-dobj	9-nmod
 31-11	9-punct	9-punct
 31-12	15-advmod	14-advmod
 31-13	17-case	14-case
-31-14	17-amod	6-amod
+31-14	17-amod	17-amod
 31-15	14-cc	14-cc
 31-16	14-conj	17-amod
-31-17	9-nmod	5-nmod
-31-18	26-punct	26-punct
-31-19	23-mark	26-mark
-31-20	23-nsubj	26-nsubj
-31-21	23-advmod	26-advmod
-31-22	23-cop	26-aux
-31-23	26-nsubj	26-nsubj
+31-17	9-nmod	26-nsubj
+31-18	26-punct	23-punct
+31-19	23-mark	23-mark
+31-20	23-nsubj	23-nsubj
+31-21	23-advmod	23-advmod
+31-22	23-cop	23-aux
+31-23	26-nsubj	17-nmod
 31-24	23-cc	23-cc
 31-25	23-conj	26-nsubj
-31-26	13-conj	1-ccomp
+31-26	13-conj	48-advcl
 31-27	28-det	28-det
-31-28	26-dobj	26-dobj
+31-28	26-dobj	26-nmod
 31-29	30-punct	26-punct
 31-30	26-advmod	31-advmod
 31-31	30-advmod	35-advmod
@@ -590,7 +590,7 @@
 31-43	45-punct	35-punct
 31-44	45-nsubj	45-mark
 31-45	42-aclCOLrelcl	48-advcl
-31-46	45-dobj	45-dobj
+31-46	45-dobj	45-nmod
 31-47	45-punct	45-punct
 31-48	41-dep	58-root
 31-49	48-punct	48-punct
@@ -621,7 +621,7 @@
 32-15	11-amod	14-amod
 32-16	17-case	17-case
 32-17	11-nmod	18-nsubj
-32-18	17-dep	11-conj
+32-18	17-dep	1-conj
 32-19	2-punct	18-punct
 32-20	11-punct	1-punct
 
@@ -648,13 +648,13 @@
 34-18	19-det	19-det
 34-19	12-conj	12-dobj
 34-20	19-punct	12-punct
-34-21	26-nsubjpass	34-root
-34-22	26-advmod	34-root
-34-23	26-advmod	34-root
-34-24	26-neg	34-root
-34-25	26-auxpass	34-aux
-34-26	19-cop	34-aux
-34-27	26-dep	34-root
+34-21	26-nsubjpass	29-mark
+34-22	26-advmod	29-advmod
+34-23	26-advmod	29-advmod
+34-24	26-neg	29-advmod
+34-25	26-auxpass	29-aux
+34-26	19-cop	29-aux
+34-27	26-dep	29-case
 34-28	27-dep	29-mark
 34-29	28-dep	34-root
 34-30	29-dobj	29-dobj
@@ -683,8 +683,8 @@
 35-18	17-advmod	19-advmod
 35-19	17-dobj	17-dobj
 35-20	21-case	21-case
-35-21	17-nmod	19-nmod
-35-22	21-dep	27-root
+35-21	17-nmod	17-dobj
+35-22	21-dep	24-case
 35-23	22-dep	24-mark
 35-24	23-dep	27-root
 35-25	24-dobj	24-nmod
@@ -704,7 +704,7 @@
 36-11	10-dobj	14-nsubj
 36-12	10-advmod	14-advmod
 36-13	10-cc	12-cc
-36-14	10-conj	2-xcomp
+36-14	10-conj	2-advcl
 36-15	14-dep	17-case
 36-16	15-dep	17-mark
 36-17	16-dep	2-ccomp
@@ -751,7 +751,7 @@
 39-3	0-cc	2-cc
 39-4	0-conj	0-nmod
 39-5	6-case	6-case
-39-6	0-nmod	0-nmod
+39-6	0-nmod	7-nsubj
 39-7	13-root	13-root
 39-8	11-advmod	11-advmod
 39-9	11-det	11-det
@@ -802,7 +802,7 @@
 42-6	1-dep	19-root
 42-7	9-case	9-case
 42-8	9-amod	9-amod
-42-9	6-nmod	6-dobj
+42-9	6-nmod	6-nmod
 42-10	6-punct	17-punct
 42-11	15-advmod	17-advmod
 42-12	15-cop	17-aux
@@ -825,7 +825,7 @@
 44-4	5-case	5-case
 44-5	7-nmod	7-nsubj
 44-6	3-dep	7-mark
-44-7	6-dep	2-ccomp
+44-7	6-dep	2-advcl
 44-8	0-punct	2-punct
 
 45-0	4-punct	4-punct
@@ -836,7 +836,7 @@
 45-5	8-punct	8-punct
 45-6	8-mark	8-mark
 45-7	8-nsubj	8-nmod
-45-8	4-dep	4-csubj
+45-8	4-dep	4-conj
 45-9	10-nummod	10-nummod
 45-10	8-dep	8-dobj
 45-11	12-case	12-case
@@ -895,8 +895,8 @@
 47-14	13-expl	16-advmodCOLemph
 47-15	16-det	16-det
 47-16	13-dobj	13-dobj
-47-17	12-case	19-root
-47-18	1-punct	17-punct
+47-17	12-case	18-case
+47-18	1-punct	1-punct
 
 48-0	1-nsubj	1-nsubj
 48-1	24-root	24-root
@@ -994,7 +994,7 @@
 52-3	4-case	4-case
 52-4	2-nmod	2-nmod
 52-5	6-case	6-case
-52-6	2-nmod	4-nmod
+52-6	2-nmod	2-nmod
 52-7	8-case	8-case
 52-8	6-nmod	6-nmod
 52-9	5-cc	8-cc
@@ -1052,9 +1052,9 @@
 54-4	5-case	5-case
 54-5	6-nmod	6-nmod
 54-6	3-dep	28-root
-54-7	9-nmodCOLposs	28-root
+54-7	9-nmodCOLposs	9-nsubj
 54-8	9-amod	9-amod
-54-9	3-dobj	7-conj
+54-9	3-dobj	6-nmod
 54-10	3-punct	9-punct
 54-11	3-dep	9-nmod
 54-12	11-dep	13-advmodCOLemph
@@ -1062,17 +1062,17 @@
 54-14	11-cc	13-cc
 54-15	17-det	17-det
 54-16	17-amod	17-amod
-54-17	11-conj	7-conj
+54-17	11-conj	6-nmod
 54-18	17-dep	19-advmodCOLemph
-54-19	18-dep	17-nmod
+54-19	18-dep	6-dobj
 54-20	25-case	22-case
 54-21	25-det	22-det
 54-22	25-amod	19-amod
 54-23	25-punct	22-punct
 54-24	25-dep	25-name
 54-25	19-nmod	22-nmod
-54-26	25-punct	22-punct
-54-27	3-punct	7-punct
+54-26	25-punct	6-punct
+54-27	3-punct	6-punct
 
 55-0	4-punct	4-punct
 55-1	4-advmod	4-advmod
@@ -1152,20 +1152,20 @@
 
 58-0	34-root	2-cc
 58-1	2-nsubj	2-nsubj
-58-2	0-conj	34-root
+58-2	0-conj	8-advcl
 58-3	2-dobj	2-dobj
 58-4	2-compoundCOLprt	2-advmod
 58-5	2-cc	2-cc
 58-6	8-nsubj	8-nsubj
 58-7	8-aux	8-aux
-58-8	2-conj	2-xcomp
+58-8	2-conj	34-root
 58-9	13-punct	25-punct
 58-10	13-mark	25-mark
 58-11	13-nsubj	25-nsubj
 58-12	13-cop	25-aux
 58-13	6-nmod	25-nsubj
 58-14	15-case	15-case
-58-15	13-nmod	25-nsubj
+58-15	13-nmod	25-nmod
 58-16	19-case	19-case
 58-17	19-det	19-det
 58-18	19-amod	19-amod
@@ -1173,17 +1173,17 @@
 58-20	13-punct	15-punct
 58-21	25-dobj	25-mark
 58-22	23-amod	23-amod
-58-23	24-dep	25-nsubj
-58-24	25-nsubj	25-nsubj
-58-25	19-dep	2-conj
+58-23	24-dep	25-nmod
+58-24	25-nsubj	25-nmod
+58-25	19-dep	8-conj
 58-26	25-dep	27-advmodCOLemph
 58-27	26-dep	25-dobj
 58-28	29-case	29-case
-58-29	27-nmod	27-nmod
+58-29	27-nmod	25-dobj
 58-30	31-case	31-case
 58-31	25-nmod	29-nmod
 58-32	31-nmod	31-nummod
-58-33	0-punct	2-punct
+58-33	0-punct	8-punct
 
 59-0	4-mark	4-mark
 59-1	4-nsubj	4-nsubj
@@ -1195,32 +1195,32 @@
 59-7	10-case	10-case
 59-8	10-det	10-det
 59-9	10-amod	10-amod
-59-10	6-nmod	5-dobj
+59-10	6-nmod	5-nmod
 59-11	4-punct	5-punct
 59-12	26-root	5-conj
-59-13	12-nsubj	26-root
+59-13	12-nsubj	16-nsubj
 59-14	12-advmod	16-advmod
 59-15	16-det	16-det
-59-16	12-dobj	26-root
+59-16	12-dobj	12-dobj
 59-17	18-case	18-case
-59-18	16-nmod	16-nmod
+59-18	16-nmod	12-dobj
 59-19	12-advmod	21-advmod
 59-20	21-case	21-case
-59-21	12-nmod	18-nmod
+59-21	12-nmod	12-dobj
 59-22	24-case	24-case
 59-23	24-amod	24-amod
 59-24	21-nmod	21-nmod
-59-25	12-punct	16-punct
+59-25	12-punct	5-punct
 
 60-0	4-punct	4-punct
 60-1	4-det	4-det
 60-2	4-amod	4-amod
 60-3	4-amod	4-amod
-60-4	6-dep	6-nsubj
+60-4	6-dep	6-nmod
 60-5	4-punct	6-punct
 60-6	10-root	10-root
 60-7	6-nsubj	8-nsubj
-60-8	6-dep	6-ccomp
+60-8	6-dep	6-advcl
 60-9	6-punct	6-punct
 
 61-0	2-nsubj	2-nsubj
@@ -1231,13 +1231,13 @@
 61-5	2-vocative	2-nmod
 61-6	2-punct	2-punct
 
-62-0	19-root	19-root
-62-1	2-nsubj	19-root
-62-2	0-conj	1-conj
+62-0	19-root	1-cc
+62-1	2-nsubj	2-nsubj
+62-2	0-conj	19-root
 62-3	6-punct	6-punct
 62-4	6-mark	6-mark
 62-5	6-nsubj	6-nsubj
-62-6	2-dobj	1-conj
+62-6	2-dobj	2-ccomp
 62-7	8-case	8-case
 62-8	6-nmod	6-dobj
 62-9	16-punct	16-punct
@@ -1247,9 +1247,9 @@
 62-13	16-nsubjpass	16-nsubj
 62-14	16-advmod	16-advmod
 62-15	16-auxpass	16-aux
-62-16	5-dep	1-conj
+62-16	5-dep	2-ccomp
 62-17	16-nmodCOLloc	16-advmod
-62-18	0-punct	1-punct
+62-18	0-punct	2-punct
 
 63-0	3-advmod	3-advmod
 63-1	3-aux	3-aux
@@ -1287,7 +1287,7 @@
 65-18	20-case	20-case
 65-19	20-det	20-det
 65-20	17-nmod	17-dobj
-65-21	17-punct	20-punct
+65-21	17-punct	17-punct
 65-22	2-punct	12-punct
 
 66-0	2-det	2-det
@@ -1370,30 +1370,30 @@
 70-0	1-amod	1-amod
 70-1	2-root	2-root
 
-71-0	1-nmodCOLtemp	2-nsubj
+71-0	1-nmodCOLtemp	2-nmod
 71-1	2-advmod	2-advmod
-71-2	24-root	24-root
-71-3	2-nsubj	24-root
-71-4	2-dobj	24-root
+71-2	24-root	14-advcl
+71-3	2-nsubj	4-nsubj
+71-4	2-dobj	2-dobj
 71-5	8-case	8-case
 71-6	8-punct	7-punct
 71-7	8-amod	8-amod
 71-8	2-nmod	4-nmod
 71-9	8-punct	8-punct
-71-10	2-punct	4-punct
-71-11	2-cc	4-cc
-71-12	14-dep	24-root
-71-13	12-nummod	24-root
-71-14	2-conj	13-conj
+71-10	2-punct	2-punct
+71-11	2-cc	2-cc
+71-12	14-dep	14-case
+71-13	12-nummod	14-nsubj
+71-14	2-conj	24-root
 71-15	14-nsubj	18-nsubj
 71-16	18-det	18-det
 71-17	18-amod	18-amod
 71-18	14-dobj	14-dobj
-71-19	18-punct	18-punct
+71-19	18-punct	14-punct
 71-20	21-punct	14-punct
 71-21	18-dep	14-dobj
-71-22	21-punct	21-punct
-71-23	2-punct	13-punct
+71-22	21-punct	14-punct
+71-23	2-punct	14-punct
 
 72-0	3-nsubj	3-nsubj
 72-1	2-case	2-case
@@ -1419,7 +1419,7 @@
 74-1	2-case	2-case
 74-2	3-nmod	3-nsubj
 74-3	13-root	13-root
-74-4	5-advmod	8-advmod
+74-4	5-advmod	5-advmod
 74-5	3-nsubj	8-nsubj
 74-6	3-dobj	5-nmod
 74-7	3-cc	5-cc
@@ -1484,9 +1484,9 @@
 78-9	10-amod	10-amod
 78-10	5-nmod	5-dobj
 78-11	10-cc	10-cc
-78-12	10-conj	10-nmod
+78-12	10-conj	5-dobj
 78-13	14-case	14-case
-78-14	12-nmod	12-nmod
+78-14	12-nmod	5-dobj
 78-15	20-case	17-case
 78-16	20-det	17-det
 78-17	20-amod	14-amod
@@ -1511,7 +1511,7 @@
 79-6	3-conj	18-root
 79-7	6-nmodCOLloc	6-advmod
 79-8	9-case	9-case
-79-9	7-nmod	6-dobj
+79-9	7-nmod	6-nmod
 79-10	6-dep	12-mark
 79-11	13-det	12-det
 79-12	13-dep	18-root
@@ -1524,11 +1524,11 @@
 80-0	2-nsubj	2-nsubj
 80-1	2-aux	2-aux
 80-2	17-root	17-root
-80-3	6-nmodCOLposs	9-nsubj
+80-3	6-nmodCOLposs	6-nsubj
 80-4	6-amod	6-amod
 80-5	6-amod	6-amod
-80-6	2-dobj	3-conj
-80-7	2-cc	6-cc
+80-6	2-dobj	2-nmod
+80-7	2-cc	2-cc
 80-8	9-advmod	9-advmod
 80-9	2-conj	2-ccomp
 80-10	12-det	12-det
@@ -1541,18 +1541,18 @@
 
 81-0	1-det	1-det
 81-1	2-nsubj	2-nsubj
-81-2	32-root	32-root
+81-2	32-root	23-advcl
 81-3	2-dep	2-ccomp
 81-4	2-cc	3-cc
 81-5	2-conj	2-ccomp
 81-6	5-dep	5-advmod
-81-7	2-punct	13-punct
-81-8	10-nsubj	13-nsubj
-81-9	10-cop	13-aux
-81-10	2-conj	13-nsubj
+81-7	2-punct	10-punct
+81-8	10-nsubj	10-nmod
+81-9	10-cop	10-aux
+81-10	2-conj	5-nmod
 81-11	10-punct	13-punct
 81-12	13-nsubj	13-nsubj
-81-13	10-conj	2-ccomp
+81-13	10-conj	23-advcl
 81-14	13-dobj	13-dobj
 81-15	14-cc	14-cc
 81-16	14-conj	14-nmod
@@ -1562,15 +1562,15 @@
 81-20	21-cop	23-aux
 81-21	13-conj	23-advmod
 81-22	21-dep	23-mark
-81-23	22-dep	2-xcomp
+81-23	22-dep	32-root
 81-24	30-punct	30-punct
 81-25	30-mark	30-mark
 81-26	30-nsubjpass	30-nsubj
 81-27	28-case	28-case
 81-28	26-nmod	30-nsubj
 81-29	30-auxpass	30-aux
-81-30	23-dobj	2-ccomp
-81-31	2-punct	2-punct
+81-30	23-dobj	23-advcl
+81-31	2-punct	23-punct
 
 82-0	1-amod	1-amod
 82-1	2-root	2-root
@@ -1601,7 +1601,7 @@
 85-2	4-aux	4-aux
 85-3	4-advmod	4-advmod
 85-4	19-root	7-cop
-85-5	4-dobj	7-nsubj
+85-5	4-dobj	4-nmod
 85-6	7-advmod	7-advmod
 85-7	4-amod	19-root
 85-8	4-punct	7-punct
@@ -1610,7 +1610,7 @@
 85-11	12-det	12-det
 85-12	10-dobj	10-dobj
 85-13	14-case	14-case
-85-14	10-nmod	12-nmod
+85-14	10-nmod	10-dobj
 85-15	10-advmod	17-advmod
 85-16	17-case	17-case
 85-17	15-nmod	14-nmod
@@ -1625,9 +1625,9 @@
 86-6	14-mark	14-mark
 86-7	8-nmodCOLposs	14-nsubj
 86-8	14-nsubj	7-nmod
-86-9	10-punct	8-punct
+86-9	10-punct	7-punct
 86-10	8-appos	11-name
-86-11	10-name	8-nmod
+86-11	10-name	7-nmod
 86-12	10-punct	14-punct
 86-13	14-advmod	14-advmod
 86-14	4-dobj	4-conj
@@ -1635,7 +1635,7 @@
 86-16	17-nmodCOLposs	17-nsubj
 86-17	14-nmod	14-dobj
 86-18	19-case	19-case
-86-19	14-nmod	14-dobj
+86-19	14-nmod	14-nmod
 86-20	22-case	27-case
 86-21	25-advmod	27-advmod
 86-22	19-nmod	24-name
@@ -1661,18 +1661,18 @@
 88-1	2-nsubj	2-nsubj
 88-2	17-root	17-root
 88-3	4-det	4-det
-88-4	2-dobj	2-dobj
+88-4	2-dobj	2-nmod
 88-5	4-dep	6-advmodCOLemph
-88-6	5-dep	4-nmod
-88-7	2-dep	17-root
+88-6	5-dep	2-dobj
+88-7	2-dep	9-case
 88-8	7-dep	9-mark
 88-9	8-dep	17-root
 88-10	9-dobj	9-dobj
 88-11	12-case	12-case
-88-12	9-nmod	10-nmod
+88-12	9-nmod	9-dobj
 88-13	14-case	14-case
 88-14	12-nmod	12-nmod
-88-15	2-punct	14-punct
+88-15	2-punct	9-punct
 88-16	2-punct	9-punct
 
 89-0	1-nsubj	1-nsubj
@@ -1687,7 +1687,7 @@
 89-9	1-punct	8-punct
 
 90-0	1-nsubj	1-nsubj
-90-1	31-root	31-root
+90-1	31-root	9-advcl
 90-2	1-dobj	1-dobj
 90-3	7-punct	7-punct
 90-4	7-mark	7-mark
@@ -1695,7 +1695,7 @@
 90-6	7-nsubj	7-nsubj
 90-7	0-dep	1-conj
 90-8	7-dobj	9-mark
-90-9	8-dep	1-xcomp
+90-9	8-dep	31-root
 90-10	11-punct	17-punct
 90-11	27-mark	17-mark
 90-12	13-amod	13-amod
@@ -1703,20 +1703,20 @@
 90-14	17-punct	13-punct
 90-15	17-dobj	17-mark
 90-16	17-nsubj	17-nsubj
-90-17	13-aclCOLrelcl	1-ccomp
+90-17	13-aclCOLrelcl	9-ccomp
 90-18	21-case	21-case
 90-19	21-det	21-det
 90-20	21-dep	21-amod
-90-21	17-nmod	17-dobj
+90-21	17-nmod	27-nsubj
 90-22	23-amod	23-amod
 90-23	17-dep	21-nmod
-90-24	17-punct	17-punct
+90-24	17-punct	27-punct
 90-25	27-aux	27-aux
 90-26	27-auxpass	27-aux
-90-27	9-dobj	1-ccomp
+90-27	9-dobj	9-ccomp
 90-28	29-case	29-case
 90-29	27-nmod	27-dobj
-90-30	1-punct	1-punct
+90-30	1-punct	9-punct
 
 91-0	3-nsubj	3-nsubj
 91-1	3-aux	3-aux
@@ -1765,17 +1765,17 @@
 93-12	14-det	14-det
 93-13	14-amod	14-amod
 93-14	11-dobj	11-dobj
-93-15	14-dep	52-root
+93-15	14-dep	17-case
 93-16	15-dep	17-mark
 93-17	16-dep	52-root
 93-18	17-dobj	17-dobj
 93-19	18-cc	18-cc
-93-20	18-conj	18-nmod
+93-20	18-conj	17-dobj
 93-21	22-case	22-case
 93-22	18-nmod	20-nmod
 93-23	25-punct	17-punct
 93-24	25-advmod	25-advmod
-93-25	18-dep	17-dobj
+93-25	18-dep	17-nmod
 93-26	25-punct	17-punct
 93-27	52-root	17-ccomp
 93-28	27-advmod	29-advmod
@@ -1800,10 +1800,10 @@
 93-47	48-det	48-det
 93-48	50-nsubjpass	50-nsubj
 93-49	50-auxpass	50-aux
-93-50	44-dep	17-ccomp
+93-50	44-dep	17-advcl
 93-51	27-punct	17-punct
 
-94-0	37-root	4-cc
+94-0	37-root	3-cc
 94-1	3-det	3-det
 94-2	3-amod	3-amod
 94-3	4-nsubj	4-nsubj
@@ -1836,12 +1836,12 @@
 94-30	31-nmodCOLposs	37-root
 94-31	34-nmod	30-nmod
 94-32	34-advmod	37-root
-94-33	34-cop	37-aux
-94-34	22-cop	37-aux
-94-35	34-dep	37-root
-94-36	0-punct	35-punct
+94-33	34-cop	36-aux
+94-34	22-cop	36-aux
+94-35	34-dep	36-case
+94-36	0-punct	32-punct
 
-95-0	34-root	34-root
+95-0	34-root	34-cc
 95-1	2-nsubj	34-root
 95-2	0-conj	1-conj
 95-3	2-advmod	2-advmod
@@ -1882,11 +1882,11 @@
 96-3	2-dep	4-mark
 96-4	3-dep	18-root
 96-5	18-root	4-conj
-96-6	5-nsubj	11-nsubj
+96-6	5-nsubj	9-nsubj
 96-7	5-nmodCOLloc	9-advmod
 96-8	9-case	9-case
-96-9	7-nmod	11-nsubj
-96-10	5-cc	9-cc
+96-9	7-nmod	5-dobj
+96-10	5-cc	5-cc
 96-11	5-conj	4-ccomp
 96-12	13-case	13-case
 96-13	11-nmod	11-dobj
@@ -1900,8 +1900,8 @@
 97-2	1-punct	1-punct
 97-3	1-punct	1-punct
 97-4	13-root	13-root
-97-5	4-nsubj	7-nsubj
-97-6	4-cc	5-cc
+97-5	4-nsubj	4-dobj
+97-6	4-cc	4-cc
 97-7	4-conj	4-conj
 97-8	7-dobj	11-nsubj
 97-9	7-nmodCOLloc	11-advmod
@@ -1923,7 +1923,7 @@
 98-11	9-name	6-nmod
 98-12	9-cc	11-cc
 98-13	9-conj	14-name
-98-14	13-name	6-nmod
+98-14	13-name	24-root
 98-15	17-aux	24-aux
 98-16	17-cop	24-aux
 98-17	6-conj	24-root
@@ -2030,11 +2030,11 @@
 101-11	12-case	12-case
 101-12	6-nmod	10-nmod
 101-13	14-nummod	14-nummod
-101-14	6-dobj	10-nmod
+101-14	6-dobj	6-dobj
 101-15	16-case	16-case
-101-16	6-nmod	14-nmod
+101-16	6-nmod	6-dobj
 101-17	18-case	18-case
-101-18	16-nmod	16-nmod
+101-18	16-nmod	6-dobj
 101-19	20-case	20-case
 101-20	18-nmod	18-nmod
 101-21	20-cc	20-cc
@@ -2079,7 +2079,7 @@
 103-8	6-conj	9-amod
 103-9	2-nmod	15-root
 103-10	9-name	15-root
-103-11	10-name	10-nummod
+103-11	10-name	13-nummod
 103-12	9-dep	13-case
 103-13	12-nummod	10-nummod
 103-14	0-punct	10-punct
@@ -2100,11 +2100,11 @@
 104-13	16-nsubj	16-nsubj
 104-14	16-advmod	16-advmod
 104-15	16-advmod	16-advmod
-104-16	11-dep	8-ccomp
+104-16	11-dep	8-advcl
 104-17	16-punct	20-punct
 104-18	20-nsubj	20-nsubj
 104-19	20-aux	20-aux
-104-20	16-dep	8-ccomp
+104-20	16-dep	8-advcl
 104-21	8-punct	8-punct
 
 105-0	3-nsubj	3-nsubj
@@ -2123,13 +2123,13 @@
 105-13	14-det	14-det
 105-14	15-nsubj	15-nsubj
 105-15	3-conj	9-conj
-105-16	15-dobj	28-root
-105-17	15-dep	28-root
+105-16	15-dobj	19-nsubj
+105-17	15-dep	19-case
 105-18	17-dep	19-mark
 105-19	18-dep	28-root
 105-20	19-dobj	19-dobj
 105-21	22-case	22-case
-105-22	19-nmod	20-nmod
+105-22	19-nmod	19-dobj
 105-23	26-case	26-case
 105-24	26-det	26-det
 105-25	26-amod	26-amod
@@ -2146,13 +2146,13 @@
 106-7	3-dobj	3-dobj
 106-8	1-punct	3-punct
 106-9	3-punct	3-punct
-106-10	30-root	30-root
+106-10	30-root	16-advcl
 106-11	10-nsubj	12-name
 106-12	11-name	10-nmod
 106-13	16-punct	10-punct
 106-14	16-nsubj	16-mark
 106-15	16-advmod	16-advmod
-106-16	11-aclCOLrelcl	10-xcomp
+106-16	11-aclCOLrelcl	30-root
 106-17	23-punct	26-punct
 106-18	23-mark	26-mark
 106-19	23-nsubj	26-nsubj
@@ -2162,10 +2162,10 @@
 106-23	16-dobj	26-advmod
 106-24	23-cc	23-cc
 106-25	23-punct	26-punct
-106-26	23-conj	10-ccomp
+106-26	23-conj	16-conj
 106-27	26-punct	26-punct
 106-28	26-dobj	26-nmod
-106-29	10-punct	10-punct
+106-29	10-punct	16-punct
 
 107-0	1-amod	1-amod
 107-1	2-nsubj	2-nsubj
@@ -2176,7 +2176,7 @@
 107-6	2-punct	2-punct
 
 108-0	27-punct	1-punct
-108-1	27-dep	48-root
+108-1	27-dep	35-advcl
 108-2	1-expl	27-mark
 108-3	4-case	4-case
 108-4	1-nmod	27-nsubj
@@ -2204,25 +2204,25 @@
 108-26	21-punct	27-punct
 108-27	48-root	1-conj
 108-28	27-nsubj	27-dobj
-108-29	27-punct	48-punct
-108-30	33-nsubj	48-root
-108-31	33-aux	48-aux
-108-32	33-cop	48-aux
-108-33	27-amod	48-root
+108-29	27-punct	35-punct
+108-30	33-nsubj	35-nsubj
+108-31	33-aux	35-aux
+108-32	33-cop	35-aux
+108-33	27-amod	35-nsubj
 108-34	30-dep	35-mark
-108-35	34-dep	33-conj
+108-35	34-dep	48-root
 108-36	40-punct	40-punct
 108-37	40-mark	40-mark
 108-38	40-nsubj	40-nsubj
 108-39	40-advmod	40-advmod
-108-40	35-dobj	33-conj
+108-40	35-dobj	35-ccomp
 108-41	46-det	42-det
 108-42	46-amod	46-amod
 108-43	46-dep	42-cc
 108-44	45-det	46-det
 108-45	46-amod	46-amod
 108-46	40-dobj	40-nmod
-108-47	27-punct	33-punct
+108-47	27-punct	35-punct
 
 109-0	8-nmod	6-nsubj
 109-1	6-aux	6-aux
@@ -2234,8 +2234,8 @@
 109-7	6-dobj	8-mark
 109-8	7-dep	6-conj
 109-9	8-dobj	12-root
-109-10	0-case	12-root
-109-11	6-punct	10-punct
+109-10	0-case	11-case
+109-11	6-punct	9-punct
 
 110-0	1-name	2-nsubj
 110-1	2-nsubj	2-nsubj
@@ -2244,8 +2244,8 @@
 110-4	5-amod	5-amod
 110-5	2-dobj	2-dobj
 110-6	7-case	7-case
-110-7	2-nmod	9-nsubj
-110-8	2-cc	7-cc
+110-7	2-nmod	2-dobj
+110-8	2-cc	2-cc
 110-9	2-conj	2-conj
 110-10	9-dobj	13-nsubj
 110-11	9-nmodCOLloc	13-advmod
@@ -2300,7 +2300,7 @@
 113-16	3-punct	10-punct
 
 114-0	1-nsubj	1-nsubj
-114-1	22-root	22-root
+114-1	22-root	13-advcl
 114-2	4-case	4-case
 114-3	4-det	4-det
 114-4	1-nmod	1-dobj
@@ -2312,15 +2312,15 @@
 114-10	9-punct	1-punct
 114-11	13-advmod	13-advmod
 114-12	13-nsubj	13-nsubj
-114-13	9-dep	1-xcomp
+114-13	9-dep	22-root
 114-14	18-punct	18-punct
 114-15	18-mark	18-mark
 114-16	18-nsubj	18-nsubj
 114-17	18-aux	18-aux
-114-18	13-dobj	1-ccomp
+114-18	13-dobj	13-ccomp
 114-19	20-case	20-case
 114-20	18-nmod	18-nmod
-114-21	1-punct	1-punct
+114-21	1-punct	13-punct
 
 115-0	5-nsubj	5-nsubj
 115-1	4-case	4-case
@@ -2338,7 +2338,7 @@
 
 116-0	4-advmod	4-advmod
 116-1	4-auxpass	4-aux
-116-2	4-nsubjpass	4-nsubj
+116-2	4-nsubjpass	3-name
 116-3	2-name	4-nsubj
 116-4	16-root	16-root
 116-5	4-compoundCOLprt	4-advmod
@@ -2364,7 +2364,7 @@
 117-8	23-mark	25-mark
 117-9	23-nsubj	25-root
 117-10	11-case	11-case
-117-11	9-nmod	9-nmod
+117-11	9-nmod	25-root
 117-12	13-amod	13-amod
 117-13	11-dep	11-nmod
 117-14	10-cc	13-cc
@@ -2377,7 +2377,7 @@
 117-21	22-advmod	23-advmod
 117-22	23-advmod	23-advmod
 117-23	6-amod	13-amod
-117-24	1-punct	9-punct
+117-24	1-punct	11-punct
 
 118-0	11-punct	2-punct
 118-1	2-det	2-det
@@ -2400,7 +2400,7 @@
 119-0	2-case	2-case
 119-1	2-det	2-det
 119-2	3-nmod	3-nsubj
-119-3	23-root	23-root
+119-3	23-root	18-cop
 119-4	6-det	6-det
 119-5	6-amod	6-amod
 119-6	3-nsubj	3-dobj
@@ -2412,14 +2412,14 @@
 119-12	11-dep	10-dobj
 119-13	14-case	14-case
 119-14	10-nmod	12-nmod
-119-15	10-cc	14-cc
+119-15	10-cc	10-cc
 119-16	10-cc	17-advmod
-119-17	10-conj	3-ccomp
+119-17	10-conj	18-cop
 119-18	21-amod	21-amod
 119-19	18-cc	18-cc
 119-20	18-conj	21-amod
-119-21	17-dobj	17-nmod
-119-22	3-punct	3-punct
+119-21	17-dobj	23-root
+119-22	3-punct	21-punct
 
 120-0	3-punct	3-punct
 120-1	3-nsubj	3-nsubj
@@ -2435,16 +2435,16 @@
 120-11	9-nmod	9-dobj
 120-12	6-punct	9-punct
 120-13	3-cc	9-cc
-120-14	15-det	24-det
-120-15	3-conj	24-root
+120-14	15-det	22-det
+120-15	3-conj	22-nsubj
 120-16	18-nsubj	18-nsubj
 120-17	18-advmod	18-advmod
 120-18	15-dep	15-conj
 120-19	18-punct	22-punct
 120-20	22-nsubj	22-nsubj
 120-21	22-aux	22-aux
-120-22	18-dep	15-conj
-120-23	3-punct	15-punct
+120-22	18-dep	6-advcl
+120-23	3-punct	6-punct
 
 121-0	2-det	2-det
 121-1	2-det	2-det
@@ -2455,15 +2455,15 @@
 121-6	7-aux	7-aux
 121-7	18-root	18-root
 121-8	10-case	9-case
-121-9	10-nmodCOLposs	18-root
-121-10	7-nmod	9-conj
+121-9	10-nmodCOLposs	10-nsubj
+121-10	7-nmod	7-nmod
 121-11	8-cc	10-cc
 121-12	8-conj	14-advmod
 121-13	14-case	14-case
-121-14	12-nmod	18-root
+121-14	12-nmod	7-nmod
 121-15	16-case	16-case
 121-16	12-nmod	14-nmod
-121-17	7-punct	14-punct
+121-17	7-punct	7-punct
 
 122-0	13-root	2-cc
 122-1	2-nsubj	2-nsubj
@@ -2476,10 +2476,10 @@
 122-8	1-amod	10-amod
 122-9	10-det	10-det
 122-10	11-nsubj	11-nsubj
-122-11	8-aclCOLrelcl	2-ccomp
+122-11	8-aclCOLrelcl	2-advcl
 122-12	0-punct	2-punct
 
-123-0	2-nsubj	2-nsubj
+123-0	2-nsubj	1-name
 123-1	0-name	2-nsubj
 123-2	23-root	23-root
 123-3	2-advmod	5-advmod
@@ -2500,8 +2500,8 @@
 123-18	20-det	20-det
 123-19	20-amod	20-amod
 123-20	17-dobj	17-dobj
-123-21	10-case	23-root
-123-22	2-punct	21-punct
+123-21	10-case	22-case
+123-22	2-punct	14-punct
 
 124-0	1-det	1-det
 124-1	3-nsubjpass	3-nsubj
@@ -2527,7 +2527,7 @@
 125-10	11-det	11-det
 125-11	13-nsubjpass	13-nsubj
 125-12	13-auxpass	13-aux
-125-13	15-root	5-ccomp
+125-13	15-root	5-advcl
 125-14	13-punct	5-punct
 
 126-0	3-nsubj	3-nsubj
@@ -2547,7 +2547,7 @@
 126-14	13-nmod	17-mark
 126-15	17-aux	17-aux
 126-16	17-aux	17-aux
-126-17	14-dep	8-ccomp
+126-17	14-dep	8-advcl
 126-18	3-punct	8-punct
 
 127-0	2-nsubj	2-nsubj
@@ -2582,7 +2582,7 @@
 128-1	4-dobj	4-nsubj
 128-2	4-aux	4-aux
 128-3	4-nsubj	4-nsubj
-128-4	0-conj	24-root
+128-4	0-conj	17-advcl
 128-5	1-nmod	8-nsubj
 128-6	7-mark	8-case
 128-7	5-dep	8-mark
@@ -2595,7 +2595,7 @@
 128-14	13-punct	10-punct
 128-15	17-nsubj	17-mark
 128-16	17-advmod	17-advmod
-128-17	13-dep	4-conj
+128-17	13-dep	24-root
 128-18	17-dobj	24-root
 128-19	20-cop	24-aux
 128-20	18-dep	24-root
@@ -2620,13 +2620,13 @@
 
 130-0	10-root	2-advmod
 130-1	2-advmod	2-advmod
-130-2	0-dep	10-root
+130-2	0-dep	6-advcl
 130-3	2-nsubj	6-nsubj
 130-4	2-nmodCOLloc	6-advmod
 130-5	2-cc	4-cc
 130-6	2-conj	10-root
 130-7	6-dobj	8-nsubj
-130-8	6-dep	6-ccomp
+130-8	6-dep	6-advcl
 130-9	0-punct	6-punct
 
 131-0	4-nsubj	4-nsubj
@@ -2652,7 +2652,7 @@
 131-20	21-amod	21-amod
 131-21	15-nmod	15-dobj
 131-22	21-cc	21-cc
-131-23	21-conj	21-nmod
+131-23	21-conj	15-dobj
 131-24	25-case	25-case
 131-25	23-nmod	23-nmod
 131-26	4-punct	4-punct
@@ -2702,7 +2702,7 @@
 132-42	41-dep	45-advmodCOLemph
 132-43	45-cop	45-aux
 132-44	45-det	45-det
-132-45	42-dep	39-dobj
+132-45	42-dep	39-nmod
 132-46	39-punct	39-punct
 132-47	51-advmod	48-advmod
 132-48	50-amod	50-amod
@@ -2714,22 +2714,22 @@
 132-54	39-punct	39-punct
 132-55	56-advmod	56-advmod
 132-56	18-dep	39-conj
-132-57	56-nsubj	73-root
-132-58	56-dep	73-root
+132-57	56-nsubj	58-nsubj
+132-58	56-dep	56-dobj
 132-59	60-case	60-case
-132-60	58-nmod	58-nmod
+132-60	58-nmod	56-dobj
 132-61	62-case	62-case
-132-62	56-nmod	60-nmod
+132-62	56-nmod	56-dobj
 132-63	64-case	64-case
-132-64	62-nmod	62-nmod
+132-64	62-nmod	56-dobj
 132-65	69-case	69-case
 132-66	69-det	69-det
 132-67	68-advmod	68-advmod
 132-68	69-amod	69-amod
-132-69	64-nmod	58-nmod
+132-69	64-nmod	56-nmod
 132-70	71-case	71-case
 132-71	69-nmod	69-nmod
-132-72	56-punct	58-punct
+132-72	56-punct	6-punct
 
 133-0	2-punct	2-punct
 133-1	2-nsubj	2-nsubj
@@ -2749,7 +2749,7 @@
 133-15	16-nsubj	16-nsubj
 133-16	2-dep	20-root
 133-17	16-dobj	18-nsubj
-133-18	16-dep	16-ccomp
+133-18	16-dep	16-advcl
 133-19	2-punct	16-punct
 
 134-0	1-punct	1-punct
@@ -2781,7 +2781,7 @@
 137-1	0-nmodCOLloc	2-advmod
 137-2	1-advmod	0-advmod
 137-3	1-cc	0-cc
-137-4	1-conj	10-advmod
+137-4	1-conj	5-advmod
 137-5	4-advmod	10-advmod
 137-6	10-case	10-case
 137-7	10-det	10-det
@@ -2829,10 +2829,10 @@
 139-13	12-advmod	14-advmod
 139-14	15-amod	15-amod
 139-15	12-dobj	12-dobj
-139-16	19-case	26-root
+139-16	19-case	18-case
 139-17	19-det	18-det
 139-18	19-dep	26-root
-139-19	15-nmod	18-dobj
+139-19	15-nmod	18-nmod
 139-20	19-punct	18-punct
 139-21	19-advmod	24-advmod
 139-22	23-neg	24-advmod
@@ -2842,10 +2842,10 @@
 
 140-0	1-advmod	1-advmod
 140-1	29-root	29-root
-140-2	1-nsubj	29-root
+140-2	1-nsubj	1-nmod
 140-3	5-det	5-det
 140-4	5-amod	5-amod
-140-5	1-dobj	2-nmod
+140-5	1-dobj	1-nmod
 140-6	1-advmod	13-advmod
 140-7	8-advmod	13-advmod
 140-8	6-cc	13-advmodCOLemph
@@ -2853,7 +2853,7 @@
 140-10	13-case	13-case
 140-11	13-det	13-det
 140-12	13-amod	13-amod
-140-13	1-nmod	5-nmod
+140-13	1-nmod	1-dobj
 140-14	17-case	17-case
 140-15	17-det	17-det
 140-16	17-amod	17-amod
@@ -2862,8 +2862,8 @@
 140-19	22-case	22-case
 140-20	22-det	22-det
 140-21	22-amod	22-amod
-140-22	14-nmod	17-nmod
-140-23	27-case	29-root
+140-22	14-nmod	1-dobj
+140-23	27-case	26-case
 140-24	27-det	26-det
 140-25	26-advmod	26-advmod
 140-26	27-dep	29-root
@@ -2933,22 +2933,22 @@
 144-6	7-det	7-det
 144-7	11-nsubj	15-root
 144-8	9-case	9-case
-144-9	7-nmod	13-nsubj
+144-9	7-nmod	11-nsubj
 144-10	11-cop	11-aux
-144-11	1-dobj	13-amod
+144-11	1-dobj	7-amod
 144-12	13-mark	13-case
 144-13	11-dep	7-nmod
 144-14	1-punct	7-punct
 
 145-0	1-nsubj	1-nsubj
 145-1	14-root	14-root
-145-2	1-dobj	9-nsubj
+145-2	1-dobj	7-nsubj
 145-3	1-nmodCOLloc	7-advmod
 145-4	7-case	7-case
 145-5	7-det	7-det
 145-6	7-amod	7-amod
-145-7	1-nmod	9-nsubj
-145-8	1-cc	7-cc
+145-7	1-nmod	1-dobj
+145-8	1-cc	1-cc
 145-9	1-conj	1-ccomp
 145-10	9-advmod	9-advmod
 145-11	12-case	12-case
@@ -2970,23 +2970,23 @@
 146-12	24-dep	0-ccomp
 146-13	14-case	14-case
 146-14	12-nmod	12-dobj
-146-15	6-punct	12-punct
-146-16	24-cc	12-cc
+146-15	6-punct	0-punct
+146-16	24-cc	0-cc
 146-17	24-mark	19-mark
 146-18	19-det	19-det
-146-19	24-nsubjpass	12-dobj
+146-19	24-nsubjpass	0-dobj
 146-20	19-cc	19-cc
 146-21	19-conj	24-nsubj
 146-22	24-auxpass	24-aux
 146-23	24-auxpass	24-aux
 146-24	0-dobj	0-ccomp
 146-25	26-case	26-case
-146-26	24-nmod	24-dobj
+146-26	24-nmod	24-nmod
 146-27	24-punct	24-punct
 146-28	36-root	36-root
-146-29	28-nsubj	28-dobj
+146-29	28-nsubj	28-nmod
 146-30	31-det	31-det
-146-31	28-dobj	29-nmod
+146-31	28-dobj	28-dobj
 146-32	34-case	34-case
 146-33	34-det	34-det
 146-34	31-nmod	31-nmod
@@ -2996,20 +2996,20 @@
 147-1	23-dep	4-discourse
 147-2	1-punct	1-punct
 147-3	4-nmodCOLloc	4-advmod
-147-4	1-conj	26-root
-147-5	4-nsubj	7-nsubj
-147-6	4-cc	5-cc
+147-4	1-conj	13-advcl
+147-5	4-nsubj	4-dobj
+147-6	4-cc	4-cc
 147-7	4-conj	4-ccomp
 147-8	4-punct	7-punct
 147-9	4-cc	7-cc
 147-10	11-nsubj	11-nsubj
-147-11	4-conj	26-root
+147-11	4-conj	13-advcl
 147-12	11-advmod	13-advmod
-147-13	11-dep	11-xcomp
+147-13	11-dep	23-ccomp
 147-14	17-punct	17-punct
 147-15	17-mark	17-mark
 147-16	17-nsubj	17-nsubj
-147-17	11-dep	11-ccomp
+147-17	11-dep	13-ccomp
 147-18	19-det	19-det
 147-19	21-nmodCOLtemp	23-nsubj
 147-20	19-nmod	19-nmod
@@ -3022,10 +3022,10 @@
 148-0	2-nsubj	2-nsubj
 148-1	2-aux	2-aux
 148-2	23-root	23-root
-148-3	4-name	23-root
+148-3	4-name	8-nsubj
 148-4	2-dobj	5-name
 148-5	4-name	3-nmod
-148-6	9-case	23-root
+148-6	9-case	8-case
 148-7	9-det	8-det
 148-8	9-dep	23-root
 148-9	2-nmod	8-dobj
@@ -3035,13 +3035,13 @@
 148-13	2-conj	23-root
 148-14	18-advmod	16-advmod
 148-15	13-dobj	16-mark
-148-16	15-dep	13-ccomp
+148-16	15-dep	23-root
 148-17	16-dobj	16-dobj
 148-18	16-cc	16-cc
-148-19	16-conj	13-ccomp
+148-19	16-conj	16-ccomp
 148-20	21-case	21-case
 148-21	19-nmod	19-nmod
-148-22	2-punct	13-punct
+148-22	2-punct	16-punct
 
 149-0	4-mark	11-mark
 149-1	2-amod	2-amod
@@ -3076,7 +3076,7 @@
 150-7	5-dep	8-case
 150-8	7-dep	10-mark
 150-9	5-punct	8-punct
-150-10	8-dep	5-ccomp
+150-10	8-dep	5-conj
 150-11	10-punct	10-punct
 150-12	10-dobj	10-dobj
 150-13	5-punct	10-punct
@@ -3084,7 +3084,7 @@
 150-15	16-case	16-case
 150-16	20-nmod	17-name
 150-17	16-name	10-nmod
-150-18	15-dep	51-root
+150-18	15-dep	20-mark
 150-19	18-dep	20-nsubj
 150-20	2-conj	51-root
 150-21	20-nsubj	20-nmod
@@ -3109,16 +3109,16 @@
 150-40	41-nsubj	41-nsubj
 150-41	37-aclCOLrelcl	23-conj
 150-42	41-dobj	43-mark
-150-43	42-dep	23-ccomp
+150-43	42-dep	51-root
 150-44	43-dobj	43-dobj
 150-45	44-cc	44-cc
-150-46	44-conj	44-nmod
+150-46	44-conj	43-dobj
 150-47	49-case	49-case
 150-48	49-amod	49-amod
 150-49	43-nmod	46-nmod
-150-50	2-punct	23-punct
+150-50	2-punct	43-punct
 
-151-0	2-nsubj	2-nsubj
+151-0	2-nsubj	1-name
 151-1	0-name	2-nsubj
 151-2	16-root	16-root
 151-3	2-punct	2-punct
@@ -3158,7 +3158,7 @@
 153-5	7-det	7-det
 153-6	7-amod	7-amod
 153-7	3-nmod	3-dobj
-153-8	3-punct	7-punct
+153-8	3-punct	3-punct
 153-9	3-punct	3-punct
 
 154-0	9-root	1-name
@@ -3290,7 +3290,7 @@
 161-11	8-cc	8-cc
 161-12	8-conj	6-conj
 161-13	14-case	14-case
-161-14	12-nmod	12-dobj
+161-14	12-nmod	12-nmod
 161-15	14-nmodCOLloc	16-advmod
 161-16	12-advmod	12-advmod
 161-17	8-punct	6-punct
@@ -3316,10 +3316,10 @@
 162-18	19-case	19-case
 162-19	17-nmod	32-nsubj
 162-20	23-case	21-case
-162-21	23-nmodCOLposs	19-nmod
+162-21	23-nmodCOLposs	32-nsubj
 162-22	23-amod	23-amod
 162-23	13-nmod	21-nmod
-162-24	13-punct	19-punct
+162-24	13-punct	21-punct
 162-25	32-aux	32-aux
 162-26	32-nsubj	27-name
 162-27	26-name	32-nsubj
@@ -3333,19 +3333,19 @@
 162-35	38-case	38-case
 162-36	37-advmod	37-advmod
 162-37	38-amod	38-amod
-162-38	34-nmod	32-dobj
+162-38	34-nmod	32-nmod
 162-39	36-dep	41-advmodCOLemph
 162-40	41-amod	41-amod
 162-41	39-dep	32-nmod
 
 163-0	1-advmod	1-advmod
-163-1	21-root	21-root
+163-1	21-root	7-advcl
 163-2	1-nsubj	4-nsubj
 163-3	4-case	4-case
 163-4	1-nmod	1-dobj
 163-5	1-punct	7-punct
 163-6	7-nsubj	7-nsubj
-163-7	2-dep	1-xcomp
+163-7	2-dep	21-root
 163-8	13-punct	13-punct
 163-9	13-mark	13-mark
 163-10	13-nsubj	13-nsubj
@@ -3382,11 +3382,11 @@
 164-19	20-nsubj	20-nsubj
 164-20	2-conj	14-conj
 164-21	22-amod	22-amod
-164-22	20-dobj	20-dobj
+164-22	20-dobj	20-nmod
 164-23	20-advmod	24-advmod
 164-24	20-nmodCOLloc	26-advmod
 164-25	26-case	26-case
-164-26	24-nmod	22-nmod
+164-26	24-nmod	20-dobj
 164-27	29-case	29-case
 164-28	29-amod	29-amod
 164-29	20-nmod	26-nmod
@@ -3411,9 +3411,9 @@
 166-7	9-det	9-det
 166-8	9-amod	9-amod
 166-9	6-dobj	6-nmod
-166-10	11-punct	9-punct
+166-10	11-punct	6-punct
 166-11	9-dep	12-name
-166-12	11-name	9-nmod
+166-12	11-name	6-nmod
 166-13	11-punct	6-punct
 166-14	4-punct	6-punct
 166-15	24-root	6-conj
@@ -3451,7 +3451,7 @@
 168-13	8-cop	16-aux
 168-14	13-dep	16-case
 168-15	13-cc	14-cc
-168-16	13-conj	1-ccomp
+168-16	13-conj	1-advcl
 168-17	1-punct	1-punct
 
 169-0	3-nsubjpass	3-nsubj
@@ -3465,7 +3465,7 @@
 
 170-0	1-nsubj	1-dobj
 170-1	20-root	20-root
-170-2	1-dep	3-nummod
+170-2	1-dep	3-amod
 170-3	1-dobj	1-dobj
 170-4	5-case	5-case
 170-5	1-nmod	1-dobj
@@ -3493,7 +3493,7 @@
 171-6	0-punct	5-punct
 
 172-0	1-nsubj	1-nsubj
-172-1	19-root	19-root
+172-1	19-root	17-cop
 172-2	1-neg	1-advmod
 172-3	7-punct	9-punct
 172-4	7-mark	9-mark
@@ -3503,14 +3503,14 @@
 172-8	7-dep	9-mark
 172-9	8-dep	1-conj
 172-10	9-dobj	9-dobj
-172-11	7-punct	9-punct
-172-12	7-cc	9-cc
+172-11	7-punct	1-punct
+172-12	7-cc	1-cc
 172-13	17-mark	17-mark
 172-14	17-nsubj	17-nsubj
 172-15	17-advmod	17-advmod
 172-16	17-cop	17-aux
-172-17	7-conj	9-conj
-172-18	1-punct	1-punct
+172-17	7-conj	19-root
+172-18	1-punct	17-punct
 
 173-0	1-det	1-det
 173-1	2-nsubj	2-nsubj
@@ -3534,15 +3534,15 @@
 174-9	8-dobj	21-root
 174-10	9-nmodCOLposs	9-nmod
 174-11	10-dep	12-case
-174-12	11-dep	21-root
-174-13	12-dobj	21-root
-174-14	13-nmod	21-root
+174-12	11-dep	17-amod
+174-13	12-dobj	17-nsubj
+174-14	13-nmod	17-nsubj
 174-15	17-case	17-case
 174-16	17-amod	17-amod
-174-17	12-nmod	21-root
+174-17	12-nmod	9-nmod
 174-18	19-case	19-case
 174-19	17-nmod	17-nmod
-174-20	8-punct	17-punct
+174-20	8-punct	9-punct
 
 175-0	1-case	1-case
 175-1	2-nmod	2-nsubj
@@ -3573,7 +3573,7 @@
 175-26	27-case	27-case
 175-27	22-nmod	22-dobj
 175-28	27-cc	27-cc
-175-29	27-conj	27-nmod
+175-29	27-conj	22-dobj
 175-30	32-case	31-case
 175-31	32-nmodCOLposs	34-root
 175-32	27-nmod	31-nmod
@@ -3649,8 +3649,8 @@
 178-19	4-punct	15-punct
 
 179-0	1-nsubj	1-nsubj
-179-1	36-root	36-root
-179-2	1-dep	1-xcomp
+179-1	36-root	2-advcl
+179-2	1-dep	36-root
 179-3	4-punct	17-punct
 179-4	24-mark	17-mark
 179-5	24-nsubj	17-nsubj
@@ -3660,22 +3660,22 @@
 179-9	14-det	12-det
 179-10	12-case	12-case
 179-11	12-amod	12-amod
-179-12	13-nmod	7-nmod
+179-12	13-nmod	17-nsubj
 179-13	14-amod	14-amod
 179-14	7-nmod	12-nmod
 179-15	14-dep	17-case
 179-16	15-dep	17-mark
-179-17	16-dep	1-ccomp
+179-17	16-dep	2-ccomp
 179-18	20-det	20-det
 179-19	20-amod	20-amod
 179-20	17-dobj	17-nmod
 179-21	22-case	22-case
 179-22	17-nmod	20-nmod
 179-23	4-punct	17-punct
-179-24	0-dep	1-ccomp
+179-24	0-dep	2-ccomp
 179-25	26-advmod	27-advmod
 179-26	27-advmod	27-advmod
-179-27	24-dep	1-ccomp
+179-27	24-dep	2-ccomp
 179-28	24-advmod	32-advmod
 179-29	32-case	32-case
 179-30	32-advmod	32-advmod
@@ -3683,13 +3683,13 @@
 179-32	28-nmod	27-nmod
 179-33	34-case	34-case
 179-34	32-nmod	32-nmod
-179-35	1-punct	1-punct
+179-35	1-punct	2-punct
 
 180-0	1-nummod	1-nummod
 180-1	7-nsubj	7-nsubj
 180-2	1-nmod	1-nmod
 180-3	2-cc	2-cc
-180-4	2-conj	2-nmod
+180-4	2-conj	1-nmod
 180-5	6-case	6-case
 180-6	1-nmod	7-nsubj
 180-7	18-root	18-root
@@ -3698,7 +3698,7 @@
 180-10	13-mark	13-mark
 180-11	13-nsubjpass	13-nsubj
 180-12	13-auxpass	13-aux
-180-13	7-dep	7-xcomp
+180-13	7-dep	7-ccomp
 180-14	16-case	16-case
 180-15	16-nummod	16-nummod
 180-16	13-nmod	13-nmod
@@ -3768,7 +3768,7 @@
 183-14	13-cc	15-mark
 183-15	13-conj	10-ccomp
 183-16	17-case	17-case
-183-17	13-nmod	15-dobj
+183-17	13-nmod	15-nmod
 183-18	13-punct	15-punct
 183-19	0-conj	27-root
 183-20	19-nsubj	19-dobj
@@ -3787,7 +3787,7 @@
 184-5	8-case	8-case
 184-6	8-det	8-det
 184-7	8-amod	8-amod
-184-8	1-nmod	4-nmod
+184-8	1-nmod	1-dobj
 184-9	10-case	10-case
 184-10	1-nmod	8-nmod
 184-11	1-punct	1-punct
@@ -3886,25 +3886,25 @@
 191-1	6-root	6-root
 191-2	1-nsubj	3-nsubj
 191-3	1-dobj	1-dobj
-191-4	1-punct	3-punct
+191-4	1-punct	1-punct
 191-5	1-punct	1-punct
 
 192-0	2-det	2-det
 192-1	2-amod	2-amod
-192-2	22-nsubj	30-root
+192-2	22-nsubj	10-nsubj
 192-3	7-case	7-case
 192-4	7-advmod	7-advmod
 192-5	7-det	7-det
 192-6	7-amod	7-amod
 192-7	2-nmod	2-nmod
-192-8	7-dep	30-root
+192-8	7-dep	10-case
 192-9	8-dep	10-mark
-192-10	9-dep	30-root
+192-10	9-dep	26-ccomp
 192-11	10-dobj	10-dobj
 192-12	11-cc	11-cc
-192-13	11-conj	11-nmod
-192-14	10-nmodCOLloc	30-root
-192-15	19-case	30-root
+192-13	11-conj	10-dobj
+192-14	10-nmodCOLloc	18-advmod
+192-15	19-case	18-case
 192-16	19-det	18-det
 192-17	18-advmod	18-advmod
 192-18	19-dep	26-ccomp
@@ -3946,14 +3946,14 @@
 193-23	20-dep	19-nmod
 193-24	1-punct	19-punct
 
-194-0	36-root	36-root
-194-1	2-advmod	36-root
+194-0	36-root	16-cc
+194-1	2-advmod	16-advmod
 194-2	3-case	3-case
-194-3	7-nmod	36-root
-194-4	7-cop	36-aux
-194-5	7-nsubj	36-root
+194-3	7-nmod	16-nsubj
+194-4	7-cop	7-aux
+194-5	7-nsubj	7-nsubj
 194-6	7-advmod	7-advmod
-194-7	0-conj	36-root
+194-7	0-conj	3-amod
 194-8	7-dep	16-case
 194-9	16-punct	16-punct
 194-10	16-mark	16-mark
@@ -3962,7 +3962,7 @@
 194-13	14-nmodCOLposs	16-nsubj
 194-14	16-nsubj	16-nsubj
 194-15	16-aux	16-aux
-194-16	8-dep	7-conj
+194-16	8-dep	36-root
 194-17	19-det	19-det
 194-18	19-amod	19-amod
 194-19	16-dobj	16-dobj
@@ -3977,16 +3977,16 @@
 194-28	31-punct	31-punct
 194-29	30-mark	31-mark
 194-30	31-nsubj	31-nsubj
-194-31	27-aclCOLrelcl	7-conj
+194-31	27-aclCOLrelcl	16-ccomp
 194-32	33-case	33-case
 194-33	31-nmod	31-dobj
 194-34	33-advmod	31-advmod
-194-35	0-punct	7-punct
+194-35	0-punct	16-punct
 
 195-0	1-punct	1-punct
 195-1	4-dep	11-root
-195-2	1-dobj	4-nsubj
-195-3	1-punct	4-punct
+195-2	1-dobj	1-dobj
+195-3	1-punct	1-punct
 195-4	11-root	1-ccomp
 195-5	6-det	6-det
 195-6	4-nsubj	4-dobj
@@ -4021,13 +4021,13 @@
 198-10	14-mark	14-mark
 198-11	12-name	14-nsubj
 198-12	14-nsubj	13-name
-198-13	12-name	11-nmod
+198-13	12-name	14-nsubj
 198-14	1-dep	17-root
 198-15	14-dobj	14-nmod
 198-16	1-punct	14-punct
 
-199-0	1-nmodCOLposs	2-root
-199-1	2-root	0-nmod
+199-0	1-nmodCOLposs	1-nsubj
+199-1	2-root	2-root
 
 200-0	1-root	1-punct
 
@@ -4043,10 +4043,10 @@
 201-9	10-case	10-case
 201-10	8-nmod	11-nsubj
 201-11	0-dep	20-root
-201-12	11-dobj	20-root
+201-12	11-dobj	13-mark
 201-13	12-dep	20-root
 201-14	13-dobj	13-nmod
-201-15	18-nsubj	18-mark
+201-15	18-nsubj	18-neg
 201-16	18-cop	18-aux
 201-17	18-advmod	18-advmod
 201-18	14-aclCOLrelcl	14-amod
@@ -4095,7 +4095,7 @@
 205-0	32-root	3-cc
 205-1	3-nsubj	3-nsubj
 205-2	3-aux	3-aux
-205-3	0-conj	32-root
+205-3	0-conj	12-advcl
 205-4	5-amod	5-amod
 205-5	3-dobj	3-dobj
 205-6	12-punct	3-punct
@@ -4104,12 +4104,12 @@
 205-9	10-case	10-case
 205-10	8-nmod	12-nsubj
 205-11	12-aux	12-aux
-205-12	5-aclCOLrelcl	3-ccomp
-205-13	12-dep	32-root
+205-12	5-aclCOLrelcl	30-cop
+205-13	12-dep	30-cop
 205-14	12-dobj	13-dobj
 205-15	17-case	17-case
 205-16	17-det	17-det
-205-17	14-nmod	14-nmod
+205-17	14-nmod	13-dobj
 205-18	20-case	20-case
 205-19	20-det	20-det
 205-20	17-nmod	17-nmod
@@ -4122,8 +4122,8 @@
 205-27	26-neg	30-advmod
 205-28	29-case	29-case
 205-29	15-nmod	30-nsubj
-205-30	29-amod	20-amod
-205-31	0-punct	13-punct
+205-30	29-amod	32-root
+205-31	0-punct	30-punct
 
 206-0	9-advmod	3-advmod
 206-1	3-case	3-case
@@ -4139,19 +4139,19 @@
 206-11	9-dobj	13-nsubj
 206-12	13-nsubj	13-mark
 206-13	11-aclCOLrelcl	22-root
-206-14	13-dobj	22-root
+206-14	13-dobj	13-nmod
 206-15	17-det	17-det
 206-16	17-dep	17-amod
 206-17	13-dep	14-nmod
-206-18	13-punct	14-punct
-206-19	11-cc	14-cc
-206-20	11-conj	14-advmod
-206-21	9-punct	14-punct
+206-18	13-punct	13-punct
+206-19	11-cc	13-cc
+206-20	11-conj	13-advmod
+206-21	9-punct	13-punct
 
-207-0	3-nsubj	10-root
-207-1	3-cop	10-aux
-207-2	3-neg	10-root
-207-3	10-root	10-root
+207-0	3-nsubj	5-nsubj
+207-1	3-cop	5-aux
+207-2	3-neg	5-advmod
+207-3	10-root	5-case
 207-4	0-dep	5-mark
 207-5	4-dep	10-root
 207-6	5-dobj	5-dobj
@@ -4169,7 +4169,7 @@
 208-7	1-punct	1-punct
 
 209-0	2-nmodCOLposs	1-name
-209-1	0-name	10-root
+209-1	0-name	2-nsubj
 209-2	8-nsubj	10-root
 209-3	6-case	6-case
 209-4	6-det	6-det
@@ -4207,7 +4207,7 @@
 211-19	7-punct	15-punct
 
 212-0	1-nsubj	1-nmod
-212-1	40-root	40-root
+212-1	40-root	13-advcl
 212-2	1-dep	1-nmod
 212-3	2-nmod	2-nummod
 212-4	5-case	5-case
@@ -4219,12 +4219,12 @@
 212-10	1-cc	1-cc
 212-11	13-nsubjpass	13-nsubj
 212-12	13-auxpass	13-aux
-212-13	1-conj	1-xcomp
+212-13	1-conj	40-root
 212-14	18-punct	18-punct
 212-15	18-mark	18-mark
 212-16	18-nsubj	18-nsubj
 212-17	18-aux	18-aux
-212-18	11-dep	1-xcomp
+212-18	11-dep	13-ccomp
 212-19	21-case	21-case
 212-20	21-nummod	21-nummod
 212-21	18-nmod	18-dobj
@@ -4241,11 +4241,11 @@
 212-32	35-punct	35-punct
 212-33	35-mark	35-mark
 212-34	35-nsubj	35-nsubj
-212-35	30-dep	1-ccomp
+212-35	30-dep	13-ccomp
 212-36	35-dep	35-advmod
 212-37	38-case	38-case
 212-38	36-nmod	35-nmod
-212-39	1-punct	1-punct
+212-39	1-punct	13-punct
 
 213-0	1-case	1-case
 213-1	10-nmod	10-nsubj
@@ -4272,9 +4272,9 @@
 214-3	18-dep	18-ccomp
 214-4	5-det	5-det
 214-5	3-dobj	3-nmod
-214-6	5-punct	5-punct
+214-6	5-punct	3-punct
 214-7	5-dep	8-name
-214-8	7-name	5-nmod
+214-8	7-name	3-nmod
 214-9	7-punct	3-punct
 214-10	3-dep	12-case
 214-11	10-dep	12-mark
@@ -4302,11 +4302,11 @@
 
 215-0	1-det	1-det
 215-1	4-nsubj	15-nsubj
-215-2	4-cop	8-aux
-215-3	4-advmod	8-advmod
-215-4	17-root	8-case
+215-2	4-cop	6-aux
+215-3	4-advmod	6-advmod
+215-4	17-root	6-case
 215-5	6-det	6-det
-215-6	4-amod	8-amod
+215-6	4-amod	1-amod
 215-7	8-case	8-case
 215-8	6-nmod	1-nmod
 215-9	15-punct	15-punct
@@ -4334,10 +4334,10 @@
 217-2	3-det	3-det
 217-3	1-dobj	1-dobj
 217-4	5-case	5-case
-217-5	1-nmod	3-nmod
+217-5	1-nmod	1-dobj
 217-6	1-advmod	8-advmod
 217-7	8-case	8-case
-217-8	6-nmod	5-nmod
+217-8	6-nmod	1-dobj
 217-9	1-dep	11-case
 217-10	9-dep	11-mark
 217-11	10-dep	1-conj
@@ -4374,17 +4374,17 @@
 219-15	29-root	6-ccomp
 219-16	15-nmodCOLloc	15-advmod
 219-17	15-punct	15-punct
-219-18	15-conj	6-ccomp
+219-18	15-conj	29-root
 219-19	18-dobj	18-dobj
 219-20	19-cc	19-cc
-219-21	19-conj	19-nmod
+219-21	19-conj	18-dobj
 219-22	18-compoundCOLprt	18-advmod
 219-23	15-cc	18-cc
-219-24	15-conj	6-ccomp
+219-24	15-conj	18-ccomp
 219-25	27-case	27-case
 219-26	27-amod	27-amod
 219-27	24-nmod	24-nmod
-219-28	15-punct	6-punct
+219-28	15-punct	18-punct
 
 220-0	3-nmod	3-nsubj
 220-1	3-aux	3-aux
@@ -4392,7 +4392,7 @@
 220-3	15-root	15-root
 220-4	6-case	6-case
 220-5	6-amod	6-amod
-220-6	3-nmod	3-dobj
+220-6	3-nmod	3-nmod
 220-7	9-punct	3-punct
 220-8	9-advmod	9-advmod
 220-9	6-appos	11-amod
@@ -4450,7 +4450,7 @@
 224-1	2-case	2-case
 224-2	0-nmod	0-nmod
 224-3	4-case	4-case
-224-4	2-nmod	2-nmod
+224-4	2-nmod	0-nmod
 224-5	6-case	6-case
 224-6	2-nmod	4-nmod
 224-7	6-cc	6-cc
@@ -4462,11 +4462,11 @@
 224-13	14-case	14-case
 224-14	12-nmod	12-dobj
 224-15	16-case	16-case
-224-16	14-nmod	14-nmod
+224-16	14-nmod	12-nmod
 224-17	12-punct	12-punct
 224-18	20-aux	20-aux
 224-19	20-auxpass	20-aux
-224-20	33-root	12-xcomp
+224-20	33-root	12-ccomp
 224-21	20-dep	23-case
 224-22	23-nummod	23-nummod
 224-23	21-nmodCOLtemp	20-dobj
@@ -4477,7 +4477,7 @@
 224-28	27-cc	27-cc
 224-29	27-conj	31-nsubj
 224-30	31-auxpass	31-aux
-224-31	24-dep	12-ccomp
+224-31	24-dep	12-advcl
 224-32	20-punct	12-punct
 
 225-0	2-case	2-case
@@ -4496,7 +4496,7 @@
 225-13	0-punct	6-punct
 225-14	18-aux	50-aux
 225-15	18-nsubj	50-root
-225-16	18-cop	50-aux
+225-16	18-cop	18-aux
 225-17	18-advmod	18-advmod
 225-18	50-root	50-root
 225-19	18-dep	21-case
@@ -4504,7 +4504,7 @@
 225-21	20-dep	18-conj
 225-22	24-det	24-det
 225-23	24-amod	24-amod
-225-24	21-dobj	21-dobj
+225-24	21-dobj	21-nmod
 225-25	18-punct	21-punct
 225-26	18-advmod	27-advmod
 225-27	18-advmod	21-advmod
@@ -4542,13 +4542,13 @@
 226-8	9-amod	9-amod
 226-9	10-nmodCOLposs	15-root
 226-10	5-nmod	9-nmod
-226-11	9-punct	10-punct
+226-11	9-punct	9-punct
 226-12	9-dep	13-name
-226-13	12-name	10-nmod
+226-13	12-name	9-nmod
 226-14	2-punct	9-punct
 
-227-0	2-nmodCOLposs	3-nsubj
-227-1	2-name	3-nsubj
+227-0	2-nmodCOLposs	2-name
+227-1	2-name	2-name
 227-2	3-nsubj	3-nsubj
 227-3	26-root	26-root
 227-4	3-nmodCOLloc	6-advmod
@@ -4590,7 +4590,7 @@
 229-3	4-amod	4-amod
 229-4	1-nsubj	1-dobj
 229-5	6-case	6-case
-229-6	1-nmod	1-dobj
+229-6	1-nmod	1-nmod
 229-7	8-det	8-det
 229-8	1-dobj	6-nmod
 229-9	1-punct	1-punct
@@ -4616,7 +4616,7 @@
 230-18	21-aux	21-aux
 230-19	21-aux	21-aux
 230-20	21-punct	21-punct
-230-21	35-root	35-root
+230-21	35-root	30-advcl
 230-22	23-case	23-case
 230-23	21-nmod	25-nsubj
 230-24	25-case	25-case
@@ -4625,7 +4625,7 @@
 230-27	25-conj	25-nmod
 230-28	21-punct	21-punct
 230-29	21-cc	21-cc
-230-30	21-conj	21-ccomp
+230-30	21-conj	35-root
 230-31	32-dep	35-root
 230-32	30-dobj	31-dobj
 230-33	30-dep	31-advmod
@@ -4641,7 +4641,7 @@
 231-7	5-dobj	5-nmod
 231-8	0-punct	5-punct
 
-232-0	10-root	10-root
+232-0	10-root	8-nmod
 232-1	0-punct	0-punct
 232-2	0-conj	0-nmod
 232-3	0-punct	0-punct
@@ -4649,15 +4649,15 @@
 232-5	0-conj	4-nmod
 232-6	0-cc	5-cc
 232-7	8-advmod	8-advmod
-232-8	0-conj	0-advmod
-232-9	0-punct	0-punct
+232-8	0-conj	10-root
+232-9	0-punct	8-punct
 
-233-0	1-nmodCOLposs	5-nsubj
+233-0	1-nmodCOLposs	3-nsubj
 233-1	3-nsubj	0-nmod
 233-2	3-cop	3-aux
-233-3	33-root	0-amod
-233-4	3-cc	0-cc
-233-5	3-conj	33-root
+233-3	33-root	33-root
+233-4	3-cc	3-cc
+233-5	3-conj	3-conj
 233-6	9-case	9-case
 233-7	9-det	9-det
 233-8	9-amod	9-amod
@@ -4665,8 +4665,8 @@
 233-10	9-punct	5-punct
 233-11	14-dobj	13-mark
 233-12	13-nsubj	13-nsubj
-233-13	9-dep	5-ccomp
-233-14	13-dep	5-xcomp
+233-13	9-dep	3-conj
+233-14	13-dep	3-conj
 233-15	17-case	17-case
 233-16	17-nummod	17-nummod
 233-17	14-nmod	14-dobj
@@ -4682,9 +4682,9 @@
 233-27	31-case	29-case
 233-28	31-nummod	29-nummod
 233-29	31-dep	30-nsubj
-233-30	31-dep	33-root
+233-30	31-dep	3-conj
 233-31	23-nmod	30-nmod
-233-32	3-punct	30-punct
+233-32	3-punct	3-punct
 
 234-0	8-root	8-root
 234-1	0-cop	8-aux
@@ -4725,13 +4725,13 @@
 235-27	22-nmod	10-dobj
 235-28	24-punct	10-punct
 235-29	12-cc	10-cc
-235-30	12-conj	37-root
-235-31	33-advmod	37-root
+235-30	12-conj	35-case
+235-31	33-advmod	35-advmod
 235-32	33-nummod	33-nummod
-235-33	35-nmodCOLtemp	37-root
+235-33	35-nmodCOLtemp	35-nmod
 235-34	35-nmodCOLtemp	35-advmod
-235-35	30-advmod	33-advmod
-235-36	10-punct	33-punct
+235-35	30-advmod	10-advmod
+235-36	10-punct	10-punct
 
 236-0	1-nsubj	1-nsubj
 236-1	14-root	14-root
@@ -4741,12 +4741,12 @@
 236-5	6-case	6-case
 236-6	4-nmod	1-nmod
 236-7	9-case	8-case
-236-8	9-nmodCOLposs	14-root
-236-9	4-nmod	8-conj
-236-10	11-punct	9-punct
+236-8	9-nmodCOLposs	9-nsubj
+236-9	4-nmod	6-nmod
+236-10	11-punct	1-punct
 236-11	9-appos	12-name
-236-12	11-name	9-nmod
-236-13	1-punct	8-punct
+236-12	11-name	1-nmod
+236-13	1-punct	1-punct
 
 237-0	2-nsubj	5-root
 237-1	2-cop	5-aux
@@ -4770,8 +4770,8 @@
 239-2	1-nsubj	3-name
 239-3	2-name	1-nmod
 239-4	6-case	5-case
-239-5	6-nmodCOLposs	16-root
-239-6	1-nmod	16-root
+239-5	6-nmodCOLposs	6-nsubj
+239-6	1-nmod	1-dobj
 239-7	1-dep	16-root
 239-8	7-dep	9-mark
 239-9	8-dep	16-root
@@ -4797,18 +4797,18 @@
 241-4	11-root	11-root
 241-5	7-case	7-case
 241-6	7-det	7-det
-241-7	4-nmod	4-dobj
+241-7	4-nmod	11-root
 241-8	7-amod	9-amod
 241-9	7-nmod	7-nmod
-241-10	4-punct	4-punct
+241-10	4-punct	7-punct
 
 242-0	1-case	1-case
 242-1	9-nmod	2-name
-242-2	1-name	9-nsubj
+242-2	1-name	5-nsubj
 242-3	5-punct	2-punct
 242-4	5-nummod	5-nummod
-242-5	1-dep	2-conj
-242-6	5-punct	2-punct
+242-5	1-dep	9-nsubj
+242-6	5-punct	5-punct
 242-7	9-aux	9-aux
 242-8	9-nsubj	9-nsubj
 242-9	14-root	12-cop
@@ -4826,7 +4826,7 @@
 243-6	5-punct	9-punct
 243-7	9-nsubj	9-nsubj
 243-8	9-advmod	9-advmod
-243-9	5-dep	3-ccomp
+243-9	5-dep	3-advcl
 243-10	0-punct	3-punct
 
 244-0	1-det	1-det
@@ -4834,11 +4834,11 @@
 244-2	5-case	5-case
 244-3	5-det	5-det
 244-4	5-amod	5-amod
-244-5	1-nmod	53-root
+244-5	1-nmod	23-nsubj
 244-6	5-punct	5-punct
-244-7	11-nsubj	53-root
-244-8	11-dep	53-root
-244-9	8-amod	53-root
+244-7	11-nsubj	23-mark
+244-8	11-dep	23-mark
+244-9	8-amod	23-nsubj
 244-10	11-aux	23-aux
 244-11	5-aux	23-aux
 244-12	11-dobj	23-nsubj
@@ -4852,21 +4852,21 @@
 244-20	21-nummod	21-nummod
 244-21	11-nmod	12-nmod
 244-22	11-punct	12-punct
-244-23	53-root	9-conj
+244-23	53-root	53-root
 244-24	29-punct	29-punct
 244-25	29-mark	29-mark
 244-26	27-det	27-det
 244-27	29-nsubj	29-nsubj
 244-28	29-neg	29-advmod
-244-29	23-dep	9-conj
+244-29	23-dep	23-ccomp
 244-30	42-case	33-case
 244-31	42-det	33-det
 244-32	42-amod	33-amod
-244-33	42-dep	29-dobj
-244-34	29-punct	37-punct
+244-33	42-dep	29-nmod
+244-34	29-punct	29-punct
 244-35	42-advmod	37-advmod
 244-36	42-det	37-det
-244-37	42-dep	9-conj
+244-37	42-dep	53-root
 244-38	42-dep	37-dobj
 244-39	42-punct	37-punct
 244-40	42-det	42-det
@@ -4874,14 +4874,14 @@
 244-42	29-nmod	37-dobj
 244-43	42-punct	37-punct
 244-44	42-det	45-det
-244-45	44-dep	9-conj
+244-45	44-dep	37-ccomp
 244-46	42-punct	45-punct
 244-47	42-det	48-det
-244-48	47-dep	9-conj
+244-48	47-dep	37-ccomp
 244-49	42-dep	48-cc
 244-50	42-det	51-det
-244-51	50-dep	9-conj
-244-52	23-punct	9-punct
+244-51	50-dep	37-advcl
+244-52	23-punct	37-punct
 
 245-0	3-det	3-det
 245-1	3-dep	3-amod
@@ -4926,20 +4926,20 @@
 246-14	15-amod	15-amod
 246-15	11-nmod	11-nmod
 246-16	15-punct	8-punct
-246-17	21-dobj	31-root
+246-17	21-dobj	23-advmodCOLemph
 246-18	21-nsubj	19-name
-246-19	18-name	31-root
-246-20	21-aux	31-aux
-246-21	15-aux	31-aux
+246-19	18-name	23-nsubj
+246-20	21-aux	23-aux
+246-21	15-aux	23-aux
 246-22	21-dep	23-advmodCOLemph
-246-23	22-dep	31-root
+246-23	22-dep	8-dobj
 246-24	23-cc	23-cc
-246-25	23-conj	23-nmod
+246-25	23-conj	8-dobj
 246-26	29-case	29-case
 246-27	29-det	29-det
 246-28	29-amod	29-amod
 246-29	23-nmod	25-nmod
-246-30	4-punct	23-punct
+246-30	4-punct	4-punct
 
 247-0	1-nsubj	1-nsubj
 247-1	16-root	16-root
@@ -4964,15 +4964,15 @@
 248-3	4-amod	15-root
 248-4	5-nsubj	15-root
 248-5	12-dep	4-conj
-248-6	5-dep	15-root
+248-6	5-dep	8-case
 248-7	6-dep	8-mark
-248-8	7-dep	15-root
+248-8	7-dep	4-conj
 248-9	8-dobj	8-dobj
 248-10	5-punct	8-punct
 248-11	5-punct	8-punct
 248-12	15-root	8-conj
 248-13	12-nsubj	12-dobj
-248-14	12-punct	8-punct
+248-14	12-punct	4-punct
 
 249-0	1-advmod	1-advmod
 249-1	4-nsubj	21-root
@@ -4982,7 +4982,7 @@
 249-5	6-case	6-case
 249-6	4-nmod	4-dobj
 249-7	8-case	8-case
-249-8	6-nmod	6-nmod
+249-8	6-nmod	4-dobj
 249-9	10-case	10-case
 249-10	4-nmod	8-nmod
 249-11	16-case	13-case
@@ -5158,16 +5158,16 @@
 262-15	11-dep	28-root
 262-16	17-advmod	17-advmod
 262-17	15-nmodCOLloc	15-advmod
-262-18	15-punct	28-punct
-262-19	22-nsubj	28-root
-262-20	22-cop	28-aux
+262-18	15-punct	22-punct
+262-19	22-nsubj	22-nsubj
+262-20	22-cop	22-aux
 262-21	22-det	22-det
-262-22	11-conj	28-root
-262-23	22-punct	22-punct
+262-22	11-conj	15-dobj
+262-23	22-punct	15-punct
 262-24	26-nsubj	26-mark
 262-25	26-aux	26-aux
-262-26	22-aux	27-aux
-262-27	11-punct	22-punct
+262-26	22-aux	15-aux
+262-27	11-punct	15-punct
 
 263-0	1-punct	3-punct
 263-1	14-root	3-advmod
@@ -5260,19 +5260,19 @@
 270-0	3-det	2-det
 270-1	3-amod	2-amod
 270-2	3-dep	4-nsubj
-270-3	4-nsubj	2-nmod
+270-3	4-nsubj	4-nsubj
 270-4	22-root	22-root
 270-5	4-advmod	4-advmod
 270-6	11-punct	11-punct
 270-7	11-mark	11-mark
-270-8	11-nsubj	11-nsubj
+270-8	11-nsubj	11-nmod
 270-9	11-advmod	11-advmod
 270-10	11-aux	11-aux
 270-11	4-dobj	22-root
 270-12	11-dobj	11-dobj
 270-13	11-nmodCOLtemp	15-advmod
 270-14	15-case	15-case
-270-15	13-nmod	12-nmod
+270-15	13-nmod	11-dobj
 270-16	15-dep	18-case
 270-17	19-dep	18-mark
 270-18	17-dep	11-ccomp
@@ -5316,9 +5316,9 @@
 
 274-0	1-advmod	1-advmod
 274-1	12-root	10-cop
-274-2	1-nsubj	10-nsubj
+274-2	1-nsubj	4-nsubj
 274-3	8-nummod	4-nummod
-274-4	8-dep	10-nsubj
+274-4	8-dep	1-dobj
 274-5	8-dep	4-cc
 274-6	8-det	8-det
 274-7	8-amod	8-amod
@@ -5327,12 +5327,12 @@
 274-10	9-name	12-root
 274-11	1-punct	10-punct
 
-275-0	13-root	13-root
+275-0	13-root	13-cc
 275-1	3-case	3-case
 275-2	3-det	3-det
 275-3	7-nmod	13-root
 275-4	7-cop	13-aux
-275-5	7-nsubj	13-root
+275-5	7-nsubj	7-nsubj
 275-6	7-amod	7-amod
 275-7	0-conj	13-root
 275-8	11-case	11-case
@@ -5370,16 +5370,16 @@
 277-16	1-punct	1-punct
 
 278-0	1-nsubj	1-nsubj
-278-1	11-root	11-root
+278-1	11-root	3-advcl
 278-2	1-dep	3-mark
-278-3	2-dep	1-xcomp
+278-3	2-dep	11-root
 278-4	7-punct	7-punct
 278-5	7-mark	7-mark
 278-6	7-nsubj	7-nsubj
-278-7	3-dobj	1-ccomp
+278-7	3-dobj	3-ccomp
 278-8	9-case	9-case
 278-9	7-nmod	7-nmod
-278-10	1-punct	1-punct
+278-10	1-punct	3-punct
 
 279-0	1-root	1-root
 
@@ -5415,7 +5415,7 @@
 281-16	7-nmod	15-nmod
 281-17	18-case	18-case
 281-18	16-nmod	16-nmod
-281-19	7-punct	15-punct
+281-19	7-punct	20-punct
 281-20	21-amod	21-amod
 281-21	7-conj	15-nmod
 281-22	1-punct	15-punct
@@ -5434,7 +5434,7 @@
 282-11	6-advmod	14-advmod
 282-12	11-dep	14-nsubj
 282-13	14-advmod	14-advmod
-282-14	6-dep	6-ccomp
+282-14	6-dep	6-advcl
 282-15	6-punct	6-punct
 
 283-0	1-case	1-case
@@ -5491,9 +5491,9 @@
 
 286-0	7-nsubj	11-nsubj
 286-1	4-case	2-case
-286-2	4-nmodCOLposs	0-nmod
+286-2	4-nmodCOLposs	11-nsubj
 286-3	4-amod	4-amod
-286-4	0-nmod	0-nmod
+286-4	0-nmod	2-nmod
 286-5	7-cop	7-aux
 286-6	7-neg	7-advmod
 286-7	28-root	4-amod
@@ -5503,20 +5503,20 @@
 286-11	7-conj	28-root
 286-12	11-dobj	11-dobj
 286-13	14-punct	11-punct
-286-14	11-dep	28-root
+286-14	11-dep	18-case
 286-15	18-mark	18-mark
 286-16	18-nsubj	18-nsubj
 286-17	18-aux	18-aux
 286-18	14-dep	28-root
 286-19	18-dobj	18-dobj
-286-20	18-dep	28-root
-286-21	26-punct	28-punct
-286-22	26-mark	28-mark
+286-20	18-dep	26-case
+286-21	26-punct	26-punct
+286-22	26-mark	26-mark
 286-23	24-neg	24-advmod
-286-24	26-nsubj	28-root
+286-24	26-nsubj	26-nsubj
 286-25	26-aux	26-aux
-286-26	20-dep	24-conj
-286-27	7-punct	24-punct
+286-26	20-dep	18-advcl
+286-27	7-punct	18-punct
 
 287-0	4-nummod	1-nummod
 287-1	4-dep	6-root
@@ -5543,8 +5543,8 @@
 289-4	0-nmod	0-nmod
 289-5	0-punct	0-punct
 
-290-0	3-nsubj	3-nsubj
-290-1	0-name	3-nsubj
+290-0	3-nsubj	2-name
+290-1	0-name	2-name
 290-2	0-name	3-nsubj
 290-3	36-root	9-cop
 290-4	9-punct	9-punct
@@ -5563,9 +5563,9 @@
 290-17	14-dobj	14-nmod
 290-18	20-case	20-case
 290-19	20-nummod	20-nummod
-290-20	15-nmod	17-nmod
+290-20	15-nmod	14-dobj
 290-21	22-case	22-case
-290-22	17-nmod	20-nmod
+290-22	17-nmod	14-dobj
 290-23	14-dep	25-case
 290-24	23-dep	25-mark
 290-25	24-dep	14-conj
@@ -5625,15 +5625,15 @@
 294-1	3-det	3-det
 294-2	3-amod	3-amod
 294-3	8-nmod	14-nsubj
-294-4	8-auxpass	14-aux
+294-4	8-auxpass	11-aux
 294-5	8-nsubjpass	11-nsubj
 294-6	8-cop	8-aux
 294-7	8-advmod	8-advmod
 294-8	25-root	11-amod
 294-9	11-case	11-case
 294-10	11-det	11-det
-294-11	8-nmod	14-nsubj
-294-12	11-punct	11-punct
+294-11	8-nmod	3-nmod
+294-12	11-punct	3-punct
 294-13	14-nsubj	14-mark
 294-14	11-dep	25-root
 294-15	16-case	16-case
@@ -5644,7 +5644,7 @@
 294-20	22-nmod	14-dobj
 294-21	22-punct	14-punct
 294-22	11-dep	14-dobj
-294-23	22-punct	22-punct
+294-23	22-punct	14-punct
 294-24	8-punct	14-punct
 
 295-0	1-punct	3-punct
@@ -5669,20 +5669,20 @@
 296-12	10-nmod	10-nmod
 296-13	1-punct	9-punct
 
-297-0	3-punct	18-punct
-297-1	3-nsubj	18-root
+297-0	3-punct	3-punct
+297-1	3-nsubj	3-nsubj
 297-2	3-cop	3-aux
 297-3	18-root	18-root
 297-4	3-dep	8-case
 297-5	8-punct	8-punct
 297-6	8-mark	8-mark
 297-7	8-nsubj	8-nsubj
-297-8	4-dep	3-csubj
+297-8	4-dep	3-conj
 297-9	13-nummod	10-nummod
 297-10	13-dep	8-nmod
 297-11	13-dep	10-cc
 297-12	13-nummod	13-nummod
-297-13	8-dobj	10-nmod
+297-13	8-dobj	8-dobj
 297-14	16-case	16-case
 297-15	16-det	16-det
 297-16	8-nmod	13-nmod
@@ -5706,14 +5706,14 @@
 299-4	7-advmod	7-advmod
 299-5	7-expl	7-mark
 299-6	7-advmod	7-advmod
-299-7	2-dep	31-root
+299-7	2-dep	16-cop
 299-8	7-dobj	7-dobj
 299-9	10-case	10-case
 299-10	7-nmod	7-dobj
 299-11	14-punct	14-punct
 299-12	14-mark	14-mark
 299-13	14-expl	14-mark
-299-14	7-dep	7-ccomp
+299-14	7-dep	16-cop
 299-15	16-advmod	16-advmod
 299-16	14-dobj	31-root
 299-17	20-punct	20-punct
@@ -5723,7 +5723,7 @@
 299-21	22-amod	22-amod
 299-22	20-dobj	20-dobj
 299-23	24-case	24-case
-299-24	20-nmod	20-dobj
+299-24	20-nmod	20-nmod
 299-25	20-punct	20-punct
 299-26	31-root	20-conj
 299-27	26-nsubj	29-nsubj
@@ -5763,8 +5763,8 @@
 
 304-0	2-mark	2-mark
 304-1	2-nsubj	2-nsubj
-304-2	5-dep	10-root
-304-3	2-dobj	2-dobj
+304-2	5-dep	5-advcl
+304-3	2-dobj	2-nmod
 304-4	2-punct	2-punct
 304-5	10-root	10-root
 304-6	5-nsubj	8-nsubj
@@ -5789,8 +5789,8 @@
 306-11	4-dep	6-advmod
 306-12	4-cc	6-cc
 306-13	14-amod	14-amod
-306-14	12-dep	6-dobj
-306-15	12-dep	20-advmod
+306-14	12-dep	6-nmod
+306-15	12-dep	16-advmod
 306-16	2-advmod	20-advmod
 306-17	20-case	20-case
 306-18	20-det	20-det
@@ -5854,22 +5854,22 @@
 309-5	2-nmod	6-nmod
 309-6	24-root	24-root
 309-7	6-nsubj	6-nmod
-309-8	7-name	11-nsubj
-309-9	8-name	11-nsubj
+309-8	7-name	10-nummod
+309-9	8-name	10-nummod
 309-10	9-name	11-nsubj
 309-11	6-dep	6-ccomp
 309-12	13-case	13-case
 309-13	11-nmod	11-dobj
-309-14	22-punct	24-punct
-309-15	22-nsubj	24-root
-309-16	15-nmodCOLposs	24-root
+309-14	22-punct	16-punct
+309-15	22-nsubj	16-nsubj
+309-16	15-nmodCOLposs	11-dobj
 309-17	18-case	18-case
-309-18	22-nmod	16-nmod
+309-18	22-nmod	11-nmod
 309-19	22-cop	22-aux
 309-20	21-nummod	21-nummod
 309-21	22-dep	22-nsubj
 309-22	13-aclCOLrelcl	18-amod
-309-23	6-punct	16-punct
+309-23	6-punct	6-punct
 
 310-0	4-nsubj	4-nsubj
 310-1	0-appos	0-nmod
@@ -5886,17 +5886,17 @@
 310-12	13-amod	13-amod
 310-13	14-nmod	14-nsubj
 310-14	4-dep	4-conj
-310-15	14-dobj	25-nsubj
+310-15	14-dobj	20-nsubj
 310-16	20-case	20-case
 310-17	20-det	20-det
 310-18	19-advmod	19-advmod
 310-19	20-dep	20-amod
-310-20	14-nmod	25-nsubj
+310-20	14-nmod	14-dobj
 310-21	22-case	22-case
-310-22	20-nmod	20-nmod
+310-22	20-nmod	14-dobj
 310-23	14-dep	25-case
 310-24	23-dep	25-mark
-310-25	24-dep	4-xcomp
+310-25	24-dep	4-ccomp
 310-26	25-dep	27-case
 310-27	26-nummod	31-nummod
 310-28	31-case	31-case
@@ -5907,13 +5907,13 @@
 
 311-0	9-punct	2-punct
 311-1	2-case	2-case
-311-2	9-nmod	9-nsubj
+311-2	9-nmod	9-nmod
 311-3	6-case	4-case
-311-4	6-nmodCOLposs	2-nmod
+311-4	6-nmodCOLposs	9-nmod
 311-5	6-amod	6-amod
 311-6	2-nmod	4-nmod
 311-7	8-case	8-case
-311-8	6-nmod	9-nsubj
+311-8	6-nmod	9-nmod
 311-9	39-root	39-root
 311-10	9-nsubj	9-dobj
 311-11	9-neg	9-advmod
@@ -5938,7 +5938,7 @@
 311-30	29-dobj	29-dobj
 311-31	33-case	33-case
 311-32	33-det	33-det
-311-33	30-nmod	30-nmod
+311-33	30-nmod	29-dobj
 311-34	35-case	35-case
 311-35	33-nmod	33-nmod
 311-36	29-advmod	29-advmod
@@ -5956,7 +5956,7 @@
 313-5	6-amod	6-amod
 313-6	2-nmod	2-nmod
 313-7	8-dep	6-cc
-313-8	16-nsubj	6-nmod
+313-8	16-nsubj	2-nmod
 313-9	12-case	12-case
 313-10	12-det	12-det
 313-11	12-amod	12-amod
@@ -5985,8 +5985,8 @@
 314-11	12-dep	33-root
 314-12	9-dobj	13-nsubj
 314-13	25-dep	11-ccomp
-314-14	18-case	18-case
-314-15	18-dep	18-case
+314-14	18-case	16-case
+314-15	18-dep	16-case
 314-16	18-det	18-det
 314-17	18-punct	18-punct
 314-18	13-nmod	13-dobj
@@ -5997,7 +5997,7 @@
 314-23	25-nsubjpass	25-nsubj
 314-24	25-auxpass	25-aux
 314-25	33-root	11-ccomp
-314-26	29-case	33-root
+314-26	29-case	28-case
 314-27	28-advmod	28-advmod
 314-28	29-dep	33-root
 314-29	25-nmod	28-dobj
@@ -6042,10 +6042,10 @@
 
 318-0	2-mark	2-mark
 318-1	2-nsubj	2-nsubj
-318-2	24-dep	36-root
+318-2	24-dep	15-advcl
 318-3	5-case	5-case
 318-4	5-det	5-det
-318-5	2-nmod	2-dobj
+318-5	2-nmod	2-nmod
 318-6	5-punct	15-punct
 318-7	11-advmod	15-advmod
 318-8	11-nsubj	15-nsubj
@@ -6055,30 +6055,30 @@
 318-12	15-punct	15-punct
 318-13	15-mark	15-mark
 318-14	15-nsubj	15-nsubj
-318-15	8-dep	2-ccomp
-318-16	15-dep	36-root
+318-15	8-dep	24-advcl
+318-16	15-dep	24-advcl
 318-17	16-dobj	16-dobj
 318-18	19-case	19-case
-318-19	17-nmod	17-nmod
+318-19	17-nmod	16-nmod
 318-20	15-punct	16-punct
 318-21	24-aux	24-aux
 318-22	24-nsubj	24-nsubj
 318-23	24-neg	24-advmod
-318-24	36-root	16-xcomp
+318-24	36-root	36-root
 318-25	29-punct	29-punct
 318-26	29-mark	29-mark
 318-27	29-nsubj	29-nsubj
 318-28	29-neg	29-advmod
-318-29	22-dep	16-ccomp
+318-29	22-dep	36-root
 318-30	31-advmod	31-advmod
 318-31	29-dobj	32-amod
 318-32	31-dep	29-dobj
 318-33	34-case	34-case
 318-34	31-nmod	32-nmod
-318-35	24-punct	16-punct
+318-35	24-punct	29-punct
 
 319-0	4-punct	4-punct
-319-1	4-nsubj	4-dobj
+319-1	4-nsubj	4-nsubj
 319-2	4-aux	4-aux
 319-3	4-neg	4-advmod
 319-4	7-root	7-root
@@ -6130,7 +6130,7 @@
 
 321-0	1-advmod	1-advmod
 321-1	25-root	25-root
-321-2	4-det	3-det
+321-2	4-det	25-det
 321-3	4-dep	25-root
 321-4	1-nsubj	3-nmod
 321-5	1-dobj	6-mark

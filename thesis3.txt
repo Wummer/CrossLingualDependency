@@ -1,0 +1,8 @@
+S0:p
+S0:g
+N0:p
+N0:g
+N1:p
+N1:g
+N2:p
+N2:g

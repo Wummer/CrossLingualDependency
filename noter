@@ -20,6 +20,12 @@ Bi-lingual word embeddings?
 
 POS embeddings og word embeddings via retrofitting.
 
+7. december 2015:
+Oscar Täckström
+
+Smid ordet ud
+
+Brug walts database til at danne features 
 
 POS ændringer:
 =======================
@@ -89,6 +95,24 @@ Spanish:	cPOS
 Swedish:	cPOS+fPOS+morph
 
 ----------------------
+
+List of WALS features:
+			81A		85A		86A		87A
+Bulgarian:	SVO		Prep	None	Adj-Noun
+Croatian:	cPOS+morph
+Czech:		cPOS+fPOS+morph
+Danish:		cPOS+morph
+English:	cPOS+fPOS+morph
+Finnish:	cPOS+fPOS+morph
+Finnishftb:	cPOS+fPOS+morph
+Greek:		cPOS+morph
+Hebrew:		cPOS+morph
+Hungarian:	cPOS+morph
+Italian:	cPOS+fPOS+morph
+Persian:	cPOS+fPOS+morph
+Swedish:	cPOS+fPOS+morph
+
+=========================
 
 Universal dependencies
 @misc{11234/LRT-1478,	

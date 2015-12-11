@@ -116,7 +116,6 @@ def dependency(words, pos_tags, i):
     word = words[i]
     norm = normalize_word(word.lower())
     pos = normalize_label(pos_tags[i])
-    feats.append(u"|w {}".format(norm))
     feats.append(u"|p {}".format(pos))
 
     return feats

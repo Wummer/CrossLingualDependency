@@ -73,6 +73,8 @@ class Thesis:
         # Settings
         self.isNumber = re.compile(r'\d+.*')
 
+        self.wo_Dict = {}
+
         """ DATA """
 
         self.train_cpos, self.train_fpos, self.train_all_pos = self.read_input(

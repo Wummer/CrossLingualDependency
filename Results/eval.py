@@ -45,12 +45,27 @@ for f in sorted(glob.glob("UD/*-baseline.tsv")):
 	print "LAS: ",LAS(f),"%"
 	print
 
-print "-"*20,"MVec10","-"*20
-for f in sorted(glob.glob("UD/*-mvec10.tsv")):
+print "-"*20,"Baselines with no words","-"*20
+for f in sorted(glob.glob("UD/*-baseline-nowords.tsv")):
 	print "Results for",(f[3:])
 	print "UAS: ",UAS(f),"%"
 	print "LAS: ",LAS(f),"%"
 	print
+
+print "-"*20,"MVec10retro","-"*20
+for f in sorted(glob.glob("UD/*-mvec10retro.tsv")):
+	print "Results for",(f[3:])
+	print "UAS: ",UAS(f),"%"
+	print "LAS: ",LAS(f),"%"
+	print
+
+print "-"*20,"MVec10retro with no words","-"*20
+for f in sorted(glob.glob("UD/*-mvec10retro-nowords.tsv")):
+	print "Results for",(f[3:])
+	print "UAS: ",UAS(f),"%"
+	print "LAS: ",LAS(f),"%"
+	print
+
 
 print "-"*20,"MVec25","-"*20
 for f in sorted(glob.glob("UD/*-mvec25.tsv")):
@@ -66,8 +81,22 @@ for f in sorted(glob.glob("UD/*-mvec25retro.tsv")):
 	print "LAS: ",LAS(f),"%"
 	print
 
-print "-"*20,"MVec50","-"*20
-for f in sorted(glob.glob("UD/*-mvec50.tsv")):
+print "-"*20,"MVec25Retro with no words","-"*20
+for f in sorted(glob.glob("UD/*-mvec25retro-nowords.tsv")):
+	print "Results for",(f[3:])
+	print "UAS: ",UAS(f),"%"
+	print "LAS: ",LAS(f),"%"
+	print
+
+print "-"*20,"MVec50retro","-"*20
+for f in sorted(glob.glob("UD/*-mvec50retro.tsv")):
+	print "Results for",(f[3:])
+	print "UAS: ",UAS(f),"%"
+	print "LAS: ",LAS(f),"%"
+	print
+
+print "-"*20,"MVec50retro with no words","-"*20
+for f in sorted(glob.glob("UD/*-mvec50retro-nowords.tsv")):
 	print "Results for",(f[3:])
 	print "UAS: ",UAS(f),"%"
 	print "LAS: ",LAS(f),"%"
