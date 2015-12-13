@@ -23,7 +23,8 @@ if DATASET == "UD":
 
 elif DATASET == "SPMRL":
     train = sorted(glob.glob("SPMRL mapped/*/*_vsrest-spmrl-train5k.conllu"))
-    test = sorted("-spmrl-test".join(x.split("_vsrest-spmrl-train")) for x in train)
+    test = sorted("-spmrl-test".join(x.split("_vsrest-spmrl-train5k"))
+                  for x in train)
 else:
     print sys.argv[1]
     print "Expected UD or SPMRL as argument 1"
@@ -47,17 +48,23 @@ for i in xrange(len(train)):
     test_vw = path + test[i].split("/")[-1].replace(".conllu", t)
 
     if DATASET == "UD":
-    	results = "Results/" + DATASET + "/" + \
-        	test_vw[11:-21] + "-dev-mvec" + \
-        	str(SIZE) + "-" + "win" + str(WINDOW) + "retro.tsv"
-    
+        results = "Results/" + DATASET + "/" + \
+            test_vw[11:-21] + "-dev-mvec" + \
+            str(SIZE) + "-" + "win" + str(WINDOW) + "retro.tsv"
+
     elif DATASET == "SPMRL":
-    	results = "Results/" + DATASET + "/" + \
-    	test_vw[14:-21] + "-dev-mvec" + \
-        str(SIZE) + "-" + "win" + str(WINDOW) + "retro.tsv"
+        results = "Results/" + DATASET + "/" + \
+            test_vw[14:-19] + "-dev-mvec" + \
+            str(SIZE) + "-" + "win" + str(WINDOW) + "retro.tsv"
 
     subprocess.call(["hanstholm/build/hanstholm", "--d", train_vw, "--e", test_vw,
                      "--template", "thesis.txt", "--pred", results])
 
     subprocess.call(["hanstholm/build/hanstholm", "--d", train_vw, "--e", test_vw,
-                     "--template", "thesis2.txt", "--pred", results[:-3] + "-nowords.tsv"])
+                     "--template", "thesis3.txt", "--pred", results[:-4] + "-nowords.tsv"])
+
+    subprocess.call(["hanstholm/build/hanstholm", "--d", train_vw, "--e", test_vw,
+                     "--template", "thesis2.txt", "--pred", results.split("-")[0] + test_vw[14:-119] + "baseline.tsv"])
+
+    subprocess.call(["hanstholm/build/hanstholm", "--d", train_vw, "--e", test_vw,
+                     "--template", "thesis4.txt", "--pred", results.split("-")[0] + "baseline-nowords.tsv"])
