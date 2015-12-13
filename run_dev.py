@@ -19,7 +19,7 @@ LOAD = False
 for size in SIZE:
     for window in WINDOW:
         T = Thesis(
-            train, test, SIZE=size, LOADMODEL=True, WINDOW=window, RETRO=RETRO)
+            train, test, SIZE=size, LOADMODEL=LOAD, WINDOW=window, RETRO=RETRO)
         LOAD = True
         del T
 
@@ -29,8 +29,9 @@ for size in SIZE:
         test_vw = path + test.split("/")[-1].replace(".conllu", t)
         dev_vw = path + train.split("/")[-1].replace(".conllu", t)
         results = "Results/UD/" + \
-            test_vw[11:-21] + "mvec" + \
+            test_vw[11:-21] + "-dev-mvec" + \
             str(size) + "-" + "win" + str(window) + "retro.tsv"
+        print results
 
         subprocess.call(["hanstholm/build/hanstholm", "--d", train_vw, "--e", test_vw,
                          "--template", "thesis.txt", "--pred", results])

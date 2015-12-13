@@ -102,8 +102,31 @@ for f in sorted(glob.glob("UD/*-mvec50retro-nowords.tsv")):
 	print "LAS: ",LAS(f),"%"
 	print
 
+print "-"*20,"MVec50retro test results","-"*20
+for f in sorted(glob.glob("UD/*--*.tsv")):
+	print "Results for",(f[3:])
+	print "UAS: ",UAS(f),"%"
+	print "LAS: ",LAS(f),"%"
+	print
+
+
 print "-"*20,"MVecDev","-"*20
 for f in sorted(glob.glob("UD/da-dev-*.tsv")):
+	print "Results for",(f[3:])
+	print "UAS: ",UAS(f),"%"
+	print "LAS: ",LAS(f),"%"
+	print
+
+print "="*20,"SPMRL RESULTS","="*20
+print "-"*20,"Baselines","-"*20
+for f in sorted(glob.glob("SPMRL/*-baseline.tsv")):
+	print "Results for",(f[3:])
+	print "UAS: ",UAS(f),"%"
+	print "LAS: ",LAS(f),"%"
+	print
+
+print "-"*20,"Baselines with no words","-"*20
+for f in sorted(glob.glob("SPMRL/*-baseline-nowords.tsv")):
 	print "Results for",(f[3:])
 	print "UAS: ",UAS(f),"%"
 	print "LAS: ",LAS(f),"%"

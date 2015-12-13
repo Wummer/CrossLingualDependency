@@ -45,7 +45,7 @@ class Thesis:
     """
 
     def __init__(self, train_file, test_file, DATA="UD", FEAT=False,
-                 METHOD="mvectors", LOADMODEL=False, P=[0.2, 0.8], SIZE=25, WINDOW=1, WORKERS=8,RETRO=True,ITER=10):
+                 METHOD="mvectors", LOADMODEL=False, P=[0.2, 0.8], SIZE=25, WINDOW=1, WORKERS=4,RETRO=True,ITER=10):
 
         #"Initialized" variables
         self.text = []
@@ -66,9 +66,10 @@ class Thesis:
         self.WINDOW = WINDOW
         self.SIZE = SIZE
         self.WORKERS = WORKERS
-        self.MODELFILE = "Vectors/" + \
-            self.train_file.split("/")[-1][:-7] + str(self.SIZE)
         self.LOADMODEL = LOADMODEL
+
+        self.MODELFILE = "Vectors/" + \
+                self.train_file.split("/")[-1][:-7] + str(self.SIZE) + "win" + str(WINDOW)
 
         # Settings
         self.isNumber = re.compile(r'\d+.*')
@@ -198,9 +199,9 @@ class Thesis:
 
     def enrichment(self):
 
-        if self.DATA == "UD":
-            train = "Data_vw/UD/" + self.train_file.split("/")[-1][:-7] + ".vw"
-            test = "Data_vw/UD/" + self.test_file.split("/")[-1][:-7] + ".vw"
+        train = "Data_vw/"+self.DATA+"/" + self.train_file.split("/")[-1][:-7] + ".vw"
+        test = "Data_vw/"+self.DATA+"/" + self.test_file.split("/")[-1][:-7] + ".vw"
+
 
         fpos_count,cpos_count,all_count=0,0,0
         used_fpos=[]

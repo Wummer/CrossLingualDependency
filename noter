@@ -68,7 +68,7 @@ Korean:	no mapping
 
 Polish:	perfect fit
 
-Swedish:	
+Swedish: Already universal POS
 
 ======================
 
@@ -99,18 +99,18 @@ Swedish:	cPOS+fPOS+morph
 List of WALS features:
 			81A		85A		86A		87A
 Bulgarian:	SVO		Prep	None	Adj-Noun
-Croatian:	cPOS+morph
-Czech:		cPOS+fPOS+morph
-Danish:		cPOS+morph
-English:	cPOS+fPOS+morph
-Finnish:	cPOS+fPOS+morph
-Finnishftb:	cPOS+fPOS+morph
-Greek:		cPOS+morph
-Hebrew:		cPOS+morph
-Hungarian:	cPOS+morph
-Italian:	cPOS+fPOS+morph
-Persian:	cPOS+fPOS+morph
-Swedish:	cPOS+fPOS+morph
+Croatian:	SVO 	Prep	None 	Adj-Noun
+Czech:		SVO 	Prep	GN 		Adj-Noun
+Danish:		SVO 	Prep	None 	Adj-Noun
+English:	SVO 	Prep 	None 	Adj-Noun
+Finnish:	SVO 	Post 	GN 		Adj-Noun
+Finnishftb:	SVO 	Post 	GN 		Adj-Noun
+Greek:		None	Prep 	NG 		Adj-Noun
+Hebrew:		SVO 	Prep 	NG		Noun-Adj
+Hungarian:	None 	Post 	GN	 	Adj-Noun
+Italian:	SVO 	Prep 	NG 		Noun-Adj
+Persian:	SOV 	Prep 	NG 		Noun-adj
+Swedish:	SVO 	Prep 	GN 		Adj-Noun
 
 =========================
 
@@ -123,8 +123,4 @@ Universal dependencies
  copyright = {Licence Universal Dependencies v1.1},	
  year = {2015}	
 }
-
-hagesfexb
-
-
 

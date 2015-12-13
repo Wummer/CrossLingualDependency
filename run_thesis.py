@@ -1,39 +1,63 @@
 import glob
-import subprocess32 as subprocess
+import subprocess
 import random
 import codecs
+import sys
 from main import Thesis
 
 random.seed(1)
-#dev experiment
-"""
-train = ["Universal Dependencies/ud-treebanks-v1.1/UD_Danish/da_vsrest-ud-train.conllu"]
-test = ["Universal Dependencies/ud-treebanks-v1.1/UD_Danish/da-ud-dev.conllu"]
+DATASET = str(sys.argv[1])
 
-"""
-#Test experiment
-train = sorted(glob.glob("Universal Dependencies/ud-treebanks-v1.1/*/*_vsrest-ud-train.conllu"))
-dev = sorted(["-ud-dev".join(x.split("_vsrest-ud-train")) for x in train])
-test =  sorted("-ud-test".join(x.split("_vsrest-ud-train")) for x in train)
+if DATASET == "UD":
+    # dev experiment
+    """
+    train = [
+        "Universal Dependencies/ud-treebanks-v1.1/UD_Danish/da_vsrest-ud-train.conllu"]
+    test = ["Universal Dependencies/ud-treebanks-v1.1/UD_Danish/da-ud-dev.conllu"]
 
-SIZE = 10
+    """
+    # Test experiment
+    train = sorted(
+        glob.glob("Universal Dependencies/ud-treebanks-v1.1/*/*_vsrest-ud-train.conllu"))
+    test = sorted("-ud-test".join(x.split("_vsrest-ud-train")) for x in train)
+
+elif DATASET == "SPMRL":
+    train = sorted(glob.glob("SPMRL mapped/*/*_vsrest-spmrl-train5k.conllu"))
+    test = sorted("-spmrl-test".join(x.split("_vsrest-spmrl-train")) for x in train)
+else:
+    print sys.argv[1]
+    print "Expected UD or SPMRL as argument 1"
+    raise SystemExit
+
+
+SIZE = 50
 RETRO = True
-LOAD = True
+LOAD = False
+WINDOW = 2
 
 for i in xrange(len(train)):
-	print train[i]
-	print dev[i]
-	T = Thesis(train[i],dev[i],FEAT=False,SIZE=SIZE,LOADMODEL=LOAD,WINDOW=2,RETRO=RETRO)
-	del T
+    print train[i]
+    T = Thesis(train[i], test[i], DATA=DATASET, SIZE=SIZE,
+               LOADMODEL=LOAD, WINDOW=WINDOW, RETRO=RETRO)
+    del T
 
-	path = "Data_vw/UD/"
-	t = "-mvectors"+str(SIZE)+".vw"
-	train_vw = path + train[i].split("/")[-1].replace(".conllu", t)
-	test_vw = path + test[i].split("/")[-1].replace(".conllu", t)
-	dev_vw = path + train[i].split("/")[-1].replace(".conllu", t)
+    path = "Data_vw/" + DATASET + "/"
+    t = "-mvectors" + str(SIZE) + ".vw"
+    train_vw = path + train[i].split("/")[-1].replace(".conllu", t)
+    test_vw = path + test[i].split("/")[-1].replace(".conllu", t)
 
-	subprocess.call(["hanstholm/build/hanstholm","--d",train_vw,"--e",test_vw,
-					"--template","thesis.txt", "--pred", "Results/UD/"+test_vw[11:-21]+"mvec"+str(SIZE)+"10retro.tsv"])
+    if DATASET == "UD":
+    	results = "Results/" + DATASET + "/" + \
+        	test_vw[11:-21] + "-dev-mvec" + \
+        	str(SIZE) + "-" + "win" + str(WINDOW) + "retro.tsv"
+    
+    elif DATASET == "SPMRL":
+    	results = "Results/" + DATASET + "/" + \
+    	test_vw[14:-21] + "-dev-mvec" + \
+        str(SIZE) + "-" + "win" + str(WINDOW) + "retro.tsv"
 
-	subprocess.call(["hanstholm/build/hanstholm","--d",train_vw,"--e",test_vw,
-					"--template","thesis2.txt", "--pred", "Results/UD/"+test_vw[11:-21]+"baseline.tsv"])
+    subprocess.call(["hanstholm/build/hanstholm", "--d", train_vw, "--e", test_vw,
+                     "--template", "thesis.txt", "--pred", results])
+
+    subprocess.call(["hanstholm/build/hanstholm", "--d", train_vw, "--e", test_vw,
+                     "--template", "thesis2.txt", "--pred", results[:-3] + "-nowords.tsv"])
