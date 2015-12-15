@@ -45,7 +45,7 @@ class Thesis:
     """
 
     def __init__(self, train_file, test_file, DATA="UD", FEAT=False,
-                 METHOD="mvectors", LOADMODEL=False, P=[0.2, 0.8], SIZE=25, WINDOW=1, WORKERS=4,RETRO=True,ITER=10):
+                 METHOD="mvectors", LOADMODEL=False, P=[0.2, 0.8], SIZE=25, WINDOW=2, WORKERS=4,RETRO=True,ITER=10):
 
         #"Initialized" variables
         self.text = []
@@ -78,12 +78,12 @@ class Thesis:
 
         """ DATA """
 
-        self.train_cpos, self.train_fpos, self.train_all_pos = self.read_input(
+        self.train_cpos, self.train_fpos, self.train_all_pos, self.train_wals = self.read_input(
             train_file)
-        self.test_cpos, self.test_fpos, self.test_all_pos = self.read_input(
+        self.test_cpos, self.test_fpos, self.test_all_pos, self.test_wals = self.read_input(
             test_file)
         self.embed_cpos, self.embed_fpos, self.embed_all_pos = self.read_input(
-            train_file.replace("_vsrest",""))
+            train_file.replace("_vsrest",""),WALS=False)
 
 
 
@@ -99,15 +99,19 @@ class Thesis:
 
         """ PARSER """
 
-    def read_input(self, file):
+    def read_input(self, file, WALS=True):
         """
         Reads the dataset files and extract the text, cPOS, fPOS and shuffled POS lists.
         Currently only support .conll-x files and dataset as 'UD' or 'SPMRL'.
         """
         f = codecs.open(file)
 
-        text, cpos, fpos = [], [], []
-        t_cpos, t_fpos, t_text, all_pos = [], [], [], []
+        text, cpos, fpos = [], [], [],
+        t_cpos, t_fpos, t_text, all_pos, = [], [], [], []
+
+        #WALS features
+        a81, a85, a86, a87 = [],[],[],[]
+        t_a81, t_a85, t_a86, t_a87 = [],[],[],[]
 
         if self.DATA == "UD" or self.DATA == "SPMRL":
             for line in f:
@@ -117,7 +121,13 @@ class Thesis:
                     continue
 
                 elif line != "\n":
-                    tline = line.strip("\n").lower().split("\t")
+                    tline = line.strip("\n").lower().split()
+
+                    if WALS:
+                        t_a81.append(tline[10])
+                        t_a85.append(tline[11])
+                        t_a86.append(tline[12])
+                        t_a87.append(tline[13])
 
                     t_text.append(tline[1])
                     t_cpos.append(tline[3].replace("|", "+"))
@@ -137,6 +147,14 @@ class Thesis:
                             "This dataset does not have fPOS. You must set FEAT=True")
 
                 elif line == "\n":
+                    if WALS:
+                        a81.append(t_a81)
+                        a85.append(t_a85)
+                        a86.append(t_a86)
+                        a87.append(t_a87)
+                        t_a81, t_a85, t_a86, t_a87 = [],[],[],[]
+
+
                     all_pos.append(self.shuffle_list(t_fpos, t_cpos))
                     text.append(t_text)
                     cpos.append(t_cpos)
@@ -147,6 +165,8 @@ class Thesis:
             raise ValueError(
                 "Unknown data set.\nUse UD for Universal Dependencies\n" +
                 "or SPMRL for Statistical Parsing of Morphologically Rich Languages")
+        if WALS:
+            return cpos,fpos,all_pos, [a81,a85,a86,a87]
 
         return cpos, fpos, all_pos
 
@@ -205,20 +225,23 @@ class Thesis:
 
         fpos_count,cpos_count,all_count=0,0,0
         used_fpos=[]
+
+        #The files we loop over
         write_files = [train, test]
         read_files = [self.train_file, self.test_file]
         pos = [self.train_fpos, self.test_fpos]
         cpos = [self.train_cpos, self.test_cpos]
+        wals_feats = [self.train_wals,self.test_wals]
 
         for idx in xrange(len(write_files)):
             with codecs.open(write_files[idx][:-3] + ("-feats" if self.FEAT == True else "")
                              + "-mvectors" + str(self.SIZE) + ".vw", "w") as f:
                 sent_tracker = 0
-                idx_tracker = 0
+                word_tracker = 0
                 for line in codecs.open(write_files[idx]):
                     if line == "\n":
                         sent_tracker += 1
-                        idx_tracker = 0
+                        word_tracker = 0
                         print >> f
                         continue
                     #Only interested in test scenario
@@ -227,31 +250,47 @@ class Thesis:
 
                     try:
                         vec = (self.model[pos[idx][sent_tracker][
-                               idx_tracker]] - self.min_vector) / self.max_vector * 1e-4
-                        tline = line[:-1] + " |g " + " ".join(
-                            str(x) + ":" + str(y) for x, y in enumerate(vec))
-                        print >> f, tline
-                        #Only interested in test scenario
+                               word_tracker]] - self.min_vector) / self.max_vector * 1e-4
                         if idx>0:
                             fpos_count+=1
-                            if pos[idx][sent_tracker] not in used_fpos:
-                                used_fpos.append(pos[idx][sent_tracker])
-
-
+                            #if pos[idx][sent_tracker] not in used_fpos:
+                            #    used_fpos.append(pos[idx][sent_tracker])
                     except KeyError:
                         vec = (self.model[cpos[idx][sent_tracker][
-                            idx_tracker]] - self.min_vector) / self.max_vector * 1e-4
-                        tline = line[:-1] + " |g " + " ".join(
-                            str(x) + ":" + str(y) for x, y in enumerate(vec))
-                        print >> f, tline
+                            word_tracker]] - self.min_vector) / self.max_vector * 1e-4
                         if idx>0:
-                            cpos_count+=1
+                            cpos_count+=1                        
 
-                    finally:
-                        idx_tracker += 1
+                    tline = line[:-1] + " |g " + " ".join(
+                        str(x) + ":" + str(y) for x, y in enumerate(vec))
+
+                    # Adding the WALS features per Dr. phil Soegaard!
+                    for feat in wals_feats[idx]:
+                        try:
+                            
+                            tline += " |g_" + feat[sent_tracker][word_tracker] +" "+ " ".join(
+                                str(x) + ":" + str(y) for x, y in enumerate(vec))
+        
+                            """
+                            tline += " "+feat[sent_tracker][word_tracker] + ":" + " ".join(
+                                str(x) + ":" + str(y) for x, y in enumerate(vec))
+                            """
+                        except IndexError:
+                            print line
+                            print tline
+                            print pos[idx][sent_tracker],len(pos[idx][sent_tracker])
+                            print feat[sent_tracker], len(feat[sent_tracker])
+                            raise SystemExit
+
+
+                    print >> f, tline
+                    #Only interested in test scenario
+
+                    word_tracker += 1
 
         print all_count,"pos tags were parsed"
         print "Of these",fpos_count,"were fPOS and",cpos_count,"were cPOS"
+
 
     def create_lexicon(self,cpos,fpos):
         lex = {}

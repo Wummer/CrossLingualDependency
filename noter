@@ -97,6 +97,7 @@ Swedish:	cPOS+fPOS+morph
 ----------------------
 
 List of WALS features:
+UD
 			81A		85A		86A		87A
 Bulgarian:	SVO		Prep	None	Adj-Noun
 Croatian:	SVO 	Prep	None 	Adj-Noun
@@ -111,6 +112,16 @@ Hungarian:	None 	Post 	GN	 	Adj-Noun
 Italian:	SVO 	Prep 	NG 		Noun-Adj
 Persian:	SOV 	Prep 	NG 		Noun-adj
 Swedish:	SVO 	Prep 	GN 		Adj-Noun
+
+
+SPMRL
+			81A		85A		86A		87A
+French:		SVO 	Prep 	NG 		Noun-Adj
+German:		None 	Prep 	NG 		Adj-Noun
+Hungarian:	None 	Post 	GN	 	Adj-Noun
+Polish:		SVO 	Prep 	NG      Adj-Noun
+Swedish:	SVO 	Prep 	GN 		Adj-Noun
+
 
 =========================
 

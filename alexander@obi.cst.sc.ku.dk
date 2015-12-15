@@ -1,379 +1,123 @@
-from __future__ import division
-import codecs
-import logging
+import glob
 import subprocess
-import universal_tags
-import w2v.word2vec as w2v
-import numpy as np
-import argparse
-import gzip
-import math
-import numpy
-import re
+import random
+import codecs
 import sys
 
-from copy import deepcopy
-from w2v.sampler import random_sampler, sample_word2vec
-from numpy import random
-
-
-# define NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION
-
 random.seed(1)
-np.random.seed(1)
-logging.basicConfig(
-    format='%(asctime)s : %(levelname)s : %(message)s', level=logging.INFO)
+
+# Initializer
+try:
+    dataset = str(sys.argv[1])
+except IndexError:
+    print "Must have argument 1 as SPMRL or UD"
 
 
-class Thesis:
-
-    """What I need:
-
-    reading method:
-        + UD 
-        + SPMRL
-    feature creation:
-        + fpos vectors
-        - baseline
-        - competing method
-    output to data:
-        + vectors
-
-    parser?
-        - hanstholm
-
-    """
-
-    def __init__(self, train_file, test_file, DATA="UD", FEAT=False,
-                 METHOD="mvectors", LOADMODEL=False, P=[0.2, 0.8], SIZE=25, WINDOW=1, WORKERS=8,RETRO=True,ITER=10):
-
-        #"Initialized" variables
-        self.text = []
-        self.cpos = []
-        self.fpos = []
-        self.all_pos = []
-        self.model = []
-
-        # Files
-        self.train_file = train_file
-        self.test_file = test_file
-
-        # Parameters
-        self.DATA = DATA
-        self.FEAT = FEAT
-        self.METHOD = METHOD
-        self.P = P
-        self.WINDOW = WINDOW
-        self.SIZE = SIZE
-        self.WORKERS = WORKERS
-        self.MODELFILE = "Vectors/" + \
-            self.train_file.split("/")[-1][:-7] + str(self.SIZE)
-        self.LOADMODEL = LOADMODEL
-
-        # Settings
-        self.isNumber = re.compile(r'\d+.*')
-
-        """ DATA """
-
-        self.train_cpos, self.train_fpos, self.train_all_pos = self.read_input(
-            train_file)
-        self.test_cpos, self.test_fpos, self.test_all_pos = self.read_input(
-            test_file)
-        self.embed_cpos, self.embed_fpos, self.embed_all_pos = self.read_input(
-            train_file.replace("_vsrest",""))
-
-
-
-        """ FEATURE CREATION """
-        self.feature_creation()
-        if RETRO == True:
-            self.retro_feature(ITER)
-
-
-        """ ENRICHMENT """
-        self.enrichment()
-
-
-        """ PARSER """
-
-    def read_input(self, file):
-        """
-        Reads the dataset files and extract the text, cPOS, fPOS and shuffled POS lists.
-        Currently only support .conll-x files and dataset as 'UD' or 'SPMRL'.
-        """
-        f = codecs.open(file)
-
-        text, cpos, fpos = [], [], []
-        t_cpos, t_fpos, t_text, all_pos = [], [], [], []
-
-        if self.DATA == "UD" or self.DATA == "SPMRL":
-            for line in f:
-            # First check if line is not 'empty' and then create our strings
-            # text, cpos and fpos
-                if line[0] == "#":
-                    continue
-
-                elif line != "\n":
-                    tline = line.strip("\n").lower().split("\t")
-
-                    t_text.append(tline[1])
-                    t_cpos.append(tline[3].replace("|", "+"))
-
-                    if tline[4] != "_":
-                        t_fpos.append(tline[4].replace("|", "+") and tline[4].split(",")[0] if self.FEAT == False
-                                      else "+".join(sorted(tline[4].split("|"))) +
-                                      "+" + "+".join(sorted(tline[5].split("|"))))
-
-                    elif tline[4] == "_":
-                        t_fpos.append(
-                            "+".join(sorted(tline[3].split("|"))).split(",")[0] +
-                            "+" + "+".join(sorted(tline[5].split("|"))))
-
-                    else:
-                        raise ValueError(
-                            "This dataset does not have fPOS. You must set FEAT=True")
-
-                elif line == "\n":
-                    all_pos.append(self.shuffle_list(t_fpos, t_cpos))
-                    text.append(t_text)
-                    cpos.append(t_cpos)
-                    fpos.append(t_fpos)
-                    t_text, t_cpos, t_fpos = [], [], []
-
-        else:
-            raise ValueError(
-                "Unknown data set.\nUse UD for Universal Dependencies\n" +
-                "or SPMRL for Statistical Parsing of Morphologically Rich Languages")
-
-        return cpos, fpos, all_pos
-
-    def shuffle_list(self, a, b):
-        """shuffle_list(a,b) takes two lists as input.
-        Then shuffles the list such that each index element from a
-         is followed by the same index element from b
-        """
-        c = [None] * (len(a) + len(b))
-        c[::2] = a
-        c[1::2] = b
-        return c
-
-    def feature_creation(self, METHOD="mvectors"):
-        """
-        Utilizes the modified word2vec model to create vectors 
-        """
-        vectors = []
-        if METHOD == "mvectors":
-            if self.LOADMODEL == True:
-                model = w2v.Word2Vec.load_word2vec_format(self.MODELFILE)
-            else:
-                model = w2v.Word2Vec(
-                    self.train_all_pos+self.embed_all_pos, context=True, min_count=0, sampler=random_sampler,
-                    size=self.SIZE, workers=self.WORKERS, window=self.WINDOW, p=self.P)
-                model.save_word2vec_format(self.MODELFILE)
-            self.model = model
-            full_vocab = np.array([self.model[x] for x in self.model.vocab.keys()])
-            self.min_vector = full_vocab.min(axis=0)
-            self.max_vector = full_vocab.max(axis=0)
-
-            """ 
-            ############## DO I EVEN NEED MORE? ####################
-            """
-        else:
-            raise ValueError("Unknown method. Did you mean 'mvectors'?")
-
-    def retro_feature(self,ITER):
-        """
-        Applies retrofitting to the vectors.
-        """
-        lexicon = self.create_lexicon(self.train_cpos,self.train_fpos)
-        wordVecs = self.read_word_vecs(self.MODELFILE)
-        
-        self.model = self.retrofit(wordVecs, lexicon, ITER)
-        full_vocab = np.array([self.model[x] for x in self.model.keys()])
-        self.min_vector = full_vocab.min(axis=0)
-        self.max_vector = full_vocab.max(axis=0)
-
-
-    def enrichment(self):
-
-        if self.DATA == "UD":
-            train = "Data_vw/UD/" + self.train_file.split("/")[-1][:-7] + ".vw"
-            test = "Data_vw/UD/" + self.test_file.split("/")[-1][:-7] + ".vw"
-
-        fpos_count,cpos_count,all_count=0,0,0
-        used_fpos=[]
-        write_files = [train, test]
-        read_files = [self.train_file, self.test_file]
-        pos = [self.train_fpos, self.test_fpos]
-        cpos = [self.train_cpos, self.test_cpos]
-
-        for idx in xrange(len(write_files)):
-            with codecs.open(write_files[idx][:-3] + ("-feats" if self.FEAT == True else "")
-                             + "-mvectors" + str(self.SIZE) + ".vw", "w") as f:
-                sent_tracker = 0
-                idx_tracker = 0
-                for line in codecs.open(write_files[idx]):
+def create_WALS_files(train, true_train):
+    with codecs.open(true_train, "w+") as outfile:
+        for infilename in train:
+            with codecs.open(infilename) as infile:
+                for line in infile:
                     if line == "\n":
-                        sent_tracker += 1
-                        idx_tracker = 0
-                        print >> f
-                        continue
-                    #Only interested in test scenario
-                    if idx>0:
-                        all_count +=1
-
-                    try:
-                        vec = (self.model[pos[idx][sent_tracker][
-                               idx_tracker]] - self.min_vector) / self.max_vector * 1e-4
-                        tline = line[:-1] + " |g " + " ".join(
-                            str(x) + ":" + str(y) for x, y in enumerate(vec))
-                        print >> f, tline
-                        #Only interested in test scenario
-                        if idx>0:
-                            fpos_count+=1
-                            if pos[idx][sent_tracker] not in used_fpos:
-                                used_fpos.append(pos[idx][sent_tracker])
+                        print >> outfile
+                    else:
+                        tline = line.strip("\n")
+                        tline += " " + " ".join(WALS[lang])
+                        print >> outfile, tline
 
 
-                    except KeyError:
-                        vec = (self.model[cpos[idx][sent_tracker][
-                            idx_tracker]] - self.min_vector) / self.max_vector * 1e-4
-                        tline = line[:-1] + " |g " + " ".join(
-                            str(x) + ":" + str(y) for x, y in enumerate(vec))
-                        print >> f, tline
-                        if idx>0:
-                            cpos_count+=1
+# Loading of the data
+if dataset == "UD":
+    train1 = list(set(glob.glob(
+        "Universal Dependencies/ud-treebanks-v1.1/*/*-ud-train.conllu"))
+        - set(glob.glob("Universal Dependencies/ud-treebanks-v1.1/*/*_vsrest-ud-train.conllu")))
+    dev1 = glob.glob(
+        "Universal Dependencies/ud-treebanks-v1.1/*/*-ud-dev.conllu")
+    test1 = glob.glob(
+        "Universal Dependencies/ud-treebanks-v1.1/*/*-ud-test.conllu")
 
-                    finally:
-                        idx_tracker += 1
+    illeagle = ["UD_Basque", "UD_French", "UD_German",
+                "UD_Indonesian", "UD_Irish", "UD_Spanish"]
 
-        print all_count,"pos tags were parsed"
-        print "Of these",fpos_count,"were fPOS and",cpos_count,"were cPOS"
-        print used_fpos
+elif dataset == "SPMRL":
+
+    train1 = list(set(glob.glob("SPMRL mapped/*/*-train5k.conllu")) -
+                  set(glob.glob("SPMRL mapped/*/*_vsrest-spmrl-train5k.conllu")))
+
+    test1 = list(set(glob.glob("SPMRL mapped/*/*-test.conllu")) -
+                 set(glob.glob("SPMRL mapped/*/*_vsrest-spmrl-test.conllu")))
+    illeagle = [""]
+
+else:
+    print sys.argv[1]
+    print "Expected UD or SPMRL as argument 1"
+    raise SystemExit
+
+train1.sort()
+dev1.sort() if dataset == "UD" else ""
+test1.sort()
+
+train, dev, test = [], [], []
+for i in xrange(len(test1)):
+    if train1[i].split("/")[2] not in illeagle:
+        train.append(train1[i])
+        dev.append(dev1[i]) if dataset == "UD" else ""
+        test.append(test1[i])
+
+# WALS features
+
+WALS = {"bg": ["81a_svo", "85a_prep", "86a_none", "87a_an"],
+        "hr": ["81a_svo", "85a_prep", "86a_none", "87a_an"],
+        "cs": ["81a_svo", "85a_prep", "86a_gn", "87a_an"],
+        "da": ["81a_svo", "85a_prep", "86a_none", "87a_an"],
+        "en": ["81a_svo", "85a_prep", "86a_none", "87a_an"],
+        "fi": ["81a_svo", "85a_post", "86a_gn", "87a_an"],
+        "fi_ftb": ["81a_svo", "85a_post", "86a_gn", "87a_an"],
+        "el": ["81a_none", "85a_prep", "86a_ng", "87a_an"],
+        "he": ["81a_svo", "85a_prep", "86a_ng", "87a_na"],
+        "hu": ["81a_none", "85a_post", "86a_gn", "87a_an"],
+        "it": ["81a_svo", "85a_prep", "86a_ng", "87a_na"],
+        "fa": ["81a_sov", "85a_prep", "86a_ng", "87a_na"],
+        "sv": ["81a_svo", "85a_prep", "86a_gn", "87a_an"],
+        "fr": ["81a_svo", "85a_prep", "86a_ng", "87a_na"],
+        "de": ["81a_none", "85a_prep", "86a_ng", "87a_an"],
+        "pl": ["81a_svo", "85a_prep", "86a_ng", "87a_an"],
+        }
+
+print "Beginning conversion of %i different languages" % (len(train))
+
+for i in xrange(len(train)):
+    lang = train[i].split("/")[-1].split("-")[0]
+
+    print "Transforming: ", lang
+
+    # Fiddling with the training files
+    a = train[:i] + train[i + 1:]
+    true_train = train[i].replace("/" + lang, "/" + lang + "_vsrest")
+
+    # Creating _vsrest files and adding WALS features
+    create_WALS_files(a, true_train)
+
+    # Now adding test features
+    true_test = test[i].replace("/" + lang, "/" + lang + "_vsrest")
+
+    create_WALS_files([test[i]], true_test)
+
+    if dataset == "UD":
+        true_dev = dev[i].replace("/" + lang, "/" + lang + "_vsrest")
+
+        create_WALS_files([dev[i]], true_dev)
+
+    subprocess.call(["python", "conll_to_vw/conll_to_vw.py", true_train, "Data_vw/" + dataset + "/" +
+                     true_train.split("/")[-1][:-6] + "vw", "--feature-set", "dependency", "--coarse"])
+
+    # Creating the dev and test file are straightforward
+    subprocess.call(["python", "conll_to_vw/conll_to_vw.py", true_test, "Data_vw/" + dataset + "/" +
+                     true_test.split("/")[-1][:-6] + "vw", "--feature-set", "dependency", "--coarse"])
+
+    if dataset == "UD":
+        subprocess.call(["python", "conll_to_vw/conll_to_vw.py", true_dev, "Data_vw/" + dataset + "/" +
+                         true_dev.split("/")[-1][:-6] + ".vw", "--feature-set", "dependency", "--coarse"])
 
 
-    def create_lexicon(self,cpos,fpos):
-        lex = {}
-
-        for l in xrange(len(cpos)):
-            for i in xrange(len(cpos[l])):
-                c = cpos[l][i]
-                f  = fpos[l][i]
-
-                try: 
-                    lex[c]
-                except KeyError:
-                    lex[c] = [f]
-                try:
-                    lex[f]
-                except KeyError:
-                    lex[f] = [c]
-
-                if f not in lex[c]:
-                    lex[c].append(f)
-                if c not in lex[f]:
-                    lex[f].append(c)
-
-        return lex
-
-
-    """
-    The following functions are taken from the Retrofitting repo and modified to fit my class. 
-    All credits go to Manaal Faruqui, mfaruqui@cs.cmu.edu
-    """
-
-    def norm_word(self, word):
-        if self.isNumber.search(word.lower()):
-            return '---num---'
-        elif re.sub(r'\W+', '', word) == '':
-            return '---punc---'
-        else:
-            return word.lower()
-
-    ''' Read all the word vectors and normalize them '''
-
-    def read_word_vecs(self, filename):
-        wordVectors = {}
-        if filename.endswith('.gz'):
-            fileObject = gzip.open(filename, 'r')
-        else:
-            fileObject = open(filename, 'r')
-
-        for line in fileObject:
-            if len(line.split()) < self.SIZE+1:
-                continue
-            line = line.strip().lower()
-            word = line.split()[0]
-            wordVectors[word] = numpy.zeros(len(line.split()) - 1, dtype=float)
-            for index, vecVal in enumerate(line.split()[1:]):
-                wordVectors[word][index] = float(vecVal)
-            ''' normalize weight vector '''
-            wordVectors[word] /= math.sqrt((wordVectors[word]**2).sum() + 1e-6)
-
-        sys.stderr.write("Vectors read from: " + filename + " \n")
-        return wordVectors
-
-    ''' Write word vectors to file '''
-
-    def print_word_vecs(self, wordVectors, outFileName):
-        sys.stderr.write('\nWriting down the vectors in ' + outFileName + '\n')
-        outFile = open(outFileName, 'w')
-        for word, values in wordVectors.iteritems():
-            outFile.write(word + ' ')
-            for val in wordVectors[word]:
-                outFile.write('%.4f' % (val) + ' ')
-            outFile.write('\n')
-        outFile.close()
-
-    ''' Read the PPDB word relations as a dictionary '''
-
-    def read_lexicon(self, filename, wordVecs):
-        lexicon = {}
-        for line in open(filename, 'r'):
-            words = line.lower().strip().split()
-            lexicon[norm_word(words[0])] = [norm_word(word)
-                                            for word in words[1:]]
-        return lexicon
-
-    ''' Retrofit word vectors to a lexicon '''
-
-    def retrofit(self, wordVecs, lexicon, numIters):
-        newWordVecs = deepcopy(wordVecs)
-        wvVocab = set(newWordVecs.keys())
-        loopVocab = wvVocab.intersection(set(lexicon.keys()))
-        for it in range(numIters):
-            # loop through every node also in ontology (else just use data
-            # estimate)
-            for word in loopVocab:
-                wordNeighbours = set(lexicon[word]).intersection(wvVocab)
-                numNeighbours = len(wordNeighbours)
-                # no neighbours, pass - use data estimate
-                if numNeighbours == 0:
-                    continue
-                # the weight of the data estimate if the number of neighbours
-                newVec = numNeighbours * wordVecs[word]
-                # loop over neighbours and add to new vector (currently with
-                # weight 1)
-                for ppWord in wordNeighbours:
-                    newVec += newWordVecs[ppWord]
-                newWordVecs[word] = newVec / (2 * numNeighbours)
-        return newWordVecs
-"""
-if __name__=='__main__':
-
-  parser = argparse.ArgumentParser()
-  parser.add_argument("-i", "--input", type=str, default=None, help="Input word vecs")
-  parser.add_argument("-l", "--lexicon", type=str, default=None, help="Lexicon file name")
-  parser.add_argument("-o", "--output", type=str, help="Output word vecs")
-  parser.add_argument("-n", "--numiter", type=int, default=10, help="Num iterations")
-  args = parser.parse_args()
-
-  wordVecs = read_word_vecs(args.input)
-  lexicon = read_lexicon(args.lexicon, wordVecs)
-  numIter = int(args.numiter)
-  outFileName = args.output
-  
-  ''' Enrich the word vectors using ppdb and print the enriched vectors '''
-  print_word_vecs(retrofit(wordVecs, lexicon, numIter), outFileName) 
-
-"""
+raise SystemExit

@@ -19,11 +19,11 @@ if DATASET == "UD":
     # Test experiment
     train = sorted(
         glob.glob("Universal Dependencies/ud-treebanks-v1.1/*/*_vsrest-ud-train.conllu"))
-    test = sorted("-ud-test".join(x.split("_vsrest-ud-train")) for x in train)
+    test = sorted("test".join(x.split("train")) for x in train)
 
 elif DATASET == "SPMRL":
     train = sorted(glob.glob("SPMRL mapped/*/*_vsrest-spmrl-train5k.conllu"))
-    test = sorted("-spmrl-test".join(x.split("_vsrest-spmrl-train5k"))
+    test = sorted("test".join(x.split("train5k"))
                   for x in train)
 else:
     print sys.argv[1]
@@ -33,7 +33,7 @@ else:
 
 SIZE = 50
 RETRO = True
-LOAD = False
+LOAD = True
 WINDOW = 2
 
 for i in xrange(len(train)):
@@ -62,9 +62,12 @@ for i in xrange(len(train)):
 
     subprocess.call(["hanstholm/build/hanstholm", "--d", train_vw, "--e", test_vw,
                      "--template", "thesis3.txt", "--pred", results[:-4] + "-nowords.tsv"])
+    
+    subprocess.call(["hanstholm/build/hanstholm", "--d", train_vw, "--e", test_vw,
+                     "--template", "thesis5.txt", "--pred", results[:-4] + "-wals.tsv"])
 
     subprocess.call(["hanstholm/build/hanstholm", "--d", train_vw, "--e", test_vw,
-                     "--template", "thesis2.txt", "--pred", results.split("-")[0] + test_vw[14:-119] + "baseline.tsv"])
+                     "--template", "thesis2.txt", "--pred", results.split("-")[0] + test_vw[14:-119] + "-baseline.tsv"])
 
     subprocess.call(["hanstholm/build/hanstholm", "--d", train_vw, "--e", test_vw,
-                     "--template", "thesis4.txt", "--pred", results.split("-")[0] + "baseline-nowords.tsv"])
+                     "--template", "thesis4.txt", "--pred", results.split("-")[0] + "-baseline-nowords.tsv"])

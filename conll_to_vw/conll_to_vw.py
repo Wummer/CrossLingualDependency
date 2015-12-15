@@ -61,7 +61,7 @@ if __name__ == '__main__':
         if len(parts) > 1 and parts[0].startswith("#") or line.startswith("#"):
             continue
 
-        elif len(parts) == 10:
+        elif len(parts) >= 10:
             word = parts[1]
             if word.isdigit():
                 number = int(word)
