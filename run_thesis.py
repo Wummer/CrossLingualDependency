@@ -49,12 +49,12 @@ for i in xrange(len(train)):
 
     if DATASET == "UD":
         results = "Results/" + DATASET + "/" + \
-            test_vw[11:-21] + "-dev-mvec" + \
+            test_vw[11:-21] + "-mvec" + \
             str(SIZE) + "-" + "win" + str(WINDOW) + "retro.tsv"
 
     elif DATASET == "SPMRL":
         results = "Results/" + DATASET + "/" + \
-            test_vw[14:-19] + "-dev-mvec" + \
+            test_vw[14:-19] + "-mvec" + \
             str(SIZE) + "-" + "win" + str(WINDOW) + "retro.tsv"
 
     subprocess.call(["hanstholm/build/hanstholm", "--d", train_vw, "--e", test_vw,
