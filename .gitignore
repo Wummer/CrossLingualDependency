@@ -4,9 +4,7 @@ Universal*/
 lit/
 SP*/
 hanstholm/
-#Data_vw/
 
 *.tsv
-*.md
 *.conll*
 *.vw

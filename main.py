@@ -27,25 +27,29 @@ logging.basicConfig(
 
 class Thesis:
 
-    """What I need:
+    """What I have done:
 
     reading method:
         + UD 
         + SPMRL
     feature creation:
         + fpos vectors
-        - baseline
+        + baseline
         - competing method
     output to data:
         + vectors
 
-    parser?
-        - hanstholm
+    parser
+        + hanstholm
 
     """
 
     def __init__(self, train_file, test_file, DATA="UD", FEAT=False,
                  METHOD="mvectors", LOADMODEL=False, P=[0.2, 0.8], SIZE=25, WINDOW=2, WORKERS=4,RETRO=True,ITER=10):
+        
+        """ 
+        Here we 'initialize' all relevant variables and run the methods. 
+        """
 
         #"Initialized" variables
         self.text = []
@@ -83,7 +87,7 @@ class Thesis:
         self.test_cpos, self.test_fpos, self.test_all_pos, self.test_wals = self.read_input(
             test_file)
         self.embed_cpos, self.embed_fpos, self.embed_all_pos = self.read_input(
-            train_file.replace("_vsrest",""),WALS=False)
+            train_file.replace("_vsrest",""),WALS=False) #Don't want no 
 
 
 
@@ -124,10 +128,10 @@ class Thesis:
                     tline = line.strip("\n").lower().split()
 
                     if WALS:
-                        t_a81.append(tline[10])
-                        t_a85.append(tline[11])
-                        t_a86.append(tline[12])
-                        t_a87.append(tline[13])
+                        t_a81.append(tline[10]) #81a
+                        t_a85.append(tline[11]) #85a
+                        t_a86.append(tline[12]) #86a
+                        t_a87.append(tline[13]) #87a
 
                     t_text.append(tline[1])
                     t_cpos.append(tline[3].replace("|", "+"))
@@ -144,7 +148,7 @@ class Thesis:
 
                     else:
                         raise ValueError(
-                            "This dataset does not have fPOS. You must set FEAT=True")
+                            "This dataset does not have fPOS or features.")
 
                 elif line == "\n":
                     if WALS:
@@ -218,6 +222,10 @@ class Thesis:
 
 
     def enrichment(self):
+        """
+        Enriches the .vw files with the appropriate vectors and WALS features.
+        As we can define which features the use in the parser template we just write everything to the file. 
+        """
 
         train = "Data_vw/"+self.DATA+"/" + self.train_file.split("/")[-1][:-7] + ".vw"
         test = "Data_vw/"+self.DATA+"/" + self.test_file.split("/")[-1][:-7] + ".vw"
@@ -244,6 +252,7 @@ class Thesis:
                         word_tracker = 0
                         print >> f
                         continue
+
                     #Only interested in test scenario
                     if idx>0:
                         all_count +=1
@@ -267,15 +276,24 @@ class Thesis:
                     # Adding the WALS features per Dr. phil Soegaard!
                     for feat in wals_feats[idx]:
                         try:
+                            """
+                            #| g_81a vso0:0 .. | g_81a sov0:0 .. |
+                            feat_head, feat_tail = feat[sent_tracker][word_tracker].split("_")
+                            tline += " |g_" + feat_head +" "+ " ".join(
+                                feat_tail + str(x) + ":" + str(y) for x, y in enumerate(vec))
                             
-                            tline += " |g_" + feat[sent_tracker][word_tracker] +" "+ " ".join(
+                            
+                             #| g_81a_vso 0:0 ..| g_81a_sov 0:0 ..|
+                            tline += " |g_"+feat[sent_tracker][word_tracker] + " " + " ".join(
                                 str(x) + ":" + str(y) for x, y in enumerate(vec))
-        
+                            
                             """
-                            tline += " "+feat[sent_tracker][word_tracker] + ":" + " ".join(
-                                str(x) + ":" + str(y) for x, y in enumerate(vec))
-                            """
+                            #|g_81a vso | g_81a sv0|
+                            feat_head, feat_tail = feat[sent_tracker][word_tracker].split("_")
+                            tline += " |g_" + feat_head + " " + feat_tail 
+                            
                         except IndexError:
+                            #Debugging
                             print line
                             print tline
                             print pos[idx][sent_tracker],len(pos[idx][sent_tracker])
@@ -284,8 +302,8 @@ class Thesis:
 
 
                     print >> f, tline
-                    #Only interested in test scenario
 
+                    #Only interested in test scenario
                     word_tracker += 1
 
         print all_count,"pos tags were parsed"
@@ -293,6 +311,10 @@ class Thesis:
 
 
     def create_lexicon(self,cpos,fpos):
+        """
+        Creates the lexicon needed for retrofitting. 
+        It follows the template of the lexicon files contained in the original retrofitting script.
+        """
         lex = {}
 
         for l in xrange(len(cpos)):
@@ -318,7 +340,7 @@ class Thesis:
 
 
     """
-    The following functions are taken from the Retrofitting repo and modified to fit my class. 
+    The following functions are taken from the Retrofitting repo and slightly modified to fit my class. 
     All credits go to Manaal Faruqui, mfaruqui@cs.cmu.edu
     """
 

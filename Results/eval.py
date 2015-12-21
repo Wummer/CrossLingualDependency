@@ -2,6 +2,9 @@ from __future__ import division
 import glob
 import codecs
 
+"""
+This file is simply used to calculate UAS / LAS for all .tsv files.
+"""
 
 def UAS(eval_file):
 	correct=0
@@ -37,6 +40,7 @@ def LAS(eval_file):
 	
 	return correct/total*100
 
+
 print "="*20,"UD RESULTS","="*20
 print "-"*20,"Baselines","-"*20
 for f in sorted(glob.glob("UD/*-baseline.tsv")):
@@ -52,69 +56,59 @@ for f in sorted(glob.glob("UD/*-baseline-nowords.tsv")):
 	print "LAS: ",LAS(f),"%"
 	print
 
-print "-"*20,"MVec10retro","-"*20
-for f in sorted(glob.glob("UD/*-mvec10retro.tsv")):
-	print "Results for",(f[3:])
-	print "UAS: ",UAS(f),"%"
-	print "LAS: ",LAS(f),"%"
-	print
-
-print "-"*20,"MVec10retro with no words","-"*20
-for f in sorted(glob.glob("UD/*-mvec10retro-nowords.tsv")):
-	print "Results for",(f[3:])
-	print "UAS: ",UAS(f),"%"
-	print "LAS: ",LAS(f),"%"
-	print
 
 
-print "-"*20,"MVec25","-"*20
-for f in sorted(glob.glob("UD/*-mvec25.tsv")):
-	print "Results for",(f[3:])
-	print "UAS: ",UAS(f),"%"
-	print "LAS: ",LAS(f),"%"
-	print
 
 print "-"*20,"MVec25Retro","-"*20
-for f in sorted(glob.glob("UD/*-mvec25retro.tsv")):
+for f in sorted(glob.glob("UD/*-mvec25retrowin2.tsv")):
 	print "Results for",(f[3:])
 	print "UAS: ",UAS(f),"%"
 	print "LAS: ",LAS(f),"%"
 	print
 
 print "-"*20,"MVec25Retro with no words","-"*20
-for f in sorted(glob.glob("UD/*-mvec25retro-nowords.tsv")):
+for f in sorted(glob.glob("UD/*-mvec25retrowin2-nowords.tsv")):
 	print "Results for",(f[3:])
 	print "UAS: ",UAS(f),"%"
 	print "LAS: ",LAS(f),"%"
 	print
 
 print "-"*20,"MVec50retro","-"*20
-for f in sorted(glob.glob("UD/*-mvec50retro.tsv")):
+for f in sorted(glob.glob("UD/*-mvec50retrowin2.tsv")):
 	print "Results for",(f[3:])
 	print "UAS: ",UAS(f),"%"
 	print "LAS: ",LAS(f),"%"
 	print
 
 print "-"*20,"MVec50retro with no words","-"*20
-for f in sorted(glob.glob("UD/*-mvec50retro-nowords.tsv")):
+for f in sorted(glob.glob("UD/*-mvec50-win2retro-nowords.tsv")):
 	print "Results for",(f[3:])
 	print "UAS: ",UAS(f),"%"
 	print "LAS: ",LAS(f),"%"
 	print
 
 print "-"*20,"MVec50retro with no words and wals","-"*20
-for f in sorted(glob.glob("UD/*-wals.tsv")):
+for f in sorted(glob.glob("UD/*mvec50-win2retro-wals.tsv")):
 	print "Results for",(f[3:])
 	print "UAS: ",UAS(f),"%"
 	print "LAS: ",LAS(f),"%"
 	print
 
-print "-"*20,"MVecDev","-"*20
-for f in sorted(glob.glob("UD/da-dev-*.tsv")):
+print "-"*20,"MVec Wals","-"*20
+for f in sorted(glob.glob("UD/*-wals*.tsv")):
 	print "Results for",(f[3:])
 	print "UAS: ",UAS(f),"%"
 	print "LAS: ",LAS(f),"%"
 	print
+
+print "-"*20,"MVec Nivre","-"*20
+for f in sorted(glob.glob("UD/*-nivre*.tsv")):
+	print "Results for",(f[3:])
+	print "UAS: ",UAS(f),"%"
+	print "LAS: ",LAS(f),"%"
+	print
+
+
 
 
 print "="*20,"SPMRL RESULTS","="*20
@@ -146,8 +140,37 @@ for f in sorted(glob.glob("SPMRL/*-mvec50-win2retro-nowords.tsv")):
 	print "LAS: ",LAS(f),"%"
 	print
 
+print "-"*20,"MVec10retro with no words and wals","-"*20
+for f in sorted(glob.glob("SPMRL/*-mvec10-win2retro-wals.tsv")):
+	print "Results for",(f[6:])
+	print "UAS: ",UAS(f),"%"
+	print "LAS: ",LAS(f),"%"
+	print
+
+
 print "-"*20,"MVec50retro with no words and wals","-"*20
 for f in sorted(glob.glob("SPMRL/*-mvec50-win2retro-wals.tsv")):
+	print "Results for",(f[6:])
+	print "UAS: ",UAS(f),"%"
+	print "LAS: ",LAS(f),"%"
+	print
+
+print "-"*20,"MVec50retro with no words and wals5","-"*20
+for f in sorted(glob.glob("SPMRL/*-mvec50-win2retro-wals5.tsv")):
+	print "Results for",(f[6:])
+	print "UAS: ",UAS(f),"%"
+	print "LAS: ",LAS(f),"%"
+	print
+
+print "-"*20,"MVec50retro with no words and wals6","-"*20
+for f in sorted(glob.glob("SPMRL/*-mvec50-win2retro-wals6.tsv")):
+	print "Results for",(f[6:])
+	print "UAS: ",UAS(f),"%"
+	print "LAS: ",LAS(f),"%"
+	print
+
+print "-"*20,"Nivre template","-"*20
+for f in sorted(glob.glob("SPMRL/*-nivre.tsv")):
 	print "Results for",(f[6:])
 	print "UAS: ",UAS(f),"%"
 	print "LAS: ",LAS(f),"%"

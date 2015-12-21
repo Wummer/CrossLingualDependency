@@ -37,10 +37,12 @@ LOAD = True
 WINDOW = 2
 
 for i in xrange(len(train)):
+
     print train[i]
     T = Thesis(train[i], test[i], DATA=DATASET, SIZE=SIZE,
                LOADMODEL=LOAD, WINDOW=WINDOW, RETRO=RETRO)
     del T
+
 
     path = "Data_vw/" + DATASET + "/"
     t = "-mvectors" + str(SIZE) + ".vw"
@@ -57,17 +59,22 @@ for i in xrange(len(train)):
             test_vw[14:-19] + "-mvec" + \
             str(SIZE) + "-" + "win" + str(WINDOW) + "retro.tsv"
 
+
+    subprocess.call(["hanstholm/build/hanstholm", "--d", train_vw, "--e", test_vw,
+                     "--template", "thesis5.txt", "--pred", results[:-4] + "-wals5.tsv"])
+    subprocess.call(["hanstholm/build/hanstholm", "--d", train_vw, "--e", test_vw,
+                     "--template", "thesis6.txt", "--pred", results[:-4] + "-wals6.tsv"])
+"""
+
     subprocess.call(["hanstholm/build/hanstholm", "--d", train_vw, "--e", test_vw,
                      "--template", "thesis.txt", "--pred", results])
 
     subprocess.call(["hanstholm/build/hanstholm", "--d", train_vw, "--e", test_vw,
                      "--template", "thesis3.txt", "--pred", results[:-4] + "-nowords.tsv"])
-    
+
     subprocess.call(["hanstholm/build/hanstholm", "--d", train_vw, "--e", test_vw,
-                     "--template", "thesis5.txt", "--pred", results[:-4] + "-wals.tsv"])
+	                 "--template", "thesis4.txt", "--pred", results.split("-")[0] + "-baseline-nowords.tsv"])
 
     subprocess.call(["hanstholm/build/hanstholm", "--d", train_vw, "--e", test_vw,
                      "--template", "thesis2.txt", "--pred", results.split("-")[0] + test_vw[14:-119] + "-baseline.tsv"])
-
-    subprocess.call(["hanstholm/build/hanstholm", "--d", train_vw, "--e", test_vw,
-                     "--template", "thesis4.txt", "--pred", results.split("-")[0] + "-baseline-nowords.tsv"])
+"""

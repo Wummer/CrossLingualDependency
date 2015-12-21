@@ -1,4 +1,4 @@
-      S0:g ++ S0:p
+S0:g ++ S0:p
 S0:g ++ S0:p   # Hello
 S0:g
 S0:p
