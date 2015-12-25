@@ -35,11 +35,16 @@ if __name__ == '__main__':
 
         if args['--feature-set'] == "dependency":
             for i in xrange(len(sent["word"])):
-                print >>data_out, u"{label} '{sent_i}-{token_i}{features}".format(
-                    label=normalize_label(sent['dependency'][i]),
-                    sent_i=sent_i,
-                    token_i=i,
-                    features=u" ".join(features_for_token(sent['word'], sent[label_key], i)))
+                try:
+                    print >>data_out, u"{label} '{sent_i}-{token_i}{features}".format(
+                        label=normalize_label(sent['dependency'][i]),
+                        sent_i=sent_i,
+                        token_i=i,
+                        features=u" ".join(features_for_token(sent['word'], sent[label_key], i)))
+                #We need this check for sentences we skip
+                except IndexError:
+                    continue 
+
         else:
             for i in xrange(len(sent["word"])):
                 print >>data_out, "{label} '{name}-{sent_i}-{token_i}|".format(
@@ -88,7 +93,12 @@ if __name__ == '__main__':
                         sent['dependency'].append(to_append)
                         repeat = False
                     sent['dependency'].append(to_append)
+
+                elif parts[6] == "_" and parts[7] == "_" and parts[3] == "_" and parts[4] == "_":
+                    continue
+                    
                 else:
+                    print "the other case"
                     repeat = True
 
         elif len(parts) == 0:

@@ -120,7 +120,7 @@ for i in xrange(len(train)):
 
     if dataset == "UD":
         subprocess.call(["python", "conll_to_vw/conll_to_vw.py", true_dev, "Data_vw/" + dataset + "/" +
-                         true_dev.split("/")[-1][:-6] + ".vw", "--feature-set", "dependency", "--coarse"])
+                         true_dev.split("/")[-1][:-6] + "vw", "--feature-set", "dependency", "--coarse"])
 
 
 raise SystemExit

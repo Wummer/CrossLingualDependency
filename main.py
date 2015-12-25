@@ -44,7 +44,7 @@ class Thesis:
 
     """
 
-    def __init__(self, train_file, test_file, DATA="UD", FEAT=False,
+    def __init__(self, train_file, test_file, DATA="UD",
                  METHOD="mvectors", LOADMODEL=False, P=[0.2, 0.8], SIZE=25, WINDOW=2, WORKERS=4,RETRO=True,ITER=10):
         
         """ 
@@ -64,7 +64,6 @@ class Thesis:
 
         # Parameters
         self.DATA = DATA
-        self.FEAT = FEAT
         self.METHOD = METHOD
         self.P = P
         self.WINDOW = WINDOW
@@ -127,6 +126,9 @@ class Thesis:
                 elif line != "\n":
                     tline = line.strip("\n").lower().split()
 
+                    if tline[6] == "_" and tline[7] == "_" and tline[3] == "_" and tline[4] == "_":
+                        continue
+
                     if WALS:
                         t_a81.append(tline[10]) #81a
                         t_a85.append(tline[11]) #85a
@@ -137,10 +139,11 @@ class Thesis:
                     t_cpos.append(tline[3].replace("|", "+"))
 
                     if tline[4] != "_":
-                        t_fpos.append(tline[4].replace("|", "+") and tline[4].split(",")[0] if self.FEAT == False
+                        t_fpos.append(tline[4].replace("|", "+").split(",")[0])
+                        """ if self.FEAT == False
                                       else "+".join(sorted(tline[4].split("|"))) +
                                       "+" + "+".join(sorted(tline[5].split("|"))))
-
+                        """
                     elif tline[4] == "_":
                         t_fpos.append(
                             "+".join(sorted(tline[3].split("|"))).split(",")[0] +
@@ -242,7 +245,7 @@ class Thesis:
         wals_feats = [self.train_wals,self.test_wals]
 
         for idx in xrange(len(write_files)):
-            with codecs.open(write_files[idx][:-3] + ("-feats" if self.FEAT == True else "")
+            with codecs.open(write_files[idx][:-3]
                              + "-mvectors" + str(self.SIZE) + ".vw", "w") as f:
                 sent_tracker = 0
                 word_tracker = 0
