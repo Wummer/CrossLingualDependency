@@ -4,6 +4,8 @@ Universal*/
 lit/
 SP*/
 hanstholm/
+RBGParser/
+lstm-parser/
 
 *.tsv
 *.conll*

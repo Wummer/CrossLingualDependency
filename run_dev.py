@@ -15,7 +15,7 @@ test = "Universal Dependencies/ud-treebanks-v1.1/UD_Danish/da_vsrest-ud-dev.conl
 SIZE = [10, 25, 50]
 WINDOW = [1, 2, 3]
 RETRO = True
-LOAD = False
+LOAD = True
 """
 SIZE = [10]
 WINDOW = [2]
@@ -34,7 +34,6 @@ for size in SIZE:
         if CREATE == "y":
             T = Thesis(
                 train, test, SIZE=size, LOADMODEL=LOAD, WINDOW=window, RETRO=RETRO)
-            LOAD = True
             del T
 
         path = "Data_vw/UD/"
@@ -47,7 +46,7 @@ for size in SIZE:
             str(size) + "-" + "win" + str(window) + "retro.tsv"
         print results
 
-
+        
         #MVEC50 with and without words
         subprocess.call(["hanstholm/build/hanstholm", "--d", train_vw, "--e", test_vw,
                          "--template", "thesis.txt", "--pred", results])
@@ -62,11 +61,12 @@ for size in SIZE:
         subprocess.call(["hanstholm/build/hanstholm", "--d", train_vw, "--e", test_vw,
                          "--template", "thesis7.txt", "--pred", results[:-4] + "-wals7.tsv"])
 
-    	LOAD = False
 
 
+
+print "Results/UD/" + test_vw[11:-4]
 #Just the baselines
 subprocess.call(["hanstholm/build/hanstholm", "--d", train_vw, "--e", test_vw,
-                 "--template", "thesis2.txt", "--pred", "Results/UD/" + test_vw[11:-21] + "baseline.tsv"])
+                 "--template", "thesis2.txt", "--pred", "Results/UD/" + results.split["-"][0] + "-dev-baseline.tsv"])
 subprocess.call(["hanstholm/build/hanstholm", "--d", train_vw, "--e", test_vw,
-                 "--template", "thesis4.txt", "--pred", "Results/UD/" + test_vw[11:-21] + "baseline-nowords.tsv"])
+                 "--template", "thesis4.txt", "--pred", "Results/UD/" + results.splt["-"][0] + "-dev-baseline-nowords.tsv"])

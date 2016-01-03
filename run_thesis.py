@@ -6,7 +6,21 @@ import sys
 from main import Thesis
 
 random.seed(1)
+print 
 DATASET = str(sys.argv[1])
+
+try:
+    if str(sys.argv[2]) == "RBG":
+        RBG = True
+    else: RBG=False
+except IndexError:
+    RBG = False
+
+SIZE = 50
+RETRO = True
+LOAD = False
+WINDOW = 2
+
 
 if DATASET == "UD":
     # dev experiment
@@ -31,50 +45,56 @@ else:
     raise SystemExit
 
 
-SIZE = 50
-RETRO = True
-LOAD = True
-WINDOW = 2
 
-for i in xrange(len(train)):
+if RBG == False:
+    for i in xrange(len(train)):
 
-    print train[i]
-    T = Thesis(train[i], test[i], DATA=DATASET, SIZE=SIZE,
-               LOADMODEL=LOAD, WINDOW=WINDOW, RETRO=RETRO)
-    del T
+        print train[i]
+        T = Thesis(train[i], test[i], DATA=DATASET, SIZE=SIZE,
+                   LOADMODEL=LOAD, WINDOW=WINDOW, RETRO=RETRO)
+        del T
 
+        path = "Data_vw/" + DATASET + "/"
+        t = "-mvectors" + str(SIZE) + ".vw"
+        train_vw = path + train[i].split("/")[-1].replace(".conllu", t)
+        test_vw = path + test[i].split("/")[-1].replace(".conllu", t)
 
-    path = "Data_vw/" + DATASET + "/"
-    t = "-mvectors" + str(SIZE) + ".vw"
-    train_vw = path + train[i].split("/")[-1].replace(".conllu", t)
-    test_vw = path + test[i].split("/")[-1].replace(".conllu", t)
+        if DATASET == "UD":
+            results = "Results/" + DATASET + "/" + \
+                test_vw[11:-21] + "-mvec" + \
+                str(SIZE) + "-" + "win" + str(WINDOW) + "retro.tsv"
 
-    if DATASET == "UD":
-        results = "Results/" + DATASET + "/" + \
-            test_vw[11:-21] + "-mvec" + \
-            str(SIZE) + "-" + "win" + str(WINDOW) + "retro.tsv"
+        elif DATASET == "SPMRL":
+            results = "Results/" + DATASET + "/" + \
+                test_vw[14:-19] + "-mvec" + \
+                str(SIZE) + "-" + "win" + str(WINDOW) + "retro.tsv"
 
-    elif DATASET == "SPMRL":
-        results = "Results/" + DATASET + "/" + \
-            test_vw[14:-19] + "-mvec" + \
-            str(SIZE) + "-" + "win" + str(WINDOW) + "retro.tsv"
+        subprocess.call(["hanstholm/build/hanstholm", "--d", train_vw, "--e", test_vw,
+                         "--template", "nivre.txt", "--pred", results[:-4] + "-nivre.tsv"])
 
+        subprocess.call(["hanstholm/build/hanstholm", "--d", train_vw, "--e", test_vw,
+                         "--template", "nivre3.txt", "--pred", results[:-4] + "-nivre3.tsv"])
 
-    subprocess.call(["hanstholm/build/hanstholm", "--d", train_vw, "--e", test_vw,
-                     "--template", "thesis5.txt", "--pred", results[:-4] + "-wals5.tsv"])
-    subprocess.call(["hanstholm/build/hanstholm", "--d", train_vw, "--e", test_vw,
-                     "--template", "thesis6.txt", "--pred", results[:-4] + "-wals6.tsv"])
-"""
+        subprocess.call(["hanstholm/build/hanstholm", "--d", train_vw, "--e", test_vw,
+                         "--template", "thesis5.txt", "--pred", results[:-4] + "-wals5.tsv"])
 
-    subprocess.call(["hanstholm/build/hanstholm", "--d", train_vw, "--e", test_vw,
-                     "--template", "thesis.txt", "--pred", results])
+        subprocess.call(["hanstholm/build/hanstholm", "--d", train_vw, "--e", test_vw,
+                         "--template", "thesis.txt", "--pred", results])
 
-    subprocess.call(["hanstholm/build/hanstholm", "--d", train_vw, "--e", test_vw,
-                     "--template", "thesis3.txt", "--pred", results[:-4] + "-nowords.tsv"])
+        subprocess.call(["hanstholm/build/hanstholm", "--d", train_vw, "--e", test_vw,
+                         "--template", "thesis3.txt", "--pred", results[:-4] + "-nowords.tsv"])
+        """
+        subprocess.call(["hanstholm/build/hanstholm", "--d", train_vw, "--e", test_vw,
+                         "--template", "thesis4.txt", "--pred", results.split("-")[0] + "-baseline-nowords.tsv"])
 
-    subprocess.call(["hanstholm/build/hanstholm", "--d", train_vw, "--e", test_vw,
-	                 "--template", "thesis4.txt", "--pred", results.split("-")[0] + "-baseline-nowords.tsv"])
+        subprocess.call(["hanstholm/build/hanstholm", "--d", train_vw, "--e", test_vw,
+                         "--template", "thesis2.txt", "--pred", results.split("-")[0] + test_vw[14:-119] + "-baseline.tsv"])
+        """
 
-    subprocess.call(["hanstholm/build/hanstholm", "--d", train_vw, "--e", test_vw,
-                     "--template", "thesis2.txt", "--pred", results.split("-")[0] + test_vw[14:-119] + "-baseline.tsv"])
-"""
+if RBG == True:
+    for i in xrange(len(train)):
+
+        print train[i]
+        T = Thesis(train[i], test[i], DATA=DATASET, SIZE=SIZE,
+                   LOADMODEL=LOAD, WINDOW=WINDOW, RETRO=RETRO, RBG=RBG,WORKERS=1)
+        del T   

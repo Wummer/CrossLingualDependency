@@ -12,8 +12,13 @@ try:
 except IndexError:
     print "Must have argument 1 as SPMRL or UD"
 
+try:
+    if str(sys.argv[2]) == "subsample":
+        subsample=True
+except IndexError:
+    subsample=False
 
-def create_WALS_files(train, true_train):
+def create_WALS_files(train, true_train,subsample):
     with codecs.open(true_train, "w+") as outfile:
         for infilename in train:
             with codecs.open(infilename) as infile:
@@ -99,17 +104,17 @@ for i in xrange(len(train)):
     true_train = train[i].replace("/" + lang, "/" + lang + "_vsrest")
 
     # Creating _vsrest files and adding WALS features
-    create_WALS_files(a, true_train)
+    create_WALS_files(a, true_train,subsample)
 
     # Now adding test features
     true_test = test[i].replace("/" + lang, "/" + lang + "_vsrest")
 
-    create_WALS_files([test[i]], true_test)
+    create_WALS_files([test[i]], true_test,subsample)
 
     if dataset == "UD":
         true_dev = dev[i].replace("/" + lang, "/" + lang + "_vsrest")
 
-        create_WALS_files([dev[i]], true_dev)
+        create_WALS_files([dev[i]], true_dev,subsample)
 
     subprocess.call(["python", "conll_to_vw/conll_to_vw.py", true_train, "Data_vw/" + dataset + "/" +
                      true_train.split("/")[-1][:-6] + "vw", "--feature-set", "dependency", "--coarse"])

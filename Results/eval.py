@@ -42,23 +42,42 @@ def LAS(eval_file):
 
 
 print "="*20,"UD RESULTS","="*20
+print "-"*20,"Dev results","-"*20
+for f in sorted(glob.glob("UD/da_vsrest-dev*.tsv")):
+	print "Results for",(f[3:])
+	print "UAS: ",UAS(f),"%"
+	print "LAS: ",LAS(f),"%"
+	print
+
 print "-"*20,"Baselines","-"*20
-for f in sorted(glob.glob("UD/*-baseline.tsv")):
+for f in sorted(glob.glob("UD/*_vsrest-baseline.tsv")):
 	print "Results for",(f[3:])
 	print "UAS: ",UAS(f),"%"
 	print "LAS: ",LAS(f),"%"
 	print
 
 print "-"*20,"Baselines with no words","-"*20
-for f in sorted(glob.glob("UD/*-baseline-nowords.tsv")):
+for f in sorted(glob.glob("UD/*_vsrest-baseline-nowords.tsv")):
 	print "Results for",(f[3:])
 	print "UAS: ",UAS(f),"%"
 	print "LAS: ",LAS(f),"%"
 	print
 
+print "-"*20,"MVec10 win3 Retro","-"*20
+for f in sorted(glob.glob("UD/*_vsrest--mvec10-win3retro*")):
+	print "Results for",(f[3:])
+	print "UAS: ",UAS(f),"%"
+	print "LAS: ",LAS(f),"%"
+	print
 
+print "-"*20,"MVec25 win2 Retro","-"*20
+for f in sorted(glob.glob("UD/*_vsrest--mvec25-win2retro*")):
+	print "Results for",(f[3:])
+	print "UAS: ",UAS(f),"%"
+	print "LAS: ",LAS(f),"%"
+	print
 
-
+"""
 print "-"*20,"MVec25Retro","-"*20
 for f in sorted(glob.glob("UD/*-mvec25retrowin2.tsv")):
 	print "Results for",(f[3:])
@@ -94,12 +113,6 @@ for f in sorted(glob.glob("UD/*mvec50-win2retro-wals.tsv")):
 	print "LAS: ",LAS(f),"%"
 	print
 
-print "-"*20,"MVec Wals","-"*20
-for f in sorted(glob.glob("UD/*-wals*.tsv")):
-	print "Results for",(f[3:])
-	print "UAS: ",UAS(f),"%"
-	print "LAS: ",LAS(f),"%"
-	print
 
 print "-"*20,"MVec Nivre","-"*20
 for f in sorted(glob.glob("UD/*-nivre*.tsv")):
@@ -108,14 +121,8 @@ for f in sorted(glob.glob("UD/*-nivre*.tsv")):
 	print "LAS: ",LAS(f),"%"
 	print
 
-print "-"*20,"Dev results","-"*20
-for f in sorted(glob.glob("UD/da_vsrest-dev*.tsv")):
-	print "Results for",(f[3:])
-	print "UAS: ",UAS(f),"%"
-	print "LAS: ",LAS(f),"%"
-	print
 
-"""
+
 
 print "="*20,"SPMRL RESULTS","="*20
 print "-"*20,"Baselines","-"*20

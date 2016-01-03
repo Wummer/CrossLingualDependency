@@ -45,7 +45,7 @@ class Thesis:
     """
 
     def __init__(self, train_file, test_file, DATA="UD",
-                 METHOD="mvectors", LOADMODEL=False, P=[0.2, 0.8], SIZE=25, WINDOW=2, WORKERS=4,RETRO=True,ITER=10):
+                 METHOD="mvectors", LOADMODEL=False, P=[0.2, 0.8], SIZE=25, WINDOW=2, WORKERS=4,RETRO=True,ITER=10,RBG=False):
         
         """ 
         Here we 'initialize' all relevant variables and run the methods. 
@@ -97,7 +97,10 @@ class Thesis:
 
 
         """ ENRICHMENT """
-        self.enrichment()
+        if not RBG:
+            self.enrichment()
+        else:
+            self.RBGenrichment()
 
 
         """ PARSER """
@@ -239,10 +242,16 @@ class Thesis:
 
         #The files we loop over
         write_files = [train, test]
-        read_files = [self.train_file, self.test_file]
+
+        #read_files = [self.train_file, self.test_file]
+        
+
         pos = [self.train_fpos, self.test_fpos]
         cpos = [self.train_cpos, self.test_cpos]
         wals_feats = [self.train_wals,self.test_wals]
+
+
+
 
         for idx in xrange(len(write_files)):
             with codecs.open(write_files[idx][:-3]
@@ -284,7 +293,7 @@ class Thesis:
                             feat_head, feat_tail = feat[sent_tracker][word_tracker].split("_")
                             tline += " |g_" + feat_head +" "+ " ".join(
                                 feat_tail + str(x) + ":" + str(y) for x, y in enumerate(vec))
-                            
+                            """
                             
                              #| g_81a_vso 0:0 ..| g_81a_sov 0:0 ..|
                             tline += " |g_"+feat[sent_tracker][word_tracker] + " " + " ".join(
@@ -294,7 +303,7 @@ class Thesis:
                             #|g_81a vso | g_81a sv0|
                             feat_head, feat_tail = feat[sent_tracker][word_tracker].split("_")
                             tline += " |g_" + feat_head + " " + feat_tail 
-                            
+                            """
                         except IndexError:
                             #Debugging
                             print line
@@ -312,6 +321,121 @@ class Thesis:
         print all_count,"pos tags were parsed"
         print "Of these",fpos_count,"were fPOS and",cpos_count,"were cPOS"
 
+
+    def RBGenrichment(self):
+        "wooptido"
+
+        train_out = "Data_RBG/"+self.DATA+"/"+self.train_file.split("/")[-1].replace(".conllu","-rbg.conllu")
+        test_out ="Data_RBG/"+self.DATA+"/"+self.test_file.split("/")[-1].replace(".conllu","-rbg.conllu")
+
+        vec_file = "Vectors/RBG/" + "mvectors" + str(self.SIZE) + "-win" + str(self.WINDOW) + "retro"
+
+        read_files = [self.train_file,self.test_file]
+        write_files = [train_out, test_out]
+
+        pos = [self.train_fpos, self.test_fpos]
+        cpos = [self.train_cpos, self.test_cpos]
+        wals_feats = [self.train_wals,self.test_wals]
+
+        #Here we print the retotrofitted vector to a file we can use in RBGparser
+        with codecs.open(vec_file,"w") as f:
+            for pos,vec in self.model.iteritems():
+                #vec = (vec - self.min_vector) / self.max_vector * 1e-4 
+                line_out = pos + " " + " ".join(str(x) for x in vec)
+                print  >> f, line_out
+
+
+        for idx in xrange(len(write_files)):
+
+            #Our basic model in the works!
+            with codecs.open(write_files[idx][:-7]
+                             + "-mvectors" + str(self.SIZE) + ".conllu","w") as f:
+
+                for line in codecs.open(read_files[idx]):
+                    if line == "\n":
+                        print >> f
+                        continue
+
+                    if line.startswith("#"):
+                        continue
+
+                    
+                    tline = line.strip().split()
+                    tline[1] = tline[4]
+                    tline[2] = "_"
+                    tline[4] = "_"
+                    tline[5] = "_"
+                    tline = tline[:-4]
+                    print >> f, "\t".join(tline)
+
+            #WALS goes here whenever ...
+            with codecs.open(write_files[idx][:-7]
+                             + "-mvectors" + str(self.SIZE) + "-wals.conllu","w") as f:
+
+                for line in codecs.open(read_files[idx]):
+                    if line == "\n":
+                        print >> f
+                        continue
+
+                    if line.startswith("#"):
+                        continue
+
+                    
+                    tline = line.strip().split()
+                    tline[1] = tline[4]
+                    tline[2] = "_"
+                    tline[4] = "_"
+                    tline[5] = ""
+
+                    for feat in tline[-4:]:
+                        vec = self.model[tline[1]]
+                        tline[5] += feat + " " + " ".join(str(x) for x in vec)
+                        
+                    #WALS as words
+                    #tline[5] = "|".join(tline[-4:])
+
+                    """
+                    if tline[5] == "_":
+                        tline[5] = "|".join(tline[-4:])
+                    else:
+                        tline[5] += "|" + "|".join(tline[-4:])
+                    """
+                    tline = tline[:-4]
+                    print >> f, "\t".join(tline)
+
+            #Baseline-nowords in the making:
+            with codecs.open(write_files[idx][:-7]+ "-baseline-nowords.conllu","w") as f:
+                for line in codecs.open(read_files[idx]):
+                    if line == "\n":
+                        print >> f
+                        continue
+
+                    if line.startswith("#"):
+                        continue
+                    #Baseline-nowords in the making:
+                    tline = line.strip().split()
+                    tline[1] = "_"
+                    tline[2] = "_"
+                    tline[4] = "_"
+                    tline[5] = "_"
+                    tline = tline[:-4]
+                    print >> f, "\t".join(tline)
+
+            #Baseline with words and all that jazz
+            with codecs.open(write_files[idx][:-7]+ "-baseline.conllu","w") as f:
+                for line in codecs.open(read_files[idx]):
+                    if line == "\n":
+                        print >> f
+                        continue
+
+                    if line.startswith("#"):
+                        continue
+                    #Baseline-nowords in the making:
+                    tline = line.strip().split()
+                    tline[5] = "_"
+                    tline[4] = "_"
+                    tline = tline[:-4]
+                    print >> f, "\t".join(tline)
 
     def create_lexicon(self,cpos,fpos):
         """

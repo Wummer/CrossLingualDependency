@@ -1,0 +1,1595 @@
+  Labeled   attachment score: 44323 / 80888 * 100 = 54.80 %
+  Unlabeled attachment score: 44323 / 80888 * 100 = 54.80 %
+  Label accuracy score:       80888 / 80888 * 100 = 100.00 %
+
+  ================================================================================
+
+  Evaluation of the results in SPMRL/de_vsrest-spmrl-test-rbg-mvectors40.conllu
+  vs. gold standard Original/de.conllu:
+
+  Legend: '.S' - the beginning of a sentence, '.E' - the end of a sentence
+
+  Number of non-scoring tokens: 11116
+
+  The overall accuracy and its distribution over CPOSTAGs
+
+  -----------+-------+-------+------+-------+------+-------+-------
+  Accuracy   | words | right |   %  | right |   %  | both  |   %
+             |       | head  |      |  dep  |      | right |
+  -----------+-------+-------+------+-------+------+-------+-------
+  total      | 80888 | 44323 |  55% | 80888 | 100% | 44323 |  55%
+  -----------+-------+-------+------+-------+------+-------+-------
+  NOUN       | 23766 | 13099 |  55% | 23766 | 100% | 13099 |  55%
+  VERB       | 10887 |  4724 |  43% | 10887 | 100% |  4724 |  43%
+  DET        |  9650 |  8554 |  89% |  9650 | 100% |  8554 |  89%
+  ADP        |  9307 |  4331 |  47% |  9307 | 100% |  4331 |  47%
+  ADJ        |  7715 |  5110 |  66% |  7715 | 100% |  5110 |  66%
+  PRON       |  6473 |  3811 |  59% |  6473 | 100% |  3811 |  59%
+  ADV        |  4338 |  1981 |  46% |  4338 | 100% |  1981 |  46%
+  CONJ       |  3535 |   634 |  18% |  3535 | 100% |   634 |  18%
+  .          |  1786 |   597 |  33% |  1786 | 100% |   597 |  33%
+  NUM        |  1564 |   905 |  58% |  1564 | 100% |   905 |  58%
+  PRT        |  1497 |   470 |  31% |  1497 | 100% |   470 |  31%
+  X          |   370 |   107 |  29% |   370 | 100% |   107 |  29%
+  -----------+-------+-------+------+-------+------+-------+-------
+
+
+  The overall error rate and its distribution over CPOSTAGs
+
+  -----------+-------+-------+------+-------+------+-------+-------
+  Error      | words | head  |   %  |  dep  |   %  | both  |   %
+  Rate       |       | err   |      |  err  |      | wrong |
+  -----------+-------+-------+------+-------+------+-------+-------
+  total      | 80888 | 36565 |  45% |     0 |   0% |     0 |   0%
+  -----------+-------+-------+------+-------+------+-------+-------
+  NOUN       | 23766 | 10667 |  45% |     0 |   0% |     0 |   0%
+  VERB       | 10887 |  6163 |  57% |     0 |   0% |     0 |   0%
+  DET        |  9650 |  1096 |  11% |     0 |   0% |     0 |   0%
+  ADP        |  9307 |  4976 |  53% |     0 |   0% |     0 |   0%
+  ADJ        |  7715 |  2605 |  34% |     0 |   0% |     0 |   0%
+  PRON       |  6473 |  2662 |  41% |     0 |   0% |     0 |   0%
+  ADV        |  4338 |  2357 |  54% |     0 |   0% |     0 |   0%
+  CONJ       |  3535 |  2901 |  82% |     0 |   0% |     0 |   0%
+  .          |  1786 |  1189 |  67% |     0 |   0% |     0 |   0%
+  NUM        |  1564 |   659 |  42% |     0 |   0% |     0 |   0%
+  PRT        |  1497 |  1027 |  69% |     0 |   0% |     0 |   0%
+  X          |   370 |   263 |  71% |     0 |   0% |     0 |   0%
+  -----------+-------+-------+------+-------+------+-------+-------
+
+
+  Precision and recall of DEPREL
+
+  ----------------+------+---------+--------+------------+---------------
+  deprel          | gold | correct | system | recall (%) | precision (%) 
+  ----------------+------+---------+--------+------------+---------------
+  --              | 6982 |    6982 |   6982 |     100.00 |        100.00
+  AC              |  127 |     127 |    127 |     100.00 |        100.00
+  ADC             |    4 |       4 |      4 |     100.00 |        100.00
+  AG              | 2241 |    2241 |   2241 |     100.00 |        100.00
+  AMS             |   75 |      75 |     75 |     100.00 |        100.00
+  APP             |  461 |     461 |    461 |     100.00 |        100.00
+  AVC             |    4 |       4 |      4 |     100.00 |        100.00
+  CC              |  238 |     238 |    238 |     100.00 |        100.00
+  CD              | 2223 |    2223 |   2223 |     100.00 |        100.00
+  CJ              | 3446 |    3446 |   3446 |     100.00 |        100.00
+  CM              |  298 |     298 |    298 |     100.00 |        100.00
+  CP              |  788 |     788 |    788 |     100.00 |        100.00
+  CVC             |   71 |      71 |     71 |     100.00 |        100.00
+  DA              |  568 |     568 |    568 |     100.00 |        100.00
+  DM              |   18 |      18 |     18 |     100.00 |        100.00
+  EP              |  186 |     186 |    186 |     100.00 |        100.00
+  JU              |  228 |     228 |    228 |     100.00 |        100.00
+  MNR             | 2554 |    2554 |   2554 |     100.00 |        100.00
+  MO              | 12102 |   12102 |  12102 |     100.00 |        100.00
+  NG              |  514 |     514 |    514 |     100.00 |        100.00
+  NK              | 27902 |   27902 |  27902 |     100.00 |        100.00
+  NMC             |  321 |     321 |    321 |     100.00 |        100.00
+  OA              | 3184 |    3184 |   3184 |     100.00 |        100.00
+  OA2             |    5 |       5 |      5 |     100.00 |        100.00
+  OC              | 3652 |    3652 |   3652 |     100.00 |        100.00
+  OG              |   21 |      21 |     21 |     100.00 |        100.00
+  OP              |  646 |     646 |    646 |     100.00 |        100.00
+  PAR             |  429 |     429 |    429 |     100.00 |        100.00
+  PD              | 1045 |    1045 |   1045 |     100.00 |        100.00
+  PG              |  388 |     388 |    388 |     100.00 |        100.00
+  PH              |   30 |      30 |     30 |     100.00 |        100.00
+  PM              |  432 |     432 |    432 |     100.00 |        100.00
+  PNC             | 1240 |    1240 |   1240 |     100.00 |        100.00
+  RC              |  765 |     765 |    765 |     100.00 |        100.00
+  RE              |  268 |     268 |    268 |     100.00 |        100.00
+  RS              |   35 |      35 |     35 |     100.00 |        100.00
+  SB              | 6638 |    6638 |   6638 |     100.00 |        100.00
+  SBP             |  156 |     156 |    156 |     100.00 |        100.00
+  SVP             |  499 |     499 |    499 |     100.00 |        100.00
+  UC              |   89 |      89 |     89 |     100.00 |        100.00
+  VO              |   15 |      15 |     15 |     100.00 |        100.00
+
+
+  Precision and recall of DEPREL + ATTACHMENT
+
+  ----------------+------+---------+--------+------------+---------------
+  deprel          | gold | correct | system | recall (%) | precision (%) 
+  ----------------+------+---------+--------+------------+---------------
+  --              | 6982 |    4321 |   6982 |      61.89 |         61.89
+  AC              |  127 |       9 |    127 |       7.09 |          7.09
+  ADC             |    4 |       0 |      4 |       0.00 |          0.00
+  AG              | 2241 |     183 |   2241 |       8.17 |          8.17
+  AMS             |   75 |      41 |     75 |      54.67 |         54.67
+  APP             |  461 |     127 |    461 |      27.55 |         27.55
+  AVC             |    4 |       1 |      4 |      25.00 |         25.00
+  CC              |  238 |       3 |    238 |       1.26 |          1.26
+  CD              | 2223 |     576 |   2223 |      25.91 |         25.91
+  CJ              | 3446 |    1861 |   3446 |      54.00 |         54.00
+  CM              |  298 |       6 |    298 |       2.01 |          2.01
+  CP              |  788 |       8 |    788 |       1.02 |          1.02
+  CVC             |   71 |      10 |     71 |      14.08 |         14.08
+  DA              |  568 |     298 |    568 |      52.46 |         52.46
+  DM              |   18 |       6 |     18 |      33.33 |         33.33
+  EP              |  186 |     175 |    186 |      94.09 |         94.09
+  JU              |  228 |      44 |    228 |      19.30 |         19.30
+  MNR             | 2554 |    1729 |   2554 |      67.70 |         67.70
+  MO              | 12102 |    4499 |  12102 |      37.18 |         37.18
+  NG              |  514 |     155 |    514 |      30.16 |         30.16
+  NK              | 27902 |   21073 |  27902 |      75.53 |         75.53
+  NMC             |  321 |     125 |    321 |      38.94 |         38.94
+  OA              | 3184 |    1898 |   3184 |      59.61 |         59.61
+  OA2             |    5 |       3 |      5 |      60.00 |         60.00
+  OC              | 3652 |     748 |   3652 |      20.48 |         20.48
+  OG              |   21 |       8 |     21 |      38.10 |         38.10
+  OP              |  646 |     317 |    646 |      49.07 |         49.07
+  PAR             |  429 |      80 |    429 |      18.65 |         18.65
+  PD              | 1045 |     592 |   1045 |      56.65 |         56.65
+  PG              |  388 |     320 |    388 |      82.47 |         82.47
+  PH              |   30 |      28 |     30 |      93.33 |         93.33
+  PM              |  432 |     105 |    432 |      24.31 |         24.31
+  PNC             | 1240 |      65 |   1240 |       5.24 |          5.24
+  RC              |  765 |     146 |    765 |      19.08 |         19.08
+  RE              |  268 |       3 |    268 |       1.12 |          1.12
+  RS              |   35 |       3 |     35 |       8.57 |          8.57
+  SB              | 6638 |    4480 |   6638 |      67.49 |         67.49
+  SBP             |  156 |      45 |    156 |      28.85 |         28.85
+  SVP             |  499 |     192 |    499 |      38.48 |         38.48
+  UC              |   89 |      38 |     89 |      42.70 |         42.70
+  VO              |   15 |       2 |     15 |      13.33 |         13.33
+
+
+  Precision and recall of binned HEAD direction
+
+  ----------------+------+---------+--------+------------+---------------
+  direction       | gold | correct | system | recall (%) | precision (%) 
+  ----------------+------+---------+--------+------------+---------------
+  to_root         | 5214 |    3725 |   4925 |      71.44 |         75.63
+  left            | 34663 |   29791 |  44190 |      85.94 |         67.42
+  right           | 41011 |   26917 |  31773 |      65.63 |         84.72
+  self            |    0 |       0 |      0 |        NaN |           NaN
+
+
+  Precision and recall of binned HEAD distance
+
+  ----------------+------+---------+--------+------------+---------------
+  distance        | gold | correct | system | recall (%) | precision (%) 
+  ----------------+------+---------+--------+------------+---------------
+  to_root         | 5214 |    3725 |   4925 |      71.44 |         75.63
+  1               | 35940 |   30336 |  44650 |      84.41 |         67.94
+  2               | 14834 |    8215 |  12737 |      55.38 |         64.50
+  3-6             | 15473 |    7633 |  13799 |      49.33 |         55.32
+  7-...           | 9427 |    2623 |   4777 |      27.82 |         54.91
+
+
+  Frame confusions (gold versus system; *...* marks the head token)
+
+  1187  *NK* / *NK* NK 
+  722  NK *NK* / *NK* 
+  383  *NK* / *NK* MO 
+  346  ** -- / ** OC 
+  342  PNC *NK* / *NK* 
+  313  *CD* CJ / NK *CD* CJ 
+  296  *MO* / MO *MO* 
+  290  *SB* / *SB* MO 
+  288  *NK* CD / *NK* 
+  265  MO *NK* / *NK* 
+  221  *NK* AG / *NK* 
+  202  *MO* / *MO* MO 
+  196  *CP* / *CP* OC 
+  195  *NK* / *NK* OA 
+  194  *CP* / *CP* MO 
+  186  *PNC* / *PNC* NK 
+  183  *NK* / *NK* AG 
+  182  *NK* / *NK* SB 
+  181  *PM* / *PM* OC 
+  181  MO *MO* NK / *MO* NK 
+  166  NK *SB* / NK *SB* MO 
+  163  *MO* NK / *MO* NK NK 
+  159  NK *NK* AG / NK *NK* 
+  157  ** -- / ** SB 
+  157  NK *NK* / NK *NK* MO 
+  151  OC *OC* / *OC* 
+  137  NK *SB* / *SB* 
+  135  NK *NK* AG / *NK* 
+  129  *CJ* CD / *CJ* 
+  123  NK *OA* / *OA* 
+  122  NK *AG* / *AG* 
+  120  *JU* / *JU* -- 
+  115  *NK* / NK *NK* 
+  112  NK *SB* AG / NK *SB* 
+  104  ** -- / ** 
+  103  *CD* CJ / CJ *CD* CJ 
+  103  NK *OA* AG / NK *OA* 
+  102  *NK* CJ / *NK* 
+  101  ** -- / ** JU 
+   99  ** -- / ** MO 
+   98  ** -- / ** NK 
+   96  *MNR* NK / *MNR* CD 
+   96  *MO* / *MO* OC 
+   96  *CJ* CJ / *CJ* 
+   90  *PNC* / SB *PNC* NK 
+   87  SB OC *RC* / *RC* 
+   84  *CD* CJ / SB *CD* CJ 
+   83  *NG* / *NG* OC 
+   82  NK *OA* / NK *OA* MO 
+   82  / -- 
+   82  *CM* / *CM* CC 
+   79  *PNC* / *PNC* SB 
+   79  MO *OC* / *OC* 
+   78  *NK* / *NK* CJ 
+   78  NK *AG* / NK *AG* MO 
+   71  *CD* CJ / *CD* OC 
+   69  / CJ 
+   67  *CP* / *CP* SB 
+   67  *NK* / *NK* MNR 
+   66  *NK* / *NK* OC 
+   65  *CD* CJ / *CD* MO 
+   65  OC *--* SB / *--* SB 
+   65  NK *AG* / NK *AG* MNR 
+   64  *NK* / SB *NK* 
+   62  *SB* RE / *SB* 
+   60  *OA* / *OA* MO 
+   60  *SB* CD / *SB* 
+   59  *NK* / AG *NK* 
+   59  MO MO *OC* / *OC* 
+   59  *--* / *--* -- 
+   58  / OC 
+   57  NK NK *NK* AG / NK NK *NK* 
+   57  ** -- / ** PNC 
+   57  *MO* CC / *MO* 
+   57  MO *MO* / *MO* 
+   56  MO *PD* / *PD* 
+   54  *SB* NK / *SB* 
+   54  *CD* CJ / *CD* MO CJ 
+   54  *MO* NK / *MO* CD 
+   53  AC *MO* NK / *MO* NK 
+   52  *NK* / MO *NK* 
+   52  ** -- -- / ** -- 
+   52  NK NK *NK* / *NK* 
+   52  *NK* / *NK* -- 
+   52  SB *--* OC / SB *--* MO 
+   51  *PNC* / *PNC* CJ 
+   51  PNC *SB* / *SB* 
+   51  NK *NK* NK / *NK* 
+   51  *MNR* NK / *MNR* PNC 
+   50  NK *SB* NK / NK *SB* 
+   50  NK NK *NK* / NK NK *NK* MO 
+   50  *MO* NK / *MO* NK OC 
+   48  *MO* MO / *MO* 
+   47  *NK* NK / *NK* 
+   47  CJ *CD* / *CD* NK 
+   47  *MO* RE / *MO* 
+   47  NK NK *SB* / NK NK *SB* MO 
+   46  *CP* / *CP* RE 
+   46  *AC* / *AC* MO 
+   46  -- *PAR* -- / *PAR* 
+   46  *CJ* / *CJ* MO 
+   45  ** -- / ** CP 
+   44  *CJ* / *CJ* CD 
+   44  RE *MO* / *MO* 
+   44  / NK 
+   44  *MO* NK / MO *MO* NK 
+   44  *NK* MNR / *NK* 
+   43  NK NK *NK* / NK *NK* 
+   42  ** -- / ** PD 
+   42  NK *NK* / *NK* MO 
+   42  -- *APP* -- / *APP* 
+   41  NK *AG* NK / NK *AG* 
+   41  *NK* RC / *NK* 
+   41  *CD* CJ / OC *CD* CJ 
+   41  *MO* NK CD / *MO* NK 
+   41  OA *OC* / *OC* 
+   40  *MO* NK / *MO* PNC 
+   40  *PG* NK / *PG* CD 
+   40  NG *MO* / *MO* 
+   40  NK *NK* NK / NK *NK* 
+   39  *CD* CJ / -- *CD* CJ 
+   39  / MO 
+   38  NK NK *OA* / NK *OA* 
+   38  *CD* CJ / *CD* 
+   37  *PM* / *PM* RE 
+   37  OA MO *OC* / *OC* 
+   36  *--* NK / *--* PNC 
+   36  PNC *APP* / *APP* 
+   36  NK *NK* / NK *NK* OC 
+   36  CM *CC* / *CC* 
+   36  *PM* / *PM* MO 
+   36  *PG* NK / *PG* PNC 
+   35  CP SB OC *MO* / *MO* 
+   35  -- *--* -- / *--* 
+   35  ** -- -- -- / ** -- 
+   35  *NK* / *NK* PD 
+   35  NK NK *SB* AG / NK NK *SB* 
+   35  *CM* / *CM* MO 
+   35  *MNR* NK / *MNR* NK NK 
+   34  *OP* RE / *OP* 
+   34  MO MO *NK* / *NK* 
+   34  *--* SB OC / MO *--* SB 
+   33  *NMC* / *NMC* NMC 
+   33  *MO* / *MO* NK 
+   33  / NK CJ 
+   33  *NG* / *NG* MO 
+   32  MO *CJ* NK / *CJ* NK 
+   32  NK *APP* / NK *APP* -- CJ -- 
+   32  *NK* / *NK* SVP 
+   32  NK *NK* MNR / *NK* MNR 
+   32  *--* APP CJ / *--* APP 
+   32  *MNR* NK / *MNR* NK OC 
+   31  MO OA *OC* / OA *OC* 
+   31  NK *NK* CD / *NK* 
+   31  NK *--* / NK *--* -- -- -- 
+   30  MO *OC* / *OC* OC 
+   30  *PNC* / *PNC* APP 
+   30  *NK* / *NK* NK AG 
+   30  *OA* MNR / *OA* 
+   30  NK *NK* RC / NK *NK* 
+   30  *AG* / *AG* NK 
+   30  NK NK *AG* NK / NK *AG* 
+   29  *CD* CJ / OA *CD* CJ 
+   29  NK NK *AG* / NK *AG* 
+   29  *MO* NK / *MO* NK CD 
+   28  ** -- / ** RE 
+   28  NK NK *AG* / *AG* 
+   28  *PNC* / *PNC* -- 
+   28  *NK* / *NK* APP 
+   28  OC *OC* / *OC* RC 
+   28  NK *OA* / *OA* MO 
+   28  NK NK *OA* / NK NK *OA* MO 
+   28  *--* SB OC / MO *--* SB OC 
+   28  *MO* / NG *MO* 
+   28  MO *CJ* / *CJ* 
+   28  -- *NK* / *NK* 
+   27  NK *OA* / NK *OA* SVP 
+   27  *CJ* NK / *CJ* 
+   27  *CD* CJ / AG *CD* CJ 
+   27  / OC -- 
+   27  CP SB OC *OC* / *OC* 
+   27  *MNR* NK / *MNR* NK CD 
+   27  *NK* AG / *NK* NK 
+   26  / CD 
+   26  *MO* / *MO* CJ 
+   26  *CD* CJ / *CD* PNC 
+   26  SB *--* OC / SB *--* MO OC 
+   26  *CJ* / *CJ* MNR 
+   26  MO MO MO *OC* / *OC* 
+   26  PNC *CJ* / *CJ* 
+   26  PNC PNC *NK* / *NK* 
+   26  *NK* / *NK* OP 
+   26  *CD* CJ / *CD* NK 
+   26  NK *NK* / NK *NK* MNR 
+   26  NK *CJ* CD / NK *CJ* 
+   25  *NMC* / *NMC* NK 
+   25  NK NK *OA* / *OA* 
+   25  *NK* / *NK* DA 
+   25  PNC *--* / *--* 
+   25  *SB* / *SB* OC 
+   25  *--* / *--* -- -- 
+   25  *MO* / *MO* SVP 
+   25  -- *CJ* -- / *CJ* 
+   25  *MO* / OA *MO* 
+   25  NK *SB* AG / NK *SB* -- 
+   25  ** -- / ** CJ 
+   24  *MO* / *MO* OA 
+   24  *MO* / *MO* NG 
+   24  *NK* / *NK* SBP 
+   24  NK *NK* / NK *NK* SVP 
+   24  *NK* / OA *NK* 
+   24  NK *DA* / *DA* 
+   24  *CD* CJ / MO *CD* CJ 
+   24  ** -- / ** CD 
+   24  AG *SB* / *SB* 
+   24  *MO* / NK *MO* 
+   23  MO *SB* / *SB* 
+   23  *CJ* / NK *CJ* CD 
+   23  *NG* MO / *NG* 
+   23  PNC *AG* / *AG* 
+   23  CP SB OC *RE* / *RE* 
+   23  *PNC* / *PNC* PNC 
+   23  NK NK *AG* / NK NK *AG* MO 
+   23  NK *OA* MNR / NK *OA* 
+   22  *NK* CC / *NK* 
+   22  AG *NK* / *NK* 
+   22  *CD* CJ / NK NK *CD* CJ 
+   22  *MO* / *MO* OP 
+   22  *SB* / *SB* NG 
+   22  *MO* NK / *MO* NK MO 
+   22  NK *CJ* AG / NK *CJ* 
+   22  MO NK *SB* / NK *SB* 
+   21  *PD* / MO *PD* 
+   21  NK *AG* AG / NK *AG* 
+   21  *SB* AG / *SB* 
+   21  NK NK *SB* / NK *SB* 
+   21  *PNC* / NK *PNC* NK 
+   21  / RC -- 
+   21  NK *NK* MNR / *NK* 
+   20  NK *NK* / NK *NK* PM 
+   20  NK NK *AG* / NK NK *AG* MNR 
+   20  NK *NK* CD / NK *NK* 
+   20  NK *CJ* / *CJ* 
+   20  MO *OC* / SB *OC* OC 
+   20  NK NK *OA* AG / NK NK *OA* 
+   20  MO MO *NK* / MO *NK* 
+   20  *CD* CJ / NK CJ *CD* CJ 
+   20  *MO* NK / *MO* AG 
+   20  *MO* NK / *MO* 
+   20  *MO* NK / *MO* NK AG 
+   20  NK *NK* AG / NK *NK* OC 
+   20  MO MO *PD* / *PD* 
+   20  *CJ* / *CJ* NK 
+   20  NK *PD* AG / NK *PD* 
+   20  *MO* / *MO* PM 
+   19  NK *NK* RC / *NK* 
+   19  MO *MO* / MO *MO* MO 
+   19  OC PM *OC* / *OC* 
+   19  NK NK *SB* / *SB* 
+   19  NK NK *NK* NK / NK NK *NK* 
+   19  NK *NK* / MO NK *NK* 
+   19  *SB* MNR / *SB* 
+   19  *MO* NK / *MO* OC 
+   19  *PD* AG / *PD* 
+   19  NK *NK* AG MNR / *NK* 
+   19  MO *OC* / SB *OC* 
+   19  SB *--* OC / SB *--* OA 
+   19  *NK* / *NK* PM 
+   18  *--* SB OC / *--* SB 
+   18  *PNC* / *PNC* AG 
+   18  *MNR* NK / *MNR* CJ 
+   18  NK NK *SB* NK / NK *SB* 
+   18  CD *NK* / *NK* 
+   18  *NK* / *NK* CD 
+   18  NK NK *SB* NK / NK NK *SB* 
+   18  *JU* / *JU* CP 
+   18  NK *DA* / NK *DA* MO 
+   18  *CD* CJ / *CD* -- 
+   18  MO *NG* / *NG* 
+   17  *MNR* NK / *MNR* AG 
+   17  *PNC* / CJ *PNC* NK 
+   17  *OA* AG / *OA* 
+   17  *CP* / -- *CP* OC 
+   17  MO *MNR* NK / *MNR* NK 
+   17  MO MO *OC* / *OC* OC 
+   17  *SB* / *SB* OP 
+   17  *MO* NK AC / *MO* NK 
+   17  NK *OA* / NK *OA* PM 
+   17  NK NK *NK* / NK NK *NK* OC 
+   17  NK *DA* AG / NK *DA* 
+   17  ** -- / ** -- -- 
+   17  / RC 
+   17  -- *--* -- / *--* -- 
+   17  NK *SB* / NK *SB* OC 
+   17  NK *OA* AG / *OA* 
+   17  *NMC* / MO *NMC* 
+   17  NK *SB* / NK *SB* NG 
+   17  *NK* / NK *NK* OA 
+   16  *MO* / *MO* -- 
+   16  *NG* / *NG* PD 
+   16  *EP* / *EP* MO 
+   16  NK *NK* MNR / NK *NK* 
+   16  OA *OC* / NK OA *OC* 
+   16  NK *CJ* / NK *CJ* MO 
+   16  *MO* / *MO* MO OC 
+   16  ** -- / ** RC 
+   16  *NK* / *NK* AC 
+   16  *CJ* NK CJ / *CJ* 
+   16  NMC *NK* / *NK* 
+   16  NK *CJ* CJ / NK *CJ* 
+   16  NK *SB* CD / NK *SB* 
+   16  *NMC* / CJ *NMC* NMC 
+   16  MO *--* SB MO / MO *--* SB 
+   16  NMC *NK* NK / NMC *NK* 
+   16  PNC *NK* PAR / *NK* 
+   16  *--* SB OC / MO *--* OC 
+   16  OC *--* SB / *--* PNC 
+   16  MO MO *OC* / MO *OC* 
+   16  NK *AG* / *AG* MO 
+   16  *NK* / *NK* PNC 
+   15  -- NK *NK* / NK *NK* 
+   15  NK *NK* AG MNR / NK *NK* 
+   15  / CJ CJ 
+   15  *CM* / *CM* -- 
+   15  ** -- / ** RS 
+   15  *MO* / SB *MO* 
+   15  *CM* / *CM* NK 
+   15  *SB* / *SB* PD 
+   15  *MO* NK / SB *MO* NK 
+   15  *MO* / *MO* PD 
+   15  *MO* CD / *MO* 
+   15  SB *--* OC / SB *--* MO MO 
+   15  NK *OA* AG MNR / NK *OA* 
+   15  *NK* / NK *NK* MNR 
+   15  *CJ* / *CJ* OC 
+   15  *DA* / *DA* MO 
+   15  CM *CC* NK / *CC* NK 
+   15  *NK* / *NK* RC 
+   15  NK *AG* CD / NK *AG* 
+   15  *CM* / *CM* OC 
+   15  *OP* NK / *OP* CD 
+   15  *CD* CJ / PD *CD* CJ 
+   14  NK *NK* NK / *NK* NK 
+   14  *AG* / *AG* SB 
+   14  *SB* MO / *SB* 
+   14  *--* SB OC / MO *--* SB MO 
+   14  NK *OA* MNR / *OA* MNR 
+   14  *CD* CJ / NK SB *CD* CJ 
+   14  CM NK *CC* / NK *CC* 
+   14  *MO* / MO *MO* OC 
+   14  *MO* / MO *MO* MO 
+   14  OC *CJ* / *CJ* 
+   14  *NK* / *NK* NK NK 
+   14  NK NK *NK* / NK NK *NK* MNR 
+   14  OC *OC* / *OC* OC 
+   14  *MO* / *MO* SB 
+   14  *OA* CD / *OA* 
+   14  NK *APP* / *APP* 
+   14  ** -- / ** AG 
+   14  NK *OA* MNR / *OA* 
+   14  *MO* NK MO / *MO* NK 
+   14  *NK* / -- *NK* 
+   14  *MO* NK / *MO* MO 
+   14  AG *OA* / *OA* 
+   14  NK *NK* / NK *NK* NK 
+   14  SB *--* OC / *--* 
+   14  MO *NK* / *NK* OA 
+   14  NK *NK* MNR MNR / NK *NK* MNR 
+   13  NK *SB* / NK *SB* OP 
+   13  NK *AG* / NK *AG* PM 
+   13  / AG 
+   13  PNC *SB* APP / *SB* 
+   13  *MNR* NK / *MNR* OC 
+   13  *MO* NK / *MO* NK -- 
+   13  SB *--* MO MO / SB *--* MO 
+   13  PNC *NK* CD / *NK* 
+   13  *PNC* / AG *PNC* NK 
+   13  CP SB OC *SB* / *SB* 
+   13  NK *NK* / CD *NK* 
+   13  *SB* / *SB* -- 
+   13  *PM* / *PM* CJ 
+   13  NK *AG* RC / NK *AG* 
+   13  NK *OA* CD / *OA* 
+   13  *CD* CJ / *CD* RC 
+   13  PD *OC* / *OC* 
+   13  *MO* NK / *MO* CJ 
+   13  OC *OC* / *OC* MO 
+   13  *NK* / *NK* PAR 
+   13  NK *OA* RC / NK *OA* 
+   12  NK *SB* / MO NK *SB* 
+   12  *NK* / PAR *NK* 
+   12  *MO* / *MO* CD 
+   12  *PNC* / *PNC* NK -- PAR 
+   12  NK *OA* NK / NK *OA* 
+   12  *MO* / AG *MO* 
+   12  NK *OA* OC / NK *OA* 
+   12  *SB* / MO *SB* 
+   12  CM *MO* / *MO* 
+   12  NK NK *NK* RC / NK NK *NK* 
+   12  *NK* / *NK* NK OC 
+   12  NK *NK* / NK *NK* OP 
+   12  *--* / *--* NK 
+   12  *CD* CJ / PNC *CD* PNC 
+   12  MO *OA* / *OA* 
+   12  *NMC* / PAR *NMC* NMC 
+   12  SB OC *RC* / SB *RC* 
+   12  *PNC* / NK *PNC* 
+   12  NK *SB* RC / NK *SB* 
+   12  NK *SB* / *SB* MO 
+   12  *CD* CJ / SVP *CD* CJ 
+   12  ** -- / ** PAR 
+   12  MO MO OA *OC* / OA *OC* 
+   12  NK *OA* / NK *OA* NG 
+   12  AC *MNR* NK / *MNR* NK 
+   12  CJ *CD* / *CD* SB 
+   12  CM *MO* NK / *MO* NK 
+   12  NK *PD* / *PD* 
+   12  *OC* / SB *OC* OC 
+   12  NK *CJ* NK / NK *CJ* 
+   12  *MNR* NK / *MNR* NK AG 
+   12  MO *MO* NK / *MO* NK NK 
+   12  *SB* / *SB* MO MO 
+   12  NK *AG* / NK *AG* SVP 
+   11  NK *AG* / NK *AG* OP 
+   11  *SB* / *SB* NK 
+   11  *PAR* NK / *PAR* 
+   11  *MO* NK / *MO* -- NK 
+   11  *NK* / CJ *NK* 
+   11  -- *PAR* NK -- / *PAR* 
+   11  NK *NK* / *NK* NK 
+   11  NK *SB* AG APP / NK *SB* 
+   11  *CJ* AG / *CJ* 
+   11  NK *NK* / *NK* OC 
+   11  *CD* CJ / *CD* PD 
+   11  NK PNC *NK* / *NK* 
+   11  NK NK *CJ* CD / NK NK *CJ* 
+   11  *--* NK / *--* PNC -- 
+   11  OA MO MO *OC* / *OC* 
+   11  NK NK *PD* AG / NK NK *PD* 
+   11  NK *--* / *--* 
+   11  *NK* CC / *NK* CM 
+   11  / MO -- 
+   11  *SB* / *SB* SB 
+   11  SB *--* OC / NK *--* MO 
+   11  *MO* NK / *MO* NK SB 
+   11  MO *OP* NK / *OP* NK 
+   11  *SB* RC / *SB* 
+   11  NK *APP* AG / NK *APP* 
+   11  *CP* / *CP* -- 
+   11  *OA* RE / *OA* 
+   11  *CP* / *CP* CJ 
+   11  NK *SB* CD / *SB* 
+   11  SB *--* OA MO / SB *--* OA 
+   11  MO MO *OC* / SB *OC* 
+   11  NK *SB* MNR / NK *SB* 
+   11  *OP* NK / *OP* NK CD 
+   11  *SB* / *SB* OA 
+   11  *OC* / -- *OC* 
+   11  NK *SB* / NK *SB* PD 
+   11  NK *MO* / *MO* MO 
+   10  *SBP* NK / *SBP* PNC 
+   10  *OP* NK / *OP* AG 
+   10  *NMC* / NMC *NMC* 
+   10  MO *OC* / AG *OC* 
+   10  ** -- -- -- -- -- / ** -- 
+   10  NK NK *OA* / NK MO NK *OA* 
+   10  MO OC *OC* / *OC* 
+   10  NK *NK* / NK *NK* NG 
+   10  NK *SB* AG MNR / NK *SB* 
+   10  *NK* NK / *NK* PNC 
+   10  / OC OC 
+   10  NK *NK* MNR RC / NK *NK* MNR 
+   10  MO MO *OC* / SB *OC* OC 
+   10  *MO* / MO MO *MO* 
+   10  OA PM *OC* / *OC* 
+   10  *CD* CJ / NK OA *CD* CJ 
+   10  OA *OC* / AG *OC* 
+   10  MO OA *OC* / *OC* 
+   10  MO MO *OC* / NK *OC* 
+   10  -- *CJ* -- / *CJ* -- 
+   10  *MO* / *MO* PAR 
+   10  *--* CJ / *--* -- CJ 
+   10  CJ *CD* / *CD* AG 
+   10  MO NK *SB* AG / NK *SB* 
+   10  *NK* / *NK* AMS 
+   10  SBP *NK* / *NK* 
+   10  *CD* CJ / APP *CD* CJ 
+   10  *CP* / *CP* PD 
+   10  *CP* / OC *CP* MO 
+   10  NK *OA* / MO NK *OA* 
+   10  MO *--* SB OC / MO *--* SB 
+   10  MO MO PM *OC* / *OC* 
+   10  *NK* APP / *NK* 
+    9  AG *SB* NK / AG *SB* 
+    9  *NK* / NK *NK* AG 
+    9  *AG* / NK *AG* 
+    9  *MO* NK / *MO* NK MNR 
+    9  *PNC* / *PNC* NK APP 
+    9  CM *CC* CD / *CC* 
+    9  *CP* / -- *CP* MO 
+    9  *CJ* / *CJ* -- 
+    9  MO NK *SB* MNR / NK *SB* MNR 
+    9  *MO* NK / -- *MO* NK 
+    9  CP SB OA *MO* / SB OA *MO* 
+    9  *MO* / *MO* RC 
+    9  NK NK *NK* / NK MO NK *NK* 
+    9  *NMC* / NMC *NMC* NK 
+    9  *OP* NK / *OP* NK NK 
+    9  NK *SB* MNR MNR / NK *SB* MNR 
+    9  NK *NK* / NK *NK* PD 
+    9  *CJ* OC / *CJ* 
+    9  NK NK *OA* MNR / NK NK *OA* 
+    9  NK *NK* CJ / *NK* 
+    9  PNC *NK* / *NK* MNR 
+    9  MO PM *OC* / *OC* 
+    9  *MO* / *MO* MNR 
+    9  *SB* NK PAR / *SB* 
+    9  *OP* NK / *OP* NK OC 
+    9  *OC* / *OC* OC 
+    9  SB *--* MO OC / SB *--* MO 
+    9  MO OA MO *OC* / *OC* 
+    9  *NK* / SB *NK* MO 
+    9  *SB* CC / *SB* 
+    9  *CJ* / *CJ* CJ 
+    9  *NK* / NK *NK* NK 
+    9  *AG* / *AG* OA 
+    9  *PNC* / NK *PNC* PNC 
+    9  *SB* / *SB* PNC 
+    9  *AC* / *AC* MO OC 
+    9  / OC CJ 
+    9  SB *OC* OC / SB *OC* MO 
+    9  ** -- -- / ** PNC 
+    9  *NG* / *NG* PM 
+    9  -- *MO* / *MO* 
+    9  *JU* / *JU* OC 
+    9  NK *NK* / *NK* NG 
+    9  *OA* RC / *OA* 
+    9  PNC *CJ* CD / *CJ* 
+    9  NK *NK* APP / NK *NK* 
+    9  MO NK *OA* / NK *OA* 
+    9  *OA* / NK *OA* 
+    9  NK NK *AG* / NK MO NK *AG* 
+    9  PNC *NK* APP / *NK* 
+    8  *SB* / NK *SB* 
+    8  *PNC* / *PNC* PNC NK 
+    8  NK *NK* NK MNR / NK *NK* 
+    8  SB *--* PD / SB *--* MO PD 
+    8  SB *--* OC / PNC *--* OC 
+    8  *PNC* / SB *PNC* NK -- PAR 
+    8  MO *NK* / *NK* SB 
+    8  NK *NK* NK / NK *NK* -- NK 
+    8  NG *NK* / *NK* 
+    8  NK *AG* / NK *AG* OC 
+    8  *OA* / *OA* PM 
+    8  NK *SB* / NK *SB* -- 
+    8  / SB -- 
+    8  *CJ* MNR / *CJ* 
+    8  MO MO *CJ* NK / *CJ* NK 
+    8  OC *--* EP MO / *--* EP MO 
+    8  *CD* CJ / NK AG *CD* CJ 
+    8  *PD* / *PD* OC 
+    8  MO MO MO *OC* / NK *OC* 
+    8  SB *--* OC / *--* MO 
+    8  NK *NK* / *NK* SVP 
+    8  NK *OA* / *OA* SVP 
+    8  NK *NK* PG MNR / NK *NK* PG 
+    8  *SB* / *SB* DA 
+    8  NK *SB* RC / NK *SB* SB 
+    8  MO MO *CJ* / *CJ* 
+    8  *CD* CJ / *CD* SB 
+    8  OP *OC* / *OC* 
+    8  *PD* MO / *PD* 
+    8  MO NK NK *SB* / NK NK *SB* 
+    8  NK *SB* / NK *SB* NK 
+    8  *PNC* / SB *PNC* PNC NK 
+    8  NK *OA* AG / NK *OA* OC 
+    8  NK NK *APP* AG / NK NK *APP* 
+    8  *CD* / *CD* MO 
+    8  SB *OC* OC / *OC* 
+    8  SB *--* PD CJ / SB *--* PD 
+    8  NK *NK* OC / NK *NK* 
+    8  NK *MO* / NK *MO* MO 
+    8  *PNC* / *PNC* AG NK 
+    8  *PD* / *PD* -- 
+    8  OA OP *OC* / *OC* 
+    8  *MNR* NK / *MNR* NK MO 
+    8  MO *NK* CJ / MO *NK* 
+    8  NK *NK* OC / *NK* 
+    8  *MO* NK / *MO* OA 
+    8  DA OA *OC* / OA *OC* 
+    8  NK NK *CJ* AG / NK NK *CJ* 
+    8  NK *MO* / *MO* 
+    8  *PM* / *PM* MNR 
+    8  NK *SB* AG / *SB* 
+    8  *CP* / *CP* NK 
+    8  *SB* / SB *SB* 
+    8  *MO* / NK *MO* MO 
+    8  *PNC* / SB *PNC* NK MO 
+    8  RE *SB* / *SB* 
+    8  MO *OC* / SB *OC* RC 
+    8  NK *AG* / NK NK *AG* 
+    8  / PM 
+    8  -- *CJ* CJ -- / *CJ* CJ 
+    8  *NMC* / CJ *NMC* 
+    8  *CD* CJ / *CD* CP 
+    8  MO OA *OC* / AG *OC* 
+    8  OA MO PM *OC* / *OC* 
+    8  OA MO *OC* / OA *OC* 
+    8  *CD* CJ / *CD* CJ CD 
+    8  *--* / *--* OC 
+    8  *PNC* / *PNC* CC 
+    8  PNC *NK* / *NK* MO 
+    8  MO *MO* / MO *MO* OC 
+    8  NK NK *NK* NK / *NK* 
+    8  *SBP* NK / *SBP* CD 
+    8  *OA* / *OA* OP 
+    8  SB OC *RC* / SB OA *RC* 
+    8  *CP* / *CP* CC 
+    8  CM NMC *CC* / *CC* 
+    8  *NK* AG MNR / *NK* 
+    7  NK *SB* AG / NK *SB* OC 
+    7  MO OA PM *OC* / *OC* 
+    7  *JU* / *JU* MO 
+    7  NK *AG* / *AG* MNR 
+    7  *--* SB OC / *--* PNC 
+    7  NK NK *OA* AG / *OA* 
+    7  NK NK *AG* AG / NK *AG* 
+    7  NK *NK* / *NK* PM 
+    7  *CJ* / *CJ* PD 
+    7  *MO* / *MO* MO CD 
+    7  *CD* CJ / PNC *CD* CJ 
+    7  *CJ* CJ / *CJ* CD 
+    7  NK NK *NK* CD / NK NK *NK* 
+    7  / -- OC 
+    7  *SVP* / *SVP* MO 
+    7  *PD* CC / *PD* CM 
+    7  MO NG *OC* / *OC* 
+    7  SB *--* PD / *--* PD 
+    7  NK *AG* / NK *AG* PD 
+    7  NK NK *NK* / *NK* MO 
+    7  *MO* / *MO* CP MO 
+    7  NK *AG* MNR / NK *AG* 
+    7  NK *NK* / NK *NK* AC 
+    7  NK *AG* CD / *AG* 
+    7  *OC* OC / *OC* 
+    7  NK *NK* / NK *NK* CVC 
+    7  SB *--* OC / SB *--* OA MO 
+    7  *OA* / *OA* NG 
+    7  MO MO *MO* / MO *MO* 
+    7  ** -- / ** CM 
+    7  NK NK *SB* / NK NK *SB* OC 
+    7  MO *--* SB / MO *--* SB AG 
+    7  *--* OC / *--* 
+    7  / MO CJ 
+    7  *--* SB OC / MO *--* SB AG 
+    7  NK *SB* AG / NK *SB* NK 
+    7  NK *NK* / NK *NK* CJ 
+    7  SB *--* OA SVP / SB *--* OA 
+    7  NK NK *DA* / NK NK *DA* MO 
+    7  *CD* CJ / NK CJ CJ *CD* CJ 
+    7  SB OC *RC* / OC *RC* 
+    7  *OP* NK / MO *OP* NK 
+    7  *PD* OC / *PD* 
+    7  NK NK *NK* AG / *NK* 
+    7  / APP 
+    7  *PD* CD / *PD* 
+    7  MO NK *OA* MNR / NK *OA* MNR 
+    7  CP OC PM *MO* / *MO* 
+    7  AG *NK* NK / *NK* 
+    7  *--* / *--* MO 
+    7  NG MO *MO* / MO *MO* 
+    7  *PNC* / *PNC* NK CD 
+    7  *NK* / OA *NK* MO 
+    7  *MNR* NK CD / *MNR* NK 
+    7  NK CD *AG* / *AG* 
+    7  *MO* NK CJ / *MO* NK 
+    7  *NK* / NK *NK* MO 
+    7  MO *--* SB OA / MO *--* SB 
+    7  SB *--* OC / SB *--* 
+    7  *NK* / DA *NK* 
+    7  NK *CJ* / NK *CJ* MNR 
+    7  *AC* / *AC* -- 
+    7  *CD* CJ / NK *CD* PNC 
+    7  OA *OC* / NK *OC* 
+    7  NK *AG* / NK *AG* RC 
+    7  MO NK *CJ* / NK *CJ* 
+    7  *NK* / *NK* NK MO 
+    7  *CP* / OC *CP* OC 
+    7  NK *AG* / NK *AG* NG 
+    7  *JU* / *JU* PAR 
+    7  NK *SB* / NMC *SB* 
+    7  / PAR 
+    7  *CP* / *CP* OA 
+    7  *MO* / *MO* CP 
+    7  -- *PAR* -- / *PAR* -- 
+    7  *CD* / *CD* OC 
+    7  CP SB *MO* / SB *MO* 
+    7  MO *NK* / *NK* NK 
+    7  MO NMC *NK* / *NK* 
+    7  NK NK *CJ* / *CJ* 
+    7  NK *NK* / NK *NK* CD 
+    7  *OP* NK / *OP* PNC 
+    7  MO MO OA *OC* / NK OA *OC* 
+    7  PM *OC* / *OC* 
+    7  OC *--* SB / *--* SB AG 
+    7  NK *NK* AG / NK *NK* NK 
+    6  MO *APP* NK / *APP* NK 
+    6  SBP MO *NK* / *NK* 
+    6  *NK* / *NK* MO MO 
+    6  SB *--* PD / SB *--* MO 
+    6  *PNC* / *PNC* NK MO 
+    6  *PNC* / *PNC* OA 
+    6  ** -- / ** OA 
+    6  SB OC *RC* / *RC* MO 
+    6  *SB* / *SB* OA MO 
+    6  *SB* / *SB* MO PD 
+    6  *MO* / MO *MO* NK 
+    6  *NMC* / NMC *NMC* NMC 
+    6  SB MO OC *RC* / *RC* 
+    6  MO *OC* / NK *OC* OC 
+    6  NK NK *OA* RC / NK NK *OA* 
+    6  *NK* / *NK* CVC 
+    6  MO NK *OA* AG / NK *OA* 
+    6  DA *NK* / *NK* 
+    6  *MO* NK / *MO* NK OA 
+    6  *OC* / CJ *OC* 
+    6  CP SB PD *MO* / *MO* 
+    6  *CD* CJ / *CD* CJ OC 
+    6  SB *--* OC / SB *--* MO MNR 
+    6  NK NK *SB* CD / NK NK *SB* 
+    6  *NG* / *NG* -- 
+    6  OA PM *OC* / OA *OC* 
+    6  CP SB MO OA *MO* / SB OA *MO* 
+    6  *CD* CJ / CC *CD* CJ 
+    6  MO MO *OC* / *OC* RC 
+    6  *CJ* OA MO / *CJ* OA 
+    6  *MNR* NK / *MNR* MO 
+    6  NK *AG* / NK *AG* AC 
+    6  SB *--* MO OC / SB *--* MO MO 
+    6  SB OC *RC* / *RC* -- 
+    6  NK NK *NK* AG MNR / NK NK *NK* 
+    6  CJ *CD* / *CD* OC 
+    6  *--* SB OC / MO *--* MO SB 
+    6  OA *OC* / OA *OC* MO 
+    6  MO MO MO MO *OC* / *OC* 
+    6  SB *--* OC / *--* OA MO 
+    6  NK *SB* / NK *SB* MO MO 
+    6  *OA* / *OA* OC 
+    6  SB PD *RC* / *RC* 
+    6  *SB* / *SB* MO NK 
+    6  *NK* / MO *NK* OA 
+    6  NK *OA* CD / NK *OA* 
+    6  *SBP* NK / *SBP* NK NK 
+    6  *CD* CJ / DA *CD* CJ 
+    6  *NK* MNR MNR / *NK* MNR 
+    6  NK NK *NK* AG / NK *NK* 
+    6  SB MO MO *RC* / SB *RC* 
+    6  *SVP* / *SVP* OC 
+    6  MO *MO* RE / *MO* 
+    6  / -- CJ 
+    6  *--* / *--* CJ 
+    6  SB *--* OC / *--* OA 
+    6  NK NK *SB* MNR / NK *SB* MNR 
+    6  AMS *MO* / *MO* 
+    6  *MO* RE / *MO* SVP 
+    6  NK NK *NK* / NK NK *NK* SVP 
+    6  NK *DA* / *DA* MO 
+    6  MO *NK* CD / *NK* 
+    6  MO *OC* / -- *OC* 
+    6  *SB* / *SB* CM 
+    6  *SB* APP / *SB* 
+    6  *NK* CD MNR / *NK* 
+    6  SB *--* OC / SB *--* MO CD 
+    6  *MNR* NK / OA *MNR* NK 
+    6  / CJ -- 
+    6  SB *--* OC / SB *--* MO OA 
+    6  *NK* / *NK* NG 
+    6  MO *--* SB OC / *--* SB 
+    6  ** -- / ** MNR 
+    6  MO *MO* / *MO* MO 
+    6  *AC* / *AC* MNR 
+    6  *OA* MNR / SB *OA* MNR 
+    6  MO OP *OC* / *OC* 
+    6  NK *SB* OC / NK *SB* 
+    6  MO OA *OC* / OA *OC* OC 
+    6  *MO* NK / *MO* NK RC 
+    6  MO MO *MO* NK / *MO* NK 
+    6  OA *OC* / *OC* OC 
+    6  SB *--* MO OA SVP / SB *--* MO OA 
+    6  *MNR* NK / MO *MNR* NK 
+    6  *MO* / *MO* AG 
+    6  CJ *CD* / *CD* CJ 
+    6  CP SB MO *MO* / SB *MO* 
+    6  PNC PNC PNC *NK* / *NK* 
+    6  MO MO *OC* CD / *OC* 
+    6  *--* OC / *--* MO 
+    6  SB *--* OC / PNC *--* MO 
+    6  NK *SB* / NK *SB* CJ 
+    6  *NK* / NK *NK* OC 
+    6  *AG* / OA *AG* 
+    6  NK *NK* / NK *NK* MO OC 
+    6  CP SB OC *MO* / SB *MO* 
+    6  -- *NK* MNR / *NK* MNR 
+    6  NK *CJ* OC / NK *CJ* 
+    6  CM NK *CC* AG / NK *CC* 
+    6  / MNR 
+    6  SB *--* MO / *--* MO 
+    6  SB OC *OC* / *OC* 
+    6  NK *SB* / NK *SB* SVP 
+    6  *CJ* MO MO / *CJ* MO 
+    6  *NG* MO / *NG* OC 
+    6  *PNC* / *PNC* PAR 
+    6  NK NK *SB* RC / NK NK *SB* 
+    6  NK *SB* RC / NK *SB* OC 
+    6  *PG* NK / *PG* AG 
+    6  *UC* / UC *UC* 
+    6  *OA* / *OA* SVP 
+    6  *PNC* / *PNC* CD 
+    6  NK *NK* CD AG / *NK* 
+    6  SB *--* OC / SB *--* CP 
+    6  NK *SB* / NK *SB* OA 
+    6  *OA* / MO *OA* 
+    6  *CJ* / *CJ* PM 
+    6  MO *MO* NK / *MO* PNC 
+    6  *CJ* / *CJ* SB 
+    6  *MO* NK / *MO* SB 
+    6  NK *NK* / *NK* PD 
+    6  NK *--* -- / NK *--* -- -- -- 
+    6  SB *--* PD / SB *--* PD AG 
+    6  *OP* NK / *OP* OC 
+    6  *MO* NK / NK *MO* NK 
+    6  *PNC* / NK *PNC* SB 
+    6  *SB* / SB *SB* MO 
+    6  *MNR* NK / AG *MNR* NK 
+    6  *MO* / *MO* PNC 
+    6  *PNC* / SB *PNC* 
+    6  NK -- *NK* / *NK* 
+    6  *PNC* / *PNC* SB APP 
+    6  MO *SBP* NK / *SBP* NK 
+    5  *PNC* / APP *PNC* NK 
+    5  SB *--* PD / AG *--* PD 
+    5  *NK* / *NK* CC 
+    5  NK NK PNC *NK* / *NK* 
+    5  / SB 
+    5  NK *NK* / NK *NK* -- 
+    5  CJ *CJ* / *CJ* CD 
+    5  *SB* CD MNR / *SB* 
+    5  *MO* PAR / *MO* 
+    5  *MO* / MO *MO* MO CD 
+    5  SB *--* OC / SB *--* NK 
+    5  *NK* / APP *NK* 
+    5  *OC* MO / *OC* -- 
+    5  MO *NK* / *NK* AG 
+    5  *OC* MO / *OC* 
+    5  *NG* / *NG* CJ 
+    5  *PNC* / *PNC* PNC SB 
+    5  / PD 
+    5  / PNC 
+    5  MO MO *OC* / AG *OC* 
+    5  CM NK *MO* / NK *MO* 
+    5  *NK* / NK *NK* CJ 
+    5  MO MO *OC* / AG *OC* OC 
+    5  *APP* AG / *APP* 
+    5  NK *NK* MNR / NK *NK* MNR OC 
+    5  *CD* CJ / -- *CD* OC 
+    5  *CJ* / NK NK *CJ* CD 
+    5  *CJ* OC / *CJ* MO 
+    5  NG NK *NK* / NK *NK* 
+    5  / OC RC 
+    5  *MO* / *MO* MO MO 
+    5  *AG* / AG *AG* 
+    5  NK *AG* APP / NK *AG* 
+    5  SB OC *CJ* / *CJ* 
+    5  *CJ* / *CJ* AG 
+    5  OA *OC* / OA *OC* OC 
+    5  *CD* CJ / NK *CD* CJ OC 
+    5  *CJ* / *CJ* PG 
+    5  *MNR* NK / *MNR* 
+    5  SB *--* OC / SB *--* OC CP 
+    5  *NG* / *NG* SVP 
+    5  *CD* CJ / CJ CJ *CD* CJ 
+    5  *--* SB OC / MO *--* 
+    5  *PNC* / *PNC* PNC PNC NK 
+    5  / NG 
+    5  OA MO *OC* / MO *OC* 
+    5  NK NK *SB* MNR / NK MO NK *SB* MNR 
+    5  *EP* / *EP* NG 
+    5  MO MO OP *OC* / *OC* 
+    5  *OA* PG / *OA* 
+    5  NK NK *AG* AG / NK NK *AG* 
+    5  MO NK *SB* / NK *SB* MO 
+    5  *CM* / NK *CM* CC 
+    5  NK *SB* NK / NK *SB* PNC 
+    5  *CJ* SB OC / MO *CJ* SB 
+    5  SB *--* OA / SB *--* OA MNR 
+    5  *--* / *--* CD 
+    5  PNC *SB* MNR / *SB* 
+    5  *NK* / *NK* SB -- 
+    5  NK *SB* APP / NK *SB* 
+    5  *PNC* / NK NK *PNC* NK 
+    5  *NK* CD / NK *NK* 
+    5  *CD* CJ / RC *CD* CJ 
+    5  *MNR* NK / *MNR* NK CJ 
+    5  *MO* NK / *MO* AG NK 
+    5  NK NK *OA* / *OA* MO 
+    5  NK *VO* / *VO* 
+    5  AMS *NK* / *NK* 
+    5  MO *--* SB MO MO / MO *--* SB 
+    5  NK NK *NK* AG / NK NK *NK* OC 
+    5  MO OA *OC* / NK OA *OC* 
+    5  OC *OC* / *OC* RE 
+    5  MO MO *CJ* / MO *CJ* 
+    5  MO *PD* / SB *PD* 
+    5  *--* SB OC / OA *--* SB 
+    5  CP SB OC *MO* / SB OC *MO* 
+    5  NK NK *OA* MNR / NK *OA* 
+    5  NK NK *NK* MNR / NK *NK* MNR 
+    5  *--* OC SB / *--* 
+    5  NK *NK* / NK *NK* SBP 
+    5  MO *MO* / *MO* OC 
+    5  NK NK NK *NK* / NK NK NK *NK* MO 
+    5  *MO* NK / MNR *MO* NK 
+    5  *OP* NK / *OP* -- NK 
+    5  OC *OC* / *OC* SB 
+    5  *CJ* / *CJ* RC 
+    5  SB *--* OC / SB *--* MO MO MO 
+    5  MO MO *NK* / *NK* NK 
+    5  NK *AMS* / *AMS* 
+    5  NK NK *OA* CD / NK NK *OA* 
+    5  *MO* / *MO* CVC 
+    5  *--* / NK *--* NK 
+    5  *MO* NK / *MO* NK CJ 
+    5  *CJ* NK CD / *CJ* NK 
+    5  *NK* / *NK* VO 
+    5  *NK* AG / *NK* OC 
+    5  NK *SB* / OA NK *SB* MO 
+    5  -- PNC *NK* / *NK* 
+    5  SB *--* PD / NK *--* PD 
+    5  *PD* / SB *PD* 
+    5  *CD* CJ / PAR *CD* CJ 
+    5  MO MO *PD* / MO *PD* 
+    5  *NK* / AG *NK* MNR 
+    5  *CP* / *CP* MO MO 
+    5  CP SB MO OA *OC* / SB MO OA *OC* 
+    5  -- *APP* -- / *APP* -- MO 
+    5  OA *OC* / OA *OC* PM 
+    5  *CM* / *CM* PNC 
+    5  OA *OC* / OA *OC* RC 
+    5  *--* APP / *--* NK 
+    5  *PD* / NG *PD* 
+    5  NK *DA* / NK *DA* SVP 
+    5  NK *AMS* / NK NK *AMS* NK 
+    5  -- *PAR* -- / *PAR* -- MO 
+    5  NK *AG* CJ / NK *AG* 
+    5  SB OC *RC* / OA *RC* 
+    5  SB MO *RC* / SB *RC* 
+    5  SB *--* MO / AG *--* MO 
+    5  *SB* CJ / *SB* 
+    5  SB *--* MO MO MO / SB *--* MO MO 
+    5  *MO* NK / *MO* NK CD OC 
+    5  CJ *CD* / *CD* MO 
+    5  *PNC* / *PNC* APP OA 
+    5  NK *PD* / SB NK *PD* 
+    5  SB *--* OC / SB *--* DA 
+    5  SB *--* OC CD / SB *--* OC 
+    5  *--* SB OC / *--* MO 
+    5  *OC* OA / *OC* 
+    5  MO *MO* / MO *MO* OP 
+    5  *SB* / MO *SB* MO 
+    5  MO MO *OC* / SB MO MO *OC* RC 
+    5  SB *--* OA / SB *--* NK 
+    5  *PNC* / SB *PNC* NK -- PAR -- 
+    5  SB OC *RC* CD / *RC* CD 
+    5  *MO* CJ / *MO* 
+    5  SB *--* MO / SB *--* MO AG 
+    5  MO *OC* / SB MO *OC* RC 
+    5  / AG APP 
+    5  / RC CJ 
+    5  *SVP* / *SVP* CD 
+    5  MO *DA* / *DA* 
+    5  MO *OC* OC / *OC* 
+    5  *PD* / CJ *PD* 
+    5  MO MO OA *OC* / NK *OC* 
+    5  NK NK *SB* / NK MO NK *SB* 
+    5  *NK* / *NK* NK PNC 
+    5  *MNR* / *MNR* MO 
+    5  MO *--* SB OA / MO *--* SB OA AG 
+    5  NK NK *CJ* / NK *CJ* 
+    5  MO *OC* / SB MO *OC* MO 
+    5  *AG* / *AG* CJ 
+    5  *CD* CJ / *CD* CD 
+    5  SB *--* OC / AG *--* MO MO 
+    5  *JU* / *JU* SB 
+    5  *MO* / *MO* SBP 
+    5  OA MO *OC* / AG *OC* 
+    5  MO *--* OA SB MO / MO *--* OA SB 
+    5  *CJ* / *CJ* PAR 
+    5  *CJ* / *CJ* SVP 
+    5  / RE 
+    5  MO PD *OC* / *OC* 
+    5  *NK* CJ / NK *NK* 
+    5  NK NK *NK* / NK NK *NK* CJ 
+    5  NK NK *AG* AG / *AG* 
+    5  AG NK *NK* / *NK* 
+    5  *PNC* / *PNC* -- -- 
+    5  *MO* / *MO* MO NK 
+    5  PNC *NK* / *NK* -- PAR 
+    5  MO *MO* / MO *MO* -- 
+    5  *NMC* / *NMC* CC 
+    5  *CD* CJ / NK *CD* CJ CD 
+    5  OA PM *RE* / *RE* 
+    5  MO *MO* NK CD / *MO* NK 
+    5  NK *NK* PAR / NK *NK* 
+    5  *CJ* / *CJ* OA 
+    5  MO *OC* / NK *OC* 
+    5  OC *--* EP / *--* EP 
+    5  NK *AG* / OA NK *AG* 
+    5  *APP* CD / *APP* 
+    5  NK NK *NK* APP / NK NK *NK* 
+    5  *OA* CC / *OA* 
+    5  *NK* / MO *NK* NK 
+    5  MO MO *OC* / NK *OC* OC 
+    5  MO *OC* / AG *OC* OC 
+    5  *OA* / DA *OA* 
+    5  CP SB MO MO *MO* / SB *MO* 
+    5  NK *CJ* CJ / *CJ* 
+
+
+  5 focus words where most of the errors occur:
+
+             | any  | head | dep  | both
+  -----------+------+------+------+------
+  und / CONJ | 1350 | 1350 |    0 |    0
+  in / ADP   |  836 |  836 |    0 |    0
+  `` / .     |  469 |  469 |    0 |    0
+  -LRB- / .  |  409 |  409 |    0 |    0
+  mit / ADP  |  359 |  359 |    0 |    0
+  -----------+------+------+------+------
+
+
+  one-token preceeding contexts where most of the errors occur:
+
+  CPOS     | any  | head | dep  | both  ||  word               | any  | head | dep  | both
+  ---------+------+------+------+-------++---------------------+------+------+------+-----
+  NOUN     | 10656 | 10656 |    0 |    0  ||  , / .              | 3029 | 3029 |    0 |    0
+  .        | 4577 | 4577 |    0 |    0  ||  der / DET          | 1128 | 1128 |    0 |    0
+  DET      | 3529 | 3529 |    0 |    0  ||  die / DET          |  686 |  686 |    0 |    0
+  ---------+------+------+------+-------++---------------------+------+------+------+-----
+
+
+  two-token preceeding contexts where most of the errors occur:
+
+  CPOS     | any  | head | dep  | both  ||  word               | any  | head | dep  | both
+  ---------+------+------+------+-------++---------------------+------+------+------+-----
+  DET+NOUN | 2571 | 2571 |    0 |    0  ||  , / . + die / PRON |  182 |  182 |    0 |    0
+  ADJ+NOUN | 2094 | 2094 |    0 |    0  ||  '' / . + , / .     |  149 |  149 |    0 |    0
+  NOUN+.   | 1987 | 1987 |    0 |    0  ||  , / . + daß / CONJ |  106 |  106 |    0 |    0
+  ---------+------+------+------+-------++---------------------+------+------+------+-----
+
+
+  one-token following contexts where most of the errors occur:
+
+  CPOS     | any  | head | dep  | both  ||  word               | any  | head | dep  | both
+  ---------+------+------+------+-------++---------------------+------+------+------+-----
+  NOUN     | 8536 | 8536 |    0 |    0  ||  , / .              | 2685 | 2685 |    0 |    0
+  .        | 6821 | 6821 |    0 |    0  ||  . / .              | 2389 | 2389 |    0 |    0
+  VERB     | 4008 | 4008 |    0 |    0  ||  und / CONJ         | 1351 | 1351 |    0 |    0
+  ---------+------+------+------+-------++---------------------+------+------+------+-----
+
+
+  two-token following contexts where most of the errors occur:
+
+  CPOS     | any  | head | dep  | both  ||  word               | any  | head | dep  | both
+  ---------+------+------+------+-------++---------------------+------+------+------+-----
+  DET+NOUN | 2676 | 2676 |    0 |    0  ||  . / . + .E         | 2324 | 2324 |    0 |    0
+  .+.E     | 2490 | 2490 |    0 |    0  ||  , / . + die / PRON |  164 |  164 |    0 |    0
+  VERB+.   | 2040 | 2040 |    0 |    0  ||  -RRB- / . + . / .  |  117 |  117 |    0 |    0
+  ---------+------+------+------+-------++---------------------+------+------+------+-----
+
+
+  Sentence with the highest number of word errors:
+   Sentence 4750 line 91587, 75 head errors, 0 dependency errors, 75 word errors
+
+
+  Sentence with the highest number of head errors:
+   Sentence 4750 line 91587, 75 head errors, 0 dependency errors, 75 word errors
+
+
+  Sentence with the highest number of dependency errors:
+   Sentence 1 line 1, 8 head errors, 0 dependency errors, 8 word errors
+
+
+  Specific errors, 10 most frequent errors:
+  =========================================
+
+   1. head two words before the correct head (before the focus word instead ofbefore the focus word), correct dependency : 4269 times
+  -----+------+------+------+------+------+------
+    Before    |    Focus    |   After     | Count
+  CPOS   word | CPOS   word | CPOS   word |
+  -----+------+------+------+------+------+------
+       |      |      |      | NOUN |      | 2839
+  ADP  |      |      |      |      |      | 1475
+  ADP  |      |      |      | NOUN |      | 1381
+       |      | ADJ  |      |      |      | 973
+  NOUN |      |      |      |      |      | 953
+       |      |      |      | VERB |      | 815
+       |      | ADJ  |      | NOUN |      | 713
+  -----+------+------+------+------+------+------
+
+   2. head one word after the correct head (before the focus word), correct dependency : 2426 times
+  -----+------+------+------+------+------+------
+    Before    |    Focus    |   After     | Count
+  CPOS   word | CPOS   word | CPOS   word |
+  -----+------+------+------+------+------+------
+       |      | NOUN |      |      |      | 1759
+  NOUN |      |      |      |      |      | 834
+       |      |      |      | .    |      | 684
+  DET  |      |      |      |      |      | 630
+  DET  |      | NOUN |      |      |      | 620
+  NOUN |      | NOUN |      |      |      | 596
+       |      | NOUN |      | .    |      | 460
+  -----+------+------+------+------+------+------
+
+   3. head three words before the correct head (before the focus word instead ofbefore the focus word), correct dependency : 1701 times
+  -----+------+------+------+------+------+------
+    Before    |    Focus    |   After     | Count
+  CPOS   word | CPOS   word | CPOS   word |
+  -----+------+------+------+------+------+------
+       |      |      |      | NOUN |      | 682
+  NOUN |      |      |      |      |      | 505
+       |      | ADP  |      |      |      | 381
+  NOUN |      |      |      | NOUN |      | 335
+       |      | ADP  |      | NOUN |      | 315
+       |      | NOUN |      |      |      | 279
+       |      |      |      | ADJ  |      | 270
+  -----+------+------+------+------+------+------
+
+   4. head three words after the correct head (after the focus word instead ofafter the focus word), correct dependency : 1439 times
+  -----+------+------+------+------+------+------
+    Before    |    Focus    |   After     | Count
+  CPOS   word | CPOS   word | CPOS   word |
+  -----+------+------+------+------+------+------
+       |      | NOUN |      |      |      | 1097
+  DET  |      |      |      |      |      | 576
+  DET  |      | NOUN |      |      |      | 569
+       |      |      |      | VERB |      | 506
+       |      | NOUN |      | VERB |      | 473
+  DET  | der  |      |      |      |      | 312
+  DET  | der  | NOUN |      |      |      | 309
+  -----+------+------+------+------+------+------
+
+   5. head two words after the correct head (before the focus word), correct dependency : 1304 times
+  -----+------+------+------+------+------+------
+    Before    |    Focus    |   After     | Count
+  CPOS   word | CPOS   word | CPOS   word |
+  -----+------+------+------+------+------+------
+  NOUN |      |      |      |      |      | 627
+       |      |      |      | .    |      | 569
+       |      | NOUN |      |      |      | 410
+       |      | VERB |      |      |      | 359
+       |      | ADP  |      |      |      | 322
+       |      | VERB |      | .    |      | 282
+  NOUN |      | ADP  |      |      |      | 251
+  -----+------+------+------+------+------+------
+
+   6. head four words before the correct head (before the focus word instead ofbefore the focus word), correct dependency : 1287 times
+  -----+------+------+------+------+------+------
+    Before    |    Focus    |   After     | Count
+  CPOS   word | CPOS   word | CPOS   word |
+  -----+------+------+------+------+------+------
+  NOUN |      |      |      |      |      | 479
+       |      | ADP  |      |      |      | 431
+       |      |      |      | NOUN |      | 328
+       |      |      |      | DET  |      | 289
+  NOUN |      | ADP  |      |      |      | 204
+       |      | ADP  |      | DET  |      | 198
+  ADV  |      |      |      |      |      | 177
+  -----+------+------+------+------+------+------
+
+   7. head one word after the correct head (after the focus word), correct dependency : 1031 times
+  -----+------+------+------+------+------+------
+    Before    |    Focus    |   After     | Count
+  CPOS   word | CPOS   word | CPOS   word |
+  -----+------+------+------+------+------+------
+       |      |      |      | NOUN |      | 434
+       |      | PRON |      |      |      | 294
+       |      |      |      | ADJ  |      | 233
+       |      | ADJ  |      |      |      | 231
+  NOUN |      |      |      |      |      | 200
+       |      | NOUN |      |      |      | 198
+  .S   | .S   |      |      |      |      | 187
+  -----+------+------+------+------+------+------
+
+   8. head 5 words before the correct head (before the focus word instead ofbefore the focus word), correct dependency : 943 times
+  -----+------+------+------+------+------+------
+    Before    |    Focus    |   After     | Count
+  CPOS   word | CPOS   word | CPOS   word |
+  -----+------+------+------+------+------+------
+  NOUN |      |      |      |      |      | 328
+       |      | ADP  |      |      |      | 327
+       |      |      |      | NOUN |      | 251
+       |      |      |      | DET  |      | 207
+       |      | NOUN |      |      |      | 149
+       |      | ADP  |      | DET  |      | 134
+  ADV  |      |      |      |      |      | 122
+  -----+------+------+------+------+------+------
+
+   9. head = 0 instead of after the focus word, correct dependency : 874 times
+  -----+------+------+------+------+------+------
+    Before    |    Focus    |   After     | Count
+  CPOS   word | CPOS   word | CPOS   word |
+  -----+------+------+------+------+------+------
+  .S   | .S   |      |      |      |      | 326
+       |      | VERB |      |      |      | 293
+       |      | NOUN |      |      |      | 204
+       |      |      |      | NOUN |      | 179
+       |      | CONJ |      |      |      | 155
+  NOUN |      |      |      |      |      | 144
+  .    |      |      |      |      |      | 142
+  -----+------+------+------+------+------+------
+
+  10. head three words after the correct head (before the focus word), correct dependency : 851 times
+  -----+------+------+------+------+------+------
+    Before    |    Focus    |   After     | Count
+  CPOS   word | CPOS   word | CPOS   word |
+  -----+------+------+------+------+------+------
+       |      |      |      | .    |      | 427
+  NOUN |      |      |      |      |      | 374
+       |      | VERB |      |      |      | 273
+       |      | NOUN |      |      |      | 248
+       |      | VERB |      | .    |      | 232
+       |      | ADP  |      |      |      | 218
+  NOUN |      |      |      | .    |      | 178
+  -----+------+------+------+------+------+------
+
+
+  Local contexts involved in several frequent errors:
+  ===================================================
+
+
+  -----+------+------+------+------+------
+    Before    |    Focus    |   After     
+  CPOS   word | CPOS   word | CPOS   word 
+  -----+------+------+------+------+------
+  NOUN |      |      |      |      |      
+  -----+------+------+------+------+------
+   1. head two words before the correct head (before the focus word instead ofbefore the focus word), correct dependency : 953 times
+   2. head one word after the correct head (before the focus word), correct dependency : 834 times
+   5. head two words after the correct head (before the focus word), correct dependency : 627 times
+   3. head three words before the correct head (before the focus word instead ofbefore the focus word), correct dependency : 505 times
+   6. head four words before the correct head (before the focus word instead ofbefore the focus word), correct dependency : 479 times
+  10. head three words after the correct head (before the focus word), correct dependency : 374 times
+   8. head 5 words before the correct head (before the focus word instead ofbefore the focus word), correct dependency : 328 times
+   7. head one word after the correct head (after the focus word), correct dependency : 200 times
+   9. head = 0 instead of after the focus word, correct dependency : 144 times
+
+  -----+------+------+------+------+------
+    Before    |    Focus    |   After     
+  CPOS   word | CPOS   word | CPOS   word 
+  -----+------+------+------+------+------
+       |      | NOUN |      |      |      
+  -----+------+------+------+------+------
+   2. head one word after the correct head (before the focus word), correct dependency : 1759 times
+   4. head three words after the correct head (after the focus word instead ofafter the focus word), correct dependency : 1097 times
+   5. head two words after the correct head (before the focus word), correct dependency : 410 times
+   3. head three words before the correct head (before the focus word instead ofbefore the focus word), correct dependency : 279 times
+  10. head three words after the correct head (before the focus word), correct dependency : 248 times
+   9. head = 0 instead of after the focus word, correct dependency : 204 times
+   7. head one word after the correct head (after the focus word), correct dependency : 198 times
+   8. head 5 words before the correct head (before the focus word instead ofbefore the focus word), correct dependency : 149 times
+
+  -----+------+------+------+------+------
+    Before    |    Focus    |   After     
+  CPOS   word | CPOS   word | CPOS   word 
+  -----+------+------+------+------+------
+       |      |      |      | NOUN |      
+  -----+------+------+------+------+------
+   1. head two words before the correct head (before the focus word instead ofbefore the focus word), correct dependency : 2839 times
+   3. head three words before the correct head (before the focus word instead ofbefore the focus word), correct dependency : 682 times
+   7. head one word after the correct head (after the focus word), correct dependency : 434 times
+   6. head four words before the correct head (before the focus word instead ofbefore the focus word), correct dependency : 328 times
+   8. head 5 words before the correct head (before the focus word instead ofbefore the focus word), correct dependency : 251 times
+   9. head = 0 instead of after the focus word, correct dependency : 179 times
+
+  -----+------+------+------+------+------
+    Before    |    Focus    |   After     
+  CPOS   word | CPOS   word | CPOS   word 
+  -----+------+------+------+------+------
+       |      | ADP  |      |      |      
+  -----+------+------+------+------+------
+   6. head four words before the correct head (before the focus word instead ofbefore the focus word), correct dependency : 431 times
+   3. head three words before the correct head (before the focus word instead ofbefore the focus word), correct dependency : 381 times
+   8. head 5 words before the correct head (before the focus word instead ofbefore the focus word), correct dependency : 327 times
+   5. head two words after the correct head (before the focus word), correct dependency : 322 times
+  10. head three words after the correct head (before the focus word), correct dependency : 218 times
+
+  -----+------+------+------+------+------
+    Before    |    Focus    |   After     
+  CPOS   word | CPOS   word | CPOS   word 
+  -----+------+------+------+------+------
+       |      |      |      | .    |      
+  -----+------+------+------+------+------
+   2. head one word after the correct head (before the focus word), correct dependency : 684 times
+   5. head two words after the correct head (before the focus word), correct dependency : 569 times
+  10. head three words after the correct head (before the focus word), correct dependency : 427 times
+
+  -----+------+------+------+------+------
+    Before    |    Focus    |   After     
+  CPOS   word | CPOS   word | CPOS   word 
+  -----+------+------+------+------+------
+       |      | VERB |      |      |      
+  -----+------+------+------+------+------
+   5. head two words after the correct head (before the focus word), correct dependency : 359 times
+   9. head = 0 instead of after the focus word, correct dependency : 293 times
+  10. head three words after the correct head (before the focus word), correct dependency : 273 times
+
+  -----+------+------+------+------+------
+    Before    |    Focus    |   After     
+  CPOS   word | CPOS   word | CPOS   word 
+  -----+------+------+------+------+------
+       |      | VERB |      | .    |      
+  -----+------+------+------+------+------
+   5. head two words after the correct head (before the focus word), correct dependency : 282 times
+  10. head three words after the correct head (before the focus word), correct dependency : 232 times
+
+  -----+------+------+------+------+------
+    Before    |    Focus    |   After     
+  CPOS   word | CPOS   word | CPOS   word 
+  -----+------+------+------+------+------
+       |      |      |      | VERB |      
+  -----+------+------+------+------+------
+   1. head two words before the correct head (before the focus word instead ofbefore the focus word), correct dependency : 815 times
+   4. head three words after the correct head (after the focus word instead ofafter the focus word), correct dependency : 506 times
+
+  -----+------+------+------+------+------
+    Before    |    Focus    |   After     
+  CPOS   word | CPOS   word | CPOS   word 
+  -----+------+------+------+------+------
+  DET  |      |      |      |      |      
+  -----+------+------+------+------+------
+   2. head one word after the correct head (before the focus word), correct dependency : 630 times
+   4. head three words after the correct head (after the focus word instead ofafter the focus word), correct dependency : 576 times
+
+  -----+------+------+------+------+------
+    Before    |    Focus    |   After     
+  CPOS   word | CPOS   word | CPOS   word 
+  -----+------+------+------+------+------
+  DET  |      | NOUN |      |      |      
+  -----+------+------+------+------+------
+   2. head one word after the correct head (before the focus word), correct dependency : 620 times
+   4. head three words after the correct head (after the focus word instead ofafter the focus word), correct dependency : 569 times
+
+  -----+------+------+------+------+------
+    Before    |    Focus    |   After     
+  CPOS   word | CPOS   word | CPOS   word 
+  -----+------+------+------+------+------
+       |      | ADJ  |      |      |      
+  -----+------+------+------+------+------
+   1. head two words before the correct head (before the focus word instead ofbefore the focus word), correct dependency : 973 times
+   7. head one word after the correct head (after the focus word), correct dependency : 231 times
+
+  -----+------+------+------+------+------
+    Before    |    Focus    |   After     
+  CPOS   word | CPOS   word | CPOS   word 
+  -----+------+------+------+------+------
+       |      |      |      | DET  |      
+  -----+------+------+------+------+------
+   6. head four words before the correct head (before the focus word instead ofbefore the focus word), correct dependency : 289 times
+   8. head 5 words before the correct head (before the focus word instead ofbefore the focus word), correct dependency : 207 times
+
+  -----+------+------+------+------+------
+    Before    |    Focus    |   After     
+  CPOS   word | CPOS   word | CPOS   word 
+  -----+------+------+------+------+------
+  NOUN |      | ADP  |      |      |      
+  -----+------+------+------+------+------
+   5. head two words after the correct head (before the focus word), correct dependency : 251 times
+   6. head four words before the correct head (before the focus word instead ofbefore the focus word), correct dependency : 204 times
+
+  -----+------+------+------+------+------
+    Before    |    Focus    |   After     
+  CPOS   word | CPOS   word | CPOS   word 
+  -----+------+------+------+------+------
+  ADV  |      |      |      |      |      
+  -----+------+------+------+------+------
+   6. head four words before the correct head (before the focus word instead ofbefore the focus word), correct dependency : 177 times
+   8. head 5 words before the correct head (before the focus word instead ofbefore the focus word), correct dependency : 122 times
+
+  -----+------+------+------+------+------
+    Before    |    Focus    |   After     
+  CPOS   word | CPOS   word | CPOS   word 
+  -----+------+------+------+------+------
+       |      |      |      | ADJ  |      
+  -----+------+------+------+------+------
+   3. head three words before the correct head (before the focus word instead ofbefore the focus word), correct dependency : 270 times
+   7. head one word after the correct head (after the focus word), correct dependency : 233 times
+
+  -----+------+------+------+------+------
+    Before    |    Focus    |   After     
+  CPOS   word | CPOS   word | CPOS   word 
+  -----+------+------+------+------+------
+  .S   | .S   |      |      |      |      
+  -----+------+------+------+------+------
+   9. head = 0 instead of after the focus word, correct dependency : 326 times
+   7. head one word after the correct head (after the focus word), correct dependency : 187 times
+
+  -----+------+------+------+------+------
+    Before    |    Focus    |   After     
+  CPOS   word | CPOS   word | CPOS   word 
+  -----+------+------+------+------+------
+       |      | ADP  |      | DET  |      
+  -----+------+------+------+------+------
+   6. head four words before the correct head (before the focus word instead ofbefore the focus word), correct dependency : 198 times
+   8. head 5 words before the correct head (before the focus word instead ofbefore the focus word), correct dependency : 134 times
+
