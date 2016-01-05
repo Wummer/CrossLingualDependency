@@ -142,11 +142,19 @@ class Thesis:
                     t_cpos.append(tline[3].replace("|", "+"))
 
                     if tline[4] != "_":
-                        t_fpos.append(tline[4].replace("|", "+").split(",")[0])
-                        """ if self.FEAT == False
-                                      else "+".join(sorted(tline[4].split("|"))) +
-                                      "+" + "+".join(sorted(tline[5].split("|"))))
-                        """
+                        if self.DATA == "UD":
+                            t_fpos.append(tline[4].replace("|", "+").split(",")[0])
+                        else:
+                            try:
+                                t_fpos.append(tline[4].replace("|", "+")+"+"+tline[14])
+                            except IndexError:
+                                lang = file.split("/")[-1][:2]
+                                t_fpos.append(tline[4].replace("|", "+")+"+"+lang)
+                        
+                        #if self.FEAT == False
+                        #              else "+".join(sorted(tline[4].split("|"))) +
+                        #              "+" + "+".join(sorted(tline[5].split("|"))))
+                        
                     elif tline[4] == "_":
                         t_fpos.append(
                             "+".join(sorted(tline[3].split("|"))).split(",")[0] +
@@ -218,13 +226,87 @@ class Thesis:
         """
         Applies retrofitting to the vectors.
         """
-        lexicon = self.create_lexicon(self.train_cpos,self.train_fpos)
+        lexicon = self.create_lexicon(self.train_cpos+self.embed_cpos,self.train_fpos+self.embed_fpos)
         wordVecs = self.read_word_vecs(self.MODELFILE)
         
         self.model = self.retrofit(wordVecs, lexicon, ITER)
         full_vocab = np.array([self.model[x] for x in self.model.keys()])
         self.min_vector = full_vocab.min(axis=0)
         self.max_vector = full_vocab.max(axis=0)
+        self.mean_vector = full_vocab.mean(axis=0)
+
+    def create_WALSvectors(self,pos, vector):
+        lang = pos[-2:]
+        WALSvector = [pos]+vector.tolist()
+        WALS = {"bg": ["81a_svo", "85a_prep", "86a_none", "87a_an"],
+        "hr": ["81a_svo", "85a_prep", "86a_none", "87a_an"],
+        "cs": ["81a_svo", "85a_prep", "86a_gn", "87a_an"],
+        "da": ["81a_svo", "85a_prep", "86a_none", "87a_an"],
+        "en": ["81a_svo", "85a_prep", "86a_none", "87a_an"],
+        "fi": ["81a_svo", "85a_post", "86a_gn", "87a_an"],
+        "fi_ftb": ["81a_svo", "85a_post", "86a_gn", "87a_an"],
+        "el": ["81a_none", "85a_prep", "86a_ng", "87a_an"],
+        "he": ["81a_svo", "85a_prep", "86a_ng", "87a_na"],
+        "hu": ["81a_none", "85a_post", "86a_gn", "87a_an"],
+        "it": ["81a_svo", "85a_prep", "86a_ng", "87a_na"],
+        "fa": ["81a_sov", "85a_prep", "86a_ng", "87a_na"],
+        "sv": ["81a_svo", "85a_prep", "86a_gn", "87a_an"],
+        "fr": ["81a_svo", "85a_prep", "86a_ng", "87a_na"],
+        "de": ["81a_none", "85a_prep", "86a_ng", "87a_an"],
+        "pl": ["81a_svo", "85a_prep", "86a_ng", "87a_an"],
+        }
+
+        if lang not in WALS.keys():
+            WALSvector += vector*8
+
+        else:
+        #Here we increase the vector size for 
+            for feat in WALS[lang]:
+
+                #81a features:
+                if feat == "81a_svo":
+                    WALSvector += vector
+                else:
+                    WALSvector += self.mean_vector
+                if feat == "81a_sov":
+                    WALSvector += vector
+                else:
+                    WALSvector += self.mean_vector
+
+                #85a features:
+                if feat == "85a_prep":
+                    WALSvector += vector
+                else:
+                    WALSvector += self.mean_vector
+
+                if feat == "85a_post":
+                    WALSvector += vector
+                else:
+                    WALSvector += self.mean_vector
+
+                #86a
+                if feat == "86a_gn":
+                    WALSvector += vector
+                else:
+                    WALSvector +=self.mean_vector
+
+                if feat == "86a_ng":
+                    WALSvector += vector
+                else:
+                    WALSvector += self.mean_vector
+
+                #87a
+                if feat == "87a_na":
+                    WALSvector += vector
+                else:
+                    WALSvector += self.mean_vector
+
+                if feat == "87a_an":
+                    WALSvector += vector
+                else:
+                    WALSvector += self.mean_vector
+
+        return WALSvector
 
 
     def enrichment(self):
@@ -329,6 +411,8 @@ class Thesis:
         test_out ="Data_RBG/"+self.DATA+"/"+self.test_file.split("/")[-1].replace(".conllu","-rbg.conllu")
 
         vec_file = "Vectors/RBG/" + "mvectors" + str(self.SIZE) + "-win" + str(self.WINDOW) + "retro"
+        lang = []
+
 
         read_files = [self.train_file,self.test_file]
         write_files = [train_out, test_out]
@@ -339,10 +423,22 @@ class Thesis:
 
         #Here we print the retotrofitted vector to a file we can use in RBGparser
         with codecs.open(vec_file,"w") as f:
-            for pos,vec in self.model.iteritems():
+            for _pos,vec in self.model.iteritems():
                 #vec = (vec - self.min_vector) / self.max_vector * 1e-4 
-                line_out = pos + " " + " ".join(str(x) for x in vec)
+                line_out = _pos + " " + " ".join(str(x) for x in vec) 
                 print  >> f, line_out
+            print >> f, "*UNKNOWN*" + " " + " ".join(str(x) for x in self.model["x"])
+
+        with codecs.open(vec_file+"-wals","w") as f:
+            for _pos,vec in self.model.iteritems():
+                WALSvec = self.create_WALSvectors(_pos, vec)
+                #vec = (vec - self.min_vector) / self.max_vector * 1e-4 
+                line_out = " ".join(str(x) for x in WALSvec)
+                print  >> f, line_out
+
+            print >> f, "*UNKNOWN*" + " " + " ".join(str(x) for x in self.model["x"]*8)
+
+
 
 
         for idx in xrange(len(write_files)):
@@ -361,11 +457,39 @@ class Thesis:
 
                     
                     tline = line.strip().split()
-                    tline[1] = tline[4]
+                    try:
+                        tline[1] = tline[4]+"+"+tline[14]
+                    except IndexError:
+                        tline[1] = tline[4]+"+"+read_files[idx].split("/")[-1][:2]
                     tline[2] = "_"
                     tline[4] = "_"
                     tline[5] = "_"
-                    tline = tline[:-4]
+                    tline = tline[:-5]
+                    print >> f, "\t".join(tline)
+
+            #Our basic model in the works!
+            lang_idx = 0
+            with codecs.open(write_files[idx][:-7]
+                             + "-mvectors" + str(self.SIZE) + "-lemma.conllu","w") as f:
+
+                for line in codecs.open(read_files[idx]):
+                    if line == "\n":
+                        print >> f
+                        continue
+
+                    if line.startswith("#"):
+                        continue
+
+                    
+                    tline = line.strip().split()
+                    try:
+                        tline[1] = tline[4]+"+"+tline[14]
+                    except IndexError:
+                        tline[1] = tline[4]+"+"+read_files[idx].split("/")[-1][:2]
+                    tline[4] = "_"
+                    tline[5] = "_"
+                    tline = tline[:-5]
+                    lang_idx +=1
                     print >> f, "\t".join(tline)
 
             #WALS goes here whenever ...
@@ -382,17 +506,25 @@ class Thesis:
 
                     
                     tline = line.strip().split()
-                    tline[1] = tline[4]
+                    try:
+                        tline[1] = tline[4]+"+"+tline[14]
+                    except IndexError:
+                        tline[1] = tline[4]+"+"+read_files[idx].split("/")[-1][:2] 
                     tline[2] = "_"
                     tline[4] = "_"
                     tline[5] = ""
 
-                    for feat in tline[-4:]:
-                        vec = self.model[tline[1]]
+                    """
+                    for feat in tline[-5:-1]:
+                        try:
+                            vec = self.model[tline[1].lower().strip()]
+                        except KeyError:
+                            vec = self.model["x"]
+
                         tline[5] += feat + " " + " ".join(str(x) for x in vec)
-                        
+                    """ 
                     #WALS as words
-                    #tline[5] = "|".join(tline[-4:])
+                    tline[5] = "|".join(tline[-4:])
 
                     """
                     if tline[5] == "_":
@@ -418,7 +550,7 @@ class Thesis:
                     tline[2] = "_"
                     tline[4] = "_"
                     tline[5] = "_"
-                    tline = tline[:-4]
+                    tline = tline[:-5]
                     print >> f, "\t".join(tline)
 
             #Baseline with words and all that jazz
@@ -434,7 +566,7 @@ class Thesis:
                     tline = line.strip().split()
                     tline[5] = "_"
                     tline[4] = "_"
-                    tline = tline[:-4]
+                    tline = tline[:-5]
                     print >> f, "\t".join(tline)
 
     def create_lexicon(self,cpos,fpos):

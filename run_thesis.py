@@ -16,10 +16,10 @@ try:
 except IndexError:
     RBG = False
 
-SIZE = 50
+SIZE = 25
 RETRO = True
 LOAD = False
-WINDOW = 2
+WINDOW = 1
 
 
 if DATASET == "UD":

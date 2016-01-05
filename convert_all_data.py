@@ -21,13 +21,14 @@ except IndexError:
 def create_WALS_files(train, true_train,subsample):
     with codecs.open(true_train, "w+") as outfile:
         for infilename in train:
+            lang = infilename.split("/")[-1].split("-")[0]
             with codecs.open(infilename) as infile:
                 for line in infile:
                     if line == "\n":
                         print >> outfile
                     else:
                         tline = line.strip("\n")
-                        tline += " " + " ".join(WALS[lang])
+                        tline += " " + " ".join(WALS[lang]+[lang])
                         print >> outfile, tline
 
 
@@ -74,8 +75,8 @@ for i in xrange(len(test1)):
 
 # WALS features
 
-WALS = {"bg": ["81a_svo", "85a_prep", "86a_none", "87a_an"],
-        "hr": ["81a_svo", "85a_prep", "86a_none", "87a_an"],
+WALS = {"bg": ["81a_svo", "85a_prep", "86a_none", "87a_an",],
+        "hr": ["81a_svo", "85a_prep", "86a_none", "87a_an",],
         "cs": ["81a_svo", "85a_prep", "86a_gn", "87a_an"],
         "da": ["81a_svo", "85a_prep", "86a_none", "87a_an"],
         "en": ["81a_svo", "85a_prep", "86a_none", "87a_an"],
