@@ -6,7 +6,9 @@ SP*/
 hanstholm/
 RBGParser/
 lstm-parser/
+stanford-parser/
 
 *.tsv
 *.conll*
 *.vw
+*.out

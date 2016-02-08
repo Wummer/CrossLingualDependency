@@ -1,0 +1,661 @@
+==================== UD RESULTS ====================
+-------------------- Dev results --------------------
+Results for da_vsrest-dev-baseline-nowords.tsv
+UAS:  54.883353104 %
+LAS:  43.198892843 %
+
+Results for da_vsrest-dev-baseline.tsv
+UAS:  56.4650059312 %
+LAS:  41.5579280348 %
+
+Results for da_vsrest-dev-mvec10-win1retro-nivre.tsv
+UAS:  61.4669829972 %
+LAS:  52.1154606564 %
+
+Results for da_vsrest-dev-mvec10-win1retro-nowords.tsv
+UAS:  57.908264136 %
+LAS:  44.6619217082 %
+
+Results for da_vsrest-dev-mvec10-win1retro-wals5.tsv
+UAS:  51.6805061289 %
+LAS:  37.3665480427 %
+
+Results for da_vsrest-dev-mvec10-win1retro-wals6.tsv
+UAS:  42.5069197311 %
+LAS:  30.0316330565 %
+
+Results for da_vsrest-dev-mvec10-win1retro-wals7.tsv
+UAS:  51.8782127323 %
+LAS:  37.6235666271 %
+
+Results for da_vsrest-dev-mvec10-win1retro.tsv
+UAS:  56.7615658363 %
+LAS:  43.0209569 %
+
+Results for da_vsrest-dev-mvec10-win2retro-nivre.tsv
+UAS:  61.7042309213 %
+LAS:  52.3724792408 %
+
+Results for da_vsrest-dev-mvec10-win2retro-nowords.tsv
+UAS:  58.71886121 %
+LAS:  45.8283906682 %
+
+Results for da_vsrest-dev-mvec10-win2retro-wals5.tsv
+UAS:  51.7200474496 %
+LAS:  37.5247133254 %
+
+Results for da_vsrest-dev-mvec10-win2retro-wals6.tsv
+UAS:  42.6650850138 %
+LAS:  30.2095689996 %
+
+Results for da_vsrest-dev-mvec10-win2retro-wals7.tsv
+UAS:  51.8782127323 %
+LAS:  37.6235666271 %
+
+Results for da_vsrest-dev-mvec10-win2retro.tsv
+UAS:  55.9509687624 %
+LAS:  42.6255436932 %
+
+Results for da_vsrest-dev-mvec10-win3retro-nivre.tsv
+UAS:  60.9924871491 %
+LAS:  51.7793594306 %
+
+Results for da_vsrest-dev-mvec10-win3retro-nowords.tsv
+UAS:  55.6148675366 %
+LAS:  43.9304072756 %
+
+Results for da_vsrest-dev-mvec10-win3retro-wals5.tsv
+UAS:  51.7793594306 %
+LAS:  37.4654013444 %
+
+Results for da_vsrest-dev-mvec10-win3retro-wals6.tsv
+UAS:  44.4049031238 %
+LAS:  31.514432582 %
+
+Results for da_vsrest-dev-mvec10-win3retro-wals7.tsv
+UAS:  51.8782127323 %
+LAS:  37.6235666271 %
+
+Results for da_vsrest-dev-mvec10-win3retro.tsv
+UAS:  55.3183076315 %
+LAS:  42.032423883 %
+
+Results for da_vsrest-dev-mvec25-win1retro-nivre.tsv
+UAS:  62.8311585607 %
+LAS:  52.846975089 %
+
+Results for da_vsrest-dev-mvec25-win1retro-nowords.tsv
+UAS:  58.6990905496 %
+LAS:  45.3736654804 %
+
+Results for da_vsrest-dev-mvec25-win1retro-wals5.tsv
+UAS:  51.8189007513 %
+LAS:  37.5642546461 %
+
+Results for da_vsrest-dev-mvec25-win1retro-wals6.tsv
+UAS:  42.3882957691 %
+LAS:  29.9525504152 %
+
+Results for da_vsrest-dev-mvec25-win1retro-wals7.tsv
+UAS:  51.8782127323 %
+LAS:  37.6235666271 %
+
+Results for da_vsrest-dev-mvec25-win1retro.tsv
+UAS:  57.0581257414 %
+LAS:  42.8627916172 %
+
+Results for da_vsrest-dev-mvec25-win2retro-nivre.tsv
+UAS:  62.2973507315 %
+LAS:  52.5306445235 %
+
+Results for da_vsrest-dev-mvec25-win2retro-nowords.tsv
+UAS:  57.4337682879 %
+LAS:  45.6899960459 %
+
+Results for da_vsrest-dev-mvec25-win2retro-wals5.tsv
+UAS:  52.0166073547 %
+LAS:  37.6631079478 %
+
+Results for da_vsrest-dev-mvec25-win2retro-wals6.tsv
+UAS:  42.8034796362 %
+LAS:  30.2293396599 %
+
+Results for da_vsrest-dev-mvec25-win2retro-wals7.tsv
+UAS:  51.8782127323 %
+LAS:  37.6235666271 %
+
+Results for da_vsrest-dev-mvec25-win2retro.tsv
+UAS:  56.1091340451 %
+LAS:  43.258204824 %
+
+Results for da_vsrest-dev-mvec25-win3retro-nivre.tsv
+UAS:  63.1870304468 %
+LAS:  53.3017002768 %
+
+Results for da_vsrest-dev-mvec25-win3retro-nowords.tsv
+UAS:  58.4816132859 %
+LAS:  46.1842625544 %
+
+Results for da_vsrest-dev-mvec25-win3retro-wals5.tsv
+UAS:  51.6607354686 %
+LAS:  37.4456306841 %
+
+Results for da_vsrest-dev-mvec25-win3retro-wals6.tsv
+UAS:  42.4476077501 %
+LAS:  30.0316330565 %
+
+Results for da_vsrest-dev-mvec25-win3retro-wals7.tsv
+UAS:  51.8782127323 %
+LAS:  37.6235666271 %
+
+Results for da_vsrest-dev-mvec25-win3retro.tsv
+UAS:  55.9707394227 %
+LAS:  42.5662317121 %
+
+Results for da_vsrest-dev-mvec50-win1retro-nowords.tsv
+UAS:  51.8189007513 %
+LAS:  41.0636615263 %
+
+Results for da_vsrest-dev-mvec50-win1retro-wals5.tsv
+UAS:  51.6607354686 %
+LAS:  37.5049426651 %
+
+Results for da_vsrest-dev-mvec50-win1retro-wals6.tsv
+UAS:  45.4132068011 %
+LAS:  32.3645709767 %
+
+Results for da_vsrest-dev-mvec50-win1retro-wals7.tsv
+UAS:  52.3131672598 %
+LAS:  38.0980624753 %
+
+Results for da_vsrest-dev-mvec50-win1retro.tsv
+UAS:  53.0644523527 %
+LAS:  40.1542111507 %
+
+Results for da_vsrest-dev-mvec50-win2retro-nowords.tsv
+UAS:  57.5326215896 %
+LAS:  44.18742586 %
+
+Results for da_vsrest-dev-mvec50-win2retro-wals5.tsv
+UAS:  51.7398181099 %
+LAS:  37.5840253064 %
+
+Results for da_vsrest-dev-mvec50-win2retro-wals6.tsv
+UAS:  45.2155001977 %
+LAS:  32.2261763543 %
+
+Results for da_vsrest-dev-mvec50-win2retro-wals7.tsv
+UAS:  52.3131672598 %
+LAS:  38.0980624753 %
+
+Results for da_vsrest-dev-mvec50-win2retro.tsv
+UAS:  55.1799130091 %
+LAS:  41.4986160538 %
+
+Results for da_vsrest-dev-mvec50-win3retro-nowords.tsv
+UAS:  55.2589956505 %
+LAS:  44.2665085014 %
+
+Results for da_vsrest-dev-mvec50-win3retro-wals5.tsv
+UAS:  51.6211941479 %
+LAS:  37.3665480427 %
+
+Results for da_vsrest-dev-mvec50-win3retro-wals6.tsv
+UAS:  44.246737841 %
+LAS:  31.4353499407 %
+
+Results for da_vsrest-dev-mvec50-win3retro-wals7.tsv
+UAS:  52.3131672598 %
+LAS:  38.0980624753 %
+
+Results for da_vsrest-dev-mvec50-win3retro.tsv
+UAS:  56.6824831949 %
+LAS:  42.9814155793 %
+
+-------------------- Baselines --------------------
+Results for bg_vsrest-baseline.tsv
+UAS:  73.0158730159 %
+LAS:  53.0423280423 %
+
+Results for cs_vsrest-baseline.tsv
+UAS:  60.4912668166 %
+LAS:  46.414479443 %
+
+Results for da_vsrest-baseline.tsv
+UAS:  56.6067864271 %
+LAS:  42.6946107784 %
+
+Results for el_vsrest-baseline.tsv
+UAS:  58.7876402283 %
+LAS:  30.8207045857 %
+
+Results for en_vsrest-baseline.tsv
+UAS:  54.6531686944 %
+LAS:  38.0969674959 %
+
+Results for fa_vsrest-baseline.tsv
+UAS:  47.6638701316 %
+LAS:  30.0798035605 %
+
+Results for fi_ftb_vsrest-baseline.tsv
+UAS:  54.300320409 %
+LAS:  43.5396191093 %
+
+Results for fi_vsrest-baseline.tsv
+UAS:  48.7472696904 %
+LAS:  36.0015418219 %
+
+Results for he_vsrest-baseline.tsv
+UAS:  49.5176252319 %
+LAS:  27.7179962894 %
+
+Results for hr_vsrest-baseline.tsv
+UAS:  56.8848758465 %
+LAS:  40.5191873589 %
+
+Results for hu_vsrest-baseline.tsv
+UAS:  59.2656587473 %
+LAS:  28.3369330454 %
+
+Results for it_vsrest-baseline.tsv
+UAS:  65.387265033 %
+LAS:  52.8491290227 %
+
+Results for sv_vsrest-baseline.tsv
+UAS:  64.7078135259 %
+LAS:  48.467936091 %
+
+-------------------- Baselines with no words --------------------
+Results for bg_vsrest-baseline-nowords.tsv
+UAS:  72.4678760393 %
+LAS:  54.40287226 %
+
+Results for cs_vsrest-baseline-nowords.tsv
+UAS:  59.3129267274 %
+LAS:  45.8684029788 %
+
+Results for da_vsrest-baseline-nowords.tsv
+UAS:  56.2674650699 %
+LAS:  43.75249501 %
+
+Results for el_vsrest-baseline-nowords.tsv
+UAS:  58.0987994489 %
+LAS:  31.3717772092 %
+
+Results for en_vsrest-baseline-nowords.tsv
+UAS:  56.6869438896 %
+LAS:  44.6613401126 %
+
+Results for fa_vsrest-baseline-nowords.tsv
+UAS:  46.2792442535 %
+LAS:  28.933906282 %
+
+Results for fi_ftb_vsrest-baseline-nowords.tsv
+UAS:  48.3817546891 %
+LAS:  36.0406091371 %
+
+Results for fi_vsrest-baseline-nowords.tsv
+UAS:  45.2267763073 %
+LAS:  32.5452910189 %
+
+Results for he_vsrest-baseline-nowords.tsv
+UAS:  49.2207792208 %
+LAS:  26.5027829314 %
+
+Results for hr_vsrest-baseline-nowords.tsv
+UAS:  57.0823927765 %
+LAS:  41.4221218962 %
+
+Results for hu_vsrest-baseline-nowords.tsv
+UAS:  55.8963282937 %
+LAS:  26.9978401728 %
+
+Results for it_vsrest-baseline-nowords.tsv
+UAS:  66.8831807893 %
+LAS:  55.348882984 %
+
+Results for sv_vsrest-baseline-nowords.tsv
+UAS:  63.356314292 %
+LAS:  49.310571241 %
+
+-------------------- MVec25 win1 Retro --------------------
+Results for bg_vsrest--mvec25-win1retro-nivre.tsv
+UAS:  77.3242630385 %
+LAS:  62.1126228269 %
+
+Results for bg_vsrest--mvec25-win1retro-nowords.tsv
+UAS:  74.5181405896 %
+LAS:  55.9334845049 %
+
+Results for bg_vsrest--mvec25-win1retro-wals5.tsv
+UAS:  77.6738473167 %
+LAS:  55.8484504913 %
+
+Results for bg_vsrest--mvec25-win1retro.tsv
+UAS:  75.5574452003 %
+LAS:  54.6485260771 %
+
+Results for cs_vsrest--mvec25-win1retro-nivre.tsv
+UAS:  62.4803048871 %
+LAS:  51.8052170166 %
+
+Results for cs_vsrest--mvec25-win1retro-nowords.tsv
+UAS:  61.3780519008 %
+LAS:  47.8002073879 %
+
+Results for cs_vsrest--mvec25-win1retro-wals5.tsv
+UAS:  53.47441992 %
+LAS:  41.5125846722 %
+
+Results for cs_vsrest--mvec25-win1retro.tsv
+UAS:  61.4022920398 %
+LAS:  46.8218484453 %
+
+Results for da_vsrest--mvec25-win1retro-nivre.tsv
+UAS:  63.6926147705 %
+LAS:  52.5548902196 %
+
+Results for da_vsrest--mvec25-win1retro-nowords.tsv
+UAS:  60.4191616766 %
+LAS:  45.7085828343 %
+
+Results for da_vsrest--mvec25-win1retro-wals5.tsv
+UAS:  59.4610778443 %
+LAS:  44.2914171657 %
+
+Results for da_vsrest--mvec25-win1retro.tsv
+UAS:  58.123752495 %
+LAS:  43.6327345309 %
+
+Results for el_vsrest--mvec25-win1retro-nivre.tsv
+UAS:  63.9834678213 %
+LAS:  38.2208226727 %
+
+Results for el_vsrest--mvec25-win1retro-nowords.tsv
+UAS:  64.7903955914 %
+LAS:  34.4420389687 %
+
+Results for el_vsrest--mvec25-win1retro-wals5.tsv
+UAS:  65.0856130683 %
+LAS:  34.3633143082 %
+
+Results for el_vsrest--mvec25-win1retro.tsv
+UAS:  61.4052351899 %
+LAS:  31.6669946861 %
+
+Results for en_vsrest--mvec25-win1retro-nivre.tsv
+UAS:  62.107317959 %
+LAS:  51.1076811331 %
+
+Results for en_vsrest--mvec25-win1retro-nowords.tsv
+UAS:  48.4156528055 %
+LAS:  35.1552569457 %
+
+Results for en_vsrest--mvec25-win1retro-wals5.tsv
+UAS:  57.6084982749 %
+LAS:  43.0361358271 %
+
+Results for en_vsrest--mvec25-win1retro.tsv
+UAS:  55.9333575449 %
+LAS:  38.8777919012 %
+
+Results for fa_vsrest--mvec25-win1retro-nivre.tsv
+UAS:  51.0333537958 %
+LAS:  34.4246640748 %
+
+Results for fa_vsrest--mvec25-win1retro-nowords.tsv
+UAS:  53.3592524384 %
+LAS:  31.1302093991 %
+
+Results for fa_vsrest--mvec25-win1retro-wals5.tsv
+UAS:  49.8056067117 %
+LAS:  27.9721710661 %
+
+Results for fa_vsrest--mvec25-win1retro.tsv
+UAS:  46.3406316077 %
+LAS:  30.3458154287 %
+
+Results for fi_ftb_vsrest--mvec25-win1retro-nivre.tsv
+UAS:  51.3338373474 %
+LAS:  38.8234870576 %
+
+Results for fi_ftb_vsrest--mvec25-win1retro-nowords.tsv
+UAS:  46.9273139648 %
+LAS:  35.4681931094 %
+
+Results for fi_ftb_vsrest--mvec25-win1retro-wals5.tsv
+UAS:  43.4712171941 %
+LAS:  26.8891528963 %
+
+Results for fi_ftb_vsrest--mvec25-win1retro.tsv
+UAS:  54.2967203082 %
+LAS:  43.5900205206 %
+
+Results for fi_vsrest--mvec25-win1retro-nivre.tsv
+UAS:  51.6767313375 %
+LAS:  37.1964538096 %
+
+Results for fi_vsrest--mvec25-win1retro-nowords.tsv
+UAS:  47.1669022228 %
+LAS:  32.6866246948 %
+
+Results for fi_vsrest--mvec25-win1retro-wals5.tsv
+UAS:  37.5690607735 %
+LAS:  22.2150841578 %
+
+Results for fi_vsrest--mvec25-win1retro.tsv
+UAS:  49.7879994861 %
+LAS:  36.9009379417 %
+
+Results for he_vsrest--mvec25-win1retro-nivre.tsv
+UAS:  57.5417439703 %
+LAS:  33.8126159555 %
+
+Results for he_vsrest--mvec25-win1retro-nowords.tsv
+UAS:  58.7012987013 %
+LAS:  30.3525046382 %
+
+Results for he_vsrest--mvec25-win1retro-wals5.tsv
+UAS:  64.4712430427 %
+LAS:  28.6270871985 %
+
+Results for he_vsrest--mvec25-win1retro.tsv
+UAS:  52.3747680891 %
+LAS:  28.2467532468 %
+
+Results for hr_vsrest--mvec25-win1retro-nivre.tsv
+UAS:  65.2088036117 %
+LAS:  51.3826185102 %
+
+Results for hr_vsrest--mvec25-win1retro-nowords.tsv
+UAS:  64.4469525959 %
+LAS:  44.920993228 %
+
+Results for hr_vsrest--mvec25-win1retro-wals5.tsv
+UAS:  63.5440180587 %
+LAS:  43.5383747178 %
+
+Results for hr_vsrest--mvec25-win1retro.tsv
+UAS:  60.0733634312 %
+LAS:  41.5349887133 %
+
+Results for hu_vsrest--mvec25-win1retro-nivre.tsv
+UAS:  59.222462203 %
+LAS:  30.7991360691 %
+
+Results for hu_vsrest--mvec25-win1retro-nowords.tsv
+UAS:  53.3909287257 %
+LAS:  27.0842332613 %
+
+Results for hu_vsrest--mvec25-win1retro-wals5.tsv
+UAS:  32.7429805616 %
+LAS:  19.0496760259 %
+
+Results for hu_vsrest--mvec25-win1retro.tsv
+UAS:  58.6609071274 %
+LAS:  28.4233261339 %
+
+Results for it_vsrest--mvec25-win1retro-nivre.tsv
+UAS:  74.4710166322 %
+LAS:  65.6333038087 %
+
+Results for it_vsrest--mvec25-win1retro-nowords.tsv
+UAS:  76.6164747564 %
+LAS:  62.0312961323 %
+
+Results for it_vsrest--mvec25-win1retro-wals5.tsv
+UAS:  72.9652593249 %
+LAS:  59.6496407834 %
+
+Results for it_vsrest--mvec25-win1retro.tsv
+UAS:  70.4753469147 %
+LAS:  56.6282846177 %
+
+Results for sv_vsrest--mvec25-win1retro-nivre.tsv
+UAS:  71.3613482162 %
+LAS:  59.0501203764 %
+
+Results for sv_vsrest--mvec25-win1retro-nowords.tsv
+UAS:  66.9511928212 %
+LAS:  49.3926460932 %
+
+Results for sv_vsrest--mvec25-win1retro-wals5.tsv
+UAS:  62.6887721602 %
+LAS:  46.848325673 %
+
+Results for sv_vsrest--mvec25-win1retro.tsv
+UAS:  65.8732764281 %
+LAS:  48.5828408842 %
+
+==================== SPMRL RESULTS ====================
+-------------------- Baselines --------------------
+Results for de_vsrest-baseline.tsv
+UAS:  36.7864440676 %
+LAS:  0.00108690926481 %
+
+Results for fr_vsrest-baseline.tsv
+UAS:  22.8555094661 %
+LAS:  0.0 %
+
+Results for hu_vsrest-baseline.tsv
+UAS:  42.2543701025 %
+LAS:  0.0 %
+
+Results for pl_vsrest-baseline.tsv
+UAS:  33.6707056308 %
+LAS:  2.00997861725 %
+
+Results for sv_vsrest-baseline.tsv
+UAS:  29.2177985948 %
+LAS:  0.00936768149883 %
+
+-------------------- Baselines with no words --------------------
+Results for de_vsrest-baseline-nowords.tsv
+UAS:  28.7791835138 %
+LAS:  0.0 %
+
+Results for fr_vsrest-baseline-nowords.tsv
+UAS:  20.6259306531 %
+LAS:  0.0 %
+
+Results for hu_vsrest-baseline-nowords.tsv
+UAS:  33.8356439622 %
+LAS:  0.0 %
+
+Results for pl_vsrest-baseline-nowords.tsv
+UAS:  19.4012829651 %
+LAS:  0.470420527441 %
+
+Results for sv_vsrest-baseline-nowords.tsv
+UAS:  21.6112412178 %
+LAS:  0.0 %
+
+-------------------- MVec25retro --------------------
+Results for de_vsrest-spmrl-mvec25-win1retro-nivre.tsv
+UAS:  38.9124385896 %
+LAS:  0.32498587018 %
+
+Results for de_vsrest-spmrl-mvec25-win1retro-nivre3.tsv
+UAS:  37.2103386809 %
+LAS:  0.327159688709 %
+
+Results for de_vsrest-spmrl-mvec25-win1retro-nowords.tsv
+UAS:  31.4421112126 %
+LAS:  0.00108690926481 %
+
+Results for de_vsrest-spmrl-mvec25-win1retro-wals5.tsv
+UAS:  40.1384722403 %
+LAS:  0.0 %
+
+Results for de_vsrest-spmrl-mvec25-win1retro.tsv
+UAS:  38.0461719056 %
+LAS:  0.00108690926481 %
+
+Results for fr_vsrest-spmrl-mvec25-win1retro-nivre.tsv
+UAS:  28.0073388641 %
+LAS:  0.00132950436077 %
+
+Results for fr_vsrest-spmrl-mvec25-win1retro-nivre3.tsv
+UAS:  27.163103595 %
+LAS:  0.00664752180387 %
+
+Results for fr_vsrest-spmrl-mvec25-win1retro-nowords.tsv
+UAS:  21.1391193363 %
+LAS:  0.0 %
+
+Results for fr_vsrest-spmrl-mvec25-win1retro-wals5.tsv
+UAS:  55.9854286322 %
+LAS:  0.0 %
+
+Results for fr_vsrest-spmrl-mvec25-win1retro.tsv
+UAS:  24.3259412891 %
+LAS:  0.00265900872155 %
+
+Results for hu_vsrest-spmrl-mvec25-win1retro-nivre.tsv
+UAS:  44.0275266225 %
+LAS:  0.818766325095 %
+
+Results for hu_vsrest-spmrl-mvec25-win1retro-nowords.tsv
+UAS:  36.231665662 %
+LAS:  0.0452079566004 %
+
+Results for hu_vsrest-spmrl-mvec25-win1retro-wals5.tsv
+UAS:  38.3413703034 %
+LAS:  2.76270845891 %
+
+Results for hu_vsrest-spmrl-mvec25-win1retro.tsv
+UAS:  42.6009644364 %
+LAS:  0.0 %
+
+Results for pl_vsrest-spmrl-mvec25-win1retro-nivre.tsv
+UAS:  34.7968638632 %
+LAS:  0.142551674982 %
+
+Results for pl_vsrest-spmrl-mvec25-win1retro-nowords.tsv
+UAS:  31.4183891661 %
+LAS:  0.598717034925 %
+
+Results for pl_vsrest-spmrl-mvec25-win1retro-wals5.tsv
+UAS:  45.9301496793 %
+LAS:  0.0 %
+
+Results for pl_vsrest-spmrl-mvec25-win1retro.tsv
+UAS:  35.880256593 %
+LAS:  2.00997861725 %
+
+Results for sv_vsrest-spmrl-mvec25-win1retro-nivre.tsv
+UAS:  31.7658079625 %
+LAS:  2.63231850117 %
+
+Results for sv_vsrest-spmrl-mvec25-win1retro-nowords.tsv
+UAS:  24.074941452 %
+LAS:  0.0 %
+
+Results for sv_vsrest-spmrl-mvec25-win1retro-wals5.tsv
+UAS:  57.6112412178 %
+LAS:  0.0 %
+
+Results for sv_vsrest-spmrl-mvec25-win1retro.tsv
+UAS:  29.4707259953 %
+LAS:  0.0187353629977 %
+

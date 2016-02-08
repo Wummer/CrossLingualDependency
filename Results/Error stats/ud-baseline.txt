@@ -1,0 +1,2758 @@
+  Labeled   attachment score: 125351 / 286646 * 100 = 43.73 %
+  Unlabeled attachment score: 168506 / 286646 * 100 = 58.79 %
+  Label accuracy score:       158711 / 286646 * 100 = 55.37 %
+
+  ================================================================================
+
+  Evaluation of the results in UD/all-baseline.conllu
+  vs. gold standard Original/all-UD.conllu:
+
+  Legend: '.S' - the beginning of a sentence, '.E' - the end of a sentence
+
+  Number of non-scoring tokens: 44623
+
+  The overall accuracy and its distribution over CPOSTAGs
+
+  -----------+-------+-------+------+-------+------+-------+-------
+  Accuracy   | words | right |   %  | right |   %  | both  |   %
+             |       | head  |      |  dep  |      | right |
+  -----------+-------+-------+------+-------+------+-------+-------
+  total      | 286646 | 168506 |  59% | 158711 |  55% | 125351 |  44%
+  -----------+-------+-------+------+-------+------+-------+-------
+  NOUN       | 80885 | 36602 |  45% | 29529 |  37% | 19385 |  24%
+  VERB       | 41466 | 19785 |  48% | 16398 |  40% | 14668 |  35%
+  ADJ        | 33304 | 25428 |  76% | 25543 |  77% | 23347 |  70%
+  ADP        | 30051 | 25874 |  86% | 28220 |  94% | 25542 |  85%
+  ADV        | 19172 | 11888 |  62% | 13878 |  72% |  9678 |  50%
+  PRON       | 17589 | 11152 |  63% |  4779 |  27% |  3646 |  21%
+  PROPN      | 15943 |  6555 |  41% |  5643 |  35% |  4132 |  26%
+  CONJ       | 12169 |  5165 |  42% | 10397 |  85% |  4964 |  41%
+  DET        | 11716 | 10435 |  89% |  9582 |  82% |  8773 |  75%
+  NUM        |  7707 |  4544 |  59% |  4298 |  56% |  3205 |  42%
+  SCONJ      |  6412 |  4212 |  66% |  5393 |  84% |  4017 |  63%
+  AUX        |  5790 |  4610 |  80% |  4004 |  69% |  3421 |  59%
+  PART       |  3168 |  1742 |  55% |   381 |  12% |   292 |   9%
+  PUNCT      |   516 |   142 |  28% |   484 |  94% |   132 |  26%
+  INTJ       |   352 |   241 |  68% |   114 |  32% |    95 |  27%
+  X          |   262 |   102 |  39% |    57 |  22% |    48 |  18%
+  SYM        |   144 |    29 |  20% |    11 |   8% |     6 |   4%
+  -----------+-------+-------+------+-------+------+-------+-------
+
+
+  The overall error rate and its distribution over CPOSTAGs
+
+  -----------+-------+-------+------+-------+------+-------+-------
+  Error      | words | head  |   %  |  dep  |   %  | both  |   %
+  Rate       |       | err   |      |  err  |      | wrong |
+  -----------+-------+-------+------+-------+------+-------+-------
+  total      | 286646 | 118140 |  41% | 127935 |  45% | 84780 |  30%
+  -----------+-------+-------+------+-------+------+-------+-------
+  NOUN       | 80885 | 44283 |  55% | 51356 |  63% | 34139 |  42%
+  VERB       | 41466 | 21681 |  52% | 25068 |  60% | 19951 |  48%
+  ADJ        | 33304 |  7876 |  24% |  7761 |  23% |  5680 |  17%
+  ADP        | 30051 |  4177 |  14% |  1831 |   6% |  1499 |   5%
+  ADV        | 19172 |  7284 |  38% |  5294 |  28% |  3084 |  16%
+  PRON       | 17589 |  6437 |  37% | 12810 |  73% |  5304 |  30%
+  PROPN      | 15943 |  9388 |  59% | 10300 |  65% |  7877 |  49%
+  CONJ       | 12169 |  7004 |  58% |  1772 |  15% |  1571 |  13%
+  DET        | 11716 |  1281 |  11% |  2134 |  18% |   472 |   4%
+  NUM        |  7707 |  3163 |  41% |  3409 |  44% |  2070 |  27%
+  SCONJ      |  6412 |  2200 |  34% |  1019 |  16% |   824 |  13%
+  AUX        |  5790 |  1180 |  20% |  1786 |  31% |   597 |  10%
+  PART       |  3168 |  1426 |  45% |  2787 |  88% |  1337 |  42%
+  PUNCT      |   516 |   374 |  72% |    32 |   6% |    22 |   4%
+  INTJ       |   352 |   111 |  32% |   238 |  68% |    92 |  26%
+  X          |   262 |   160 |  61% |   205 |  78% |   151 |  58%
+  SYM        |   144 |   115 |  80% |   133 |  92% |   110 |  76%
+  -----------+-------+-------+------+-------+------+-------+-------
+
+
+  Precision and recall of DEPREL
+
+  ----------------+------+---------+--------+------------+---------------
+  deprel          | gold | correct | system | recall (%) | precision (%) 
+  ----------------+------+---------+--------+------------+---------------
+  acl             | 3901 |      40 |     40 |       1.03 |        100.00
+  acl:inf         |   22 |       0 |      0 |       0.00 |           NaN
+  acl:relcl       | 1243 |       0 |      0 |       0.00 |           NaN
+  advcl           | 3617 |     299 |    299 |       8.27 |        100.00
+  advcl:compar    |   84 |       0 |      0 |       0.00 |           NaN
+  advmod          | 15717 |   13820 |  13820 |      87.93 |        100.00
+  advmod:emph     | 2628 |       0 |      0 |       0.00 |           NaN
+  advmod:inf      |    4 |       0 |      0 |       0.00 |           NaN
+  advmod:locy     |    8 |       0 |      0 |       0.00 |           NaN
+  advmod:mode     |   82 |       0 |      0 |       0.00 |           NaN
+  advmod:phrase   |    9 |       0 |      0 |       0.00 |           NaN
+  advmod:tfrom    |    2 |       0 |      0 |       0.00 |           NaN
+  advmod:tlocy    |   71 |       0 |      0 |       0.00 |           NaN
+  advmod:to       |    2 |       0 |      0 |       0.00 |           NaN
+  advmod:tto      |    3 |       0 |      0 |       0.00 |           NaN
+  amod            | 26278 |   24519 |  24519 |      93.31 |        100.00
+  amod:att        |  238 |       0 |      0 |       0.00 |           NaN
+  amod:mode       |   22 |       0 |      0 |       0.00 |           NaN
+  amod:obl        |    7 |       0 |      0 |       0.00 |           NaN
+  appos           | 1582 |      89 |     89 |       5.63 |        100.00
+  aux             | 5934 |    3982 |   3982 |      67.10 |        100.00
+  auxpass         | 1009 |      13 |     13 |       1.29 |        100.00
+  auxpass:reflex  |  559 |       0 |      0 |       0.00 |           NaN
+  case            | 29639 |   28205 |  28205 |      95.16 |        100.00
+  case:acc        |  126 |       0 |      0 |       0.00 |           NaN
+  case:gen        |  182 |       0 |      0 |       0.00 |           NaN
+  cc              | 12036 |   10397 |  10397 |      86.38 |        100.00
+  cc:preconj      |    6 |       0 |      0 |       0.00 |           NaN
+  ccomp           | 3088 |     179 |    179 |       5.80 |        100.00
+  ccomp:obj       |   16 |       0 |      0 |       0.00 |           NaN
+  ccomp:obl       |    6 |       0 |      0 |       0.00 |           NaN
+  compound        | 1890 |       4 |      4 |       0.21 |        100.00
+  compound:lvc    |  524 |       0 |      0 |       0.00 |           NaN
+  compound:nn     |   52 |       0 |      0 |       0.00 |           NaN
+  compound:preverb |   34 |       0 |      0 |       0.00 |           NaN
+  compound:prt    |  289 |       0 |      0 |       0.00 |           NaN
+  compound:reflex | 1946 |       0 |      0 |       0.00 |           NaN
+  conj            | 14425 |    4014 |   4014 |      27.83 |        100.00
+  conj:discourse  |    6 |       0 |      0 |       0.00 |           NaN
+  conj:preconj    |   14 |       0 |      0 |       0.00 |           NaN
+  cop             | 5565 |     407 |    407 |       7.31 |        100.00
+  csubj           |  996 |       4 |      4 |       0.40 |        100.00
+  csubj:cop       |    6 |       0 |      0 |       0.00 |           NaN
+  csubjpass       |   12 |       0 |      0 |       0.00 |           NaN
+  dep             | 2306 |       6 |      6 |       0.26 |        100.00
+  det             | 11297 |    9583 |   9583 |      84.83 |        100.00
+  det:def         | 1321 |       0 |      0 |       0.00 |           NaN
+  det:numgov      |  119 |       0 |      0 |       0.00 |           NaN
+  det:nummod      |   63 |       0 |      0 |       0.00 |           NaN
+  det:poss        |   71 |       0 |      0 |       0.00 |           NaN
+  det:predet      |   48 |       0 |      0 |       0.00 |           NaN
+  det:quant       |   10 |       0 |      0 |       0.00 |           NaN
+  discourse       |  270 |      78 |     78 |      28.89 |        100.00
+  dislocated      |   44 |       0 |      0 |       0.00 |           NaN
+  dobj            | 17143 |    3857 |   3857 |      22.50 |        100.00
+  dobj:lvc        |    6 |       0 |      0 |       0.00 |           NaN
+  dummy           |    0 |       0 | 127935 |        NaN |          0.00
+  expl            |  511 |       0 |      0 |       0.00 |           NaN
+  foreign         |  328 |       5 |      5 |       1.52 |        100.00
+  goeswith        |   18 |       0 |      0 |       0.00 |           NaN
+  iobj            |  581 |       2 |      2 |       0.34 |        100.00
+  list            |  261 |       0 |      0 |       0.00 |           NaN
+  mark            | 7365 |    5737 |   5737 |      77.90 |        100.00
+  mark:comparator |   70 |       0 |      0 |       0.00 |           NaN
+  mwe             | 1241 |       3 |      3 |       0.24 |        100.00
+  name            | 2709 |     138 |    138 |       5.09 |        100.00
+  neg             | 1565 |     225 |    225 |      14.38 |        100.00
+  nmod            | 45129 |   22154 |  22154 |      49.09 |        100.00
+  nmod:agent      |   14 |       0 |      0 |       0.00 |           NaN
+  nmod:att        |  120 |       0 |      0 |       0.00 |           NaN
+  nmod:gobj       |   79 |       0 |      0 |       0.00 |           NaN
+  nmod:gsubj      |   13 |       0 |      0 |       0.00 |           NaN
+  nmod:loc        |   28 |       0 |      0 |       0.00 |           NaN
+  nmod:npmod      |   60 |       0 |      0 |       0.00 |           NaN
+  nmod:obl        |  244 |       0 |      0 |       0.00 |           NaN
+  nmod:obllvc     |    4 |       0 |      0 |       0.00 |           NaN
+  nmod:own        |   11 |       0 |      0 |       0.00 |           NaN
+  nmod:poss       | 3552 |       0 |      0 |       0.00 |           NaN
+  nmod:smixut     |  673 |       0 |      0 |       0.00 |           NaN
+  nmod:temp       |   11 |       0 |      0 |       0.00 |           NaN
+  nmod:tmod       |  119 |       0 |      0 |       0.00 |           NaN
+  nsubj           | 22147 |   11408 |  11408 |      51.51 |        100.00
+  nsubj:cop       |  162 |       0 |      0 |       0.00 |           NaN
+  nsubjpass       | 1092 |       2 |      2 |       0.18 |        100.00
+  nummod          | 4466 |    4191 |   4191 |      93.84 |        100.00
+  nummod:gov      |  893 |       0 |      0 |       0.00 |           NaN
+  parataxis       |  679 |       0 |      0 |       0.00 |           NaN
+  punct           |  491 |     484 |    484 |      98.57 |        100.00
+  remnant         |   64 |       0 |      0 |       0.00 |           NaN
+  reparandum      |    3 |       0 |      0 |       0.00 |           NaN
+  root            | 21957 |   14863 |  14863 |      67.69 |        100.00
+  subj:cop        |   19 |       0 |      0 |       0.00 |           NaN
+  vocative        |   88 |       0 |      0 |       0.00 |           NaN
+  xcomp           | 3255 |       3 |      3 |       0.09 |        100.00
+  xcomp:ds        |   46 |       0 |      0 |       0.00 |           NaN
+
+
+  Precision and recall of DEPREL + ATTACHMENT
+
+  ----------------+------+---------+--------+------------+---------------
+  deprel          | gold | correct | system | recall (%) | precision (%) 
+  ----------------+------+---------+--------+------------+---------------
+  acl             | 3901 |      33 |     40 |       0.85 |         82.50
+  acl:inf         |   22 |       0 |      0 |       0.00 |           NaN
+  acl:relcl       | 1243 |       0 |      0 |       0.00 |           NaN
+  advcl           | 3617 |     184 |    299 |       5.09 |         61.54
+  advcl:compar    |   84 |       0 |      0 |       0.00 |           NaN
+  advmod          | 15717 |    9620 |  13820 |      61.21 |         69.61
+  advmod:emph     | 2628 |       0 |      0 |       0.00 |           NaN
+  advmod:inf      |    4 |       0 |      0 |       0.00 |           NaN
+  advmod:locy     |    8 |       0 |      0 |       0.00 |           NaN
+  advmod:mode     |   82 |       0 |      0 |       0.00 |           NaN
+  advmod:phrase   |    9 |       0 |      0 |       0.00 |           NaN
+  advmod:tfrom    |    2 |       0 |      0 |       0.00 |           NaN
+  advmod:tlocy    |   71 |       0 |      0 |       0.00 |           NaN
+  advmod:to       |    2 |       0 |      0 |       0.00 |           NaN
+  advmod:tto      |    3 |       0 |      0 |       0.00 |           NaN
+  amod            | 26278 |   22538 |  24519 |      85.77 |         91.92
+  amod:att        |  238 |       0 |      0 |       0.00 |           NaN
+  amod:mode       |   22 |       0 |      0 |       0.00 |           NaN
+  amod:obl        |    7 |       0 |      0 |       0.00 |           NaN
+  appos           | 1582 |      54 |     89 |       3.41 |         60.67
+  aux             | 5934 |    3403 |   3982 |      57.35 |         85.46
+  auxpass         | 1009 |      11 |     13 |       1.09 |         84.62
+  auxpass:reflex  |  559 |       0 |      0 |       0.00 |           NaN
+  case            | 29639 |   25524 |  28205 |      86.12 |         90.49
+  case:acc        |  126 |       0 |      0 |       0.00 |           NaN
+  case:gen        |  182 |       0 |      0 |       0.00 |           NaN
+  cc              | 12036 |    4959 |  10397 |      41.20 |         47.70
+  cc:preconj      |    6 |       0 |      0 |       0.00 |           NaN
+  ccomp           | 3088 |     130 |    179 |       4.21 |         72.63
+  ccomp:obj       |   16 |       0 |      0 |       0.00 |           NaN
+  ccomp:obl       |    6 |       0 |      0 |       0.00 |           NaN
+  compound        | 1890 |       2 |      4 |       0.11 |         50.00
+  compound:lvc    |  524 |       0 |      0 |       0.00 |           NaN
+  compound:nn     |   52 |       0 |      0 |       0.00 |           NaN
+  compound:preverb |   34 |       0 |      0 |       0.00 |           NaN
+  compound:prt    |  289 |       0 |      0 |       0.00 |           NaN
+  compound:reflex | 1946 |       0 |      0 |       0.00 |           NaN
+  conj            | 14425 |    2113 |   4014 |      14.65 |         52.64
+  conj:discourse  |    6 |       0 |      0 |       0.00 |           NaN
+  conj:preconj    |   14 |       0 |      0 |       0.00 |           NaN
+  cop             | 5565 |     352 |    407 |       6.33 |         86.49
+  csubj           |  996 |       4 |      4 |       0.40 |        100.00
+  csubj:cop       |    6 |       0 |      0 |       0.00 |           NaN
+  csubjpass       |   12 |       0 |      0 |       0.00 |           NaN
+  dep             | 2306 |       3 |      6 |       0.13 |         50.00
+  det             | 11297 |    8774 |   9583 |      77.67 |         91.56
+  det:def         | 1321 |       0 |      0 |       0.00 |           NaN
+  det:numgov      |  119 |       0 |      0 |       0.00 |           NaN
+  det:nummod      |   63 |       0 |      0 |       0.00 |           NaN
+  det:poss        |   71 |       0 |      0 |       0.00 |           NaN
+  det:predet      |   48 |       0 |      0 |       0.00 |           NaN
+  det:quant       |   10 |       0 |      0 |       0.00 |           NaN
+  discourse       |  270 |      63 |     78 |      23.33 |         80.77
+  dislocated      |   44 |       0 |      0 |       0.00 |           NaN
+  dobj            | 17143 |    3519 |   3857 |      20.53 |         91.24
+  dobj:lvc        |    6 |       0 |      0 |       0.00 |           NaN
+  dummy           |    0 |       0 | 127935 |        NaN |          0.00
+  expl            |  511 |       0 |      0 |       0.00 |           NaN
+  foreign         |  328 |       2 |      5 |       0.61 |         40.00
+  goeswith        |   18 |       0 |      0 |       0.00 |           NaN
+  iobj            |  581 |       2 |      2 |       0.34 |        100.00
+  list            |  261 |       0 |      0 |       0.00 |           NaN
+  mark            | 7365 |    4286 |   5737 |      58.19 |         74.71
+  mark:comparator |   70 |       0 |      0 |       0.00 |           NaN
+  mwe             | 1241 |       3 |      3 |       0.24 |        100.00
+  name            | 2709 |      65 |    138 |       2.40 |         47.10
+  neg             | 1565 |     193 |    225 |      12.33 |         85.78
+  nmod            | 45129 |   12825 |  22154 |      28.42 |         57.89
+  nmod:agent      |   14 |       0 |      0 |       0.00 |           NaN
+  nmod:att        |  120 |       0 |      0 |       0.00 |           NaN
+  nmod:gobj       |   79 |       0 |      0 |       0.00 |           NaN
+  nmod:gsubj      |   13 |       0 |      0 |       0.00 |           NaN
+  nmod:loc        |   28 |       0 |      0 |       0.00 |           NaN
+  nmod:npmod      |   60 |       0 |      0 |       0.00 |           NaN
+  nmod:obl        |  244 |       0 |      0 |       0.00 |           NaN
+  nmod:obllvc     |    4 |       0 |      0 |       0.00 |           NaN
+  nmod:own        |   11 |       0 |      0 |       0.00 |           NaN
+  nmod:poss       | 3552 |       0 |      0 |       0.00 |           NaN
+  nmod:smixut     |  673 |       0 |      0 |       0.00 |           NaN
+  nmod:temp       |   11 |       0 |      0 |       0.00 |           NaN
+  nmod:tmod       |  119 |       0 |      0 |       0.00 |           NaN
+  nsubj           | 22147 |    8566 |  11408 |      38.68 |         75.09
+  nsubj:cop       |  162 |       0 |      0 |       0.00 |           NaN
+  nsubjpass       | 1092 |       2 |      2 |       0.18 |        100.00
+  nummod          | 4466 |    3125 |   4191 |      69.97 |         74.56
+  nummod:gov      |  893 |       0 |      0 |       0.00 |           NaN
+  parataxis       |  679 |       0 |      0 |       0.00 |           NaN
+  punct           |  491 |     132 |    484 |      26.88 |         27.27
+  remnant         |   64 |       0 |      0 |       0.00 |           NaN
+  reparandum      |    3 |       0 |      0 |       0.00 |           NaN
+  root            | 21957 |   14863 |  14863 |      67.69 |        100.00
+  subj:cop        |   19 |       0 |      0 |       0.00 |           NaN
+  vocative        |   88 |       0 |      0 |       0.00 |           NaN
+  xcomp           | 3255 |       1 |      3 |       0.03 |         33.33
+  xcomp:ds        |   46 |       0 |      0 |       0.00 |           NaN
+
+
+  Precision and recall of binned HEAD direction
+
+  ----------------+------+---------+--------+------------+---------------
+  direction       | gold | correct | system | recall (%) | precision (%) 
+  ----------------+------+---------+--------+------------+---------------
+  to_root         | 21957 |   14866 |  14866 |      67.71 |        100.00
+  left            | 114311 |   43864 |  43864 |      38.37 |        100.00
+  right           | 150378 |  150378 | 227916 |     100.00 |         65.98
+  self            |    0 |       0 |      0 |        NaN |           NaN
+
+
+  Precision and recall of binned HEAD distance
+
+  ----------------+------+---------+--------+------------+---------------
+  distance        | gold | correct | system | recall (%) | precision (%) 
+  ----------------+------+---------+--------+------------+---------------
+  to_root         | 21957 |   14866 |  14866 |      67.71 |        100.00
+  1               | 121532 |   90731 |  90731 |      74.66 |        100.00
+  2               | 60755 |   33574 |  33574 |      55.26 |        100.00
+  3-6             | 61342 |   24135 |  24135 |      39.34 |        100.00
+  7-...           | 21060 |   21060 | 123340 |     100.00 |         17.07
+
+
+  Frame confusions (gold versus system; *...* marks the head token)
+
+  6424  ** root / ** 
+  1597  case *nmod* nmod / case *nmod* 
+  1314  *nsubj* nmod / *nsubj* 
+  1162  *nmod* nmod / *nmod* 
+  923  *dobj* nmod / *dobj* 
+  474  case *nmod* nmod:poss / case *nmod* 
+  409  case amod *nmod* nmod / case amod *nmod* 
+  406  *amod* cc conj / *amod* cc 
+  401  *conj* nmod / *conj* 
+  382  amod *nmod* nmod / amod *nmod* 
+  376  *case* mwe / *case* 
+  368  nmod *nmod* / *nmod* 
+  358  ** root root / ** root 
+  344  *amod* nmod / *amod* 
+  337  *nmod* case / *nmod* 
+  334  nmod *nsubj* / *nsubj* 
+  330  amod *dobj* nmod / amod *dobj* 
+  324  amod *nsubj* nmod / amod *nsubj* 
+  320  case *nmod* / *nmod* 
+  309  *dobj* acl / *dobj* 
+  299  *nmod:poss* nmod:poss / *nmod:poss* 
+  259  case *nmod* cc conj / case *nmod* cc 
+  258  *nsubj* acl / *nsubj* 
+  246  case *nmod* acl / case *nmod* 
+  230  det:def *nmod:smixut* / dummy *nmod:smixut* 
+  227  *nmod* cc conj / *nmod* cc 
+  220  *amod* dobj / *amod* 
+  217  advmod *advmod* / *advmod* 
+  212  *xcomp* dobj / *xcomp* dummy 
+  206  case *dobj* nmod / case *dobj* 
+  200  *advmod* nmod / *advmod* 
+  197  case *nmod* amod / case *nmod* 
+  184  case det *nmod* nmod / case det *nmod* 
+  178  *nsubj* nmod:poss / *nsubj* 
+  172  nmod name *nsubj* / *nsubj* 
+  171  name *nsubj* / *nsubj* 
+  168  det:def *amod* / *amod* 
+  166  nmod *dobj* / *dobj* 
+  165  nsubj *root* ccomp / nsubj *root* dummy 
+  164  *nmod* acl / *nmod* 
+  163  *conj* dobj / *conj* dummy 
+  155  case *nmod* nmod:poss / case *nmod* dummy 
+  154  *nsubj* cc conj / *nsubj* cc 
+  151  *case* mwe mwe / *case* 
+  150  nsubj *root* dobj / nsubj *root* dummy 
+  144  case *dobj* acl / case *dobj* 
+  143  det *nmod* / dummy *nmod* 
+  143  *xcomp* dobj / *xcomp* 
+  140  *dep* dep / *dep* 
+  138  det *dobj* nmod / det *dobj* 
+  134  *nmod* conj / *nmod* 
+  134  advmod:emph *advmod* / *advmod* 
+  132  det *nsubj* nmod / det *nsubj* 
+  131  *nmod:poss* nmod:poss / *nmod:poss* dummy 
+  120  *nmod* nummod / *nmod* 
+  116  *advmod* mwe / *advmod* 
+  116  advmod *nummod* / *nummod* 
+  116  *nsubj* name / *nsubj* 
+  114  amod *nmod* / *nmod* 
+  114  compound *compound* / *compound* 
+  113  name *root* / *root* 
+  111  case nmod:poss *nmod* / *nmod* 
+  108  nsubj *root* ccomp / nsubj *root* 
+  108  *dobj* amod / *dobj* 
+  108  case amod *nmod* / amod *nmod* 
+  106  *root* ccomp / *root* dummy 
+  105  *nmod:poss* nmod / *nmod:poss* 
+  104  ccomp *root* nsubj / *root* dummy 
+  104  det:def *nsubj* / dummy *nsubj* 
+  103  nmod:poss *nmod* / *nmod* 
+  103  amod *dobj* acl / amod *dobj* 
+  102  *root* nmod / *root* 
+  101  case *nmod* acl:relcl / case *nmod* 
+  100  *amod* conj / *amod* 
+   99  *nsubj* amod / *nsubj* 
+   99  case *nmod* name / case *nmod* 
+   98  *conj* dobj / *conj* 
+   97  nsubj *root* dobj / nsubj *root* 
+   97  dobj *xcomp* / *xcomp* 
+   94  case *nmod* nummod / case *nmod* 
+   94  *dobj* cc conj / *dobj* cc 
+   94  det *nsubj* / *nsubj* 
+   93  *mark* mwe / *mark* 
+   92  nmod:poss *dobj* / *dobj* 
+   92  nmod *amod* / *amod* 
+   92  amod *nsubj* acl / amod *nsubj* 
+   92  name *nmod* / *nmod* 
+   91  case *nmod* nmod:smixut / case *nmod* 
+   90  nmod:poss *nsubj* / *nsubj* 
+   89  case *advmod* / *advmod* 
+   89  amod *conj* nmod / amod *conj* 
+   86  case *nmod* nmod nmod / case *nmod* 
+   86  *nsubjpass* nmod / *nsubjpass* 
+   86  *nmod:poss* cc conj / *nmod:poss* cc 
+   85  case *nmod* nmod / *nmod* 
+   84  *nummod* conj / *nummod* 
+   84  case det *nmod* acl:relcl / case det *nmod* 
+   84  case *nmod* cc conj / case *nmod* 
+   84  advmod *amod* / *amod* 
+   82  *root* conj / *root* 
+   82  *advmod* advcl / *advmod* 
+   82  *nsubj* nmod nmod / *nsubj* 
+   82  case det:def *nmod* / case dummy *nmod* 
+   81  amod *amod* / *amod* 
+   81  amod *nmod* acl / amod *nmod* 
+   80  *dobj* case / *dobj* 
+   79  *conj* nmod:poss / *conj* 
+   79  det *nsubj* / dummy *nsubj* 
+   79  *root* dobj / *root* dummy 
+   77  *nsubj* acl:relcl / *nsubj* 
+   77  det:def *amod* / dummy *amod* 
+   76  advmod:emph case *nmod* / case *nmod* 
+   75  case det *nmod* / case dummy *nmod* 
+   74  nummod *nmod* / *nmod* 
+   74  *nmod* nmod nmod / *nmod* 
+   73  *nmod* amod / *nmod* 
+   73  case compound *nmod* / *nmod* 
+   72  case nmod:poss *nmod* / case dummy *nmod* 
+   72  *conj* ccomp / *conj* 
+   72  case amod *nmod* acl / case amod *nmod* 
+   69  name *conj* / *conj* 
+   68  amod *nsubj* / *nsubj* 
+   68  *xcomp* nmod / *xcomp* 
+   68  amod *nmod* cc conj / amod *nmod* cc 
+   65  case amod *nmod* cc conj / case amod *nmod* cc 
+   65  case nmod *nmod* / *nmod* 
+   64  *dobj* nmod nmod / *dobj* 
+   64  nmod *conj* / *conj* 
+   64  case *nmod* nmod:smixut / case *nmod* dummy 
+   64  case nummod:gov *advmod* / case dummy *advmod* 
+   64  nsubj cop *root* / *root* 
+   64  det *nmod* / *nmod* 
+   63  *appos* nmod / *appos* 
+   61  *root* cop nsubj / *root* 
+   61  dobj *xcomp* / dummy *xcomp* 
+   60  amod *dobj* / *dobj* 
+   60  case *advmod* acl / case *advmod* 
+   60  *appos* name / *appos* 
+   59  case amod *nmod* / *nmod* 
+   59  nsubj *acl* dobj / nsubj *acl* dummy 
+   58  det *dobj* acl / det *dobj* 
+   58  case *nmod* nmod / case *nmod* dummy 
+   58  *nmod:poss* name / *nmod:poss* 
+   58  *nmod* conj cc conj / *nmod* 
+   58  advmod:emph *nsubj* / *nsubj* 
+   57  case *nmod* nmod nmod / case *nmod* nmod 
+   57  *nmod* nmod / *nmod* dummy 
+   56  nmod *advmod* / *advmod* 
+   56  nsubj *acl* dobj / nsubj *acl* 
+   56  case *nmod* conj cc conj / case *nmod* 
+   55  *nsubj* nmod:poss / *nsubj* dummy 
+   55  case det *nmod* amod / case det *nmod* 
+   55  *nmod:poss* amod / *nmod:poss* 
+   55  *nsubj* cc conj / *nsubj* 
+   55  *root* ccomp / *root* 
+   55  nmod *root* nsubj / dummy *root* dummy 
+   55  *root* xcomp / *root* dummy 
+   54  nsubj *root* nmod / nsubj *root* 
+   54  nmod *nmod* / dummy *nmod* 
+   54  advmod *case* / *case* 
+   53  case nummod *nmod* / *nmod* 
+   53  *nmod* name / *nmod* 
+   53  *nsubj* xcomp / *nsubj* 
+   53  nsubj *root* xcomp / nsubj *root* dummy 
+   53  det amod *dobj* nmod / det amod *dobj* 
+   52  ** root root root / ** root 
+   52  *conj* conj / *conj* 
+   52  *advmod* cc conj / *advmod* cc 
+   52  *conj* nmod / *conj* dummy 
+   52  *nmod:poss* amod nmod:poss / *nmod:poss* 
+   51  *root* dobj / *root* 
+   51  nmod:poss *dobj* / dummy *dobj* 
+   50  *name* name / *name* 
+   50  nmod *root* / *root* 
+   50  *dobj* nmod:poss case / *dobj* 
+   50  case amod *dobj* nmod / case amod *dobj* 
+   49  dobj *root* nsubj / dummy *root* dummy 
+   49  *nmod* cc conj / *nmod* cc dummy 
+   49  case *conj* nmod / case *conj* 
+   49  ** root root / ** 
+   49  *conj* acl / *conj* 
+   49  *root* nsubj / *root* dummy 
+   49  *conj* amod / *conj* 
+   49  case det compound *nmod* / *nmod* 
+   49  *acl* nmod / *acl* 
+   49  advmod:emph case amod *nmod* / case amod *nmod* 
+   49  *nummod* nmod / *nummod* 
+   49  *nsubj* nmod / *nsubj* dummy 
+   48  amod *dobj* cc conj / amod *dobj* cc 
+   48  ccomp *root* nsubj / *root* 
+   48  *amod* advcl / *amod* 
+   48  *conj* xcomp / *conj* 
+   48  det *dobj* / *dobj* 
+   48  advmod:emph amod *nsubj* / amod *nsubj* 
+   48  *nmod* nmod nmod / *nmod* nmod 
+   48  *conj* cc conj / *conj* cc 
+   47  nsubj *root* dobj / dummy *root* dummy 
+   47  *csubj* dobj / *csubj* dummy 
+   47  *dobj* xcomp / *dobj* 
+   47  nmod name *nsubj* / dummy *nsubj* 
+   47  det *nsubj* nmod / dummy *nsubj* 
+   46  compound *nummod:gov* / *nummod:gov* 
+   46  cc *cc* / *cc* 
+   46  *nsubj* nmod nmod / *nsubj* nmod 
+   46  *conj* xcomp / *conj* dummy 
+   46  advmod:emph *advmod* / dummy *advmod* 
+   46  det *dobj* / dummy *dobj* 
+   45  case *nmod* amod nmod:poss / case *nmod* 
+   45  *conj* nmod:poss / *conj* dummy 
+   45  *nummod* cc conj / *nummod* cc 
+   45  *nmod:poss* name / *nmod:poss* dummy 
+   45  mark *xcomp* / *xcomp* 
+   45  *amod* cc conj / *amod* 
+   44  case det *nmod* acl / case det *nmod* 
+   44  case nummod *nmod* nmod / case nummod *nmod* 
+   44  nummod:gov *dobj* / dummy *dobj* 
+   44  nsubj *root* nmod / nsubj *root* dummy 
+   44  *amod* nmod nmod / *amod* 
+   44  *dobj* acl:relcl / *dobj* 
+   43  *advmod* cc conj / *advmod* 
+   43  case *nmod* cc conj / case *nmod* cc dummy 
+   42  case det amod *nmod* nmod / case det amod *nmod* 
+   42  case det *nmod* / *nmod* 
+   42  amod amod *nmod* nmod / amod amod *nmod* 
+   42  det compound *dobj* / *dobj* 
+   41  compound *nummod* / *nummod* 
+   41  advmod:emph case *nmod* nmod / case *nmod* nmod 
+   41  advmod *nmod* / *nmod* 
+   41  nsubj cop *conj* / *conj* 
+   41  *advmod* conj / *advmod* 
+   41  *nummod* nummod / *nummod* 
+   41  *xcomp* ccomp / *xcomp* 
+   41  nsubj *root* dobj / dummy *root* 
+   40  *root* nmod / *root* dummy 
+   40  *advmod* dep / *advmod* 
+   40  *acl* dobj / *acl* dummy 
+   40  nmod name *nmod* / *nmod* 
+   39  *nsubj* nmod:smixut / *nsubj* 
+   39  nmod:poss *nmod:poss* / *nmod:poss* 
+   39  advmod:emph case *nmod* nmod / case *nmod* 
+   39  *advmod* advmod / *advmod* 
+   39  *csubj* dobj / *csubj* 
+   39  *dep* nmod / *dep* 
+   38  *nsubj* conj / *nsubj* 
+   38  nummod:gov *nmod* / dummy *nmod* 
+   38  *nsubj* appos / *nsubj* 
+   37  nsubj *root* dobj / dummy *root* dobj 
+   37  dobj *root* nsubj / dummy *root* 
+   37  *conj* dep / *conj* 
+   37  amod *nsubj* cc conj / amod *nsubj* cc 
+   37  nmod *nsubj* / dummy *nsubj* 
+   37  det *nsubj* acl:relcl / det *nsubj* 
+   37  *nmod:smixut* nmod:smixut / *nmod:smixut* 
+   37  case *nmod* nmod / *nmod* nmod 
+   36  nsubj cop *root* nmod / *root* 
+   36  case *nmod* nmod acl / case *nmod* nmod 
+   36  *conj* nsubj / *conj* dummy 
+   35  amod amod *nmod* / amod *nmod* 
+   35  case *nmod* nmod cc conj / case *nmod* 
+   35  nsubj *conj* dobj / nsubj *conj* dummy 
+   35  det *conj* / dummy *conj* 
+   35  *advmod* mwe mwe / *advmod* 
+   35  compound *compound* / dummy *compound* 
+   35  *nmod:poss* case / *nmod:poss* 
+   35  det amod *nmod* / dummy amod *nmod* 
+   35  nmod *root* nsubj / nmod *root* dummy 
+   34  nsubj *root* nmod dobj / nsubj *root* 
+   34  advmod:emph case *nmod* / dummy case *nmod* 
+   34  case *iobj* nmod / case *iobj* 
+   34  advmod:emph *nsubj* nmod / *nsubj* 
+   34  dep *mark* / *mark* 
+   34  nmod *root* nsubj / nmod *root* 
+   33  mark *advcl* dobj / mark *advcl* dummy 
+   33  compound *nsubj* / *nsubj* 
+   33  *root* dep / *root* dummy 
+   33  *name* name / *name* dummy 
+   33  nsubj *root* cop / nsubj *root* dummy 
+   33  *nmod:poss* cc conj / *nmod:poss* 
+   33  advmod:emph *conj* / dummy *conj* 
+   33  *dobj* dep / *dobj* 
+   32  *dobj* cc conj / *dobj* 
+   32  advmod:emph amod *dobj* / amod *dobj* 
+   32  *dobj* nummod / *dobj* 
+   32  case amod amod *nmod* nmod / case amod amod *nmod* 
+   32  *amod* advmod / *amod* 
+   32  nsubj *root* dobj / *root* dummy 
+   32  *xcomp* nmod / *xcomp* dummy 
+   31  det amod *nsubj* nmod / det amod *nsubj* 
+   31  nummod:gov *dobj* nmod / dummy *dobj* nmod 
+   31  *nsubj* name / *nsubj* dummy 
+   31  nsubj *root* xcomp / dummy *root* dummy 
+   31  *dep* conj / *dep* 
+   31  det *nsubj* acl / det *nsubj* 
+   31  case amod *nmod* nmod / amod *nmod* 
+   31  *root* appos / *root* dummy 
+   31  *acl* dobj / *acl* 
+   31  case compound *nmod* / case dummy *nmod* 
+   31  case *nmod* dep / case *nmod* 
+   31  case nummod:gov *nmod* / case dummy *nmod* 
+   30  *conj* name / *conj* 
+   30  *root* appos / *root* 
+   30  case *dobj* / *dobj* 
+   30  mark *advcl* / *advcl* 
+   30  *cop* aux / *cop* dummy 
+   30  det *dobj* nmod / dummy *dobj* 
+   30  *acl* nmod / *acl* dummy 
+   30  nsubj *root* nmod / dummy *root* nmod 
+   30  case det:def *nmod* amod / case dummy *nmod* 
+   29  nummod:gov *nsubj* / dummy *nsubj* 
+   29  amod amod *nsubj* nmod / amod amod *nsubj* 
+   29  compound *root* / dummy *root* 
+   29  advmod:emph *amod* / dummy *amod* 
+   29  case *nmod* appos / case *nmod* 
+   29  cop *root* csubj / *root* dummy 
+   28  *nmod* dobj / *nmod* 
+   28  nsubj *root* dobj / *root* 
+   28  dobj *conj* / dummy *conj* 
+   28  nummod:gov *conj* / dummy *conj* 
+   28  *dobj* nmod nmod / *dobj* nmod 
+   28  *nsubj* conj cc conj / *nsubj* 
+   28  *nmod* cc conj / *nmod* 
+   28  amod *root* / *root* 
+   28  mark *advmod* / *advmod* 
+   28  advmod *root* dobj / advmod *root* dummy 
+   28  case det *nmod* cc conj / case det *nmod* 
+   28  case name *nmod* / *nmod* 
+   28  advmod:emph case amod *nmod* / dummy case amod *nmod* 
+   28  nmod amod *nsubj* / amod *nsubj* 
+   28  dobj *acl* / dummy *acl* 
+   27  *conj* ccomp / *conj* dummy 
+   27  det *nmod* nmod / dummy *nmod* 
+   27  advmod *det* / *det* 
+   27  det *conj* nmod / det *conj* 
+   27  case *nmod* name / case *nmod* dummy 
+   27  *nmod:poss* amod nmod:poss / *nmod:poss* dummy 
+   27  mark *xcomp* nmod / *xcomp* 
+   27  *nsubj* cc conj / *nsubj* cc dummy 
+   27  nsubj *root* ccomp / *root* 
+   27  compound *nmod* / dummy *nmod* 
+   27  *root* conj / *root* dummy 
+   27  nmod amod *nmod* / amod *nmod* 
+   27  dobj *amod* / *amod* 
+   27  *amod* case / *amod* 
+   26  det *nmod* acl / det *nmod* 
+   26  *amod* conj cc conj / *amod* 
+   26  cop *xcomp* / *xcomp* 
+   26  advmod:emph *nsubj* nmod / *nsubj* nmod 
+   26  *dobj* nmod cc conj / *dobj* 
+   26  nmod name *conj* / *conj* 
+   26  nsubj dobj *acl* / nsubj dummy *acl* 
+   26  *conj* dep / *conj* dummy 
+   26  *dep* nummod / *dep* 
+   26  nmod *acl* / *acl* 
+   26  advmod *conj* / *conj* 
+   26  *conj* nmod nmod / *conj* 
+   26  *root* csubj / *root* dummy 
+   26  advmod:emph *conj* / *conj* 
+   26  nmod:poss *conj* / *conj* 
+   26  mark *xcomp* nmod / *xcomp* nmod 
+   26  nmod *root* nsubj / dummy *root* 
+   25  nsubj cop advmod *root* / advmod *root* 
+   25  amod amod *dobj* nmod / amod amod *dobj* 
+   25  *advcl* dobj / *advcl* dummy 
+   25  *dobj* cc conj / *dobj* cc dummy 
+   25  compound:reflex *xcomp* / *xcomp* 
+   25  nummod:gov *nmod* nmod / dummy *nmod* nmod 
+   25  *root* nsubj / *root* 
+   25  nsubj *acl* xcomp / nsubj *acl* dummy 
+   25  *amod* appos / *amod* 
+   25  *nsubj* amod nmod:poss / *nsubj* 
+   25  nmod amod *dobj* / amod *dobj* 
+   25  det compound *nsubj* / *nsubj* 
+   25  nsubj *root* ccomp / dummy *root* dummy 
+   24  mark amod *xcomp* / amod *xcomp* 
+   24  *dobj* nmod:poss case / *dobj* dummy 
+   24  case *nmod* amod nmod / case *nmod* amod 
+   24  *nsubj* dep / *nsubj* 
+   24  *dobj* nmod / *dobj* dummy 
+   24  acl *nmod* / *nmod* 
+   24  nummod *nsubj* nmod / nummod *nsubj* 
+   24  nsubj aux *root* xcomp / nsubj aux *root* dummy 
+   24  nmod *nmod* case / *nmod* 
+   24  case *nmod* conj / case *nmod* 
+   24  *nummod* cc conj / *nummod* 
+   24  advmod *root* nsubj / advmod *root* dummy 
+   24  dobj *csubj* / *csubj* 
+   24  auxpass *ccomp* / dummy *ccomp* 
+   24  amod *nmod* case / amod *nmod* 
+   24  name *nmod* / dummy *nmod* 
+   24  mark:comparator *advcl:compar* / dummy *advcl:compar* 
+   24  *csubj* ccomp / *csubj* 
+   24  dep *dep* / *dep* 
+   24  case det *nmod* nmod / case dummy *nmod* 
+   24  punct *nmod* punct / *nmod* 
+   24  dobj *xcomp* nmod / *xcomp* nmod 
+   24  compound *conj* / dummy *conj* 
+   23  mark *advcl* dobj / dummy *advcl* dobj 
+   23  case amod *nmod* nmod nmod / case amod *nmod* 
+   23  *nmod* appos / *nmod* 
+   23  case *cc* / *cc* 
+   23  case compound *nmod* / dummy *nmod* 
+   23  nmod:poss *nmod* / dummy *nmod* 
+   23  case *advcl* / *advcl* 
+   23  case *nmod* name / *nmod* 
+   23  nmod:obl *amod:att* / *amod:att* 
+   23  mark *advcl* nmod / *advcl* nmod 
+   23  *conj* cc conj / *conj* 
+   23  case det *nmod* / det *nmod* 
+   23  amod amod *nmod* acl / amod amod *nmod* 
+   23  *nmod* acl:relcl / *nmod* 
+   23  nummod *nummod* / *nummod* 
+   23  det amod:att *nmod:obl* / det dummy *nmod:obl* 
+   22  nummod *amod* / *amod* 
+   22  *parataxis* dobj / *parataxis* dummy 
+   22  *list* appos / *list* 
+   22  compound *conj* / *conj* 
+   22  *dobj* nmod:poss / *dobj* 
+   22  nsubj *root* nmod / dummy *root* 
+   22  nsubj *root* ccomp / *root* dummy 
+   22  nsubj *root* advcl / nsubj *root* dummy 
+   22  nmod:poss *nsubj:cop* / *nsubj:cop* 
+   22  dobj *root* / dummy *root* 
+   22  advmod:emph *dobj* / *dobj* 
+   22  nsubj *root* nmod / dummy *root* dummy 
+   22  *advmod* acl / *advmod* 
+   22  det *nmod* nmod / det *nmod* 
+   22  nummod *nmod* nmod / nummod *nmod* 
+   22  *dobj* cc conj nmod / *dobj* cc 
+   21  mark *ccomp* dobj / mark *ccomp* dummy 
+   21  case det det:poss *nmod* / case det dummy *nmod* 
+   21  *cop* nmod / *cop* 
+   21  nsubj aux *root* / *root* 
+   21  dobj *root* nmod / dummy *root* nmod 
+   21  *dobj* nmod acl / *dobj* 
+   21  amod *nsubjpass* nmod / amod *nsubjpass* 
+   21  *nmod* advmod / *nmod* 
+   21  *nsubj* nmod acl / *nsubj* 
+   21  mark *xcomp* dobj / dummy *xcomp* 
+   21  advmod:emph *nsubj* / dummy *nsubj* 
+   21  ccomp *root* / *root* 
+   21  nmod:poss *nsubj* / dummy *nsubj* 
+   21  det:def *nmod* / dummy *nmod* 
+   21  *conj* advmod / *conj* 
+   21  *dobj* conj cc conj / *dobj* 
+   20  nsubj *root* dobj nmod / nsubj *root* dummy 
+   20  name *dobj* / *dobj* 
+   20  *det* mwe / *det* 
+   20  *appos* nmod:poss / *appos* 
+   20  case amod *dobj* acl / case amod *dobj* 
+   20  nmod nmod *nsubj* / *nsubj* 
+   20  mark nsubj cop *ccomp* / *ccomp* 
+   20  case *nmod* case / case *nmod* 
+   20  nmod *dobj* / dummy *dobj* 
+   20  *ccomp* dobj / *ccomp* dummy 
+   20  nummod *compound* / *compound* 
+   20  *nsubj* case / *nsubj* 
+   20  nsubj *acl:relcl* dobj / dummy *acl:relcl* dummy 
+   20  amod *nsubj* amod / amod *nsubj* 
+   20  det *dobj* acl:relcl / det *dobj* 
+   20  dobj *csubj* / dummy *csubj* 
+   20  dep *advmod* / *advmod* 
+   20  *cc* mwe / *cc* 
+   20  *dobj* appos / *dobj* 
+   20  *nmod* cc conj nmod / *nmod* cc 
+   20  *dobj* nmod acl / *dobj* nmod 
+   20  case nmod name *nmod* / *nmod* 
+   20  *nsubj* nmod cc conj / *nsubj* 
+   20  det *nsubj* amod / det *nsubj* 
+   20  *conj* acl:relcl / *conj* 
+   20  case nmod:poss *nmod* / dummy *nmod* 
+   20  compound *nsubj* / dummy *nsubj* 
+   20  amod *nmod* amod / amod *nmod* 
+   20  case amod *nmod* amod / case amod *nmod* 
+   19  *nsubj* nmod acl / *nsubj* nmod 
+   19  case *nmod* cc conj nmod / case *nmod* cc 
+   19  *conj* compound:reflex dobj / *conj* dummy 
+   19  *nmod* dep / *nmod* 
+   19  dobj *acl* nsubj / dummy *acl* dummy 
+   19  *root* cc conj / *root* cc dummy 
+   19  advmod:emph *dobj* nmod / *dobj* nmod 
+   19  nummod *nmod* case / nummod *nmod* 
+   19  *conj* dobj nmod / *conj* 
+   19  *advcl* dobj / *advcl* 
+   19  amod *nsubj* appos / amod *nsubj* 
+   19  det:def *nsubj* amod / dummy *nsubj* 
+   19  amod *dobj* amod / amod *dobj* 
+   19  *conj* nmod nmod / *conj* nmod 
+   19  nsubj *root* dobj nmod / nsubj *root* 
+   19  amod:att *nmod:obl* / dummy *nmod:obl* 
+   19  nummod:gov *advmod* / dummy *advmod* 
+   19  nmod:att *nmod:obl* / *nmod:obl* 
+   19  nsubj *acl:relcl* dobj / dummy *acl:relcl* dobj 
+   19  nmod *conj* / dummy *conj* 
+   19  case *iobj* nmod:smixut / case *iobj* 
+   19  nmod *nsubj* nmod / *nsubj* 
+   19  *conj* nmod dobj / *conj* 
+   19  nsubj *acl* xcomp / nsubj *acl* 
+   19  nsubj *acl:relcl* / dummy *acl:relcl* 
+   18  det *nmod* case / det *nmod* 
+   18  name *name* / *name* 
+   18  amod *nsubj* nmod nmod / amod *nsubj* 
+   18  nsubjpass auxpass *root* nmod / dummy dummy *root* nmod 
+   18  *nmod* nmod acl / *nmod* nmod 
+   18  nsubj *root* dobj / *root* dobj 
+   18  compound *dobj* / *dobj* 
+   18  det *nmod* nmod / dummy *nmod* nmod 
+   18  *xcomp* dobj nmod / *xcomp* 
+   18  advmod *amod* cc conj / advmod *amod* cc 
+   18  case *nmod* nmod acl / case *nmod* 
+   18  nummod *nmod* nummod / *nmod* nummod 
+   18  amod amod *dobj* / amod *dobj* 
+   18  case punct *nmod* punct / case punct *nmod* 
+   18  compound *root* / *root* 
+   18  case:gen *nmod:poss* / *nmod:poss* 
+   18  case *dobj* nmod / *dobj* 
+   18  mark *advcl* dobj / dummy *advcl* 
+   18  case amod amod *nmod* / amod amod *nmod* 
+   18  nummod *dobj* nmod / nummod *dobj* 
+   18  nsubj *conj* dobj / nsubj *conj* 
+   18  mark *advcl* dobj / mark *advcl* 
+   18  foreign *nmod* / dummy *nmod* 
+   18  *nmod* nmod cc conj / *nmod* 
+   18  det det *nsubj* / det dummy *nsubj* 
+   18  *root* xcomp / *root* 
+   18  compound:reflex *xcomp* dobj / *xcomp* dummy 
+   17  ** root root root / ** root root 
+   17  name *appos* / *appos* 
+   17  amod amod *dobj* acl / amod amod *dobj* 
+   17  case *nmod* nmod cc conj / case *nmod* nmod 
+   17  case det:def *iobj* / case dummy *iobj* 
+   17  mark *xcomp* / dummy *xcomp* 
+   17  case *nummod* nmod / *nummod* 
+   17  nsubj *conj* ccomp / nsubj *conj* 
+   17  *name* nmod:poss / *name* 
+   17  advmod *conj* dobj / advmod *conj* dummy 
+   17  case amod *nmod* nmod nmod / case amod *nmod* nmod 
+   17  advmod:emph amod *nmod* / amod *nmod* 
+   17  advmod case *nmod* / case *nmod* 
+   17  case nummod *nmod* / nummod *nmod* 
+   17  acl *dobj* / *dobj* 
+   17  mark nsubj *ccomp* dobj / mark nsubj *ccomp* dummy 
+   17  nsubj *root* xcomp / nsubj *root* 
+   17  nsubj advmod *root* dobj / nsubj advmod *root* dummy 
+   17  neg *root* / *root* 
+   17  case det compound *nmod* / case dummy *nmod* 
+   17  det amod *dobj* / dummy amod *dobj* 
+   17  *root* nmod:tmod / *root* 
+   17  det nmod *nsubj* / *nsubj* 
+   17  *amod* compound:reflex dobj / *amod* 
+   17  amod *root* nmod cop nsubj / amod *root* 
+   17  case:acc det:def *dobj* / dummy *dobj* 
+   17  case amod *nmod* nmod / amod *nmod* nmod 
+   17  det *nsubjpass* nmod / det *nsubjpass* 
+   17  det:def *nsubj* acl:relcl / dummy *nsubj* 
+   17  case *nmod* / dummy *nmod* 
+   17  det amod *nsubj* acl / det amod *nsubj* 
+   17  case *dobj* amod / case *dobj* 
+   17  nsubj *root* advmod dobj / nsubj *root* dobj 
+   16  case:acc *dobj* / *dobj* 
+   16  amod *nsubj* nmod / *nsubj* 
+   16  dobj advmod *xcomp* / advmod *xcomp* 
+   16  case det det *nmod* / case det dummy *nmod* 
+   16  punct nummod punct *appos* / *appos* 
+   16  *advcl* nmod / *advcl* dummy 
+   16  dobj *csubj* nmod / *csubj* nmod 
+   16  case amod *nmod* nmod acl / case amod *nmod* nmod 
+   16  mark *xcomp* dobj / dummy *xcomp* dobj 
+   16  case *dobj* cc conj / case *dobj* cc 
+   16  amod *conj* / *conj* 
+   16  *nsubj* name appos / *nsubj* 
+   16  advmod:emph *dobj* nmod / *dobj* 
+   16  *nsubj* nmod:smixut / *nsubj* dummy 
+   16  *root* acl / *root* 
+   16  *conj* nmod:smixut / *conj* dummy 
+   16  *amod* acl / *amod* 
+   16  amod *conj* acl / amod *conj* 
+   16  nsubj cop advmod *conj* / advmod *conj* 
+   16  mark *acl:relcl* nmod / mark *acl:relcl* dummy 
+   16  nmod *root* nsubj dobj / dummy *root* 
+   16  nsubj *root* dobj nmod / nsubj *root* dobj dummy 
+   16  *nmod:smixut* nmod:smixut / *nmod:smixut* dummy 
+   16  compound *list* / *list* 
+   16  nsubj *conj* xcomp / nsubj *conj* 
+   16  *dobj* amod case / *dobj* amod 
+   16  det:numgov *dobj* / dummy *dobj* 
+   16  amod *dobj* appos / amod *dobj* 
+   16  *advmod* appos / *advmod* 
+   16  *conj* nsubj / *conj* 
+   16  advmod:emph *nsubj* nmod / dummy *nsubj* 
+   16  *conj* appos / *conj* 
+   16  det amod *nsubj* / dummy amod *nsubj* 
+   16  nsubj advmod *root* ccomp / nsubj advmod *root* dummy 
+   16  mark nsubj cop *advcl* / *advcl* 
+   16  amod *nmod* appos / amod *nmod* 
+   16  amod *advmod* / *advmod* 
+   16  nsubj compound:reflex *root* dobj / nsubj dummy *root* dummy 
+   15  nmod *appos* / *appos* 
+   15  *root* nmod cop nsubj / *root* 
+   15  *conj* advcl / *conj* 
+   15  det amod *dobj* acl / det amod *dobj* 
+   15  advmod:emph case det *nmod* / case det *nmod* 
+   15  *nmod* nmod acl / *nmod* 
+   15  nsubj compound:reflex *root* nmod / nsubj dummy *root* nmod 
+   15  *nmod:poss* amod nmod / *nmod:poss* amod 
+   15  amod *nsubj* nmod acl / amod *nsubj* nmod 
+   15  dobj *advcl* / *advcl* 
+   15  case nummod:gov *dobj* / case dummy *dobj* 
+   15  det *conj* / *conj* 
+   15  det *det* / *det* 
+   15  dobj *advcl* / dummy *advcl* 
+   15  mark *acl:relcl* nmod / mark *acl:relcl* 
+   15  *conj* dobj nmod / *conj* dummy 
+   15  amod amod *nsubj* acl / amod amod *nsubj* 
+   15  case det *nmod* nmod / case dummy *nmod* nmod 
+   15  dobj *nmod* / *nmod* 
+   15  amod *dobj* nmod acl / amod *dobj* nmod 
+   15  aux *ccomp* / dummy *ccomp* 
+   15  case *dobj* nmod nmod / case *dobj* nmod 
+   15  nsubj *root* ccomp / dummy *root* 
+   15  advmod *advmod* nmod / advmod *advmod* 
+   15  advmod:emph amod *nsubj* nmod / amod *nsubj* 
+   15  nsubj cop *root* nmod / *root* nmod 
+   15  *mwe* mwe / *mwe* 
+   15  advmod:emph *nsubj* acl / dummy *nsubj* 
+   15  case det *conj* nmod / case det *conj* 
+   15  det:def *nsubj* nmod / dummy *nsubj* 
+   15  mark *acl:relcl* iobj / mark *acl:relcl* dummy 
+   15  dobj *acl* nsubj / dummy *acl* 
+   15  amod *nmod* nmod nmod / amod *nmod* nmod 
+   14  nsubj aux *root* xcomp / dummy aux *root* dummy 
+   14  *nsubj* nmod amod / *nsubj* 
+   14  case det *nmod* cc conj / case det *nmod* cc 
+   14  mark *acl* / dummy *acl* 
+   14  *root* cop csubj / *root* 
+   14  nmod name *dobj* / *dobj* 
+   14  advmod *conj* dobj / advmod *conj* 
+   14  *case* nmod / *case* 
+   14  case *dobj* nmod nmod / case *dobj* 
+   14  det amod *dobj* / amod *dobj* 
+   14  *name* nmod / *name* 
+   14  ccomp nsubj *root* / nsubj *root* 
+   14  mark *acl* dobj / dummy *acl* dummy 
+   14  case amod *nmod* cc conj / case amod *nmod* cc dummy 
+   14  advmod:emph *amod* / *amod* 
+   14  amod nmod *nsubj* / *nsubj* 
+   14  nmod cop *root* csubj / *root* dummy 
+   14  mark nsubj *advcl* dobj / mark nsubj *advcl* dummy 
+   14  case det:def *nmod* acl:relcl / case dummy *nmod* 
+   14  advmod:emph *nsubj* acl / *nsubj* 
+   14  mark *advcl* / dummy *advcl* 
+   14  nsubj cop *root* / cop *root* 
+   14  acl *nsubj* / *nsubj* 
+   14  compound *list* / dummy *list* 
+   14  advmod:emph amod *conj* / amod *conj* 
+   14  nsubj cop *root* dobj / *root* 
+   14  advmod:emph amod *nsubj* nmod / amod *nsubj* nmod 
+   14  *root* compound:reflex ccomp / *root* dummy dummy 
+   14  mark *advcl* nsubj / mark *advcl* dummy 
+   14  det *nmod:poss* / *nmod:poss* 
+   14  case det amod *nmod* / case dummy amod *nmod* 
+   14  aux *ccomp* dobj / dummy *ccomp* dobj 
+   14  *case* cc conj / *case* 
+   14  *nmod:poss* conj / *nmod:poss* 
+   14  nsubj *conj* / *conj* 
+   14  advmod:emph amod *dobj* nmod / amod *dobj* nmod 
+   14  case det compound *nmod* / dummy *nmod* 
+   14  case amod *conj* nmod / case amod *conj* 
+   14  name *nsubj* / dummy *nsubj* 
+   14  compound *nummod* / dummy *nummod* 
+   14  case det:nummod *nmod* / case dummy *nmod* 
+   14  nsubjpass auxpass *root* nmod / dummy dummy *root* 
+   14  nsubj *root* / dummy *root* 
+   14  nsubj advmod *acl* dobj / nsubj advmod *acl* dummy 
+   14  amod *appos* nmod / amod *appos* 
+   14  nsubj *acl:relcl* nmod / nsubj *acl:relcl* dummy 
+   14  mark *advcl* nmod / *advcl* 
+   14  advmod *nsubj* / *nsubj* 
+   14  *root* advcl / *root* dummy 
+   14  advcl *amod* / *amod* 
+   14  mark *advcl* dobj / dummy *advcl* dummy 
+   14  nsubj compound:lvc *root* ccomp / nsubj dummy *root* 
+   14  *xcomp* dobj dobj / *xcomp* 
+   13  case nummod *nmod* nmod / *nmod* 
+   13  *amod* compound:reflex / *amod* 
+   13  compound *dobj* / dummy *dobj* 
+   13  cop *root* csubj / *root* 
+   13  neg *conj* / *conj* 
+   13  mark *advcl* ccomp / mark *advcl* dummy 
+   13  *dep* dobj / *dep* dummy 
+   13  nsubj dobj *root* / nsubj dummy *root* 
+   13  case *nmod* amod nmod:poss / case *nmod* dummy 
+   13  mark *advcl* xcomp / mark *advcl* 
+   13  *root* dep / *root* 
+   13  *nmod:loc* nmod / *nmod:loc* 
+   13  *amod* dep / *amod* 
+   13  *root* dobj nsubj / *root* 
+   13  *root* nmod nmod / *root* nmod 
+   13  nsubj *root* nmod nmod / nsubj *root* nmod 
+   13  dobj *nsubj* / *nsubj* 
+   13  advmod *dobj* / *dobj* 
+   13  nsubj advmod *acl* dobj / nsubj advmod *acl* 
+   13  foreign *nmod* / *nmod* 
+   13  nsubj *root* advmod dobj / nsubj *root* 
+   13  amod *nsubj* nmod nmod / amod *nsubj* nmod 
+   13  advmod *xcomp* / *xcomp* 
+   13  *nsubj* amod nmod / *nsubj* amod 
+   13  *amod* dobj nmod / *amod* 
+   13  case amod *nmod* appos / case amod *nmod* 
+   13  amod *dobj* nmod nmod / amod *dobj* 
+   13  case *nmod* advmod / case *nmod* 
+   13  nmod:poss amod *nsubj* / amod *nsubj* 
+   13  nmod:gobj *nmod* / *nmod* 
+   13  *dep* nmod / *dep* dummy 
+   13  nmod *xcomp* / *xcomp* 
+   13  nsubj *root* nmod / *root* 
+   13  mark *acl* dobj / mark *acl* dummy 
+   13  nmod:poss *amod* / *amod* 
+   13  nmod *root* dobj / dummy *root* dummy 
+   13  dobj *root* nmod / dummy *root* 
+   13  advmod:emph *dobj* acl / *dobj* 
+   13  nsubj *conj* dobj / *conj* dummy 
+   13  nsubj cop *conj* nmod / *conj* 
+   13  nsubj *conj* dobj / dummy *conj* 
+   13  amod *nmod* nmod / *nmod* 
+   12  case *nmod* appos / case *nmod* dummy 
+   12  nmod cop *root* nsubj / *root* 
+   12  *dep* amod / *dep* 
+   12  mark *acl:relcl* iobj / mark *acl:relcl* 
+   12  nsubj *conj* dobj / *conj* 
+   12  *advcl* nmod / *advcl* 
+   12  det *nsubj* nmod / dummy *nsubj* nmod 
+   12  det *amod* / *amod* 
+   12  *conj* nmod:smixut / *conj* 
+   12  advmod:emph case *nmod* nummod / dummy case *nmod* nummod 
+   12  nsubj *root* nmod nmod / nsubj *root* 
+   12  case *advmod* nmod / *advmod* 
+   12  advmod *amod* dobj / advmod *amod* 
+   12  dobj / 
+   12  case nummod *nmod* amod / case nummod *nmod* 
+   12  dobj compound:reflex *xcomp* / *xcomp* 
+   12  dobj *acl* nmod / dummy *acl* nmod 
+   12  *root* conj conj / *root* 
+   12  case *nmod* amod cc conj / case *nmod* amod 
+   12  advmod *root* ccomp / advmod *root* dummy 
+   12  *xcomp* cc conj / *xcomp* cc 
+   12  det amod *nmod* nmod / det amod *nmod* 
+   12  det:def *conj* / dummy *conj* 
+   12  amod *nmod* nmod nmod / amod *nmod* 
+   12  nmod *dobj* nmod / *dobj* 
+   12  compound:reflex *xcomp* dobj / *xcomp* 
+   12  nmod name *nsubj* dep / *nsubj* 
+   12  *root* cop nsubj / *root* dummy 
+   12  nsubj *acl:relcl* dobj / dummy *acl:relcl* 
+   12  *nsubj* nummod / *nsubj* 
+   12  nsubj *conj* xcomp / nsubj *conj* dummy 
+   12  *name* cc conj / *name* cc 
+   12  mark *acl* dobj / dummy *acl* 
+   12  amod *nmod* conj cc conj / amod *nmod* 
+   12  nsubj *acl* nmod / nsubj *acl* 
+   12  nsubj compound:reflex *root* dobj / nsubj dummy *root* 
+   12  nmod *root* ccomp / dummy *root* dummy 
+   12  mark *xcomp* dobj / dummy *xcomp* dummy 
+   12  *dobj* nmod amod / *dobj* 
+   12  amod *dobj* xcomp / amod *dobj* 
+   12  mark nsubj *ccomp* dobj / mark nsubj *ccomp* 
+   12  acl *nmod:poss* / *nmod:poss* 
+   12  *root* dobj nmod / *root* 
+   12  *ccomp* xcomp / *ccomp* dummy 
+   12  name *root* conj / *root* 
+   12  nmod name *nmod* / dummy *nmod* 
+   12  advmod *root* xcomp / advmod *root* dummy 
+   12  amod *nummod* / *nummod* 
+   12  *advcl* mark dobj / *advcl* 
+   12  amod *dobj* nmod acl / amod *dobj* 
+   12  name *nsubj* cc conj / *nsubj* cc 
+   12  nmod compound:reflex *root* nsubj / dummy dummy *root* dummy 
+   12  *nmod:poss* acl:relcl / *nmod:poss* 
+   12  amod *nsubj* nmod / amod *nsubj* dummy 
+   12  nsubj *root* advmod nmod / nsubj *root* nmod 
+   12  dep *nmod* / *nmod* 
+   12  *xcomp* dobj nmod / *xcomp* dobj 
+   12  dobj *root* dobj / dummy *root* 
+   12  compound *nmod* / *nmod* 
+   12  *nsubj* advmod / *nsubj* 
+   12  compound *root* list list / dummy *root* dummy 
+   11  amod *root* nmod / amod *root* 
+   11  nmod det:def *nmod:smixut* / dummy *nmod:smixut* 
+   11  mark nsubj *ccomp* xcomp / mark nsubj *ccomp* 
+   11  mark dobj *advcl* / mark dummy *advcl* 
+   11  *cc* cc / *cc* 
+   11  advmod:emph case *nmod* nummod / case *nmod* nummod 
+   11  nsubj *conj* nmod / *conj* nmod 
+   11  nsubj *root* nmod / *root* nmod 
+   11  cop advmod *xcomp* / advmod *xcomp* 
+   11  case det:predet det *nmod* / case dummy det *nmod* 
+   11  advmod *cc* / *cc* 
+   11  nummod:gov *nsubj* nmod / dummy *nsubj* nmod 
+   11  *root* nsubj xcomp / *root* dummy 
+   11  nsubj nmod *root* ccomp / nsubj dummy *root* dummy 
+   11  det amod *nsubj* / amod *nsubj* 
+   11  nsubj *root* nmod / *root* dummy 
+   11  *xcomp* cop / *xcomp* 
+   11  amod *cop* nmod / amod *cop* 
+   11  nsubj *conj* nmod / nsubj *conj* 
+   11  *appos* acl / *appos* 
+   11  nmod *nmod* nmod / *nmod* 
+   11  nmod *xcomp* dobj / dummy *xcomp* dummy 
+   11  case amod amod *nmod* acl / case amod amod *nmod* 
+   11  advmod *amod* nmod / advmod *amod* 
+   11  amod *dobj* nmod nmod / amod *dobj* nmod 
+   11  nummod punct nummod *conj* / nummod *conj* 
+   11  case amod *iobj* nmod / case amod *iobj* 
+   11  mark *xcomp* dobj nmod / dummy *xcomp* dobj 
+   11  *root* advmod dobj / *root* dummy 
+   11  mark *advcl* nsubj / mark *advcl* 
+   11  case *nmod* cc conj / *nmod* cc 
+   11  *xcomp* nmod dobj / *xcomp* 
+   11  nsubj cop *root* acl / *root* 
+   11  *conj* name conj / *conj* dummy 
+   11  advmod *acl* nsubj / advmod *acl* dummy 
+   11  mark nsubj *acl* dobj / mark nsubj *acl* dummy 
+   11  case *root* nmod / case *root* 
+   11  case *dobj* cc conj nmod / case *dobj* cc 
+   11  *list* nummod / *list* 
+   11  nsubj advmod *root* ccomp / nsubj advmod *root* 
+   11  nsubj cop amod *root* / amod *root* 
+   11  nsubj *acl:relcl* nmod / nsubj *acl:relcl* 
+   11  advmod:emph *dobj* / dummy *dobj* 
+   11  nsubj dobj *conj* / dummy *conj* 
+   11  case amod *nmod* nmod / case amod *nmod* dummy 
+   11  advmod *acl* dobj / advmod *acl* dummy 
+   11  nsubj *root* advmod / dummy *root* advmod 
+   11  *conj* dobj dobj / *conj* 
+   11  nmod auxpass *root* nsubjpass / dummy dummy *root* dummy 
+   11  amod *root* appos / amod *root* 
+   11  dobj *conj* / *conj* 
+   11  name name *nmod* / *nmod* 
+   11  advmod *mark* / *mark* 
+   11  neg *advmod* / *advmod* 
+   11  dobj *root* nmod nsubj / dummy *root* 
+   11  case *nmod* conj conj cc conj / case *nmod* 
+   11  nsubj *root* advmod / *root* 
+   11  *root* dobj nsubj / *root* dummy 
+   11  det *dobj* case / det *dobj* 
+   11  nmod nmod name *nsubj* / *nsubj* 
+   11  nsubj *acl:relcl* nmod / dummy *acl:relcl* nmod 
+   11  *advmod* advcl:compar / *advmod* 
+   11  nmod *acl* nsubj / dummy *acl* 
+   11  *det* cc conj / *det* cc 
+   11  nmod *nsubj* acl / *nsubj* 
+   11  nummod:gov *dobj* nmod / dummy *dobj* 
+   11  nmod nmod *nsubj* / dummy *nsubj* 
+   11  case:gen *nmod* / dummy *nmod* 
+   11  cop *conj* / *conj* 
+   11  case *nmod* amod amod / case *nmod* 
+   11  *root* cc conj / *root* cc 
+   10  aux *ccomp* dobj / dummy *ccomp* dummy 
+   10  advmod:emph *nummod* / *nummod* 
+   10  nsubj advmod *conj* / advmod *conj* 
+   10  dobj *xcomp* dobj / dummy *xcomp* dummy 
+   10  *appos* appos / *appos* 
+   10  *root* parataxis / *root* 
+   10  name *dep* / *dep* 
+   10  cop nsubj *root* nmod / *root* 
+   10  case amod *dobj* cc conj / case amod *dobj* cc 
+   10  det *nsubjpass* acl:relcl / det *nsubjpass* 
+   10  nmod *root* csubj / nmod *root* dummy 
+   10  case amod nummod *nmod* / nummod *nmod* 
+   10  *advmod* nmod:poss / *advmod* 
+   10  det amod:att *nmod:att* / det dummy *nmod:att* 
+   10  mark aux *advcl* dobj / mark aux *advcl* dummy 
+   10  mark *acl* dobj / dummy *acl* dobj 
+   10  advcl *root* ccomp / *root* 
+   10  case:gen *nmod:poss* nmod:smixut / *nmod:poss* dummy 
+   10  mark aux *advcl* dobj / mark aux *advcl* 
+   10  dobj *root* nsubj nmod / dummy *root* 
+   10  case amod nummod *nmod* / amod nummod *nmod* 
+   10  nsubj cop *acl* nmod / *acl* 
+   10  nsubj aux *root* nmod / *root* nmod 
+   10  *nsubjpass* acl / *nsubjpass* 
+   10  amod *root* cop nsubj / amod *root* 
+   10  dep *root* nsubj / *root* dummy 
+   10  det amod *dobj* acl:relcl / det amod *dobj* 
+   10  nmod:npmod *advmod* / *advmod* 
+   10  cc *root* conj / *root* 
+   10  amod *root* acl / amod *root* 
+   10  dep *root* / *root* 
+   10  nsubj compound:reflex *acl* nmod / nsubj dummy *acl* nmod 
+   10  nsubj *acl* nmod / dummy *acl* nmod 
+   10  amod *dobj* nmod cc conj / amod *dobj* 
+   10  amod amod *nsubj* / amod *nsubj* 
+   10  nmod:poss *conj* / dummy *conj* 
+   10  det nmod *nmod* / *nmod* 
+   10  case amod *nmod* nmod cc conj / case amod *nmod* 
+   10  *root* list list list list list / *root* 
+   10  mark *ccomp* dobj / mark *ccomp* 
+   10  nsubj *root* dobj nmod / nsubj *root* dobj 
+   10  amod *nsubj* cc conj / amod *nsubj* 
+   10  amod *nsubj* nmod acl / amod *nsubj* 
+   10  case:acc *dobj* nmod:smixut / *dobj* dummy 
+   10  *conj* dobj nmod / *conj* dummy nmod 
+   10  name *nsubj* acl / *nsubj* 
+   10  case:gen *nmod* / *nmod* 
+   10  mark nmod compound:lvc *acl:relcl* / mark dummy dummy *acl:relcl* 
+   10  mark aux *advcl* xcomp / mark aux *advcl* dummy 
+   10  nsubj cop *root* advcl / *root* 
+   10  mark nsubj *advcl* nmod / mark nsubj *advcl* dummy 
+   10  dobj *amod* / dummy *amod* 
+   10  nsubj *root* advmod dobj / nsubj *root* dummy 
+   10  *det* advcl / *det* 
+   10  nsubj cop *root* cc conj / *root* 
+   10  *root* advmod dobj / *root* 
+   10  advmod expl *root* nsubj / advmod dummy *root* dummy 
+   10  cop *xcomp* nmod / *xcomp* 
+   10  nmod *root* nmod nsubj / dummy *root* 
+   10  nummod *nmod:poss* / dummy *nmod:poss* 
+   10  advmod *xcomp* dobj / advmod *xcomp* 
+   10  *acl* xcomp / *acl* dummy 
+   10  mark nsubj *advcl* dobj / mark dummy *advcl* 
+   10  det det:poss *dobj* / det dummy *dobj* 
+   10  nummod *conj* / *conj* 
+   10  dobj *xcomp* dobj / *xcomp* dummy 
+   10  amod *nmod* cc conj / amod *nmod* cc dummy 
+   10  nmod *root* dobj / dummy *root* 
+   10  det amod *conj* nmod / det amod *conj* 
+   10  *nsubj* nmod cc conj / *nsubj* nmod 
+   10  nummod:gov *nsubj* nmod / dummy *nsubj* 
+   10  det:def *nsubj* appos / dummy *nsubj* 
+   10  *nummod* nummod nummod / *nummod* 
+   10  *name* nmod:poss / *name* dummy 
+   10  case det:def *nmod* amod / case dummy *nmod* amod 
+   10  nmod *advcl* / *advcl* 
+   10  *dep* dobj / *dep* 
+   10  dobj nsubj *acl* / dummy nsubj *acl* 
+   10  *root* aux ccomp / *root* dummy 
+   10  advmod:emph case amod *nmod* nmod / case amod *nmod* nmod 
+   10  *xcomp* advcl / *xcomp* 
+   10  nsubj *root* xcomp / dummy *root* 
+   10  nsubj advmod *root* dobj / nsubj advmod *root* 
+   10  advmod *root* dobj / advmod *root* 
+   10  nmod:att *dobj* / *dobj* 
+   10  advmod:emph *nmod* / dummy *nmod* 
+   10  nsubj *root* dobj nmod / nsubj *root* dummy nmod 
+   10  advmod *root* nsubj / advmod *root* 
+   10  *nmod* conj / *nmod* dummy 
+    9  det *dobj* cc conj / det *dobj* cc 
+    9  *nmod* ccomp / *nmod* 
+    9  case nmod:poss *nmod* nmod / *nmod* 
+    9  det amod *conj* / dummy amod *conj* 
+    9  name *nsubj* appos / *nsubj* 
+    9  *root* dobj advmod nsubj / *root* 
+    9  advmod:emph nummod:gov *dobj* / dummy dummy *dobj* 
+    9  mark amod *xcomp* nmod / amod *xcomp* nmod 
+    9  case nmod:poss compound *nmod* / *nmod* 
+    9  nsubj aux *acl* xcomp / nsubj aux *acl* 
+    9  *ccomp* nmod / *ccomp* dummy 
+    9  case amod *nmod* cc conj / case amod *nmod* 
+    9  nsubj *root* dobj cc conj / nsubj *root* dobj conj 
+    9  amod amod *conj* nmod / amod amod *conj* 
+    9  mark *ccomp* xcomp / mark *ccomp* 
+    9  *dep* cc conj / *dep* cc 
+    9  nsubj *root* nmod cc conj / nsubj *root* dummy cc conj 
+    9  *xcomp* advmod / *xcomp* 
+    9  *cop* aux / *cop* 
+    9  *root* compound:reflex dobj / *root* dummy 
+    9  name *conj* / dummy *conj* 
+    9  amod *nmod* nmod / amod *nmod* dummy 
+    9  mark *acl* / *acl* 
+    9  dep *nmod* / dummy *nmod* 
+    9  nmod:poss *nsubjpass* / *nsubjpass* 
+    9  *mwe* mwe / *mwe* dummy 
+    9  case amod *nmod* acl:relcl / case amod *nmod* 
+    9  case det:def *nmod* nmod / case dummy *nmod* 
+    9  nsubj *acl* nmod / dummy *acl* 
+    9  dobj *csubj* nmod / *csubj* 
+    9  mark *xcomp* nmod / dummy *xcomp* dummy 
+    9  *nmod:poss* amod cc conj / *nmod:poss* amod 
+    9  nmod *conj* dobj / dummy *conj* dummy 
+    9  dobj *root* nsubj / *root* 
+    9  *ccomp* ccomp / *ccomp* 
+    9  case *conj* acl / case *conj* 
+    9  *acl* dobj nmod / *acl* 
+    9  nsubj *root* dobj advcl / nsubj *root* dobj dummy 
+    9  nsubj *acl:relcl* nmod / dummy *acl:relcl* dummy 
+    9  dobj nmod *acl* / dummy dummy *acl* 
+    9  nsubj *root* dobj nmod / dummy *root* 
+    9  dobj *root* nsubj / *root* dummy 
+    9  *conj* dobj nmod / *conj* dobj dummy 
+    9  *root* xcomp nsubj / *root* dummy 
+    9  nummod *nummod* nummod / *nummod* 
+    9  *dobj* nmod cc conj / *dobj* nmod 
+    9  nsubj cc *root* dobj / nsubj *root* 
+    9  mark *xcomp* nmod / dummy *xcomp* 
+    9  nsubj cop *ccomp* / *ccomp* 
+    9  nsubj aux *root* dobj / dummy aux *root* dobj 
+    9  dobj *xcomp* dobj / *xcomp* 
+    9  case nummod *nmod* nummod / *nmod* nummod 
+    9  *conj* dobj nmod / *conj* dobj 
+    9  nmod *root* nsubj dobj / dummy *root* dummy 
+    9  cop *root* nsubj / dummy *root* dummy 
+    9  nsubj nmod *root* ccomp / nsubj dummy *root* 
+    9  *dobj* conj / *dobj* 
+    9  *dobj* conj conj cc conj / *dobj* 
+    9  *root* dobj nmod / *root* dobj 
+    9  *name* dep / *name* dummy 
+    9  punct *appos* punct / punct *appos* 
+    9  case det amod *nmod* / *nmod* 
+    9  advmod *conj* ccomp / advmod *conj* 
+    9  nsubj cop amod *root* acl / amod *root* 
+    9  dobj *root* advcl / dummy *root* dummy 
+    9  det *dobj* amod / det *dobj* 
+    9  mark nsubj *advcl* dobj / mark dummy *advcl* dobj 
+    9  advmod *dobj* nmod / *dobj* 
+    9  dobj *conj* nmod / dummy *conj* nmod 
+    9  *advmod* mwe / *advmod* dummy 
+    9  nmod name *nsubj* acl / *nsubj* 
+    9  advmod *xcomp* dobj / advmod *xcomp* dummy 
+    9  *nsubjpass* nmod nmod / *nsubjpass* 
+    9  *xcomp* iobj / *xcomp* 
+    9  nsubj *root* dobj dobj / nsubj *root* 
+    9  *root* advmod / *root* 
+    9  *conj* nummod / *conj* 
+    9  case *nummod* / *nummod* 
+    9  *root* list / *root* 
+    9  det *nummod* / *nummod* 
+    9  dep *root* nsubj / *root* 
+    9  dobj nsubj *root* / dummy nsubj *root* 
+    9  nsubj *root* nmod dobj / nsubj *root* nmod 
+    9  *advcl* ccomp / *advcl* 
+    9  nsubj nmod *acl* dobj / nsubj dummy *acl* dummy 
+    9  case amod *nmod* nmod acl / case amod *nmod* 
+    9  *amod* nmod:poss / *amod* 
+    9  *appos* conj / *appos* 
+    9  nsubj aux *acl:relcl* / dummy aux *acl:relcl* 
+    9  *dobj* advmod / *dobj* 
+    9  nsubj *conj* dobj / dummy *conj* dobj 
+    9  nsubj advmod *root* dobj / advmod *root* dummy 
+    9  *advmod* name / *advmod* 
+    9  nsubj cop advmod *root* nmod / advmod *root* 
+    9  dep *amod* / *amod* 
+    9  case:acc det:def *dobj* / dummy dummy *dobj* 
+    9  advmod:emph det *dobj* / det *dobj* 
+    9  nmod *root* dobj / nmod *root* 
+    9  *advmod* name / *advmod* dummy 
+    9  mark nsubj cop *ccomp* nmod / *ccomp* 
+    9  mark nsubj *advcl* xcomp / mark dummy *advcl* dummy 
+    9  *nsubj* nmod appos / *nsubj* nmod 
+    9  det *dobj* cc conj / det *dobj* 
+    9  nmod:poss compound *dobj* / *dobj* 
+    9  nummod *conj* nmod / nummod *conj* 
+    9  aux *root* / *root* 
+    9  nmod:poss *nsubj* nmod / *nsubj* 
+    9  case nummod:gov *conj* / case dummy *conj* 
+    9  advmod *root* ccomp / advmod *root* 
+    9  advmod *advmod* advcl / advmod *advmod* 
+    9  case det amod *nmod* acl / case det amod *nmod* 
+    9  dobj advmod *root* nsubj / dummy advmod *root* dummy 
+    9  mark *xcomp* advmod / dummy *xcomp* advmod 
+    9  case:gen *nmod:poss* / dummy *nmod:poss* 
+    9  amod *root* cc conj / amod *root* cc dummy 
+    9  case nummod:gov *dobj* nmod / case dummy *dobj* nmod 
+    9  nsubj *conj* xcomp / dummy *conj* 
+    9  advmod:emph case amod *nmod* nmod / case amod *nmod* 
+    9  nmod *nmod* case / dummy *nmod* 
+    9  *appos* cc conj / *appos* cc 
+    9  *nsubj* cc conj nmod / *nsubj* cc 
+    9  nsubjpass aux *root* iobj / dummy aux *root* dummy 
+    9  nsubj nmod *root* cop / *root* 
+    9  *conj* advmod dobj / *conj* 
+    9  nmod:gobj *conj* / *conj* 
+    9  amod amod *dobj* appos / amod amod *dobj* 
+    9  nmod *xcomp* dobj / *xcomp* dummy 
+    9  *conj* nmod:poss cc conj / *conj* dummy 
+    9  mark amod *advcl* nmod / amod *advcl* nmod 
+    9  nsubj aux *acl* xcomp / nsubj aux *acl* dummy 
+    8  advmod *acl* nsubj / advmod *acl* 
+    8  det amod *nsubj* nmod / dummy amod *nsubj* 
+    8  advmod *nsubj* nmod / *nsubj* 
+    8  case *nmod* amod acl:relcl / case *nmod* 
+    8  advmod:emph *conj* nmod / *conj* nmod 
+    8  amod:att *dobj* / dummy *dobj* 
+    8  case *iobj* nmod:smixut / case *iobj* dummy 
+    8  nmod amod *nmod* / dummy amod *nmod* 
+    8  *conj* dobj dobj / *conj* dummy 
+    8  det amod *dobj* / *dobj* 
+    8  amod nmod *dobj* / *dobj* 
+    8  case *nmod* nmod:poss amod / case *nmod* 
+    8  advmod amod *dobj* / amod *dobj* 
+    8  amod *nmod* nmod cc conj / amod *nmod* 
+    8  nsubj *root* dobj cc conj / dummy *root* 
+    8  nmod name *nsubj* cc conj / *nsubj* cc 
+    8  nsubj cop *acl* dobj / *acl* 
+    8  case *conj* / *conj* 
+    8  det *advmod* / *advmod* 
+    8  nsubj nmod *root* ccomp / dummy *root* 
+    8  nmod *root* dobj / nmod *root* dummy 
+    8  name *nmod* acl / *nmod* 
+    8  case *iobj* amod / case *iobj* 
+    8  case *nmod* nmod nmod / *nmod* 
+    8  advmod *conj* nmod / advmod *conj* 
+    8  case nmod *nmod* nmod / *nmod* 
+    8  mark *advcl* ccomp / mark *advcl* 
+    8  *dep* conj conj / *dep* 
+    8  case *conj* cc conj / case *conj* cc 
+    8  case det *nummod* / det *nummod* 
+    8  case *nmod* acl:relcl / *nmod* 
+    8  mark *advcl* xcomp / mark *advcl* dummy 
+    8  *conj* iobj / *conj* dummy 
+    8  nsubj expl *root* iobj / nsubj dummy *root* dummy 
+    8  *root* compound:reflex dobj / *root* 
+    8  *dobj* advcl / *dobj* 
+    8  nsubj dobj *conj* / nsubj dummy *conj* 
+    8  mark nsubj *advcl* dobj / mark dummy *advcl* dummy 
+    8  amod *dobj* cc conj / amod *dobj* cc dummy 
+    8  *parataxis* nummod / *parataxis* 
+    8  *nmod* foreign / *nmod* 
+    8  amod *conj* amod / amod *conj* 
+    8  *root* nsubj dobj / *root* 
+    8  case det *nmod* nmod / det *nmod* 
+    8  nsubj *root* nmod nmod / dummy *root* dummy 
+    8  *compound* cc conj / *compound* 
+    8  nmod *root* advmod nsubj / dummy *root* dummy 
+    8  case nmod *nmod* nmod / *nmod* nmod 
+    8  *dobj* amod nmod / *dobj* amod 
+    8  *parataxis* nsubj / *parataxis* dummy 
+    8  *conj* amod nmod:poss / *conj* 
+    8  det *nmod:poss* case / det *nmod:poss* 
+    8  case det compound *nmod* acl:relcl / *nmod* 
+    8  nsubj *root* / *root* 
+    8  amod amod *root* / amod *root* 
+    8  compound:reflex *xcomp* / dummy *xcomp* 
+    8  case nmod:poss *nmod* nmod / *nmod* nmod 
+    8  compound compound *root* list list / dummy dummy *root* dummy 
+    8  *dobj* nmod:smixut / *dobj* dummy 
+    8  *conj* nmod dobj / *conj* dummy 
+    8  mark nmod *ccomp* / mark dummy *ccomp* 
+    8  *amod* conj conj / *amod* 
+    8  *appos* name name / *appos* 
+    8  auxpass *ccomp* nmod / dummy *ccomp* nmod 
+    8  *conj* amod conj / *conj* amod 
+    8  nsubj cop *acl* nmod / *acl* nmod 
+    8  *conj* csubj / *conj* 
+    8  case foreign *nmod* / case dummy *nmod* 
+    8  *nsubj* nmod appos / *nsubj* 
+    8  mark cop *advcl* / *advcl* 
+    8  case det amod *nmod* acl:relcl / case det amod *nmod* 
+    8  dep *conj* / *conj* 
+    8  advcl *root* dobj / *root* dummy 
+    8  nsubj dobj advmod *root* / nsubj dummy advmod *root* 
+    8  *root* nmod cop csubj / *root* 
+    8  advmod:emph case *dobj* nmod / case *dobj* 
+    8  advmod *nmod* case / advmod *nmod* 
+    8  case *nmod* nummod / *nmod* nummod 
+    8  case det *nmod* nmod nmod / case det *nmod* 
+    8  advmod *root* nsubj dobj / advmod *root* 
+    8  nmod *xcomp* / dummy *xcomp* 
+    8  *root* dobj cc conj / *root* dobj conj 
+    8  *xcomp* xcomp / *xcomp* 
+    8  amod *nsubj* nmod amod / amod *nsubj* 
+    8  amod:att *nsubj* / dummy *nsubj* 
+    8  case *advmod* conj / case *advmod* 
+    8  case *nmod* nummod nmod / case *nmod* 
+    8  nsubj *root* advmod advcl / nsubj *root* advmod dummy 
+    8  *root* conj conj / *root* dummy dummy 
+    8  case *dobj* conj cc conj / case *dobj* 
+    8  case nmod *nmod* / case dummy *nmod* 
+    8  advmod:emph case *dobj* / case *dobj* 
+    8  dobj compound:reflex *acl* nsubj / dummy dummy *acl* dummy 
+    8  case amod amod *nmod* cc conj / case amod amod *nmod* cc 
+    8  acl *nmod:gobj* / *nmod:gobj* 
+    8  dobj aux *root* nsubj / dummy aux *root* dummy 
+    8  det *dobj* acl / dummy *dobj* 
+    8  det amod *nsubj* / *nsubj* 
+    8  name *root* appos / *root* 
+    8  nsubj *root* iobj / nsubj *root* dummy 
+    8  *acl* ccomp / *acl* 
+    8  mark nsubj *advcl* / mark dummy *advcl* 
+    8  *root* parataxis / *root* dummy 
+    8  dobj dobj *xcomp* / *xcomp* 
+    8  case *advmod* nmod / case *advmod* 
+    8  advmod *root* nsubj xcomp / advmod *root* dummy 
+    8  case:gen det:def *nmod* / dummy dummy *nmod* 
+    8  nmod:att *nsubj* / *nsubj* 
+    8  det *conj* nmod / dummy *conj* 
+    8  *nsubj* appos / *nsubj* dummy 
+    8  dep *advmod* / dummy *advmod* 
+    8  advmod dobj *acl* / advmod dummy *acl* 
+    8  nsubj *root* xcomp / *root* 
+    8  nmod name *nmod* acl / *nmod* 
+    8  case *conj* amod / case *conj* 
+    8  det:def *nsubj* nmod:poss / dummy *nsubj* 
+    8  case det *nmod* appos / case det *nmod* 
+    8  mark *advcl* nmod nmod / *advcl* 
+    8  dobj *conj* nmod / dummy *conj* 
+    8  dep *root* / dummy *root* 
+    8  *xcomp* dobj cc conj / *xcomp* dobj 
+    8  case det *nmod* nmod nmod / case det *nmod* nmod 
+    8  case det compound compound *nmod* / *nmod* 
+    8  nsubj nmod *acl* / nsubj dummy *acl* 
+    8  *nmod* conj conj cc conj / *nmod* 
+    8  *conj* compound:reflex dobj / *conj* 
+    8  mark *acl:relcl* dobj / mark *acl:relcl* 
+    8  mark nsubj *advcl* dobj / mark nsubj *advcl* 
+    8  nsubj *acl* ccomp / nsubj *acl* 
+    8  det *dobj* acl:relcl / dummy *dobj* 
+    8  mark expl *advcl* nsubj / mark dummy *advcl* dummy 
+    8  case det *nmod* amod nmod / case det *nmod* 
+    8  *nsubj* nmod xcomp / *nsubj* 
+    7  det *dobj* nmod nmod / det *dobj* nmod 
+    7  nmod *root* nsubj / *root* dummy 
+    7  nmod *conj* dobj / dummy *conj* 
+    7  advmod *root* csubj / advmod *root* dummy 
+    7  amod amod *conj* / amod *conj* 
+    7  *conj* nmod:smixut amod / *conj* 
+    7  *conj* amod cc conj / *conj* amod 
+    7  mark case *dep* nmod / case *dep* nmod 
+    7  case *conj* nmod / *conj* 
+    7  *acl* xcomp / *acl* 
+    7  nsubj advmod *root* xcomp / nsubj advmod *root* dummy 
+    7  nsubj aux *acl* dobj / nsubj aux *acl* dummy 
+    7  amod *dobj* conj cc conj / amod *dobj* 
+    7  nummod *nmod:poss* amod / nummod *nmod:poss* 
+    7  nsubj aux advmod *acl:relcl* / dummy aux advmod *acl:relcl* 
+    7  *conj* dobj advmod / *conj* 
+    7  advmod:emph case *dobj* / dummy case *dobj* 
+    7  dobj *ccomp* / dummy *ccomp* 
+    7  nsubj *root* advcl / *root* 
+    7  case nmod *dobj* / *dobj* 
+    7  dobj *dobj* / *dobj* 
+    7  advmod:emph *advmod* nmod / *advmod* 
+    7  nsubj aux *root* dobj / *root* dummy 
+    7  dep *dep* / dummy *dep* 
+    7  nmod *dobj* acl / *dobj* 
+    7  mark nsubj cop *advcl* nmod / *advcl* 
+    7  nmod:poss amod *dobj* / amod *dobj* 
+    7  nsubj *root* dobj cc conj / nsubj *root* dummy conj 
+    7  advmod:emph *nsubj* nmod / dummy *nsubj* nmod 
+    7  nsubj nmod *root* ccomp / dummy *root* dummy 
+    7  det:def *nmod:smixut* amod / dummy *nmod:smixut* 
+    7  *compound:prt* mwe / *compound:prt* 
+    7  *root* nummod / *root* 
+    7  mark nsubj *csubj* xcomp / mark nsubj *csubj* 
+    7  nmod *root* nmod / *root* 
+    7  advmod:emph case nummod *nmod* / dummy case nummod *nmod* 
+    7  case amod *nmod* nmod / *nmod* nmod 
+    7  advmod:emph amod amod *nsubj* / amod amod *nsubj* 
+    7  *nmod* nmod nmod nmod / *nmod* 
+    7  *conj* advmod / *conj* dummy 
+    7  det nmod *dobj* / *dobj* 
+    7  *dep* dobj dep / *dep* dummy 
+    7  ** root root root root / ** root 
+    7  *nsubj* nmod:smixut acl:relcl / *nsubj* dummy 
+    7  *nmod* nmod appos / *nmod* 
+    7  det *nsubjpass* / dummy *nsubjpass* 
+    7  cop amod *xcomp* / amod *xcomp* 
+    7  nmod / 
+    7  case det *nmod* nmod / *nmod* 
+    7  case compound compound *nmod* / *nmod* 
+    7  *xcomp* dobj advcl / *xcomp* dummy 
+    7  nsubj *root* advcl / dummy *root* dummy 
+    7  *dobj* appos / *dobj* dummy 
+    7  *parataxis* nsubj / *parataxis* 
+    7  nsubj aux *root* dobj / *root* dobj 
+    7  dobj compound:reflex *root* nsubj / dummy dummy *root* 
+    7  mark nsubj *ccomp* dobj / mark dummy *ccomp* 
+    7  advmod:emph *conj* nmod / *conj* 
+    7  det:def *nmod:smixut* nmod / dummy *nmod:smixut* 
+    7  dobj *root* nmod / dummy *root* dummy 
+    7  amod *nsubj* nmod cc conj / amod *nsubj* 
+    7  nsubjpass *acl:relcl* nmod / dummy *acl:relcl* nmod 
+    7  amod *compound* / *compound* 
+    7  nsubj aux *root* nmod / *root* 
+    7  *root* csubj / *root* 
+    7  det det *dobj* / det dummy *dobj* 
+    7  nmod *nmod* cc conj / *nmod* cc 
+    7  *conj* cop nsubj / *conj* 
+    7  mark nsubj cop *csubj* / *csubj* 
+    7  case *nmod* nmod:smixut amod / case *nmod* 
+    7  *amod* nmod cc conj / *amod* 
+    7  *conj* aux xcomp / *conj* 
+    7  case det amod compound *nmod* / dummy *nmod* 
+    7  mark nsubj cop *ccomp* advcl / *ccomp* 
+    7  *conj* advmod dobj / *conj* dummy 
+    7  nsubj cop amod *root* nmod / amod *root* nmod 
+    7  nsubj aux *root* dobj / dummy aux *root* 
+    7  mark cop *ccomp* csubj / *ccomp* dummy 
+    7  *nmod:poss* appos / *nmod:poss* 
+    7  punct *list* punct / punct *list* 
+    7  mark *acl* dobj / mark *acl* 
+    7  *nummod* appos / *nummod* 
+    7  case nummod:gov *nmod* nmod / case dummy *nmod* nmod 
+    7  *xcomp* ccomp / *xcomp* dummy 
+    7  case det:def *nmod* amod nmod / case dummy *nmod* 
+    7  dobj *conj* nsubj / dummy *conj* dummy 
+    7  det amod:att *nsubj* / det dummy *nsubj* 
+    7  *appos* amod / *appos* 
+    7  nsubj cc *root* ccomp / nsubj *root* dummy 
+    7  *csubj* nmod / *csubj* 
+    7  nsubjpass *root* nmod / dummy *root* nmod 
+    7  nmod *root* nsubj nmod / dummy *root* dummy nmod 
+    7  nummod *nsubj* / *nsubj* 
+    7  *root* advcl / *root* 
+    7  dobj aux *root* / *root* 
+    7  nsubj cop *parataxis* / *parataxis* 
+    7  nsubj cop advmod *root* cc conj / advmod *root* cc conj 
+    7  advmod *conj* nsubj / advmod *conj* dummy 
+    7  cc *appos* nmod / dummy *appos* 
+    7  compound *amod* / dummy *amod* 
+    7  case nmod:poss amod *nmod* / amod *nmod* 
+    7  nsubj aux *root* dobj / nsubj aux *root* dummy 
+    7  cc nsubj cop *root* / *root* 
+    7  advmod *advmod* nmod / *advmod* 
+    7  *appos* name / *appos* dummy 
+    7  nsubj dobj *root* ccomp / nsubj dummy *root* dummy 
+    7  det amod *nsubj* acl:relcl / det amod *nsubj* 
+    7  *advmod* mwe mwe mwe / *advmod* 
+    7  *compound* cc conj / *compound* cc 
+    7  *root* cc xcomp / *root* dummy 
+    7  *appos* nmod nmod / *appos* 
+    7  nmod nsubj *root* dobj / dummy nsubj *root* dummy 
+    7  *ccomp* ccomp / *ccomp* dummy 
+    7  nummod *advmod* nummod / dummy *advmod* 
+    7  *root* nmod appos / *root* nmod dummy 
+    7  nummod *nsubj* appos / nummod *nsubj* 
+    7  *compound:lvc* nmod:poss / *compound:lvc* 
+    7  name *nsubj* nmod / *nsubj* 
+    7  cc *appos* / dummy *appos* 
+    7  advmod *advmod* cc conj / advmod *advmod* cc 
+    7  case *nmod* conj conj / case *nmod* 
+    7  nsubj aux *root* dobj / nsubj aux *root* 
+    7  nmod *root* nsubj xcomp / dummy *root* dummy 
+    7  advmod *amod* conj / advmod *amod* 
+    7  nsubj *acl* nmod nmod / nsubj *acl* nmod 
+    7  amod *dobj* acl / *dobj* 
+    7  nsubj cop advmod *root* / cop advmod *root* 
+    7  case amod amod *nmod* / case amod *nmod* 
+    7  nmod nummod *nmod* / nummod *nmod* 
+    7  dobj advmod *root* nsubj / dummy advmod *root* 
+    7  nmod nmod *nmod* / *nmod* 
+    7  det *nmod:poss* nmod / det *nmod:poss* 
+    7  nmod *conj* nsubj / dummy *conj* dummy 
+    7  nmod det *nmod* / det *nmod* 
+    7  det *conj* acl / det *conj* 
+    7  nsubj *root* advmod nmod / nsubj *root* advmod 
+    7  nsubj *acl* dobj / dummy *acl* dummy 
+    7  nsubj *root* dobj nmod / dummy *root* dobj 
+    7  *conj* compound:reflex ccomp / *conj* dummy 
+    7  compound compound *compound* / *compound* 
+    7  case det *nmod* nmod / case det *nmod* dummy 
+    7  nsubj *root* advmod / nsubj *root* 
+    7  *advcl* dobj nmod / *advcl* 
+    7  *conj* advcl / *conj* dummy 
+    7  nsubj *ccomp* / dummy *ccomp* 
+    7  det amod:att *dobj* / det dummy *dobj* 
+    7  det *nmod* cc conj / det *nmod* cc 
+    7  advmod:emph case *nmod* nmod / dummy case *nmod* 
+    7  mark nsubj *advcl* xcomp / mark nsubj *advcl* 
+    7  nsubj advmod *root* dobj / dummy advmod *root* 
+    7  nsubj *conj* xcomp / *conj* dummy 
+    7  case det compound *nmod* nmod / *nmod* 
+    7  nsubj nmod *root* dobj / nsubj dummy *root* dummy 
+    7  aux *ccomp* iobj / dummy *ccomp* dummy 
+    7  nsubj *ccomp* dobj / dummy *ccomp* dobj 
+    7  case det amod *nmod* / det amod *nmod* 
+    7  nsubj *root* nmod dobj / nsubj *root* dummy 
+    7  nsubj cop *root* conj / *root* 
+    7  advmod:emph amod *dobj* nmod / amod *dobj* 
+    7  case det amod compound *nmod* / *nmod* 
+    7  case amod amod *nmod* / amod *nmod* 
+    7  mark amod *xcomp* nmod / amod *xcomp* 
+    7  advmod:emph case *dobj* acl / case *dobj* 
+    7  *nsubj* nmod:smixut appos / *nsubj* 
+    7  amod:att *nmod:att* / dummy *nmod:att* 
+    7  case *dobj* nmod cc conj / case *dobj* 
+    7  nmod *root* dobj / dummy *root* dobj 
+    7  mark *xcomp* dobj nmod / dummy *xcomp* 
+    7  nsubj *conj* / dummy *conj* 
+    7  det *nsubj* nmod / *nsubj* 
+    7  nsubj *acl:relcl* dobj nmod / dummy *acl:relcl* dobj dummy 
+    6  case name *dobj* / *dobj* 
+    6  acl *advmod* / *advmod* 
+    6  nmod *root* nmod nsubj / *root* 
+    6  ccomp nsubj *root* / *root* 
+    6  amod *nmod* nmod acl / amod *nmod* nmod 
+    6  advmod *advmod* advcl:compar / advmod *advmod* 
+    6  amod nmod *nmod* / *nmod* 
+    6  *conj* auxpass:reflex nsubj / *conj* 
+    6  advmod:emph *root* / dummy *root* 
+    6  nsubj *acl:relcl* xcomp / dummy *acl:relcl* 
+    6  mark *acl* xcomp / mark *acl* 
+    6  *root* advmod nsubj / *root* dummy 
+    6  det *nmod:npmod* / *nmod:npmod* 
+    6  *appos* dobj / *appos* dummy 
+    6  dobj *xcomp* advcl / *xcomp* 
+    6  nsubj *root* advmod advcl / nsubj *root* 
+    6  advmod:emph *nmod* / *nmod* 
+    6  *nmod* conj conj / *nmod* 
+    6  *xcomp* dobj nmod / *xcomp* dobj dummy 
+    6  det *nmod* acl:relcl / dummy *nmod* 
+    6  det amod *root* cop csubj / det amod *root* 
+    6  *nsubj* dep dep / *nsubj* 
+    6  aux *root* ccomp / aux *root* dummy 
+    6  case:gen *nmod:poss* nmod:smixut / *nmod:poss* 
+    6  cop nsubj *conj* nmod / *conj* 
+    6  case det:def *iobj* amod / case dummy *iobj* 
+    6  name name *nsubj* / *nsubj* 
+    6  advmod nsubj *root* ccomp / advmod nsubj *root* dummy 
+    6  *parataxis* dobj / *parataxis* 
+    6  nmod:npmod *amod* / *amod* 
+    6  *advmod:emph* cc / *advmod:emph* 
+    6  case amod *nmod* nmod / *nmod* 
+    6  nsubj *root* cop / dummy *root* dummy 
+    6  compound:nn name *nsubj* / *nsubj* 
+    6  mark *xcomp* dobj nmod / dummy *xcomp* dummy 
+    6  case:gen det:def *nmod:poss* amod / dummy *nmod:poss* 
+    6  nummod / 
+    6  nmod *dobj* nmod / *dobj* nmod 
+    6  mark nsubj *ccomp* nmod / mark nsubj *ccomp* 
+    6  cc *advmod* / *advmod* 
+    6  dobj compound:reflex nsubj *acl* / dummy dummy nsubj *acl* 
+    6  dobj advmod *xcomp* / dummy advmod *xcomp* 
+    6  name *root* / dummy *root* 
+    6  nmod *dep* / *dep* 
+    6  case *nmod* conj conj conj cc conj / case *nmod* 
+    6  *root* dobj cc conj / *root* dummy cc conj 
+    6  det *nsubj* acl:relcl / dummy *nsubj* 
+    6  det *dobj* nmod acl:relcl / det *dobj* 
+    6  dobj nmod *xcomp* / *xcomp* 
+    6  nsubj *conj* ccomp / *conj* 
+    6  *xcomp* iobj / *xcomp* dummy 
+    6  nmod *nsubj* nmod / *nsubj* nmod 
+    6  advmod:emph case amod amod *nmod* / case amod amod *nmod* 
+    6  mark nsubj *ccomp* dobj / mark dummy *ccomp* dobj 
+    6  nummod det:def *nsubj* / nummod dummy *nsubj* 
+    6  *conj* dobj advcl / *conj* dummy 
+    6  case *nmod* nmod appos / case *nmod* 
+    6  det *nsubjpass* amod / det *nsubjpass* 
+    6  cc *nsubj* / *nsubj* 
+    6  *nsubj* name acl:relcl / *nsubj* 
+    6  *amod* nmod xcomp / *amod* 
+    6  nmod amod *dobj* / dummy amod *dobj* 
+    6  nsubj *root* nmod nmod / nsubj *root* dummy nmod 
+    6  nmod *xcomp* dobj / *xcomp* 
+    6  nmod *root* nsubj / *root* 
+    6  neg *root* / dummy *root* 
+    6  case amod *nmod* conj / case amod *nmod* 
+    6  acl *conj* / *conj* 
+    6  dobj *root* nsubj dobj / dummy *root* 
+    6  case *advcl* nmod / *advcl* 
+    6  cop *conj* csubj / *conj* dummy 
+    6  advmod amod *nsubj* / amod *nsubj* 
+    6  nsubj *root* cop / *root* dummy 
+    6  neg aux *root* / *root* 
+    6  compound:reflex *csubj* ccomp / dummy *csubj* 
+    6  nmod nsubj *root* xcomp / dummy nsubj *root* dummy 
+    6  *nmod* advcl / *nmod* 
+    6  *nsubj* name cc conj / *nsubj* 
+    6  case amod *nmod* nummod / case amod *nmod* 
+    6  advmod:emph case *nmod* acl / case *nmod* 
+    6  case nmod:poss *nmod* cc conj / case dummy *nmod* cc 
+    6  amod *dobj* nmod / *dobj* nmod 
+    6  nmod *remnant* / *remnant* 
+    6  case *nmod* nmod amod / case *nmod* 
+    6  det amod *nmod* nmod / dummy amod *nmod* 
+    6  amod *nsubj* nmod appos / amod *nsubj* nmod 
+    6  case nummod *nmod* nmod / *nmod* nmod 
+    6  *nmod* foreign / *nmod* dummy 
+    6  advmod:emph nummod *nmod* / dummy nummod *nmod* 
+    6  *advmod* ccomp / *advmod* 
+    6  *root* nmod nmod / *root* 
+    6  amod compound *conj* / *conj* 
+    6  advmod:emph nummod:gov *dobj* nmod / dummy *dobj* 
+    6  nmod dobj *root* nsubj / dummy dummy *root* 
+    6  *conj* advmod nmod / *conj* advmod dummy 
+    6  case *nmod* nmod appos / case *nmod* nmod 
+    6  case *nmod* mwe / case *nmod* 
+    6  advmod:emph case *nmod* / *nmod* 
+    6  case nummod *nmod* appos / case nummod *nmod* 
+    6  *amod* expl / *amod* 
+    6  nummod *nummod* / dummy *nummod* 
+    6  ccomp *root* nmod nsubj / *root* 
+    6  case *conj* nmod:poss / case *conj* 
+    6  advmod *acl* dobj / advmod *acl* 
+    6  nsubj *root* nmod nmod / dummy *root* 
+    6  advcl *root* nsubj / *root* dummy 
+    6  nsubj cop det *root* / det *root* 
+    6  nsubj *root* advcl / dummy *root* advcl 
+    6  amod *root* parataxis / amod *root* 
+    6  det:numgov *nsubj* / dummy *nsubj* 
+    6  mark *xcomp* nmod / mark *xcomp* 
+    6  *nmod:poss* amod acl:relcl / *nmod:poss* 
+    6  advmod:emph case *nmod* cc conj / case *nmod* cc 
+    6  nummod *nmod:poss* nmod:poss / nummod *nmod:poss* 
+    6  *nsubj* dep / *nsubj* dummy 
+    6  nsubj *root* dobj ccomp / nsubj *root* dummy dummy 
+    6  nmod advmod *amod* / advmod *amod* 
+    6  nsubj *acl:relcl* advcl / dummy *acl:relcl* dummy 
+    6  nsubj cop amod *root* / cop amod *root* 
+    6  case *appos* nmod / case *appos* 
+    6  *xcomp* nmod nmod / *xcomp* dummy 
+    6  nsubj *acl* dobj nmod / nsubj *acl* 
+    6  det *nsubj:cop* / *nsubj:cop* 
+    6  nsubj compound:reflex *acl* dobj / nsubj dummy *acl* 
+    6  dobj *root* advmod nsubj / dummy *root* 
+    6  *root* vocative / *root* dummy 
+    6  *name* dep / *name* 
+    6  amod *nmod* nmod acl / amod *nmod* 
+    6  nsubj *amod* / dummy *amod* 
+    6  advmod *xcomp* nmod / advmod *xcomp* 
+    6  *advcl* nmod dobj / *advcl* 
+    6  nmod *nsubjpass* / *nsubjpass* 
+    6  mark amod *xcomp* acl / mark amod *xcomp* 
+    6  *conj* cc conj nmod / *conj* cc 
+    6  amod amod *root* cop nsubj / amod amod *root* 
+    6  *advmod* amod / *advmod* 
+    6  dobj aux *acl* nmod / dummy aux *acl* nmod 
+    6  nmod *root* ccomp / nmod *root* 
+    6  *dep* advmod / *dep* 
+    6  nsubj dobj *root* cc conj / nsubj dummy *root* cc conj 
+    6  advmod *amod* / dummy *amod* 
+    6  nsubj *root* dobj advcl / nsubj *root* dummy 
+    6  amod *appos* / *appos* 
+    6  *ccomp* advcl / *ccomp* 
+    6  mark dobj *advcl* nsubj / mark dummy *advcl* dummy 
+    6  nsubj *acl* nmod dobj / nsubj *acl* 
+    6  dobj nmod *acl* nsubj / dummy dummy *acl* dummy 
+    6  nsubj *root* dobj nmod / *root* 
+    6  *acl* cop nsubj / *acl* 
+    6  det amod compound *dobj* / *dobj* 
+    6  mark nsubj dobj *ccomp* / mark nsubj dummy *ccomp* 
+    6  *nsubj* nmod nmod nmod / *nsubj* 
+    6  nmod *advcl* / dummy *advcl* 
+    6  case *conj* nmod:smixut / case *conj* 
+    6  case nummod:gov *nmod* nmod / case dummy *nmod* 
+    6  nmod advmod *root* nsubj / dummy advmod *root* dummy 
+    6  det:def *dep* / dummy *dep* 
+    6  advmod:emph amod *conj* nmod / amod *conj* 
+    6  dep *conj* / dummy *conj* 
+    6  nmod *root* / dummy *root* 
+    6  *root* cc nsubj / *root* cc dummy 
+    6  advmod *amod* cc conj / advmod *amod* 
+    6  nsubj cop *root* parataxis / *root* 
+    6  *root* advmod nmod / *root* nmod 
+    6  name name *conj* / *conj* 
+    6  nmod dobj *root* nsubj / dummy dummy *root* dummy 
+    6  *root* advmod nmod / *root* 
+    6  mark *csubj* dobj / mark *csubj* dummy 
+    6  nmod *case* / *case* 
+    6  cc *appos* / *appos* 
+    6  *root* dobj dobj / *root* 
+    6  mwe *mark* / *mark* 
+    6  nummod:gov *advmod* nmod / dummy *advmod* 
+    6  nsubj cop *acl:relcl* nmod / *acl:relcl* 
+    6  mark nsubj *advcl* xcomp / mark nsubj *advcl* dummy 
+    6  *root* dobj nmod / *root* dobj dummy 
+    6  det:nummod *nmod* / dummy *nmod* 
+    6  nsubj *root* advmod dobj / *root* dummy 
+    6  amod *nsubj* acl:relcl / amod *nsubj* 
+    6  compound:reflex *xcomp* ccomp / dummy *xcomp* 
+    6  advmod:emph det *nsubj* / det *nsubj* 
+    6  nsubj *acl* ccomp / nsubj *acl* dummy 
+    6  case *conj* nummod / case *conj* 
+    6  nmod name *dobj* / dummy *dobj* 
+    6  nsubj cop nmod amod *root* / amod *root* 
+    6  mark nmod compound:lvc *ccomp* / mark dummy dummy *ccomp* 
+    6  nmod *acl* nsubj / dummy *acl* dummy 
+    6  amod *dobj* acl:relcl / amod *dobj* 
+    6  cc *nmod* / *nmod* 
+    6  *root* xcomp nsubj / *root* 
+    6  case amod *nmod* nmod cc conj / case amod *nmod* nmod 
+    6  nsubj *acl:relcl* / *acl:relcl* 
+    6  nsubj compound:reflex *root* nmod / nsubj dummy *root* 
+    6  nummod *amod:att* / *amod:att* 
+    6  mark amod *advcl* / amod *advcl* 
+    6  case *nmod* nummod nmod / case *nmod* nummod 
+    6  case *nmod* nmod cc conj / *nmod* 
+    6  nsubj *root* dobj dobj / nsubj *root* dummy 
+    6  advcl *root* nsubj dobj / *root* 
+    6  mark nmod *acl:relcl* cop / *acl:relcl* dummy 
+    6  dobj *xcomp* nmod / dummy *xcomp* nmod 
+    6  nsubj advmod *root* dobj / dummy advmod *root* dobj 
+    6  *amod* nmod:smixut / *amod* 
+    6  cc case amod *nmod* / case amod *nmod* 
+    6  amod *nmod* cc conj / amod *nmod* 
+    6  det *nsubj* cc conj / det *nsubj* cc 
+    6  advmod *dobj* nmod / advmod *dobj* 
+    6  nmod:gobj *dobj* / *dobj* 
+    6  nsubj cop nmod *root* / dummy *root* 
+    6  nsubj aux *root* dobj / dummy aux *root* dummy 
+    6  *amod* nmod dobj / *amod* 
+    6  nummod *dobj* amod / nummod *dobj* 
+    6  advmod:emph amod *nsubj* acl / amod *nsubj* 
+    6  case det amod *nmod* / amod *nmod* 
+    6  *root* dobj nmod / *root* dummy 
+    6  dobj nsubj *acl* dobj / dummy nsubj *acl* dummy 
+    6  det *appos* acl:relcl / det *appos* 
+    6  advmod:emph *dep* / dummy *dep* 
+    6  name *nmod* cc conj / *nmod* cc 
+    6  nmod expl *root* nsubj / dummy dummy *root* dummy 
+    6  *root* conj conj conj / *root* 
+    6  advmod:emph amod *dobj* acl / amod *dobj* 
+    6  nsubj *root* xcomp / *root* dummy 
+    6  case nummod:gov *advmod* nmod / case dummy *advmod* 
+    6  amod *dobj* nmod / amod *dobj* dummy 
+    6  *nummod* cc / *nummod* 
+    6  ccomp *root* advmod nsubj / *root* 
+    6  cop advmod *conj* / advmod *conj* 
+    6  mark *nmod* / *nmod* 
+    6  aux *root* ccomp / *root* 
+    6  det *dobj* appos / det *dobj* 
+    6  nsubj *acl* nmod / nsubj *acl* dummy 
+    6  nmod:poss amod *dobj* / dummy amod *dobj* 
+    6  det name *nsubj* / *nsubj* 
+    6  nsubj *conj* xcomp / *conj* 
+    6  amod *nsubj* cc conj / amod *nsubj* cc dummy 
+    6  nsubj *root* nmod cc conj / dummy *root* 
+    6  case *dep* / *dep* 
+    6  case det *nmod* acl / case dummy *nmod* 
+    6  det *dobj* nmod acl / det *dobj* nmod 
+    6  det *dobj* xcomp / det *dobj* 
+    6  *nmod* mwe / *nmod* 
+    6  *appos* cc conj / *appos* cc dummy 
+    6  advmod:emph case *conj* / dummy case *conj* 
+    6  nmod *root* ccomp / dummy *root* 
+    6  advmod:emph *conj* acl / *conj* 
+    6  advmod *csubj* dobj / advmod *csubj* dummy 
+    6  case nmod:poss amod *nmod* / dummy amod *nmod* 
+    6  nsubj *root* advmod nmod / nsubj *root* 
+    6  *nmod* nmod cc conj / *nmod* nmod 
+    6  nsubj *acl:relcl* nmod / dummy *acl:relcl* 
+    6  nsubj *root* nmod cc conj / nsubj *root* conj 
+    6  dobj nmod *xcomp* / dummy *xcomp* 
+    6  det *dobj* nmod / *dobj* 
+    6  nmod cop nsubj *root* / *root* 
+    6  nsubj cop *root* / dummy *root* 
+    6  advmod dobj *conj* / advmod dummy *conj* 
+    6  mark *ccomp* nsubj / mark *ccomp* 
+    6  nmod auxpass *root* nsubjpass / dummy dummy *root* 
+    6  nsubj aux *conj* xcomp / nsubj aux *conj* 
+    6  punct *appos* punct / *appos* 
+    6  case det *advmod* / *advmod* 
+    6  *csubj* dobj nmod / *csubj* dummy nmod 
+    6  nmod:att *amod:att* / *amod:att* 
+    6  *acl* nmod:smixut / *acl* dummy 
+    6  nummod *dobj* appos / nummod *dobj* 
+    5  case amod *nmod* conj cc conj / case amod *nmod* 
+    5  dobj nsubj *acl:relcl* / nsubj *acl:relcl* 
+    5  nsubj aux *conj* dobj / dummy aux *conj* dummy 
+    5  advmod nmod *nmod* / *nmod* 
+    5  case nummod:gov *nsubj* / case dummy *nsubj* 
+    5  *nmod* dep / *nmod* dummy 
+    5  dobj *root* nsubj conj / dummy *root* dummy 
+    5  *root* cop csubj / *root* dummy dummy 
+    5  *conj* advmod dobj / *conj* advmod 
+    5  *xcomp* dobj nmod / *xcomp* dummy 
+    5  case *dobj* nmod acl / case *dobj* nmod 
+    5  nsubj compound:lvc *root* ccomp / nsubj dummy *root* dummy 
+    5  advmod *conj* xcomp / advmod *conj* 
+    5  aux expl *ccomp* iobj / dummy dummy *ccomp* dummy 
+    5  *advmod* advmod:emph / *advmod* 
+    5  mark nsubj *advcl* dobj / *advcl* dobj 
+    5  expl *root* dislocated / dummy *root* 
+    5  det amod *nmod* acl:relcl / dummy amod *nmod* 
+    5  cop *root* nsubj / *root* 
+    5  *conj* compound:reflex / *conj* dummy 
+    5  aux *ccomp* ccomp / dummy *ccomp* 
+    5  advmod nsubj *root* dobj / advmod nsubj *root* dummy 
+    5  nsubj cop advmod *root* cc conj / advmod *root* cc 
+    5  amod *nsubj* nmod conj cc conj / amod *nsubj* nmod 
+    5  compound *amod* / *amod* 
+    5  nsubj *conj* advmod / nsubj *conj* dummy 
+    5  *acl:relcl* dobj / *acl:relcl* dummy 
+    5  *conj* dobj nmod / *conj* nmod 
+    5  *root* cc dobj / *root* cc dummy 
+    5  nsubj *root* advmod / nsubj *root* dummy 
+    5  compound compound *nsubj* / *nsubj* 
+    5  case det *nmod* name / *nmod* 
+    5  case *amod* / *amod* 
+    5  case *nmod* nmod nmod / case *nmod* dummy 
+    5  advmod:emph case nummod *nmod* / case nummod *nmod* 
+    5  nmod aux *root* dobj / *root* dobj 
+    5  *nsubj* amod nmod / *nsubj* 
+    5  mark nsubj *advcl* xcomp / mark dummy *advcl* 
+    5  nummod:gov *nmod* nmod / dummy *nmod* 
+    5  det compound *dobj* / dummy *dobj* 
+    5  name *nsubj* conj cc conj / *nsubj* 
+    5  *acl* ccomp / *acl* dummy 
+    5  cc nsubj cop *root* nmod / *root* 
+    5  nsubj cop *root* / nsubj dummy *root* 
+    5  nsubj advmod *root* dobj / dummy advmod *root* dummy 
+    5  det *nsubj* nmod nmod / det *nsubj* 
+    5  nsubj *root* dobj advmod / dummy *root* dobj advmod 
+    5  case nummod *advmod* nummod / *advmod* 
+    5  mark aux *ccomp* xcomp / mark aux *ccomp* dummy 
+    5  det *dobj* amod nmod / det *dobj* nmod 
+    5  case det *nummod* nmod / *nummod* 
+    5  advmod:emph case *nmod* acl / dummy case *nmod* 
+    5  nsubj *conj* nmod / dummy *conj* dummy 
+    5  case case *nmod* / case *nmod* 
+    5  *conj* dobj advcl / *conj* dobj 
+    5  amod amod *nsubj* appos / amod amod *nsubj* 
+    5  case nmod:poss amod *nmod* / *nmod* 
+    5  advmod:emph case *advmod* / *advmod* 
+    5  nsubj cop *root* ccomp / *root* dummy 
+    5  case amod *dobj* nmod / amod *dobj* 
+    5  nsubj aux *acl:relcl* nmod / dummy aux *acl:relcl* nmod 
+    5  aux *ccomp* dobj / dummy *ccomp* 
+    5  case *nmod* nmod acl:relcl / case *nmod* 
+    5  nmod nmod *appos* / *appos* 
+    5  det *nsubj* appos / det *nsubj* 
+    5  *appos* conj conj cc conj / *appos* 
+    5  advmod:emph case *dobj* nmod / case *dobj* nmod 
+    5  amod *nsubj* conj cc conj / amod *nsubj* 
+    5  case amod *dobj* / amod *dobj* 
+    5  nsubj *root* nmod dobj / *root* 
+    5  amod amod *nsubj* cc conj / amod amod *nsubj* cc 
+    5  *csubj* dobj dobj / *csubj* dummy 
+    5  nsubj *acl* / dummy *acl* 
+    5  nsubj *root* nmod:poss cop / *root* 
+    5  *nsubj* acl appos / *nsubj* 
+    5  compound:nn *nmod* / *nmod* 
+    5  aux nsubj *root* dobj / aux dummy *root* dobj 
+    5  nsubj *root* dobj nmod / dummy *root* dobj nmod 
+    5  mark nsubj cop advmod *advcl* / advmod *advcl* 
+    5  mark nmod *acl* nsubj / mark dummy *acl* dummy 
+    5  case *dep* nmod / case *dep* 
+    5  *punct* nmod / *punct* 
+    5  *nmod* nummod nmod / *nmod* 
+    5  advmod:emph *advmod* acl / *advmod* 
+    5  nmod:poss *compound:nn* / *compound:nn* 
+    5  *acl* nmod nmod / *acl* dummy 
+    5  case nummod *nmod* acl / *nmod* 
+    5  *parataxis* aux nsubj / *parataxis* dummy 
+    5  nmod *nummod* / *nummod* 
+    5  ccomp *root* nmod / *root* nmod 
+    5  *dep* name / *dep* 
+    5  *auxpass* aux / *auxpass* dummy 
+    5  *amod* xcomp / *amod* 
+    5  dobj *root* nmod / *root* 
+    5  nsubj compound:reflex *root* / nsubj dummy *root* 
+    5  det *conj* nmod / dummy *conj* nmod 
+    5  name *root* dep appos / *root* 
+    5  nmod *amod* / dummy *amod* 
+    5  nmod *conj* xcomp / dummy *conj* 
+    5  case det *nmod* nmod acl / case det *nmod* 
+    5  *xcomp* dobj advcl / *xcomp* 
+    5  ccomp *root* nsubj nmod / *root* dummy 
+    5  advmod *conj* / dummy *conj* 
+    5  *nmod:poss* amod amod / *nmod:poss* 
+    5  *nmod* conj conj conj cc conj / *nmod* 
+    5  *dep* conj conj conj / *dep* 
+    5  cop *conj* csubj / *conj* 
+    5  mark nsubj *advcl* nmod / mark dummy *advcl* dummy 
+    5  *advmod* mwe mwe / *advmod* dummy 
+    5  nmod:poss *dobj* cc conj / *dobj* 
+    5  nmod *dobj* acl / dummy *dobj* 
+    5  dobj *root* nmod nsubj / dummy *root* nmod 
+    5  advmod *nsubj* nmod / advmod *nsubj* 
+    5  case det *nmod* name / det *nmod* 
+    5  *acl* nmod dobj / *acl* 
+    5  case *nmod* nmod:smixut nmod / case *nmod* dummy 
+    5  nmod:gobj *nsubj* / *nsubj* 
+    5  *root* dobj advcl / *root* dummy 
+    5  xcomp *root* nsubj / *root* dummy 
+    5  *root* dobj cc conj / *root* dummy conj 
+    5  nsubjpass auxpass *acl* dobj / dummy dummy *acl* 
+    5  mark *acl:relcl* nmod:poss cop / *acl:relcl* 
+    5  discourse *cc* / *cc* 
+    5  compound compound *root* / dummy dummy *root* 
+    5  *conj* dobj ccomp / *conj* dummy 
+    5  advmod:emph *det* / *det* 
+    5  *nummod* mwe / *nummod* 
+    5  nsubj *advcl* / dummy *advcl* 
+    5  *nmod:smixut* name / *nmod:smixut* 
+    5  case:acc *dobj* / dummy *dobj* 
+    5  *nsubj* nmod nmod acl / *nsubj* 
+    5  nmod *root* csubj / nmod *root* 
+    5  cop *root* csubj / cop *root* dummy 
+    5  case *mark* / *mark* 
+    5  mark *xcomp* xcomp / dummy *xcomp* 
+    5  *xcomp* xcomp / *xcomp* dummy 
+    5  case det *conj* acl:relcl / case det *conj* 
+    5  *dobj* amod appos / *dobj* 
+    5  nsubj *root* dobj cc conj / *root* 
+    5  det:def *nsubj* amod nmod / dummy *nsubj* 
+    5  mark *acl* nsubj / mark *acl* 
+    5  case *nmod* nmod:poss cc conj / case *nmod* 
+    5  nmod *conj* nmod / *conj* 
+    5  dobj *acl* advmod / dummy *acl* advmod 
+    5  mark det amod *xcomp* / det amod *xcomp* 
+    5  *amod* advmod dobj / *amod* 
+    5  nmod *root* xcomp nsubj / dummy *root* dummy 
+    5  *acl* compound:reflex dobj / *acl* 
+    5  advcl *root* xcomp / *root* dummy 
+    5  nsubj *ccomp* ccomp / nsubj *ccomp* 
+    5  amod amod *nsubj* amod / amod amod *nsubj* 
+    5  dobj *acl* nsubj dobj / dummy *acl* 
+    5  amod *appos* acl / amod *appos* 
+    5  mark *ccomp* nmod / mark *ccomp* 
+    5  *acl* dobj nmod / *acl* dobj 
+    5  nmod nmod *nmod* / dummy *nmod* 
+    5  ccomp *root* advmod nsubj / *root* dummy 
+    5  advmod:emph case amod *nmod* acl / case amod *nmod* 
+    5  nummod *root* nmod / nummod *root* 
+    5  nsubj *root* dobj advcl / dummy *root* dobj dummy 
+    5  mark nsubj *advcl* ccomp / mark nsubj *advcl* 
+    5  nsubj *root* nmod xcomp / nsubj *root* dummy 
+    5  case *iobj* case / case *iobj* 
+    5  nsubj aux *acl* dobj / nsubj aux *acl* 
+    5  mark nsubj *advcl* nmod / mark dummy *advcl* nmod 
+    5  nmod det:def *nmod:smixut* amod / dummy *nmod:smixut* 
+    5  advmod:emph *nmod* nmod / *nmod* 
+    5  case det amod *nmod* appos / case det amod *nmod* 
+    5  advmod nsubj cop *root* nmod / *root* 
+    5  advmod:emph case det *nmod* acl / dummy case det *nmod* 
+    5  nsubj advmod *root* ccomp / advmod *root* 
+    5  nmod name *root* / *root* 
+    5  *dep* nmod:smixut / *dep* 
+    5  advcl nsubj *root* xcomp / nsubj *root* dummy 
+    5  nsubj *root* advmod / *root* advmod 
+    5  dobj *acl* / *acl* 
+    5  ccomp *root* dobj nsubj / *root* 
+    5  nsubj *conj* nmod / nsubj *conj* dummy 
+    5  nmod nsubj *acl* dobj / dummy nsubj *acl* dummy 
+    5  case:gen *nmod:poss* name / *nmod:poss* 
+    5  det *dobj* nmod / det *dobj* dummy 
+    5  advmod:emph case det *nmod* / dummy case det *nmod* 
+    5  mark *advcl* nmod / dummy *advcl* dummy 
+    5  det *root* cop nsubj / det *root* 
+    5  amod amod *nmod* nmod / amod *nmod* nmod 
+    5  nmod nsubj *root* ccomp / dummy nsubj *root* 
+    5  nsubj *root* dobj advmod / nsubj *root* 
+    5  advmod *acl* nsubj / dummy *acl* dummy 
+    5  advmod:emph name *nsubj* / *nsubj* 
+    5  nsubj *root* nmod advcl / nsubj *root* dummy 
+    5  mark advmod *ccomp* dobj / mark advmod *ccomp* dummy 
+    5  det *dobj* amod nmod / det *dobj* 
+    5  *advcl* ccomp / *advcl* dummy 
+    5  *appos* xcomp / *appos* 
+    5  mark nsubj *ccomp* xcomp / mark nsubj *ccomp* dummy 
+    5  nummod *dobj* / *dobj* 
+    5  *root* nmod appos / *root* nmod 
+    5  case det:def *nmod* nmod / case dummy *nmod* nmod 
+    5  foreign *conj* / dummy *conj* 
+    5  case *dobj* nmod cc conj / case *dobj* nmod cc dummy 
+    5  nsubj *root* nmod nmod / nsubj *root* dummy 
+    5  mark compound:reflex *advcl* dobj / mark dummy *advcl* dummy 
+    5  case nmod:poss amod *nmod* / case dummy amod *nmod* 
+    5  mark nsubj *ccomp* xcomp / mark dummy *ccomp* 
+    5  dobj aux *root* nmod / dummy aux *root* nmod 
+    5  mark nsubj *advcl* / *advcl* 
+    5  advmod *advmod* acl / advmod *advmod* 
+    5  *root* advmod xcomp / *root* dummy 
+    5  *nmod* acl / *nmod* dummy 
+    5  *nmod* xcomp / *nmod* 
+    5  nsubjpass auxpass *acl* dobj / dummy dummy *acl* dummy 
+    5  case:acc *dobj* nmod:smixut nmod / *dobj* dummy nmod 
+    5  dobj nsubj *acl* / dummy dummy *acl* 
+    5  case *conj* nmod:smixut / case *conj* dummy 
+    5  mark aux nsubj *advcl* dobj / mark aux nsubj *advcl* dummy 
+    5  advmod *root* nmod / advmod *root* 
+    5  nsubj nmod *acl* dobj / nsubj dummy *acl* 
+    5  case nmod:poss amod *nmod* nmod / amod *nmod* 
+    5  advmod cop *root* csubj / *root* 
+    5  *nmod:smixut* amod / *nmod:smixut* 
+    5  nmod:poss *nmod* case / *nmod* 
+    5  amod name *nsubj* / *nsubj* 
+    5  case nummod *nmod* nmod:poss / case nummod *nmod* 
+    5  det:def *amod* advmod / *amod* 
+    5  nsubj *root* dobj nmod / *root* dummy nmod 
+    5  *root* conj cc conj / *root* 
+    5  amod compound *root* / *root* 
+    5  *conj* cc conj / *conj* cc dummy 
+    5  nsubj *root* cop ccomp / *root* 
+    5  nmod:poss *dobj* nmod / *dobj* nmod 
+    5  nmod *conj* nsubj / *conj* dummy 
+    5  name *nsubj* xcomp / *nsubj* 
+    5  amod *conj* nmod / amod *conj* dummy 
+    5  nsubj aux *root* xcomp / dummy aux *root* 
+    5  *conj* compound:reflex xcomp / *conj* 
+    5  advcl *root* dobj nsubj / *root* dummy 
+    5  nsubj cop *conj* conj / *conj* 
+    5  *csubj* dobj dobj / *csubj* 
+    5  *root* dep cc conj / *root* 
+    5  nsubjpass auxpass *conj* nmod / dummy dummy *conj* 
+    5  *acl* nmod dobj / *acl* dummy 
+    5  nsubj nmod *ccomp* cop / *ccomp* 
+    5  advmod *amod* advcl / advmod *amod* 
+    5  mark cop *ccomp* / *ccomp* 
+    5  nummod *nmod* / dummy *nmod* 
+    5  *xcomp* acl / *xcomp* 
+    5  compound:reflex *xcomp* nmod / *xcomp* 
+    5  det *nsubj* advmod / det *nsubj* 
+    5  advmod:emph case amod amod *nmod* / dummy case amod amod *nmod* 
+    5  det *nsubj* nmod:poss / det *nsubj* dummy 
+    5  nsubj *root* nmod dobj / dummy *root* nmod 
+    5  case *nmod* case nmod / case *nmod* 
+    5  det:numgov *advmod* / dummy *advmod* 
+    5  nsubj cop *root* acl / cop *root* 
+    5  nmod *acl:relcl* nsubj / nmod *acl:relcl* dummy 
+    5  *dobj* xcomp / *dobj* dummy 
+    5  nsubj cop advmod *root* cc conj / advmod *root* 
+    5  dobj *conj* dobj / dummy *conj* dummy 
+    5  amod *nsubj* nmod appos / amod *nsubj* 
+    5  compound:reflex *xcomp* dobj / dummy *xcomp* dummy 
+    5  advcl:compar *advmod* / *advmod* 
+    5  case *dobj* nmod / case *dobj* dummy 
+    5  compound compound *compound* / dummy dummy *compound* 
+    5  det amod compound *dobj* nmod / *dobj* 
+    5  case *nmod* nmod nmod nmod / case *nmod* 
+    5  compound *appos* / dummy *appos* 
+    5  *nsubj* nmod:poss nmod / *nsubj* 
+    5  *root* auxpass:reflex csubj / *root* dummy dummy 
+    5  dep *advcl* / dummy *advcl* 
+    5  case amod nummod:gov *advmod* / case amod dummy *advmod* 
+    5  *appos* conj cc conj / *appos* 
+    5  case det:def *nmod* nmod:poss / case dummy *nmod* 
+    5  advmod *conj* ccomp / advmod *conj* dummy 
+    5  case det *nmod* nmod acl:relcl / case det *nmod* 
+    5  amod *nsubj* / dummy *nsubj* 
+    5  dobj *root* nsubj nmod / dummy *root* dummy 
+    5  dobj *root* dobj / dummy *root* dummy 
+    5  det *nmod* cc conj / dummy *nmod* cc 
+    5  case *conj* nmod nmod / case *conj* 
+    5  case:acc *dobj* nmod:poss / *dobj* dummy 
+    5  nsubj *acl* dobj / dummy *acl* 
+    5  mark nsubj *advcl* ccomp / mark nsubj *advcl* dummy 
+    5  nummod:gov *nsubjpass* / dummy *nsubjpass* 
+    5  det *nmod* cc conj / det *nmod* 
+    5  advmod *conj* nmod / *conj* 
+    5  advmod:emph *dobj* nmod / dummy *dobj* nmod 
+    5  *root* compound:reflex nsubj / *root* 
+    5  nsubj *conj* nmod / *conj* 
+    5  name *conj* dep / *conj* 
+    5  nsubj cop amod *root* nmod / amod *root* 
+    5  det *nsubj* nmod:poss / det *nsubj* 
+    5  case *nmod* mwe / *nmod* 
+    5  nmod auxpass:reflex *root* dobj / dummy dummy *root* dummy 
+    5  nummod *compound* cc conj / *compound* cc 
+    5  advmod:emph case *conj* nmod / case *conj* nmod 
+    5  mark *advcl* dobj / *advcl* dobj 
+    5  advmod *amod* dep / advmod *amod* 
+    5  nmod:poss *dobj* cc conj / *dobj* cc 
+    5  *foreign* foreign / *foreign* 
+    5  nmod:poss *nmod:poss* / dummy *nmod:poss* 
+    5  nsubj nmod *root* dobj / nsubj dummy *root* 
+    5  nmod *conj* nsubj / nmod *conj* dummy 
+    5  nsubj *root* nmod dobj / dummy *root* 
+    5  nsubj *root* dobj cc conj / nsubj *root* conj 
+    5  nmod name name *nsubj* / *nsubj* 
+    5  compound:reflex dobj *xcomp* / dummy *xcomp* 
+    5  *xcomp* nmod nmod / *xcomp* 
+    5  *conj* xcomp:ds / *conj* dummy 
+    5  nsubj compound:reflex nmod *acl* dobj / nsubj dummy dummy *acl* dummy 
+    5  nsubj cop *root* dobj / *root* dummy 
+    5  dobj *root* nsubj cc conj / dummy *root* dummy cc conj 
+    5  cop advmod *root* csubj / advmod *root* dummy 
+    5  advmod:emph amod *conj* nmod / amod *conj* nmod 
+    5  *nsubj* mwe / *nsubj* 
+    5  advmod compound *nummod* / *nummod* 
+    5  dobj nsubj *acl* nmod / dummy nsubj *acl* 
+    5  *root* advmod ccomp / *root* advmod dummy 
+    5  nummod *nmod* advmod / nummod *nmod* 
+    5  nsubj *conj* nmod / dummy *conj* nmod 
+    5  case det *dobj* nmod / case det *dobj* 
+    5  nmod:poss *dobj* nmod / *dobj* 
+    5  nsubj *root* dobj conj / nsubj *root* dummy 
+    5  nsubj cop advmod advmod *root* / advmod advmod *root* 
+    5  *nmod* cc conj case / *nmod* cc 
+    5  *root* acl:relcl / *root* 
+    5  nmod:poss amod *nmod:poss* / amod *nmod:poss* 
+    5  *name* nmod:smixut / *name* dummy 
+    5  case det *nmod* amod nmod / case det *nmod* amod 
+    5  amod *nmod* acl:relcl / amod *nmod* 
+    5  dobj *xcomp* nmod / *xcomp* 
+    5  nsubj neg *root* ccomp / *root* dummy 
+    5  advcl *root* nsubj / *root* 
+    5  *xcomp* advcl / *xcomp* dummy 
+    5  *nsubj* cc / *nsubj* 
+    5  compound compound *conj* / *conj* 
+    5  nmod nummod *dobj* / nummod *dobj* 
+    5  case *nmod* amod nmod:poss / case *nmod* amod 
+    5  *nsubjpass* amod / *nsubjpass* 
+    5  dobj dobj *root* nsubj / dummy dummy *root* 
+    5  nsubj *acl* dobj nmod / nsubj *acl* dummy 
+    5  case amod *dobj* nmod nmod / case amod *dobj* 
+    5  amod amod *dobj* cc conj / amod amod *dobj* cc 
+    5  nmod nsubj *root* nmod / dummy nsubj *root* nmod 
+    5  *appos* nmod cc conj / *appos* 
+    5  nsubj cop *acl:relcl* / *acl:relcl* 
+    5  nmod advmod *root* dobj / dummy advmod *root* 
+    5  mark nsubj cop advmod *ccomp* / advmod *ccomp* 
+    5  mark nsubj *acl* xcomp / mark nsubj *acl* dummy 
+    5  *dobj* ccomp / *dobj* 
+    5  *dobj* nmod case / *dobj* 
+    5  nmod det *nsubj* / det *nsubj* 
+    5  aux dobj *ccomp* / dummy dobj *ccomp* 
+    5  xcomp *root* nsubj / dummy *root* 
+    5  nmod advmod *root* nsubj / dummy advmod *root* 
+    5  nsubj cop *acl* advcl / *acl* 
+    5  nsubj cop advmod *root* advcl / advmod *root* 
+    5  *root* list / *root* dummy 
+    5  *conj* advmod nmod / *conj* 
+    5  *conj* aux xcomp / *conj* dummy 
+    5  nmod *conj* acl / *conj* 
+    5  case amod *nmod* acl / amod *nmod* 
+    5  *xcomp* dobj dobj / *xcomp* dummy 
+    5  nummod *nmod:poss* nmod / nummod *nmod:poss* 
+    5  det compound *dobj* nmod / *dobj* 
+    5  mark nsubj *ccomp* cop / mark nsubj *ccomp* dummy 
+    5  nsubj compound:reflex *acl* nmod / nsubj dummy *acl* 
+    5  nsubj *root* dobj cc conj / nsubj *root* 
+    5  *conj* dobj nmod nmod / *conj* 
+    5  compound *appos* / *appos* 
+    5  nmod compound:reflex advmod *root* nsubj / dummy dummy advmod *root* dummy 
+    5  case *root* nummod / case *root* 
+    5  dobj nsubj *acl* dobj / dummy nsubj *acl* 
+    5  *root* amod / *root* 
+    5  case det amod *dobj* nmod / case det amod *dobj* 
+    5  *name* conj / *name* 
+    5  cop nsubj *root* / nsubj *root* 
+    5  amod *dobj* cc conj / amod *dobj* 
+    5  nsubj cop *root* cc conj / *root* cc 
+    5  case *nmod* nmod:tmod / *nmod* 
+    5  det amod *dobj* cc conj / det amod *dobj* cc 
+    5  mark *csubj* ccomp / mark *csubj* 
+    5  case det *nmod* amod cc conj / case det *nmod* amod 
+    5  dobj *xcomp* advmod / dummy *xcomp* advmod 
+    5  *root* advmod dobj / *root* dobj 
+    5  nsubj *root* nmod dobj / nsubj *root* nmod dummy 
+    5  amod amod *nmod* appos / amod amod *nmod* 
+    5  nsubj *ccomp* dobj / dummy *ccomp* 
+    5  *nummod* conj cc conj / *nummod* 
+    5  nsubj auxpass:reflex *root* / nsubj dummy *root* 
+    5  nsubj *root* advmod dobj / nsubj *root* advmod dummy 
+    5  nsubj *conj* ccomp / dummy *conj* 
+    5  amod amod *nmod* nmod nmod / amod amod *nmod* nmod 
+    5  mark dobj *ccomp* / mark dummy *ccomp* 
+    5  case amod *conj* acl / case amod *conj* 
+    5  *conj* name / *conj* dummy 
+    5  mark *ccomp* ccomp / mark *ccomp* 
+    5  nsubj *root* advmod xcomp / nsubj *root* dummy 
+
+
+  5 focus words where most of the errors occur:
+
+            | any  | head | dep  | both
+  ----------+------+------+------+------
+  se / PRON | 2757 |  698 | 2757 |  698
+  a / CONJ  | 1800 | 1792 |   17 |    9
+  je / VERB | 1351 | 1285 | 1348 | 1282
+  ה / DET   | 1152 |  209 | 1152 |  209
+  i / CONJ  |  764 |  747 |  618 |  601
+  ----------+------+------+------+------
+
+
+  one-token preceeding contexts where most of the errors occur:
+
+  CPOS       | any  | head | dep  | both  ||  word                     | any  | head | dep  | both
+  -----------+------+------+------+-------++---------------------------+------+------+------+-----
+  NOUN       | 30056 | 23646 | 22504 | 16094  ||  , / PUNCT                | 8904 | 7220 | 6024 | 4340
+  VERB       | 19128 | 12803 | 15295 | 8970  ||  a / CONJ                 | 2251 | 1926 | 1957 | 1632
+  ADJ        | 19053 | 13395 | 15513 | 9855  ||  v / ADP                  | 1551 | 1157 | 1157 |  763
+  -----------+------+------+------+-------++---------------------------+------+------+------+-----
+
+
+  two-token preceeding contexts where most of the errors occur:
+
+  CPOS       | any  | head | dep  | both  ||  word                     | any  | head | dep  | both
+  -----------+------+------+------+-------++---------------------------+------+------+------+-----
+  .S+.S      | 8473 | 6084 | 6589 | 4200  ||  , / PUNCT + že / SCONJ   |  691 |  449 |  544 |  302
+  ADJ+NOUN   | 6363 | 4902 | 4759 | 3298  ||  , / PUNCT + které / PRON |  226 |  154 |  215 |  143
+  NOUN+PUNCT | 6353 | 4945 | 4521 | 3113  ||  .S + V / ADP             |  221 |   87 |  208 |   74
+  -----------+------+------+------+-------++---------------------------+------+------+------+-----
+
+
+  one-token following contexts where most of the errors occur:
+
+  CPOS       | any  | head | dep  | both  ||  word                     | any  | head | dep  | both
+  -----------+------+------+------+-------++---------------------------+------+------+------+-----
+  PUNCT      | 28623 | 20096 | 22267 | 13740  ||  . / PUNCT                | 11891 | 8299 | 8701 | 5109
+  NOUN       | 28097 | 21705 | 22423 | 16031  ||  , / PUNCT                | 10623 | 7347 | 8672 | 5396
+  VERB       | 23010 | 13458 | 19107 | 9555  ||  a / CONJ                 | 2227 | 1825 | 1877 | 1475
+  -----------+------+------+------+-------++---------------------------+------+------+------+-----
+
+
+  two-token following contexts where most of the errors occur:
+
+  CPOS       | any  | head | dep  | both  ||  word                     | any  | head | dep  | both
+  -----------+------+------+------+-------++---------------------------+------+------+------+-----
+  PUNCT+.E   | 11568 | 7855 | 8713 | 5000  ||  . / PUNCT + .E           | 10586 | 7171 | 7907 | 4492
+  ADJ+NOUN   | 8031 | 6806 | 6290 | 5065  ||  , / PUNCT + že / SCONJ   |  851 |  505 |  737 |  391
+  ADP+NOUN   | 7626 | 5374 | 6179 | 3927  ||  ? / PUNCT + .E           |  529 |  354 |  454 |  279
+  -----------+------+------+------+-------++---------------------------+------+------+------+-----
+
+
+  Sentence with the highest number of word errors:
+   Sentence 13939 line 243024, 58 head errors, 62 dependency errors, 76 word errors
+
+
+  Sentence with the highest number of head errors:
+   Sentence 20089 line 329875, 60 head errors, 37 dependency errors, 66 word errors
+
+
+  Sentence with the highest number of dependency errors:
+   Sentence 13939 line 243024, 58 head errors, 62 dependency errors, 76 word errors
+
+
+  Specific errors, 10 most frequent errors:
+  =========================================
+
+   1. head is the focus word instead of 0, dependency "dummy" instead of "root" : 7091 times
+  ------+------+-------+------+-------+------+------
+    Before     |    Focus     |   After      | Count
+  CPOS    word | CPOS    word | CPOS    word |
+  ------+------+-------+------+-------+------+------
+        |      | VERB  |      |       |      | 3344
+        |      |       |      | PUNCT |      | 1877
+        |      | NOUN  |      |       |      | 1615
+  VERB  |      |       |      |       |      | 1128
+  PUNCT |      |       |      |       |      | 1047
+  NOUN  |      |       |      |       |      | 989
+        |      | ADJ   |      |       |      | 879
+  ------+------+-------+------+-------+------+------
+
+   2. correct head (after the focus word), dependency "dummy" instead of "nmod" : 4177 times
+  ------+------+-------+------+-------+------+------
+    Before     |    Focus     |   After      | Count
+  CPOS    word | CPOS    word | CPOS    word |
+  ------+------+-------+------+-------+------+------
+        |      | NOUN  |      |       |      | 2934
+  ADP   |      |       |      |       |      | 1992
+        |      |       |      | VERB  |      | 1445
+  ADP   |      | NOUN  |      |       |      | 1346
+        |      | NOUN  |      | VERB  |      | 1000
+  ADJ   |      |       |      |       |      | 812
+  ADJ   |      | NOUN  |      |       |      | 783
+  ------+------+-------+------+-------+------+------
+
+   3. correct head (before the focus word), dependency "dummy" instead of "dobj" : 4125 times
+  ------+------+-------+------+-------+------+------
+    Before     |    Focus     |   After      | Count
+  CPOS    word | CPOS    word | CPOS    word |
+  ------+------+-------+------+-------+------+------
+        |      | NOUN  |      |       |      | 3485
+        |      |       |      | PUNCT |      | 2543
+        |      | NOUN  |      | PUNCT |      | 2115
+  VERB  |      |       |      |       |      | 1402
+  ADJ   |      |       |      |       |      | 1385
+  ADJ   |      | NOUN  |      |       |      | 1368
+        |      |       |      | PUNCT | .    | 1230
+  ------+------+-------+------+-------+------+------
+
+   4. correct head (after the focus word), dependency "dummy" instead of "dobj" : 3119 times
+  ------+------+-------+------+-------+------+------
+    Before     |    Focus     |   After      | Count
+  CPOS    word | CPOS    word | CPOS    word |
+  ------+------+-------+------+-------+------+------
+        |      | NOUN  |      |       |      | 1616
+        |      |       |      | VERB  |      | 1559
+        |      | PRON  |      |       |      | 1385
+        |      | NOUN  |      | VERB  |      | 781
+        |      | PRON  |      | VERB  |      | 710
+  ADJ   |      |       |      |       |      | 422
+  PUNCT |      |       |      |       |      | 409
+  ------+------+-------+------+-------+------+------
+
+   5. correct head (after the focus word), dependency "dummy" instead of "nsubj" : 3087 times
+  ------+------+-------+------+-------+------+------
+    Before     |    Focus     |   After      | Count
+  CPOS    word | CPOS    word | CPOS    word |
+  ------+------+-------+------+-------+------+------
+        |      |       |      | VERB  |      | 1703
+        |      | PRON  |      |       |      | 1682
+        |      | NOUN  |      |       |      | 1212
+        |      | PRON  |      | VERB  |      | 987
+  .S    | .S   |       |      |       |      | 830
+        |      | NOUN  |      | VERB  |      | 612
+        |      |       |      | AUX   |      | 499
+  ------+------+-------+------+-------+------+------
+
+   6. correct head (before the focus word), dependency "dummy" instead of "nmod" : 2567 times
+  ------+------+-------+------+-------+------+------
+    Before     |    Focus     |   After      | Count
+  CPOS    word | CPOS    word | CPOS    word |
+  ------+------+-------+------+-------+------+------
+        |      | NOUN  |      |       |      | 2134
+        |      |       |      | PUNCT |      | 1045
+        |      | NOUN  |      | PUNCT |      | 758
+  ADP   |      |       |      |       |      | 755
+  ADP   |      | NOUN  |      |       |      | 623
+        |      |       |      | ADP   |      | 529
+  ADJ   |      |       |      |       |      | 521
+  ------+------+-------+------+-------+------+------
+
+   7. correct head (before the focus word), dependency "dummy" instead of "nsubj" : 2102 times
+  ------+------+-------+------+-------+------+------
+    Before     |    Focus     |   After      | Count
+  CPOS    word | CPOS    word | CPOS    word |
+  ------+------+-------+------+-------+------+------
+        |      | NOUN  |      |       |      | 1657
+        |      |       |      | PUNCT |      | 1152
+  VERB  |      |       |      |       |      | 890
+        |      | NOUN  |      | PUNCT |      | 863
+  ADJ   |      |       |      |       |      | 621
+  VERB  |      | NOUN  |      |       |      | 612
+  ADJ   |      | NOUN  |      |       |      | 600
+  ------+------+-------+------+-------+------+------
+
+   8. correct head (before the focus word), dependency "dummy" instead of "xcomp" : 1572 times
+  ------+------+-------+------+-------+------+------
+    Before     |    Focus     |   After      | Count
+  CPOS    word | CPOS    word | CPOS    word |
+  ------+------+-------+------+-------+------+------
+        |      | VERB  |      |       |      | 1389
+  VERB  |      |       |      |       |      | 755
+  VERB  |      | VERB  |      |       |      | 696
+        |      |       |      | PUNCT |      | 463
+        |      | VERB  |      | PUNCT |      | 334
+        |      |       |      | ADP   |      | 256
+        |      |       |      | PUNCT | .    | 240
+  ------+------+-------+------+-------+------+------
+
+   9. head 997 words after the correct head (after the focus word instead ofafter the focus word), correct dependency : 1498 times
+  ------+------+-------+------+-------+------+------
+    Before     |    Focus     |   After      | Count
+  CPOS    word | CPOS    word | CPOS    word |
+  ------+------+-------+------+-------+------+------
+  NOUN  |      |       |      |       |      | 471
+        |      | NOUN  |      |       |      | 468
+        |      | CONJ  |      |       |      | 345
+  VERB  |      |       |      |       |      | 275
+        |      | ADV   |      |       |      | 262
+        |      |       |      | NOUN  |      | 252
+        |      |       |      | VERB  |      | 243
+  ------+------+-------+------+-------+------+------
+
+  10. head 996 words after the correct head (after the focus word instead ofafter the focus word), correct dependency : 1480 times
+  ------+------+-------+------+-------+------+------
+    Before     |    Focus     |   After      | Count
+  CPOS    word | CPOS    word | CPOS    word |
+  ------+------+-------+------+-------+------+------
+        |      | NOUN  |      |       |      | 486
+  NOUN  |      |       |      |       |      | 391
+        |      | CONJ  |      |       |      | 376
+        |      |       |      | PUNCT |      | 291
+        |      |       |      | NOUN  |      | 218
+  VERB  |      |       |      |       |      | 206
+        |      | ADV   |      |       |      | 196
+  ------+------+-------+------+-------+------+------
+
+
+  Local contexts involved in several frequent errors:
+  ===================================================
+
+
+  ------+------+-------+------+-------+------
+    Before     |    Focus     |   After      
+  CPOS    word | CPOS    word | CPOS    word 
+  ------+------+-------+------+-------+------
+        |      | NOUN  |      |       |      
+  ------+------+-------+------+-------+------
+   3. correct head (before the focus word), dependency "dummy" instead of "dobj" : 3485 times
+   2. correct head (after the focus word), dependency "dummy" instead of "nmod" : 2934 times
+   6. correct head (before the focus word), dependency "dummy" instead of "nmod" : 2134 times
+   7. correct head (before the focus word), dependency "dummy" instead of "nsubj" : 1657 times
+   4. correct head (after the focus word), dependency "dummy" instead of "dobj" : 1616 times
+   1. head is the focus word instead of 0, dependency "dummy" instead of "root" : 1615 times
+   5. correct head (after the focus word), dependency "dummy" instead of "nsubj" : 1212 times
+  10. head 996 words after the correct head (after the focus word instead ofafter the focus word), correct dependency : 486 times
+   9. head 997 words after the correct head (after the focus word instead ofafter the focus word), correct dependency : 468 times
+
+  ------+------+-------+------+-------+------
+    Before     |    Focus     |   After      
+  CPOS    word | CPOS    word | CPOS    word 
+  ------+------+-------+------+-------+------
+        |      |       |      | PUNCT |      
+  ------+------+-------+------+-------+------
+   3. correct head (before the focus word), dependency "dummy" instead of "dobj" : 2543 times
+   1. head is the focus word instead of 0, dependency "dummy" instead of "root" : 1877 times
+   7. correct head (before the focus word), dependency "dummy" instead of "nsubj" : 1152 times
+   6. correct head (before the focus word), dependency "dummy" instead of "nmod" : 1045 times
+   8. correct head (before the focus word), dependency "dummy" instead of "xcomp" : 463 times
+  10. head 996 words after the correct head (after the focus word instead ofafter the focus word), correct dependency : 291 times
+
+  ------+------+-------+------+-------+------
+    Before     |    Focus     |   After      
+  CPOS    word | CPOS    word | CPOS    word 
+  ------+------+-------+------+-------+------
+  VERB  |      |       |      |       |      
+  ------+------+-------+------+-------+------
+   3. correct head (before the focus word), dependency "dummy" instead of "dobj" : 1402 times
+   1. head is the focus word instead of 0, dependency "dummy" instead of "root" : 1128 times
+   7. correct head (before the focus word), dependency "dummy" instead of "nsubj" : 890 times
+   8. correct head (before the focus word), dependency "dummy" instead of "xcomp" : 755 times
+   9. head 997 words after the correct head (after the focus word instead ofafter the focus word), correct dependency : 275 times
+  10. head 996 words after the correct head (after the focus word instead ofafter the focus word), correct dependency : 206 times
+
+  ------+------+-------+------+-------+------
+    Before     |    Focus     |   After      
+  CPOS    word | CPOS    word | CPOS    word 
+  ------+------+-------+------+-------+------
+  ADJ   |      |       |      |       |      
+  ------+------+-------+------+-------+------
+   3. correct head (before the focus word), dependency "dummy" instead of "dobj" : 1385 times
+   2. correct head (after the focus word), dependency "dummy" instead of "nmod" : 812 times
+   7. correct head (before the focus word), dependency "dummy" instead of "nsubj" : 621 times
+   6. correct head (before the focus word), dependency "dummy" instead of "nmod" : 521 times
+   4. correct head (after the focus word), dependency "dummy" instead of "dobj" : 422 times
+
+  ------+------+-------+------+-------+------
+    Before     |    Focus     |   After      
+  CPOS    word | CPOS    word | CPOS    word 
+  ------+------+-------+------+-------+------
+        |      |       |      | VERB  |      
+  ------+------+-------+------+-------+------
+   5. correct head (after the focus word), dependency "dummy" instead of "nsubj" : 1703 times
+   4. correct head (after the focus word), dependency "dummy" instead of "dobj" : 1559 times
+   2. correct head (after the focus word), dependency "dummy" instead of "nmod" : 1445 times
+   9. head 997 words after the correct head (after the focus word instead ofafter the focus word), correct dependency : 243 times
+
+  ------+------+-------+------+-------+------
+    Before     |    Focus     |   After      
+  CPOS    word | CPOS    word | CPOS    word 
+  ------+------+-------+------+-------+------
+  ADJ   |      | NOUN  |      |       |      
+  ------+------+-------+------+-------+------
+   3. correct head (before the focus word), dependency "dummy" instead of "dobj" : 1368 times
+   2. correct head (after the focus word), dependency "dummy" instead of "nmod" : 783 times
+   7. correct head (before the focus word), dependency "dummy" instead of "nsubj" : 600 times
+
+  ------+------+-------+------+-------+------
+    Before     |    Focus     |   After      
+  CPOS    word | CPOS    word | CPOS    word 
+  ------+------+-------+------+-------+------
+  NOUN  |      |       |      |       |      
+  ------+------+-------+------+-------+------
+   1. head is the focus word instead of 0, dependency "dummy" instead of "root" : 989 times
+   9. head 997 words after the correct head (after the focus word instead ofafter the focus word), correct dependency : 471 times
+  10. head 996 words after the correct head (after the focus word instead ofafter the focus word), correct dependency : 391 times
+
+  ------+------+-------+------+-------+------
+    Before     |    Focus     |   After      
+  CPOS    word | CPOS    word | CPOS    word 
+  ------+------+-------+------+-------+------
+        |      | NOUN  |      | PUNCT |      
+  ------+------+-------+------+-------+------
+   3. correct head (before the focus word), dependency "dummy" instead of "dobj" : 2115 times
+   7. correct head (before the focus word), dependency "dummy" instead of "nsubj" : 863 times
+   6. correct head (before the focus word), dependency "dummy" instead of "nmod" : 758 times
+
+  ------+------+-------+------+-------+------
+    Before     |    Focus     |   After      
+  CPOS    word | CPOS    word | CPOS    word 
+  ------+------+-------+------+-------+------
+        |      | NOUN  |      | VERB  |      
+  ------+------+-------+------+-------+------
+   2. correct head (after the focus word), dependency "dummy" instead of "nmod" : 1000 times
+   4. correct head (after the focus word), dependency "dummy" instead of "dobj" : 781 times
+   5. correct head (after the focus word), dependency "dummy" instead of "nsubj" : 612 times
+
+  ------+------+-------+------+-------+------
+    Before     |    Focus     |   After      
+  CPOS    word | CPOS    word | CPOS    word 
+  ------+------+-------+------+-------+------
+        |      | ADV   |      |       |      
+  ------+------+-------+------+-------+------
+   9. head 997 words after the correct head (after the focus word instead ofafter the focus word), correct dependency : 262 times
+  10. head 996 words after the correct head (after the focus word instead ofafter the focus word), correct dependency : 196 times
+
+  ------+------+-------+------+-------+------
+    Before     |    Focus     |   After      
+  CPOS    word | CPOS    word | CPOS    word 
+  ------+------+-------+------+-------+------
+  PUNCT |      |       |      |       |      
+  ------+------+-------+------+-------+------
+   1. head is the focus word instead of 0, dependency "dummy" instead of "root" : 1047 times
+   4. correct head (after the focus word), dependency "dummy" instead of "dobj" : 409 times
+
+  ------+------+-------+------+-------+------
+    Before     |    Focus     |   After      
+  CPOS    word | CPOS    word | CPOS    word 
+  ------+------+-------+------+-------+------
+  ADP   |      | NOUN  |      |       |      
+  ------+------+-------+------+-------+------
+   2. correct head (after the focus word), dependency "dummy" instead of "nmod" : 1346 times
+   6. correct head (before the focus word), dependency "dummy" instead of "nmod" : 623 times
+
+  ------+------+-------+------+-------+------
+    Before     |    Focus     |   After      
+  CPOS    word | CPOS    word | CPOS    word 
+  ------+------+-------+------+-------+------
+        |      |       |      | ADP   |      
+  ------+------+-------+------+-------+------
+   6. correct head (before the focus word), dependency "dummy" instead of "nmod" : 529 times
+   8. correct head (before the focus word), dependency "dummy" instead of "xcomp" : 256 times
+
+  ------+------+-------+------+-------+------
+    Before     |    Focus     |   After      
+  CPOS    word | CPOS    word | CPOS    word 
+  ------+------+-------+------+-------+------
+        |      |       |      | PUNCT | .    
+  ------+------+-------+------+-------+------
+   3. correct head (before the focus word), dependency "dummy" instead of "dobj" : 1230 times
+   8. correct head (before the focus word), dependency "dummy" instead of "xcomp" : 240 times
+
+  ------+------+-------+------+-------+------
+    Before     |    Focus     |   After      
+  CPOS    word | CPOS    word | CPOS    word 
+  ------+------+-------+------+-------+------
+        |      | VERB  |      |       |      
+  ------+------+-------+------+-------+------
+   1. head is the focus word instead of 0, dependency "dummy" instead of "root" : 3344 times
+   8. correct head (before the focus word), dependency "dummy" instead of "xcomp" : 1389 times
+
+  ------+------+-------+------+-------+------
+    Before     |    Focus     |   After      
+  CPOS    word | CPOS    word | CPOS    word 
+  ------+------+-------+------+-------+------
+        |      | PRON  |      |       |      
+  ------+------+-------+------+-------+------
+   5. correct head (after the focus word), dependency "dummy" instead of "nsubj" : 1682 times
+   4. correct head (after the focus word), dependency "dummy" instead of "dobj" : 1385 times
+
+  ------+------+-------+------+-------+------
+    Before     |    Focus     |   After      
+  CPOS    word | CPOS    word | CPOS    word 
+  ------+------+-------+------+-------+------
+  ADP   |      |       |      |       |      
+  ------+------+-------+------+-------+------
+   2. correct head (after the focus word), dependency "dummy" instead of "nmod" : 1992 times
+   6. correct head (before the focus word), dependency "dummy" instead of "nmod" : 755 times
+
+  ------+------+-------+------+-------+------
+    Before     |    Focus     |   After      
+  CPOS    word | CPOS    word | CPOS    word 
+  ------+------+-------+------+-------+------
+        |      | PRON  |      | VERB  |      
+  ------+------+-------+------+-------+------
+   5. correct head (after the focus word), dependency "dummy" instead of "nsubj" : 987 times
+   4. correct head (after the focus word), dependency "dummy" instead of "dobj" : 710 times
+
+  ------+------+-------+------+-------+------
+    Before     |    Focus     |   After      
+  CPOS    word | CPOS    word | CPOS    word 
+  ------+------+-------+------+-------+------
+        |      | CONJ  |      |       |      
+  ------+------+-------+------+-------+------
+  10. head 996 words after the correct head (after the focus word instead ofafter the focus word), correct dependency : 376 times
+   9. head 997 words after the correct head (after the focus word instead ofafter the focus word), correct dependency : 345 times
+
+  ------+------+-------+------+-------+------
+    Before     |    Focus     |   After      
+  CPOS    word | CPOS    word | CPOS    word 
+  ------+------+-------+------+-------+------
+        |      |       |      | NOUN  |      
+  ------+------+-------+------+-------+------
+   9. head 997 words after the correct head (after the focus word instead ofafter the focus word), correct dependency : 252 times
+  10. head 996 words after the correct head (after the focus word instead ofafter the focus word), correct dependency : 218 times
+

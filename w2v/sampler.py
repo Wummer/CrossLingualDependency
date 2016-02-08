@@ -65,3 +65,16 @@ def randomizer(word,context,p):
         return word
     elif choice == 1:
         return context
+
+
+
+sent = "It is just disappointing ."
+cPOS = ["PRON", "VERB","ADV","ADJ","PUNCT"]
+fPOS = ["PRP","VBZ","RB","JJ","."]
+all_pos = [""]*len(cPOS)*2
+
+all_pos[::2] = fPOS
+all_pos[1::2] = cPOS
+
+print random_sampler(all_pos,window=2)
+

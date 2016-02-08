@@ -1,9 +1,13 @@
 S0:p
 S0:g
-S0:g_81a
-S0:g_85a
-S0:g_86a
-S0:g_87a
+S0:g_81a_vso
+S0:g_81a_svo
+S0:g_85a_prep
+S0:g_85a_post
+S0:g_86a_gn
+S0:g_86a_ng
+S0:g_87a_an
+S0:g_87a_na
 N0:p
 N0:g
 N0:g_81a_vso

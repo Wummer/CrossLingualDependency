@@ -1,0 +1,1722 @@
+  Labeled   attachment score: 1 / 80888 * 100 = 0.00 %
+  Unlabeled attachment score: 31795 / 80888 * 100 = 39.31 %
+  Label accuracy score:       21 / 80888 * 100 = 0.03 %
+
+  ================================================================================
+
+  Evaluation of the results in SPMRL/de_vsrest-baseline.conllu
+  vs. gold standard Original/de-SPMRL.conllu:
+
+  Legend: '.S' - the beginning of a sentence, '.E' - the end of a sentence
+
+  Number of non-scoring tokens: 11116
+
+  The overall accuracy and its distribution over CPOSTAGs
+
+  -----------+-------+-------+------+-------+------+-------+-------
+  Accuracy   | words | right |   %  | right |   %  | both  |   %
+             |       | head  |      |  dep  |      | right |
+  -----------+-------+-------+------+-------+------+-------+-------
+  total      | 80888 | 31795 |  39% |    21 |   0% |     1 |   0%
+  -----------+-------+-------+------+-------+------+-------+-------
+  NOUN       | 23766 |  7111 |  30% |    17 |   0% |     1 |   0%
+  VERB       | 10887 |  3156 |  29% |     0 |   0% |     0 |   0%
+  DET        |  9650 |  7241 |  75% |     0 |   0% |     0 |   0%
+  ADP        |  9307 |  3333 |  36% |     1 |   0% |     0 |   0%
+  ADJ        |  7715 |  3593 |  47% |     1 |   0% |     0 |   0%
+  PRON       |  6473 |  2562 |  40% |     0 |   0% |     0 |   0%
+  ADV        |  4338 |  1307 |  30% |     0 |   0% |     0 |   0%
+  CONJ       |  3535 |  1413 |  40% |     0 |   0% |     0 |   0%
+  .          |  1786 |   541 |  30% |     0 |   0% |     0 |   0%
+  NUM        |  1564 |   696 |  45% |     2 |   0% |     0 |   0%
+  PRT        |  1497 |   780 |  52% |     0 |   0% |     0 |   0%
+  X          |   370 |    62 |  17% |     0 |   0% |     0 |   0%
+  -----------+-------+-------+------+-------+------+-------+-------
+
+
+  The overall error rate and its distribution over CPOSTAGs
+
+  -----------+-------+-------+------+-------+------+-------+-------
+  Error      | words | head  |   %  |  dep  |   %  | both  |   %
+  Rate       |       | err   |      |  err  |      | wrong |
+  -----------+-------+-------+------+-------+------+-------+-------
+  total      | 80888 | 49093 |  61% | 80867 | 100% | 49073 |  61%
+  -----------+-------+-------+------+-------+------+-------+-------
+  NOUN       | 23766 | 16655 |  70% | 23749 | 100% | 16639 |  70%
+  VERB       | 10887 |  7731 |  71% | 10887 | 100% |  7731 |  71%
+  DET        |  9650 |  2409 |  25% |  9650 | 100% |  2409 |  25%
+  ADP        |  9307 |  5974 |  64% |  9306 | 100% |  5973 |  64%
+  ADJ        |  7715 |  4122 |  53% |  7714 | 100% |  4121 |  53%
+  PRON       |  6473 |  3911 |  60% |  6473 | 100% |  3911 |  60%
+  ADV        |  4338 |  3031 |  70% |  4338 | 100% |  3031 |  70%
+  CONJ       |  3535 |  2122 |  60% |  3535 | 100% |  2122 |  60%
+  .          |  1786 |  1245 |  70% |  1786 | 100% |  1245 |  70%
+  NUM        |  1564 |   868 |  55% |  1562 | 100% |   866 |  55%
+  PRT        |  1497 |   717 |  48% |  1497 | 100% |   717 |  48%
+  X          |   370 |   308 |  83% |   370 | 100% |   308 |  83%
+  -----------+-------+-------+------+-------+------+-------+-------
+
+
+  Precision and recall of DEPREL
+
+  ----------------+------+---------+--------+------------+---------------
+  deprel          | gold | correct | system | recall (%) | precision (%) 
+  ----------------+------+---------+--------+------------+---------------
+  --              | 6982 |       0 |      0 |       0.00 |           NaN
+  AC              |  127 |       0 |      0 |       0.00 |           NaN
+  ADC             |    4 |       0 |      0 |       0.00 |           NaN
+  AG              | 2241 |       0 |      0 |       0.00 |           NaN
+  AMS             |   75 |       0 |      0 |       0.00 |           NaN
+  APP             |  461 |       0 |      0 |       0.00 |           NaN
+  AVC             |    4 |       0 |      0 |       0.00 |           NaN
+  CC              |  238 |       0 |      0 |       0.00 |           NaN
+  CD              | 2223 |       0 |      0 |       0.00 |           NaN
+  CJ              | 3446 |      21 |     21 |       0.61 |        100.00
+  CM              |  298 |       0 |      0 |       0.00 |           NaN
+  CP              |  788 |       0 |      0 |       0.00 |           NaN
+  CVC             |   71 |       0 |      0 |       0.00 |           NaN
+  DA              |  568 |       0 |      0 |       0.00 |           NaN
+  DM              |   18 |       0 |      0 |       0.00 |           NaN
+  EP              |  186 |       0 |      0 |       0.00 |           NaN
+  JU              |  228 |       0 |      0 |       0.00 |           NaN
+  MNR             | 2554 |       0 |      0 |       0.00 |           NaN
+  MO              | 12102 |       0 |      0 |       0.00 |           NaN
+  NG              |  514 |       0 |      0 |       0.00 |           NaN
+  NK              | 27902 |       0 |      0 |       0.00 |           NaN
+  NMC             |  321 |       0 |      0 |       0.00 |           NaN
+  OA              | 3184 |       0 |      0 |       0.00 |           NaN
+  OA2             |    5 |       0 |      0 |       0.00 |           NaN
+  OC              | 3652 |       0 |      0 |       0.00 |           NaN
+  OG              |   21 |       0 |      0 |       0.00 |           NaN
+  OP              |  646 |       0 |      0 |       0.00 |           NaN
+  PAR             |  429 |       0 |      0 |       0.00 |           NaN
+  PD              | 1045 |       0 |      0 |       0.00 |           NaN
+  PG              |  388 |       0 |      0 |       0.00 |           NaN
+  PH              |   30 |       0 |      0 |       0.00 |           NaN
+  PM              |  432 |       0 |      0 |       0.00 |           NaN
+  PNC             | 1240 |       0 |      0 |       0.00 |           NaN
+  RC              |  765 |       0 |      0 |       0.00 |           NaN
+  RE              |  268 |       0 |      0 |       0.00 |           NaN
+  RS              |   35 |       0 |      0 |       0.00 |           NaN
+  SB              | 6638 |       0 |      0 |       0.00 |           NaN
+  SBP             |  156 |       0 |      0 |       0.00 |           NaN
+  SVP             |  499 |       0 |      0 |       0.00 |           NaN
+  UC              |   89 |       0 |      0 |       0.00 |           NaN
+  VO              |   15 |       0 |      0 |       0.00 |           NaN
+  dummy           |    0 |       0 |  80867 |        NaN |          0.00
+
+
+  Precision and recall of DEPREL + ATTACHMENT
+
+  ----------------+------+---------+--------+------------+---------------
+  deprel          | gold | correct | system | recall (%) | precision (%) 
+  ----------------+------+---------+--------+------------+---------------
+  --              | 6982 |       0 |      0 |       0.00 |           NaN
+  AC              |  127 |       0 |      0 |       0.00 |           NaN
+  ADC             |    4 |       0 |      0 |       0.00 |           NaN
+  AG              | 2241 |       0 |      0 |       0.00 |           NaN
+  AMS             |   75 |       0 |      0 |       0.00 |           NaN
+  APP             |  461 |       0 |      0 |       0.00 |           NaN
+  AVC             |    4 |       0 |      0 |       0.00 |           NaN
+  CC              |  238 |       0 |      0 |       0.00 |           NaN
+  CD              | 2223 |       0 |      0 |       0.00 |           NaN
+  CJ              | 3446 |       1 |     21 |       0.03 |          4.76
+  CM              |  298 |       0 |      0 |       0.00 |           NaN
+  CP              |  788 |       0 |      0 |       0.00 |           NaN
+  CVC             |   71 |       0 |      0 |       0.00 |           NaN
+  DA              |  568 |       0 |      0 |       0.00 |           NaN
+  DM              |   18 |       0 |      0 |       0.00 |           NaN
+  EP              |  186 |       0 |      0 |       0.00 |           NaN
+  JU              |  228 |       0 |      0 |       0.00 |           NaN
+  MNR             | 2554 |       0 |      0 |       0.00 |           NaN
+  MO              | 12102 |       0 |      0 |       0.00 |           NaN
+  NG              |  514 |       0 |      0 |       0.00 |           NaN
+  NK              | 27902 |       0 |      0 |       0.00 |           NaN
+  NMC             |  321 |       0 |      0 |       0.00 |           NaN
+  OA              | 3184 |       0 |      0 |       0.00 |           NaN
+  OA2             |    5 |       0 |      0 |       0.00 |           NaN
+  OC              | 3652 |       0 |      0 |       0.00 |           NaN
+  OG              |   21 |       0 |      0 |       0.00 |           NaN
+  OP              |  646 |       0 |      0 |       0.00 |           NaN
+  PAR             |  429 |       0 |      0 |       0.00 |           NaN
+  PD              | 1045 |       0 |      0 |       0.00 |           NaN
+  PG              |  388 |       0 |      0 |       0.00 |           NaN
+  PH              |   30 |       0 |      0 |       0.00 |           NaN
+  PM              |  432 |       0 |      0 |       0.00 |           NaN
+  PNC             | 1240 |       0 |      0 |       0.00 |           NaN
+  RC              |  765 |       0 |      0 |       0.00 |           NaN
+  RE              |  268 |       0 |      0 |       0.00 |           NaN
+  RS              |   35 |       0 |      0 |       0.00 |           NaN
+  SB              | 6638 |       0 |      0 |       0.00 |           NaN
+  SBP             |  156 |       0 |      0 |       0.00 |           NaN
+  SVP             |  499 |       0 |      0 |       0.00 |           NaN
+  UC              |   89 |       0 |      0 |       0.00 |           NaN
+  VO              |   15 |       0 |      0 |       0.00 |           NaN
+  dummy           |    0 |       0 |  80867 |        NaN |          0.00
+
+
+  Precision and recall of binned HEAD direction
+
+  ----------------+------+---------+--------+------------+---------------
+  direction       | gold | correct | system | recall (%) | precision (%) 
+  ----------------+------+---------+--------+------------+---------------
+  to_root         | 5214 |    2412 |   5715 |      46.26 |         42.20
+  left            | 34663 |   31878 |  39643 |      91.97 |         80.41
+  right           | 41011 |   29571 |  32309 |      72.11 |         91.53
+  self            |    0 |       0 |   3221 |        NaN |          0.00
+
+
+  Precision and recall of binned HEAD distance
+
+  ----------------+------+---------+--------+------------+---------------
+  distance        | gold | correct | system | recall (%) | precision (%) 
+  ----------------+------+---------+--------+------------+---------------
+  to_root         | 5214 |    2412 |   5715 |      46.26 |         42.20
+  1               | 35940 |   25750 |  30534 |      71.65 |         84.33
+  2               | 14834 |    4111 |   5004 |      27.71 |         82.15
+  3-6             | 15473 |   10523 |  27688 |      68.01 |         38.01
+  7-...           | 9427 |    7994 |  11947 |      84.80 |         66.91
+
+
+  Frame confusions (gold versus system; *...* marks the head token)
+
+  4611  *NK* / *NK* dummy 
+  2559  / dummy 
+  2215  *MO* NK / *MO* 
+  2111  ** -- / ** dummy 
+  1681  *MO* NK / *MO* dummy 
+  1447  ** -- / ** 
+  1196  *CD* CJ / *CD* 
+  1143  *NK* / dummy *NK* dummy 
+  1123  NK *NK* / dummy *NK* 
+  1004  *MNR* NK / *MNR* 
+  992  *MNR* NK / *MNR* dummy 
+  984  *MO* / *MO* dummy 
+  869  *NK* / dummy *NK* 
+  788  ** -- / ** dummy dummy 
+  692  NK *SB* / dummy *SB* 
+  671  NK *AG* / dummy *AG* 
+  587  *SB* / *SB* dummy 
+  545  NK *NK* / *NK* 
+  541  *NK* / *NK* dummy dummy 
+  527  *CD* CJ / *CD* dummy 
+  489  / dummy dummy 
+  449  *NK* / dummy *NK* dummy dummy 
+  376  *MO* NK / *MO* dummy dummy 
+  369  ** -- / ** dummy dummy dummy 
+  361  NK *OA* / dummy *OA* 
+  277  MO *NK* / *NK* 
+  274  SB *--* OC / dummy *--* 
+  265  *NK* / dummy dummy *NK* 
+  264  *PNC* / *PNC* dummy 
+  261  NK *NK* / dummy *NK* dummy 
+  255  *MO* / dummy *MO* dummy 
+  254  *OP* NK / *OP* 
+  235  NK *SB* / *SB* 
+  234  *CP* / *CP* dummy 
+  232  NK NK *NK* / *NK* 
+  230  *NK* / *NK* dummy dummy dummy 
+  230  NK *SB* / dummy *SB* dummy 
+  226  NK *NK* AG / dummy *NK* 
+  225  *OA* / *OA* dummy 
+  223  PNC *NK* / *NK* 
+  219  *NK* CD / *NK* 
+  204  *MO* / dummy *MO* 
+  201  MO *MO* / *MO* 
+  199  *--* / *--* dummy 
+  194  *MNR* NK / *MNR* dummy dummy 
+  194  *NK* AG / *NK* 
+  189  *OP* NK / *OP* dummy 
+  185  *CJ* / *CJ* dummy 
+  180  NK NK *SB* / *SB* 
+  175  NK *OA* / *OA* 
+  170  *--* SB OC / *--* 
+  166  / dummy dummy dummy 
+  164  NK NK *NK* / dummy dummy *NK* 
+  164  *PG* NK / *PG* dummy 
+  163  MO *OC* / dummy *OC* 
+  161  NK *NK* MNR / dummy *NK* 
+  152  *--* / dummy *--* 
+  149  *NK* / dummy dummy *NK* dummy 
+  145  SB *--* OC / dummy *--* dummy 
+  143  NK *NK* / dummy dummy *NK* 
+  143  MO *NK* / *NK* dummy 
+  141  *NK* MNR / *NK* 
+  140  NK *SB* AG / dummy *SB* 
+  140  *MO* NK / dummy *MO* 
+  129  NK *AG* / dummy *AG* dummy 
+  129  NK *AG* / *AG* 
+  127  *MO* / *MO* dummy dummy 
+  127  *--* SB OC / *--* dummy 
+  125  OC *OC* / dummy dummy *OC* 
+  124  *CD* CJ / *CD* dummy dummy 
+  116  ** -- / ** dummy dummy dummy dummy 
+  115  NK NK *AG* / dummy dummy *AG* 
+  114  NK *NK* / *NK* dummy 
+  114  NK NK *OA* / *OA* 
+  112  OA *OC* / dummy *OC* 
+  109  NK *CJ* / dummy *CJ* 
+  109  *NK* CD / *NK* dummy 
+  105  NK NK *AG* / *AG* 
+  104  PNC *NK* / *NK* dummy 
+  103  NK *SB* MNR / dummy *SB* 
+  102  MO *MO* NK / *MO* 
+   96  *CD* CJ / dummy *CD* 
+   96  *PG* NK / *PG* 
+   92  *NK* / dummy *NK* dummy dummy dummy 
+   91  OC *OC* / *OC* 
+   91  MO *OC* / *OC* 
+   89  *NK* MNR / *NK* dummy 
+   88  NK *DA* / dummy *DA* 
+   87  NK *OA* AG / dummy *OA* 
+   87  MO MO *OC* / dummy dummy *OC* 
+   87  *PG* NK / *PG* dummy dummy 
+   85  NK *SB* / *SB* dummy 
+   85  *CJ* NK / *CJ* 
+   85  *MO* / dummy *MO* dummy dummy 
+   83  SB *--* PD / dummy *--* dummy 
+   80  MO *MO* NK / *MO* dummy 
+   79  NK *OA* MNR / dummy *OA* 
+   78  OA *OC* / dummy dummy *OC* 
+   76  NK *NK* MNR / dummy *NK* dummy 
+   75  *--* SB OC / *--* dummy dummy 
+   75  *NK* CJ / *NK* 
+   74  MO MO *OC* / dummy *OC* 
+   74  *CJ* CJ / *CJ* 
+   73  MO *PD* / *PD* 
+   73  NK NK *SB* / dummy dummy *SB* 
+   72  NK NK *OA* / dummy dummy *OA* 
+   71  NK *SB* MNR / dummy *SB* dummy 
+   70  SB OC *RC* / dummy dummy *RC* 
+   69  NK NK *SB* / *SB* dummy 
+   69  *CJ* CD / *CJ* dummy 
+   68  *CJ* CD / *CJ* 
+   68  *NK* CJ / *NK* dummy 
+   67  *SB* / *SB* dummy dummy 
+   67  *NK* AG / *NK* dummy 
+   65  *OP* NK / *OP* dummy dummy 
+   64  *MO* CC / *MO* 
+   64  OA MO *OC* / dummy dummy *OC* 
+   63  *NK* NK / *NK* 
+   63  NK *OA* MNR / dummy *OA* dummy 
+   62  *CJ* CJ / *CJ* dummy 
+   61  MO *PD* / dummy *PD* 
+   61  CJ *CD* / *CD* 
+   61  *--* / dummy *--* dummy 
+   59  *CJ* / dummy *CJ* 
+   58  *SB* RE / *SB* 
+   58  NK *AG* / dummy dummy *AG* 
+   56  MO *MO* / dummy *MO* 
+   56  *SVP* / *SVP* dummy 
+   55  *MO* RE / *MO* 
+   54  *MO* NK / *MO* dummy dummy dummy 
+   54  SB *--* OA / dummy *--* dummy 
+   54  NK NK *NK* AG / dummy dummy *NK* 
+   53  *NK* / dummy dummy *NK* dummy dummy 
+   53  *SBP* NK / *SBP* dummy 
+   52  NK *OA* / dummy *OA* dummy 
+   52  NK *NK* RC / dummy *NK* 
+   51  / dummy dummy dummy dummy 
+   51  *CM* / dummy *CM* dummy 
+   51  *PNC* / dummy *PNC* dummy 
+   51  MO *OC* / dummy dummy *OC* 
+   51  SB *--* OC / *--* 
+   50  *DA* / *DA* dummy 
+   50  *NK* / *NK* dummy dummy dummy dummy 
+   50  *NK* / dummy dummy dummy *NK* 
+   49  *JU* / *JU* dummy 
+   48  NK *NK* AG / dummy *NK* dummy 
+   48  *AG* / *AG* dummy 
+   48  *NG* / *NG* dummy 
+   48  SB *--* MO / dummy *--* dummy 
+   48  -- *--* -- / dummy *--* 
+   47  *SB* NK / *SB* dummy 
+   47  NK NK *NK* / *NK* dummy 
+   47  MO MO *NK* / *NK* 
+   46  *MNR* NK / dummy *MNR* 
+   46  NG *MO* / dummy *MO* 
+   46  *SBP* NK / *SBP* 
+   46  *NK* RC / *NK* 
+   45  *MO* NK / dummy *MO* dummy 
+   45  *MO* MO / *MO* 
+   44  MO OA *OC* / dummy dummy *OC* 
+   44  OC *OC* / dummy *OC* 
+   44  *--* / dummy dummy *--* 
+   43  MO *MO* NK / *MO* dummy dummy 
+   43  *CJ* NK / *CJ* dummy 
+   43  SB *OC* OC / dummy *OC* 
+   42  ** -- -- / ** dummy 
+   42  NK *SB* NK / *SB* dummy 
+   42  MO *MO* NK / dummy *MO* 
+   42  *CM* / dummy *CM* 
+   41  NK *PD* / dummy *PD* 
+   41  SB OC *RC* / dummy dummy dummy *RC* 
+   41  *EP* / *EP* dummy 
+   41  OC *--* SB / *--* dummy 
+   40  NK NK *NK* / dummy *NK* 
+   40  *--* NK / *--* dummy 
+   40  MO *MO* / *MO* dummy 
+   40  NK *SB* RC / dummy *SB* 
+   40  NK *MO* / *MO* 
+   39  SB *--* OC / *--* dummy 
+   39  MO *CJ* / *CJ* 
+   38  *SB* CD / *SB* 
+   38  RE *MO* / *MO* 
+   38  *CVC* NK / *CVC* 
+   38  *CD* CJ / dummy dummy *CD* 
+   38  *PNC* / *PNC* dummy dummy 
+   38  *OC* / dummy *OC* 
+   38  NK *AG* MNR / dummy *AG* 
+   38  NK *CJ* / *CJ* 
+   37  *--* NK / *--* dummy dummy 
+   37  MO MO *OC* / *OC* 
+   37  *OP* RE / *OP* 
+   37  PNC *SB* / *SB* 
+   37  NK *MO* / dummy *MO* 
+   37  *MO* / dummy dummy *MO* 
+   36  *CJ* / dummy *CJ* dummy 
+   36  *CM* / *CM* dummy 
+   36  *MO* NK / dummy dummy *MO* 
+   36  *OA* MNR / *OA* 
+   36  *MO* / dummy dummy *MO* dummy 
+   36  *SVP* / dummy *SVP* 
+   36  NK *OA* / *OA* dummy 
+   35  NK *NK* / dummy *NK* dummy dummy 
+   35  -- *CJ* -- / dummy *CJ* 
+   35  MO *--* SB OC / dummy *--* dummy 
+   35  SB *--* OC / dummy *--* dummy dummy 
+   35  NK *NK* MNR / *NK* 
+   35  NK *DA* / *DA* 
+   35  NK *APP* / *APP* dummy 
+   35  *PNC* / dummy *PNC* 
+   34  ** -- / ** dummy dummy dummy dummy dummy 
+   34  *--* MNR / *--* dummy 
+   34  NK NK *NK* / dummy dummy *NK* dummy 
+   34  PNC *NK* / dummy *NK* 
+   33  NK *AG* MNR / dummy *AG* dummy 
+   33  NK NK *SB* NK / *SB* dummy 
+   33  *PM* / *PM* dummy 
+   33  *SB* MNR / *SB* 
+   33  *--* APP CJ / *--* 
+   33  *MO* CD / *MO* 
+   33  *NK* NK / *NK* dummy 
+   32  *OA* MNR / *OA* dummy 
+   32  *SBP* NK / *SBP* dummy dummy 
+   32  *NK* PG / *NK* 
+   32  *--* / *--* dummy dummy 
+   32  NK *NK* PG / dummy *NK* 
+   32  NK *NK* NK / *NK* 
+   31  NK *SB* / dummy dummy *SB* 
+   31  NK NK *CJ* / *CJ* 
+   31  SB *--* MO OC / dummy *--* 
+   31  OA MO *OC* / dummy dummy dummy *OC* 
+   31  NK *AG* / *AG* dummy 
+   31  *OA* / *OA* dummy dummy 
+   31  NK *NK* AG / *NK* dummy 
+   30  NK *NK* AG MNR / dummy *NK* 
+   30  *SB* / dummy *SB* 
+   30  OA MO *OC* / dummy *OC* 
+   30  *PD* / dummy *PD* 
+   30  NK *SB* AG / dummy *SB* dummy 
+   30  *MNR* NK / *MNR* dummy dummy dummy 
+   30  SB *--* PD / dummy *--* 
+   29  NK *--* / *--* dummy 
+   29  ** -- -- -- / ** dummy dummy 
+   29  NK *NK* NK / dummy *NK* 
+   29  NK *SB* / dummy *SB* dummy dummy 
+   29  MO MO MO *OC* / dummy dummy dummy *OC* 
+   29  MO OA *OC* / dummy dummy dummy *OC* 
+   29  NK NK *NK* MNR / dummy dummy *NK* dummy 
+   29  SB *--* OA MO / dummy *--* dummy 
+   29  CM *CC* / *CC* 
+   29  *OC* OC / *OC* 
+   28  NK *NK* AG / *NK* 
+   28  -- *PAR* -- / dummy *PAR* 
+   28  MO MO *OC* / dummy dummy dummy *OC* 
+   28  *SB* RC / *SB* 
+   28  *PNC* / dummy dummy *PNC* dummy 
+   28  NK NK *NK* / dummy dummy dummy *NK* 
+   28  *PD* / *PD* dummy 
+   28  SB OC *RC* / dummy *RC* 
+   28  MO *CJ* / dummy *CJ* 
+   28  NK NK *SB* / dummy *SB* 
+   27  OC *--* SB / *--* dummy dummy 
+   27  -- *NK* / *NK* 
+   27  NK NK *SB* AG / dummy dummy *SB* 
+   27  MO OA *OC* / dummy *OC* 
+   27  CJ *CD* / *CD* dummy 
+   27  SB OA *RC* / dummy dummy dummy *RC* 
+   27  OC *--* SB / dummy *--* dummy 
+   27  MO *NK* / dummy *NK* 
+   27  NK *OA* AG / dummy *OA* dummy 
+   26  *NK* CC / *NK* 
+   26  SB *CJ* OC / dummy *CJ* 
+   26  NK NK *AG* / *AG* dummy 
+   26  SB *--* OA / dummy *--* dummy dummy 
+   25  *NG* / dummy *NG* 
+   25  SB *--* MO OA / dummy *--* 
+   25  SB *OC* OC / dummy *OC* dummy 
+   25  *MO* NK CD / *MO* dummy 
+   25  SB *--* PD / dummy *--* dummy dummy 
+   25  AC *MO* NK / *MO* dummy 
+   25  *JU* / *JU* dummy dummy 
+   25  AG *SB* / *SB* 
+   25  *AC* / *AC* dummy 
+   25  OP *OC* / dummy *OC* 
+   25  NK *NK* NK / dummy *NK* dummy 
+   25  *SB* CD / *SB* dummy 
+   25  NK *NK* / dummy dummy dummy *NK* 
+   24  SB *--* MO / dummy *--* 
+   24  SB *--* MO MO / dummy *--* dummy 
+   24  MO *MO* NK / dummy *MO* dummy 
+   24  NK *SB* NK / *SB* 
+   24  *--* / dummy dummy *--* dummy 
+   24  *NMC* / dummy *NMC* 
+   24  NK *OA* RC / dummy *OA* 
+   24  AC *MO* NK / *MO* 
+   24  MO *--* SB OC / dummy *--* 
+   24  -- *APP* -- / dummy *APP* 
+   24  NK *AG* RC / dummy *AG* 
+   24  *CD* CJ / dummy *CD* dummy 
+   23  NK *CJ* CJ / dummy *CJ* 
+   23  *NG* MO / *NG* 
+   23  SB *--* MO PD / dummy *--* dummy 
+   23  *CD* CJ / *CD* dummy dummy dummy 
+   23  NK *AG* / dummy *AG* dummy dummy 
+   23  SB *--* OP / dummy *--* dummy 
+   23  *NG* / *NG* dummy dummy 
+   23  *OA* / dummy *OA* 
+   23  CP SB OC *MO* / dummy dummy *MO* 
+   23  MO *NG* / *NG* 
+   23  *--* / dummy *--* dummy dummy 
+   23  NK NK *PD* / dummy dummy *PD* 
+   23  AG *NK* / *NK* 
+   22  NK *OA* MNR / *OA* dummy 
+   22  NK NK *SB* MNR / dummy dummy *SB* 
+   22  NK *NK* CD / dummy *NK* 
+   22  OA *OC* / *OC* 
+   22  NK NK *OA* / dummy *OA* 
+   22  NK *NK* NK / *NK* dummy 
+   22  *CJ* / *CJ* dummy dummy 
+   21  NK NK *CJ* / dummy dummy *CJ* 
+   21  NK NK *DA* / *DA* 
+   21  PNC *--* / *--* 
+   21  NK *PD* MNR / dummy *PD* 
+   21  *CJ* OC / *CJ* 
+   21  NK NK *NK* MNR / dummy dummy *NK* 
+   21  NK *PD* AG / dummy *PD* 
+   21  PD *OC* / dummy *OC* 
+   21  NK *NK* / dummy dummy *NK* dummy 
+   21  *MO* / *MO* dummy dummy dummy 
+   21  MO *PD* / dummy dummy *PD* 
+   21  NK NK *OA* MNR / dummy dummy *OA* 
+   21  NK *NK* MNR / *NK* dummy 
+   21  NK *OA* AG / *OA* 
+   21  NK NK *AG* / dummy *AG* 
+   21  NK *NK* CD / dummy *NK* dummy 
+   21  SB *--* MO OC / dummy *--* dummy 
+   21  -- *PAR* -- / dummy *PAR* dummy 
+   20  NK *--* / dummy *--* 
+   20  MO NK *SB* / dummy *SB* 
+   20  PNC *CJ* / *CJ* 
+   20  MO MO MO *OC* / dummy dummy *OC* 
+   20  NK *CJ* CD / dummy *CJ* dummy 
+   20  PNC PNC *NK* / *NK* 
+   20  NK *OA* / dummy dummy *OA* 
+   20  MO *--* SB / dummy *--* dummy dummy 
+   20  *NK* / dummy dummy dummy *NK* dummy 
+   20  *PNC* / dummy *PNC* dummy dummy 
+   20  *PAR* NK / *PAR* 
+   20  *OA* AG / *OA* 
+   20  *SB* AG / *SB* 
+   20  MO *--* SB MO / dummy *--* dummy dummy 
+   20  NK NK *SB* MNR / dummy dummy *SB* dummy 
+   19  *MNR* NK / dummy dummy *MNR* 
+   19  AMS *MO* / *MO* 
+   19  *CJ* NK CJ / *CJ* 
+   19  MO *--* SB OA / dummy *--* dummy 
+   19  MO *CJ* NK / *CJ* 
+   19  *SB* MNR / *SB* dummy 
+   19  *MNR* / *MNR* dummy 
+   19  *--* / *--* dummy dummy dummy 
+   19  NK *CJ* / dummy dummy *CJ* 
+   19  NK *CJ* / dummy *CJ* dummy 
+   19  *MO* NK / *MO* dummy dummy dummy dummy 
+   18  MO MO OA *OC* / dummy dummy dummy *OC* 
+   18  DA *OC* / dummy *OC* 
+   18  OA MO MO *OC* / dummy dummy dummy *OC* 
+   18  MO *--* SB / dummy *--* dummy 
+   18  MO *--* SB MO / dummy *--* dummy 
+   18  *MO* / dummy *MO* dummy dummy dummy 
+   18  NK *NK* RC / *NK* 
+   18  *OP* NK / *OP* dummy dummy dummy 
+   18  MO *NK* / *NK* dummy dummy 
+   18  *CP* / *CP* dummy dummy 
+   18  NK *AG* AG / dummy *AG* 
+   18  *AG* / dummy *AG* dummy 
+   18  *MO* NK CD / *MO* 
+   18  NK NK *AG* / dummy dummy *AG* dummy 
+   18  *NMC* / *NMC* dummy 
+   18  NK NK *OA* AG / dummy dummy *OA* 
+   18  NK *SB* PG / dummy *SB* 
+   17  NK NK *AG* NK / *AG* 
+   17  OC PM *OC* / dummy dummy *OC* 
+   17  OA PM *OC* / dummy dummy dummy *OC* 
+   17  *MO* CC / *MO* dummy 
+   17  NK *DA* / dummy *DA* dummy 
+   17  NK NK NK *NK* / *NK* 
+   17  *MO* CD / *MO* dummy 
+   17  NK *AG* CD / dummy *AG* dummy 
+   17  MO *OC* OC / dummy *OC* 
+   17  SB *--* OA MO / dummy *--* dummy dummy 
+   17  NK *AMS* / dummy *AMS* 
+   17  PNC *AG* / *AG* 
+   17  NK NK *SB* MNR / *SB* 
+   17  *PD* AG / *PD* 
+   17  *CD* CJ / dummy dummy *CD* dummy 
+   17  PNC *NK* / *NK* dummy dummy 
+   17  *PM* / dummy *PM* 
+   16  *OC* SB OC / *OC* 
+   16  SB *--* OA / dummy *--* 
+   16  *MO* / dummy dummy *MO* dummy dummy 
+   16  *NK* NK / *NK* dummy dummy 
+   16  MO *--* SB OA / dummy *--* dummy dummy 
+   16  *SB* NK / *SB* 
+   16  *NG* / dummy *NG* dummy 
+   16  NK *NK* / dummy *NK* dummy dummy dummy 
+   16  CD *NK* / *NK* 
+   15  PNC *SB* / *SB* dummy 
+   15  SB *--* PD / *--* dummy 
+   15  MO *NK* / dummy *NK* dummy 
+   15  NK NK *NK* RC / *NK* 
+   15  *PNC* / dummy dummy *PNC* 
+   15  NK NK *DA* / dummy dummy *DA* 
+   15  NK *SB* AG APP / dummy *SB* 
+   15  MO MO *NK* / *NK* dummy 
+   15  NK NK *OA* / *OA* dummy 
+   15  MO *MO* / dummy *MO* dummy 
+   15  NK *CJ* MNR / dummy *CJ* dummy 
+   15  NK NK *SB* / dummy dummy *SB* dummy 
+   15  ** -- -- / ** dummy dummy 
+   15  NK NK *NK* MNR / *NK* 
+   15  NK *DA* AG / dummy *DA* 
+   15  NK *CJ* AG / dummy *CJ* 
+   15  CP SB OC *RE* / dummy dummy *RE* 
+   15  MO OA MO *OC* / dummy dummy dummy *OC* 
+   15  OA MO *OC* / *OC* 
+   15  OC *--* SB / *--* 
+   14  SB *--* MO OA / dummy *--* dummy 
+   14  NK NK *NK* NK / *NK* 
+   14  SB *--* OA MO MO / dummy *--* 
+   14  *--* OC / *--* 
+   14  *OA* RC / *OA* 
+   14  NK *MO* / *MO* dummy 
+   14  NK *NK* AG / dummy *NK* dummy dummy 
+   14  *CJ* AG / *CJ* 
+   14  *CJ* OA / *CJ* dummy 
+   14  *MO* NK MO / *MO* 
+   14  NK *OA* OC / dummy *OA* 
+   14  *SB* NK PAR / *SB* dummy 
+   14  NK *NK* CD / *NK* dummy 
+   14  / dummy dummy dummy dummy dummy 
+   14  NMC *NK* / dummy *NK* dummy 
+   14  *CJ* / dummy *CJ* dummy dummy 
+   14  CP SB OC *OC* / dummy dummy *OC* 
+   14  PD *OC* / dummy dummy *OC* 
+   14  *CVC* NK / *CVC* dummy 
+   14  MO *CJ* / dummy dummy *CJ* 
+   14  NK NK *AG* NK / *AG* dummy 
+   14  *NG* / dummy dummy *NG* 
+   14  NK *NK* OC / dummy *NK* 
+   14  OA *OC* / dummy *OC* dummy 
+   13  OA PM *OC* / dummy dummy *OC* 
+   13  SB MO OC *RC* / dummy dummy *RC* 
+   13  NK *SB* CD / dummy *SB* dummy 
+   13  SB OC *OC* / dummy dummy *OC* 
+   13  *--* / dummy *--* dummy dummy dummy 
+   13  NK *AMS* / dummy *AMS* dummy 
+   13  *CJ* NK / *CJ* dummy dummy 
+   13  PNC *APP* / *APP* 
+   13  *PNC* / *PNC* dummy dummy dummy 
+   13  *NMC* / dummy dummy *NMC* 
+   13  *--* APP / *--* 
+   13  SB *--* OA SVP / dummy *--* dummy dummy 
+   13  OC *CJ* / dummy dummy *CJ* 
+   13  *CJ* / dummy dummy *CJ* 
+   13  *SB* PG / *SB* 
+   13  NK *SB* OC / dummy *SB* 
+   13  AG *OA* / *OA* 
+   13  MO *OC* / *OC* dummy 
+   13  SBP *NK* / *NK* 
+   13  PNC *NK* PAR / *NK* dummy dummy 
+   13  -- *NK* / *NK* dummy 
+   13  MO *SB* / *SB* 
+   13  NK *AG* NK / dummy *AG* 
+   13  NK NK *NK* / dummy *NK* dummy 
+   13  NK *NK* / *NK* dummy dummy 
+   13  SB *--* OC CD / dummy *--* dummy 
+   13  MO MO MO *OC* / dummy *OC* 
+   13  PNC *NK* / dummy *NK* dummy 
+   12  MO *NK* / dummy dummy *NK* dummy 
+   12  MO MO OA *OC* / dummy dummy dummy dummy *OC* 
+   12  *NK* / dummy *NK* dummy dummy dummy dummy 
+   12  MO *--* SB / dummy *--* 
+   12  MO *OA* / *OA* 
+   12  NK *AG* NK / *AG* dummy 
+   12  NK NK *SB* RC / dummy dummy *SB* 
+   12  NK NK *AG* / dummy dummy dummy *AG* 
+   12  *CJ* SB OC / *CJ* dummy 
+   12  SB OC *RC* / *RC* 
+   12  *CJ* OC / *CJ* dummy 
+   12  MO *--* SB OA / dummy *--* 
+   12  CM NK *CC* / dummy *CC* 
+   12  MO MO PM *OC* / dummy dummy dummy *OC* 
+   12  MO MO *CJ* / dummy dummy *CJ* 
+   12  MO MO *PD* / dummy dummy *PD* 
+   12  -- NK *NK* / dummy *NK* 
+   12  MO *--* SB PD / dummy *--* 
+   12  NK NK *SB* AG / *SB* 
+   12  *--* SB OC CJ / *--* 
+   12  CM *MO* NK / *MO* 
+   12  MO MO *PD* / dummy *PD* 
+   12  -- *--* -- / dummy *--* dummy 
+   12  *CJ* SB OC / *CJ* 
+   12  NK NK *NK* NK / *NK* dummy 
+   12  NK *NK* PG / dummy *NK* dummy 
+   12  NK NK NK *AG* / *AG* 
+   12  NK *OA* AG MNR / dummy *OA* 
+   12  *MO* NK AC / *MO* dummy 
+   12  NK *SB* AG MNR / dummy *SB* 
+   11  *NK* CC / *NK* dummy 
+   11  SB *--* MO MO / dummy *--* 
+   11  *OC* MO / *OC* dummy 
+   11  -- *MO* / *MO* 
+   11  *--* SB OC / *--* dummy dummy dummy 
+   11  *OA* / dummy *OA* dummy 
+   11  NK *AG* NK / *AG* 
+   11  SB OC *RC* / dummy dummy *RC* dummy 
+   11  NK NK *NK* AG / *NK* 
+   11  *NG* MO / *NG* dummy 
+   11  *OC* MO / *OC* 
+   11  DA OA *OC* / dummy dummy dummy *OC* 
+   11  -- *PAR* NK -- / *PAR* 
+   11  NK *AMS* / *AMS* 
+   11  NK *AG* / dummy dummy *AG* dummy 
+   11  NK *OA* MNR / *OA* 
+   11  SB *--* MO / *--* dummy 
+   11  -- *APP* -- / dummy *APP* dummy 
+   11  SBP *OC* / dummy *OC* 
+   11  SB *--* MO PD / dummy *--* dummy dummy 
+   11  *NK* NK / dummy *NK* 
+   11  *CVC* NK / dummy *CVC* 
+   11  *--* NK / *--* 
+   11  SB PD *RC* / dummy dummy *RC* 
+   11  SB OA *RC* / dummy dummy *RC* 
+   11  *MO* MO / *MO* dummy 
+   11  SB *--* OP / dummy *--* 
+   11  NK *SB* AG / *SB* 
+   11  NK NK *SB* NK / *SB* 
+   11  SB *OC* PD / dummy *OC* dummy 
+   11  SB *--* OA CD / dummy *--* dummy 
+   11  *CJ* MO / *CJ* dummy 
+   11  NK NK *OA* MNR / dummy dummy *OA* dummy 
+   11  NK NK *AG* AG / dummy dummy *AG* 
+   11  PD *--* SB / dummy *--* 
+   11  *SB* APP / *SB* 
+   11  SB *--* OC CJ / dummy *--* 
+   11  MO NK NK *SB* / *SB* 
+   11  *OA* CD / *OA* dummy 
+   10  OA MO MO *OC* / dummy dummy *OC* 
+   10  OA *OC* MO / dummy *OC* 
+   10  NK *CJ* MNR / dummy *CJ* 
+   10  NK *PD* / *PD* 
+   10  MO OA MO *OC* / dummy dummy *OC* 
+   10  AG *SB* NK / *SB* dummy 
+   10  *NK* AG / *NK* dummy dummy 
+   10  NK NK *OA* AG / *OA* 
+   10  SB *--* PD / *--* 
+   10  *NK* / *NK* dummy dummy dummy dummy dummy 
+   10  SB *--* MO OA SVP / dummy *--* 
+   10  PD *--* SB / dummy *--* dummy 
+   10  -- *APP* -- / *APP* dummy 
+   10  -- *PAR* -- / *PAR* dummy 
+   10  OA OP *OC* / dummy dummy *OC* 
+   10  NK NK NK *NK* / dummy dummy dummy *NK* 
+   10  PNC *APP* / *APP* dummy 
+   10  -- *NK* MNR / *NK* dummy 
+   10  MO MO OA *OC* / dummy dummy *OC* 
+   10  *SB* MO / *SB* 
+   10  NK NK *OA* / dummy dummy *OA* dummy 
+   10  NK NK *PD* AG / dummy dummy *PD* 
+   10  PD *--* SB / dummy *--* dummy dummy 
+   10  MO NK *SB* AG / dummy *SB* 
+   10  SB OC *RC* / dummy *RC* dummy 
+   10  SB *--* OA MO MO / dummy *--* dummy 
+   10  MO *MNR* NK / *MNR* 
+   10  / dummy dummy dummy dummy dummy dummy 
+   10  NMC *NK* / dummy *NK* 
+   10  NK *AG* / dummy dummy dummy *AG* 
+   10  MO *OC* MO / dummy *OC* 
+   10  *--* CJ / *--* dummy dummy 
+   10  SB *--* MO MO / dummy *--* dummy dummy 
+   10  NK *OA* PG / dummy *OA* 
+   10  OA SB MO MO *RC* / dummy dummy dummy dummy dummy *RC* 
+   10  NK *CJ* NK / *CJ* dummy 
+   10  SB *--* OA MO / dummy *--* 
+   10  CM *CC* NK / *CC* 
+   10  *NK* MNR / *NK* dummy dummy 
+   10  MO *--* OA SB MO / dummy *--* 
+   10  CM *MO* / *MO* 
+   10  SB *--* MO PD / dummy *--* 
+   10  NK NK *OA* MNR / dummy *OA* dummy 
+   10  *NK* PG / *NK* dummy 
+   10  NK NK *NK* / *NK* dummy dummy 
+   10  MO *--* SB MO OC / dummy *--* 
+   10  MO *--* SB OC / dummy *--* dummy dummy 
+   10  *MO* NK AC / *MO* 
+   10  *CJ* MO / *CJ* 
+   10  MO *--* SB MO / dummy *--* 
+   10  PNC *NK* / dummy dummy *NK* 
+   10  *PD* MO / *PD* 
+   10  SB *CJ* PD / dummy *CJ* dummy 
+    9  MO MO *PD* / dummy dummy dummy *PD* 
+    9  SB *--* / dummy *--* 
+    9  MO *--* SB MO MO / dummy *--* dummy dummy 
+    9  *NK* / dummy dummy dummy dummy *NK* 
+    9  NK NK NK *AG* / dummy dummy dummy *AG* 
+    9  MO *OC* / dummy *OC* dummy 
+    9  NK *SB* RC / dummy *SB* dummy 
+    9  NK *PD* / dummy dummy *PD* 
+    9  *PG* NK / *PG* dummy dummy dummy 
+    9  PNC *NK* CD / *NK* 
+    9  CP SB OC *OC* / dummy dummy dummy dummy *OC* 
+    9  MO *CJ* NK / *CJ* dummy 
+    9  *AG* / *AG* dummy dummy 
+    9  *JU* / dummy *JU* dummy dummy 
+    9  SB *--* MO MO OC / dummy *--* 
+    9  MO OA MO *OC* / dummy dummy dummy dummy *OC* 
+    9  JU SB *--* OC / dummy dummy *--* 
+    9  *NMC* / dummy dummy dummy dummy *NMC* 
+    9  *SB* / dummy *SB* dummy 
+    9  MO *--* SB PD / dummy *--* dummy 
+    9  *SVP* / *SVP* dummy dummy 
+    9  *SB* AG / *SB* dummy 
+    9  *PM* / dummy dummy *PM* 
+    9  *CM* / dummy *CM* dummy dummy 
+    9  MO PD *OC* / dummy dummy *OC* 
+    9  *CJ* MNR / *CJ* dummy 
+    9  NK NK NK *SB* / *SB* 
+    9  NK NK *NK* RC / dummy dummy *NK* 
+    9  -- *APP* -- / *APP* dummy dummy 
+    9  NK NK *NK* AG / dummy *NK* 
+    9  MO PM *OC* / dummy dummy dummy *OC* 
+    9  *--* MO / *--* dummy 
+    9  OC *--* EP MO / *--* dummy 
+    9  SB *--* OC / *--* dummy dummy 
+    9  *OA* RE / *OA* 
+    9  CJ *CD* / dummy *CD* 
+    9  NK *SB* RC / *SB* 
+    9  *CJ* / dummy dummy *CJ* dummy 
+    9  *NMC* / dummy *NMC* dummy 
+    9  SBP *NK* / *NK* dummy 
+    9  CP SB OC *MO* / dummy *MO* 
+    9  PNC *CJ* / *CJ* dummy 
+    9  PD *--* MO SB / dummy *--* 
+    9  NK *CJ* / *CJ* dummy 
+    9  *SB* CJ / *SB* dummy 
+    9  *CJ* MNR / *CJ* 
+    9  *CJ* OA MO / *CJ* dummy 
+    9  NK *NK* MNR MNR / dummy *NK* dummy 
+    9  NK *NK* OP / dummy *NK* dummy 
+    9  *--* SB PD / *--* 
+    9  *AG* / dummy *AG* dummy dummy 
+    9  PM *OC* / dummy *OC* 
+    9  SB *--* OA SVP / dummy *--* dummy 
+    9  MO OA PM *OC* / dummy dummy dummy dummy *OC* 
+    9  PD *OC* / *OC* 
+    9  OC *--* SB / *--* dummy dummy dummy 
+    9  *MNR* NK / dummy *MNR* dummy 
+    9  MO *--* SB OA MO / dummy *--* 
+    9  NK NK *NK* AG / *NK* dummy 
+    9  *SB* PAR / *SB* 
+    9  *PD* CD / *PD* 
+    9  NK *NK* NK MNR / *NK* dummy 
+    9  NK NK *CJ* CD / dummy dummy *CJ* dummy 
+    9  NK *OA* / dummy *OA* dummy dummy 
+    9  NK NK *OA* / dummy *OA* dummy 
+    9  SB *--* PD CJ / dummy *--* dummy 
+    9  NK *OA* OP / dummy *OA* dummy 
+    9  NK *APP* / dummy *APP* 
+    9  NK *SB* AG / *SB* dummy 
+    9  *APP* AG / *APP* 
+    9  OA MO PM *OC* / dummy dummy dummy *OC* 
+    9  *MO* NK CD / *MO* dummy dummy 
+    9  *PNC* / dummy dummy dummy *PNC* dummy 
+    9  NK *APP* AG / dummy *APP* 
+    8  NK NK *OA* AG / *OA* dummy 
+    8  *MO* MNR / *MO* 
+    8  SB OC *RC* / dummy dummy *RC* dummy dummy 
+    8  NK *NK* CJ / *NK* 
+    8  NK *SB* OP / dummy *SB* 
+    8  *CD* / *CD* dummy 
+    8  *--* SB PD / *--* dummy 
+    8  *OP* NK / dummy *OP* 
+    8  NK NK *CJ* AG / dummy dummy *CJ* 
+    8  ** -- -- -- -- -- / ** dummy dummy dummy dummy 
+    8  MO MO MO *OC* / dummy dummy dummy dummy *OC* 
+    8  NK *AMS* / dummy dummy *AMS* dummy 
+    8  NK *NK* NK / dummy dummy *NK* 
+    8  *AG* / dummy *AG* 
+    8  OC *OC* / *OC* dummy 
+    8  MO OP *OC* / dummy dummy *OC* 
+    8  ** -- -- / ** 
+    8  NK PNC *NK* / *NK* 
+    8  NK *SB* MNR MNR / dummy *SB* dummy 
+    8  *SBP* NK / dummy *SBP* 
+    8  MO OA *CJ* / dummy dummy dummy *CJ* 
+    8  CP SB OA *MO* / dummy dummy dummy dummy *MO* 
+    8  NK *NK* APP / dummy *NK* 
+    8  CM *CC* / dummy *CC* 
+    8  NK *DA* / *DA* dummy 
+    8  CM *CC* NK / *CC* dummy 
+    8  *MO* NK / dummy *MO* dummy dummy 
+    8  NK *OA* RC / *OA* 
+    8  NK NK *SB* RC / *SB* 
+    8  *CD* CJ / dummy dummy dummy *CD* 
+    8  *MO* AG / *MO* 
+    8  SB MO MO *RC* / dummy dummy dummy dummy *RC* 
+    8  *PD* OC / *PD* 
+    8  NK *CJ* CJ / *CJ* 
+    8  MO *--* MO SB / dummy *--* dummy 
+    8  MO *--* OA SB / dummy *--* 
+    8  MO *--* SB MO OA / dummy *--* 
+    8  MO OA *OC* / *OC* 
+    8  SB *CJ* OC / dummy *CJ* dummy 
+    8  *MNR* NK CD / *MNR* dummy 
+    8  ** -- / ** dummy dummy dummy dummy dummy dummy 
+    8  NK *OG* / dummy *OG* 
+    8  MO MO MO MO *OC* / dummy dummy *OC* 
+    8  *PD* CC / *PD* 
+    8  *CJ* MO OA / *CJ* 
+    8  *NK* / dummy dummy *NK* dummy dummy dummy 
+    8  SB *--* PD CJ / dummy *--* 
+    8  SB *--* SVP / dummy *--* dummy 
+    8  NK *NK* / dummy dummy dummy *NK* dummy 
+    8  MO MO MO *OC* / *OC* 
+    8  AMS *NK* / *NK* 
+    8  *PD* CD / *PD* dummy 
+    8  *SB* CC / *SB* 
+    8  CP SB MO OA *OC* / dummy dummy dummy dummy dummy *OC* 
+    8  JU SB *--* OC / dummy dummy *--* dummy 
+    8  PNC *SB* APP / *SB* 
+    8  OA PM *RE* / dummy dummy dummy *RE* 
+    8  NK *SB* / dummy dummy dummy *SB* 
+    8  JU *--* SB OC / dummy *--* 
+    8  *PM* / dummy *PM* dummy 
+    8  NK *CJ* RC / dummy *CJ* 
+    8  MO *SB* / dummy *SB* 
+    8  *MNR* NK / *MNR* dummy dummy dummy dummy 
+    8  OA *CJ* / dummy dummy *CJ* 
+    8  SB *--* OA MO / dummy *--* dummy dummy dummy 
+    8  SB MO OA *RC* / dummy dummy dummy dummy *RC* 
+    8  *UC* / dummy *UC* 
+    8  MO *NK* / dummy dummy *NK* 
+    8  DA MO *OC* / dummy dummy *OC* 
+    8  *MO* / dummy dummy dummy *MO* 
+    8  OA DA *OC* / dummy dummy *OC* 
+    8  *PD* / dummy dummy *PD* 
+    8  MO *--* SB MO MO / dummy *--* 
+    8  DA OA *OC* / dummy dummy *OC* 
+    8  NK *SB* PG / dummy *SB* dummy 
+    8  NK *SB* CD / dummy *SB* 
+    8  SB *OC* PD / dummy *OC* 
+    8  SB MO *RC* / dummy dummy dummy *RC* 
+    8  NK NK *SB* MNR / dummy *SB* dummy 
+    8  CP SB OC *MO* / dummy dummy dummy dummy *MO* 
+    8  *--* SB MO OC / *--* 
+    8  *OC* OC / *OC* dummy 
+    8  MO *--* SB MO PD / dummy *--* dummy 
+    7  NK NK *SB* / dummy *SB* dummy 
+    7  NK CD *AG* / *AG* 
+    7  NMC *NK* NK / *NK* 
+    7  *PAR* NK CJ / *PAR* 
+    7  *--* SB OC / dummy *--* 
+    7  SB OC *RC* / dummy dummy dummy *RC* dummy 
+    7  *MO* SB OC / *MO* 
+    7  AMS *NK* / *NK* dummy 
+    7  *PD* AG / *PD* dummy 
+    7  MO *PD* / *PD* dummy 
+    7  NK NK *PD* MNR / dummy dummy *PD* 
+    7  NK *APP* / dummy dummy dummy *APP* 
+    7  OC *--* SB MO / *--* dummy dummy 
+    7  NK NK *OA* RC / *OA* 
+    7  AG *SB* / *SB* dummy 
+    7  *OC* SB OC / *OC* dummy 
+    7  PNC PNC *NK* / *NK* dummy 
+    7  SB *--* MO OA MO / dummy *--* 
+    7  *JU* / *JU* dummy dummy dummy 
+    7  NK *SB* PAR / dummy *SB* 
+    7  MO *--* MO SB / dummy *--* 
+    7  *CJ* MO MO / *CJ* dummy 
+    7  MO *--* SB OC / *--* dummy 
+    7  *PNC* / dummy dummy *PNC* dummy dummy 
+    7  NK NK *AG* MNR / *AG* dummy 
+    7  PNC *SB* / dummy *SB* 
+    7  MO *--* OA SB OP / dummy *--* 
+    7  NG *MO* / *MO* 
+    7  MO MO *OC* / *OC* dummy 
+    7  NK -- *NK* AG / *NK* 
+    7  OA *--* SB MO / dummy *--* dummy 
+    7  NK NK *NK* MNR / *NK* dummy 
+    7  DA *OC* / dummy dummy *OC* 
+    7  PNC *APP* / dummy *APP* dummy 
+    7  NK *SB* APP / dummy *SB* 
+    7  AC *MO* NK / *MO* dummy dummy 
+    7  NK *OA* CD / dummy *OA* dummy 
+    7  *MNR* NK / dummy dummy dummy *MNR* 
+    7  MO *MO* RE / *MO* 
+    7  *NK* OP / *NK* dummy 
+    7  NK *--* -- / *--* 
+    7  MO *PD* / dummy *PD* dummy 
+    7  MO MO *CJ* / dummy *CJ* 
+    7  -- *CJ* CJ -- / *CJ* dummy dummy 
+    7  -- *PAR* -- / dummy *PAR* dummy dummy 
+    7  NK NK *NK* PG / *NK* 
+    7  NK *NK* PAR / dummy *NK* 
+    7  SB MO OA *RC* / dummy dummy dummy *RC* 
+    7  MO MO OA *OC* / dummy *OC* 
+    7  MO NK *SB* MNR / dummy *SB* 
+    7  NK *SB* NK / *SB* dummy dummy 
+    7  SBP MO *NK* / *NK* 
+    7  OC *--* SB MO / *--* 
+    7  SB MO *RC* / dummy dummy *RC* 
+    7  NK *SB* MNR APP / dummy *SB* 
+    7  NK *DA* RC / dummy *DA* 
+    7  *PNC* / *PNC* dummy dummy dummy dummy 
+    7  NK NK *APP* AG / dummy dummy *APP* 
+    7  MO *OC* MO / *OC* 
+    7  MO *SB* / *SB* dummy 
+    7  *--* SB MO OC / *--* dummy 
+    7  AC *MNR* NK / *MNR* dummy 
+    7  NK NK *NK* AG MNR / dummy dummy *NK* 
+    7  RE *SB* / *SB* 
+    7  *CJ* CJ / *CJ* dummy dummy 
+    7  *CJ* CD / *CJ* dummy dummy 
+    7  OC *OC* / dummy *OC* dummy 
+    7  NK *SB* AG / dummy *SB* dummy dummy 
+    7  NK *OA* NK / *OA* 
+    7  NK *CJ* CD / *CJ* dummy 
+    7  NK NK *OA* / dummy dummy dummy *OA* 
+    7  MO MO MO MO *OC* / dummy dummy dummy *OC* 
+    7  *--* NK CJ / *--* 
+    7  MO NK *SB* / dummy *SB* dummy 
+    7  SB *--* MO CD / dummy *--* dummy 
+    7  *CD* CJ / dummy *CD* dummy dummy 
+    7  NK *NK* CD / *NK* 
+    7  *NK* RC / *NK* dummy 
+    7  *NK* AG MNR / *NK* 
+    7  MO *CJ* NK / *CJ* dummy dummy 
+    7  MO *OC* CD / *OC* dummy 
+    7  *--* SB OC CD / *--* dummy 
+    7  NK -- *NK* / *NK* 
+    7  *MO* NK / dummy dummy *MO* dummy 
+    7  PNC *CJ* CD / *CJ* 
+    7  MO OA *CJ* / dummy dummy *CJ* 
+    7  NMC *NK* NK / dummy *NK* 
+    7  MO *MNR* NK / *MNR* dummy 
+    7  MO *PD* MO / *PD* 
+    6  *NK* PAR / *NK* 
+    6  *CD* CJ / *CD* dummy dummy dummy dummy 
+    6  SB OA MO *RC* / dummy dummy dummy *RC* 
+    6  NK NK *SB* AG / dummy *SB* 
+    6  OA *OC* CD / dummy *OC* dummy 
+    6  NK *APP* AG / dummy *APP* dummy 
+    6  OC *--* SB / dummy *--* 
+    6  *SB* APP / *SB* dummy 
+    6  NK NK *SB* AG / dummy dummy *SB* dummy 
+    6  OA *OC* OC / dummy *OC* 
+    6  *PAR* MO / *PAR* 
+    6  NK -- NK *NK* / dummy *NK* 
+    6  MO *--* SB MO OC / dummy *--* dummy 
+    6  NK -- NK *OA* / dummy *OA* 
+    6  OA *CJ* / dummy *CJ* 
+    6  SB OA MO *RC* / dummy dummy dummy dummy *RC* 
+    6  *MO* CJ / *MO* 
+    6  SB *--* MO MO SVP / dummy *--* dummy 
+    6  NK *CJ* MNR CJ / dummy *CJ* dummy 
+    6  OA SB MO *RC* / dummy dummy dummy *RC* 
+    6  MO NK *SB* / *SB* 
+    6  NK *AG* AG / dummy *AG* dummy 
+    6  NK *DA* MNR / dummy *DA* 
+    6  PM *OC* / dummy dummy *OC* 
+    6  *--* / dummy dummy *--* dummy dummy 
+    6  NK *SB* APP / dummy *SB* dummy 
+    6  NK *NK* NK / dummy *NK* dummy dummy 
+    6  NK NK *CJ* / dummy *CJ* 
+    6  MO PM *OC* / dummy *OC* 
+    6  CM *CC* CD / *CC* dummy 
+    6  SB *--* MO PD / *--* dummy 
+    6  OA MO PM *RE* / dummy dummy dummy dummy *RE* 
+    6  MO OA PM *OC* / dummy dummy dummy *OC* 
+    6  *NK* APP / *NK* dummy 
+    6  NK NK NK *NK* / dummy *NK* 
+    6  NK *NK* OC / *NK* 
+    6  NK *DA* / dummy *DA* dummy dummy 
+    6  MO *CJ* NK / dummy *CJ* 
+    6  MO *--* SB MO OA / dummy *--* dummy 
+    6  NK *AG* CD / dummy *AG* 
+    6  NK *OA* NK / dummy *OA* 
+    6  SB *--* MO CJ / dummy *--* dummy 
+    6  PNC *CJ* / dummy *CJ* 
+    6  MO SB *MO* / dummy dummy dummy *MO* 
+    6  -- *NK* / dummy *NK* 
+    6  NK *NK* NK / *NK* dummy dummy 
+    6  NK *NK* MNR RC / dummy *NK* 
+    6  *--* MO SB OC / *--* 
+    6  NK *CJ* NK / *CJ* 
+    6  NK *SB* MNR / *SB* dummy 
+    6  NK *SB* OP / dummy *SB* dummy 
+    6  SB *CJ* MO / dummy *CJ* 
+    6  *PNC* / dummy dummy dummy dummy *PNC* dummy 
+    6  SB *--* MO OA CD / dummy *--* 
+    6  NK *CJ* CJ / *CJ* dummy 
+    6  NK NK *NK* MNR / dummy *NK* 
+    6  -- SB *OC* OC / dummy dummy *OC* 
+    6  CP SB OC *RE* / dummy dummy dummy dummy *RE* 
+    6  NK *NK* AG RC / dummy *NK* 
+    6  DA *OC* / *OC* 
+    6  NK *AG* PG / dummy *AG* 
+    6  *CJ* NK CD / *CJ* dummy 
+    6  MO *OP* NK / *OP* 
+    6  NK NK *AG* MNR / dummy dummy *AG* 
+    6  NK *OA* AG / *OA* dummy 
+    6  MO *CJ* SB / dummy *CJ* dummy 
+    6  NG *PD* / dummy *PD* 
+    6  *SB* CJ / *SB* 
+    6  NK NK *CJ* / *CJ* dummy 
+    6  CP SB OC *RE* / dummy *RE* 
+    6  *NK* APP / *NK* 
+    6  *PD* RC / *PD* 
+    6  NK *OA* PG / dummy *OA* dummy 
+    6  *DA* / dummy *DA* 
+    6  NK *OA* APP / dummy *OA* 
+    6  NK *AMS* / *AMS* dummy 
+    6  OA MO MO *OC* / dummy dummy dummy dummy *OC* 
+    6  MO *MNR* NK / *MNR* dummy dummy 
+    6  MO OC *OC* / dummy dummy *OC* 
+    6  NK *OA* CD / *OA* dummy 
+    6  NK *SB* PG / *SB* 
+    6  AG *NK* NK / *NK* 
+    6  MO *NK* CD / *NK* dummy 
+    6  SB *--* MO OC / *--* dummy 
+    6  SB *CJ* MO / dummy *CJ* dummy 
+    6  SB *CJ* PD / dummy *CJ* 
+    6  *PG* NK / dummy *PG* dummy 
+    6  SB OC *CJ* / dummy dummy *CJ* 
+    6  NK NK NK *OA* / *OA* 
+    6  MO SB *MO* / dummy dummy *MO* 
+    6  MO OP *OC* / *OC* 
+    6  MO MO OP *OC* / dummy *OC* 
+    6  NK NK *AG* MNR / dummy dummy *AG* dummy 
+    6  CP SB OC *SB* / dummy dummy *SB* 
+    6  PM *MO* / dummy *MO* 
+    6  *--* SB OC CJ / *--* dummy 
+    6  *OA* OC / *OA* 
+    6  MO OA MO *OC* / dummy *OC* 
+    6  NK *AG* NK / dummy *AG* dummy 
+    6  PNC *SB* MNR / *SB* 
+    6  SB *--* MO CD / dummy *--* 
+    6  NK *OA* NK / *OA* dummy 
+    6  MO *--* OA SB / dummy *--* dummy 
+    6  *NK* AG / *NK* dummy dummy dummy 
+    6  *CJ* / *CJ* dummy dummy dummy 
+    6  NMC NMC NMC NMC NMC *NK* / dummy *NK* dummy 
+    6  ** -- -- -- / ** dummy dummy dummy 
+    6  SB *--* MO MO PD / dummy *--* dummy 
+    6  *CJ* PG / *CJ* 
+    6  *MNR* / *MNR* dummy dummy 
+    6  SB *--* NG OC / dummy *--* dummy 
+    6  SB *--* SVP OC / dummy *--* dummy 
+    6  RE *MO* / *MO* dummy 
+    6  SB *--* MO OA / dummy *--* dummy dummy 
+    6  NK NK *SB* AG / *SB* dummy 
+    6  *OC* OA / *OC* 
+    6  MO *--* SB OC / *--* 
+    6  -- *PAR* -- / *PAR* dummy dummy 
+    6  SB MO MO *RC* / dummy dummy dummy *RC* 
+    6  *SB* / dummy *SB* dummy dummy 
+    6  *UC* / *UC* dummy 
+    6  OP *OC* / *OC* 
+    6  SB *CJ* OA / dummy *CJ* dummy 
+    6  *NK* / dummy *NK* dummy dummy dummy dummy dummy 
+    6  NK *NK* / *NK* dummy dummy dummy 
+    6  CP SB OC *RE* / dummy dummy dummy *RE* 
+    6  *MO* NK CJ / *MO* 
+    6  NK *SB* CD / *SB* dummy 
+    6  *SB* RE / *SB* dummy 
+    6  MO *OC* OC / *OC* 
+    6  NK NK *OA* MNR / *OA* 
+    6  *--* PD / *--* 
+    6  CP SB OC *OC* / *OC* 
+    6  NK *CJ* CJ / dummy *CJ* dummy dummy 
+    6  NK NK *OA* RC / dummy dummy *OA* 
+    6  NK *CJ* AG / dummy *CJ* dummy 
+    6  NK *SB* PAR / dummy *SB* dummy 
+    6  *EP* / *EP* dummy dummy 
+    6  SB *--* OA / *--* dummy 
+    6  *MO* NK MO / *MO* dummy 
+    5  OP *OC* / dummy dummy *OC* 
+    5  *AC* / dummy *AC* 
+    5  SB *--* MO MO / *--* dummy 
+    5  SB *--* MO MO OA / dummy *--* dummy 
+    5  NK *OA* / dummy dummy dummy *OA* 
+    5  NK *AG* / dummy *AG* dummy dummy dummy 
+    5  NK *SB* MNR / *SB* 
+    5  *MO* NK CD / *MO* dummy dummy dummy 
+    5  SB *--* OA SVP / dummy *--* 
+    5  *PD* CC / *PD* dummy 
+    5  -- NK *NK* / dummy *NK* dummy 
+    5  *MO* MO / dummy *MO* 
+    5  CP SB OC *MO* / *MO* 
+    5  *PG* NK / dummy *PG* 
+    5  SB *--* MO MO / *--* 
+    5  CM *MO* / *MO* dummy 
+    5  PNC *CJ* CJ / *CJ* 
+    5  SB OP *RC* / dummy dummy *RC* 
+    5  MO *--* SB SVP / dummy *--* 
+    5  NK *DA* MNR / dummy *DA* dummy 
+    5  AMS *PD* / *PD* 
+    5  *APP* CJ / *APP* dummy 
+    5  *NK* NK PAR / *NK* dummy 
+    5  CP SB OC *OC* / dummy *OC* 
+    5  NK NK *SB* / dummy dummy dummy *SB* 
+    5  SB OA MO *RC* / dummy dummy dummy *RC* dummy 
+    5  PNC *APP* / dummy dummy *APP* 
+    5  ** -- -- -- / ** dummy 
+    5  MO PM *OC* / dummy dummy *OC* 
+    5  NK *SB* CD / *SB* 
+    5  MO *NK* CJ / *NK* 
+    5  MO *--* / dummy *--* 
+    5  MO NMC *NK* / *NK* dummy 
+    5  NMC NMC NMC *NK* / dummy *NK* dummy 
+    5  MO *NK* / *NK* dummy dummy dummy 
+    5  MO *--* EP MO OA / dummy *--* 
+    5  NK NK *AG* PG / *AG* 
+    5  NK NK *SB* MNR / *SB* dummy 
+    5  *APP* NK / *APP* 
+    5  MO *MO* NK / *MO* dummy dummy dummy 
+    5  *MO* CC / *MO* dummy dummy 
+    5  SB OA *RC* CD / dummy dummy *RC* dummy 
+    5  SB *--* OC CD / dummy *--* 
+    5  OC *--* SB MO / *--* dummy 
+    5  OA *--* SB MO MO / dummy *--* 
+    5  -- *PAR* -- / dummy dummy *PAR* 
+    5  NK *NK* PG MNR / dummy *NK* 
+    5  *--* OC / dummy *--* 
+    5  *--* / dummy dummy dummy *--* 
+    5  CD *NK* / *NK* dummy 
+    5  MO NK *OA* / *OA* 
+    5  MO *NG* / dummy *NG* dummy 
+    5  MO *MO* CD / *MO* 
+    5  NK *NK* MNR RC / *NK* 
+    5  OA MO *OC* MO / dummy dummy *OC* 
+    5  OC *--* SB SVP / *--* 
+    5  SB *OC* OC / *OC* 
+    5  MO OA OP *OC* / dummy dummy dummy *OC* 
+    5  NK NK *APP* / dummy dummy *APP* 
+    5  *JU* / dummy *JU* dummy 
+    5  CM *CC* / *CC* dummy 
+    5  MO OA *OC* / dummy dummy *OC* dummy 
+    5  *APP* MNR / *APP* dummy 
+    5  MO *NK* / dummy dummy *NK* dummy dummy 
+    5  CP SB PD *OC* / dummy dummy dummy *OC* 
+    5  NK NK *SB* MNR / dummy *SB* 
+    5  *NK* MNR MNR / *NK* 
+    5  *OA* AG / *OA* dummy 
+    5  *NK* PG / *NK* dummy dummy 
+    5  NK *NK* CJ / dummy *NK* 
+    5  MO *NK* / dummy dummy dummy *NK* 
+    5  *NK* NK MNR / *NK* dummy 
+    5  MO *SB* RC / *SB* 
+    5  NK *NK* AG APP / dummy *NK* 
+    5  MO PD *OC* / dummy *OC* 
+    5  *NK* / *NK* CJ 
+    5  MO *CJ* / *CJ* dummy 
+    5  NMC *NK* / *NK* 
+    5  OA MO PM *OC* / dummy dummy dummy dummy *OC* 
+    5  NK *NK* MNR MNR / dummy *NK* 
+    5  MO *--* SB MO OP / dummy *--* 
+    5  *MNR* RE / *MNR* 
+    5  DA *NK* / *NK* 
+    5  CP OA PM *MO* / dummy dummy dummy dummy *MO* 
+    5  SB *--* MO / dummy *--* dummy dummy 
+    5  PNC *OA* / *OA* 
+    5  MO OP *OC* / dummy *OC* 
+    5  NK *PAR* / dummy *PAR* dummy 
+    5  *DA* / *DA* dummy dummy 
+    5  MO MO *MO* NK / *MO* 
+    5  MO SB OA *RC* / dummy dummy dummy dummy *RC* 
+    5  *CJ* OA MO / *CJ* dummy dummy 
+    5  MO NG *OC* / dummy dummy dummy *OC* 
+    5  *JU* / dummy *JU* dummy dummy dummy 
+    5  OA MO PM *OC* / dummy dummy *OC* 
+    5  NK NK *PD* RC / dummy dummy *PD* 
+    5  SB *--* MO MO OC / dummy *--* dummy 
+    5  MO *--* SB MO MO / *--* 
+    5  MO SBP *NK* / *NK* 
+    5  *--* SB NG OC / *--* 
+    5  *MO* PAR / *MO* dummy 
+    5  NK NK *NK* AG / dummy dummy *NK* dummy 
+    5  NK NK PNC *NK* / *NK* 
+    5  *OA* CD / *OA* 
+    5  *PAR* CJ / *PAR* dummy 
+    5  *--* MNR / *--* 
+    5  NK *OA* OP / dummy *OA* 
+    5  PNC *NK* APP / *NK* 
+    5  NK NK *NK* MNR / dummy *NK* dummy 
+    5  NK NK *AG* RC / *AG* 
+    5  MO *--* SB OA SVP / dummy *--* 
+    5  -- *APP* -- / dummy *APP* dummy dummy 
+    5  MO NK *OA* MNR / dummy *OA* 
+    5  JU SB *--* PD / dummy dummy *--* 
+    5  *CP* / dummy *CP* dummy 
+    5  PNC *AG* / *AG* dummy 
+    5  MO *OP* NK / *OP* dummy 
+    5  MO *--* SB OA / *--* dummy 
+    5  OA *OC* CD / *OC* dummy 
+    5  *MO* NK / dummy dummy dummy *MO* 
+    5  CP SB OC *MO* / dummy dummy dummy *MO* 
+    5  CP SB OC *OC* / dummy dummy dummy *OC* 
+    5  *SVP* / *SVP* dummy dummy dummy 
+    5  NK *--* MNR / dummy *--* dummy 
+    5  NK *NK* RC / dummy *NK* dummy 
+    5  SB *--* CJ / dummy *--* 
+    5  *SB* CD MNR / *SB* dummy 
+    5  *MO* MO / *MO* dummy dummy 
+    5  NK NK *AG* AG / *AG* 
+    5  MO MO *OC* OC / dummy *OC* 
+    5  OA MO PM *OC* / dummy *OC* 
+    5  SB *--* MO MO MO / dummy *--* 
+    5  MO NMC *NK* / dummy *NK* 
+    5  *CJ* RC / *CJ* 
+    5  *NK* / dummy dummy *NK* dummy dummy dummy dummy 
+    5  MO SB *RC* / dummy dummy dummy *RC* 
+    5  NK *MO* / dummy *MO* dummy 
+    5  NMC NMC *NK* / dummy *NK* 
+    5  *CJ* OA / *CJ* 
+    5  NK NK *OA* PG / *OA* dummy 
+    5  -- *NK* AG / *NK* 
+    5  SB *--* MO OP / dummy *--* 
+    5  NK -- *AG* / *AG* 
+    5  MO *--* SB PD / dummy *--* dummy dummy 
+    5  MO DA *OC* / dummy *OC* 
+    5  CP SB MO OA *MO* / dummy dummy dummy dummy dummy *MO* 
+    5  SB *--* OA OP / dummy *--* 
+    5  NK NK *NK* / dummy dummy *NK* dummy dummy 
+    5  NK NK *NK* CD / dummy dummy *NK* dummy 
+    5  *OC* CD / *OC* dummy 
+    5  *CJ* MO OA / *CJ* dummy 
+    5  NK NK *AG* RC / dummy dummy *AG* 
+    5  NK *NK* CD AG / dummy *NK* 
+    5  MO *MO* NK CD / dummy *MO* 
+    5  DA *OC* OC / dummy *OC* 
+    5  *--* / dummy *--* dummy dummy dummy dummy 
+    5  NK NK *SB* PAR / *SB* 
+    5  *SB* PG / *SB* dummy 
+    5  NK *DA* / dummy dummy *DA* 
+    5  NK *APP* / dummy dummy *APP* 
+    5  *OA* APP / *OA* 
+    5  CP OC PM *MO* / dummy dummy dummy *MO* 
+    5  NG *MO* / dummy dummy *MO* dummy 
+
+
+  5 focus words where most of the errors occur:
+
+             | any  | head | dep  | both
+  -----------+------+------+------+------
+  der / DET  | 2384 |  586 | 2384 |  586
+  die / DET  | 2146 |  450 | 2146 |  450
+  und / CONJ | 1812 | 1173 | 1812 | 1173
+  in / ADP   | 1501 | 1006 | 1501 | 1006
+  den / DET  |  993 |  249 |  993 |  249
+  -----------+------+------+------+------
+
+
+  one-token preceeding contexts where most of the errors occur:
+
+  CPOS     | any  | head | dep  | both  ||  word               | any  | head | dep  | both
+  ---------+------+------+------+-------++---------------------+------+------+------+-----
+  NOUN     | 18994 | 12091 | 18994 | 12091  ||  , / .              | 4977 | 2695 | 4971 | 2689
+  DET      | 9638 | 6176 | 9634 | 6172  ||  der / DET          | 2382 | 1792 | 2381 | 1791
+  ADP      | 9289 | 5399 | 9289 | 5399  ||  die / DET          | 2142 | 1232 | 2140 | 1230
+  ---------+------+------+------+-------++---------------------+------+------+------+-----
+
+
+  two-token preceeding contexts where most of the errors occur:
+
+  CPOS     | any  | head | dep  | both  ||  word               | any  | head | dep  | both
+  ---------+------+------+------+-------++---------------------+------+------+------+-----
+  DET+NOUN | 5462 | 3368 | 5462 | 3368  ||  .S + Die / DET     |  498 |  150 |  498 |  150
+  .S+.S    | 4990 | 1820 | 4990 | 1820  ||  , / . + die / PRON |  337 |  161 |  337 |  161
+  NOUN+ADP | 4251 | 2364 | 4251 | 2364  ||  , / . + daß / CONJ |  259 |   99 |  259 |   99
+  ---------+------+------+------+-------++---------------------+------+------+------+-----
+
+
+  one-token following contexts where most of the errors occur:
+
+  CPOS     | any  | head | dep  | both  ||  word               | any  | head | dep  | both
+  ---------+------+------+------+-------++---------------------+------+------+------+-----
+  NOUN     | 22147 | 10599 | 22147 | 10599  ||  , / .              | 4791 | 3745 | 4791 | 3745
+  .        | 11989 | 9478 | 11982 | 9471  ||  . / .              | 4020 | 3403 | 4018 | 3401
+  VERB     | 9685 | 4616 | 9685 | 4616  ||  der / DET          | 2305 | 1425 | 2305 | 1425
+  ---------+------+------+------+-------++---------------------+------+------+------+-----
+
+
+  two-token following contexts where most of the errors occur:
+
+  CPOS     | any  | head | dep  | both  ||  word               | any  | head | dep  | both
+  ---------+------+------+------+-------++---------------------+------+------+------+-----
+  DET+NOUN | 5452 | 3299 | 5452 | 3299  ||  . / . + .E         | 3898 | 3312 | 3896 | 3310
+  NOUN+.   | 4817 | 2050 | 4817 | 2050  ||  , / . + die / PRON |  333 |  278 |  333 |  278
+  ADJ+NOUN | 4735 | 3025 | 4735 | 3025  ||  , / . + daß / CONJ |  257 |  157 |  257 |  157
+  ---------+------+------+------+-------++---------------------+------+------+------+-----
+
+
+  Sentence with the highest number of word errors:
+   Sentence 760 line 14181, 77 head errors, 117 dependency errors, 117 word errors
+
+
+  Sentence with the highest number of head errors:
+   Sentence 2290 line 44552, 82 head errors, 108 dependency errors, 108 word errors
+
+
+  Sentence with the highest number of dependency errors:
+   Sentence 760 line 14181, 77 head errors, 117 dependency errors, 117 word errors
+
+
+  Specific errors, 10 most frequent errors:
+  =========================================
+
+   1. correct head (after the focus word), dependency "dummy" instead of "NK" : 10460 times
+  -----+------+------+------+------+------+------
+    Before    |    Focus    |   After     | Count
+  CPOS   word | CPOS   word | CPOS   word |
+  -----+------+------+------+------+------+------
+       |      |      |      | NOUN |      | 8970
+       |      | DET  |      |      |      | 7239
+       |      | DET  |      | NOUN |      | 5935
+  ADP  |      |      |      |      |      | 2795
+       |      | ADJ  |      |      |      | 2604
+       |      | ADJ  |      | NOUN |      | 2475
+  ADP  |      |      |      | NOUN |      | 2378
+  -----+------+------+------+------+------+------
+
+   2. head two words before the correct head (before the focus word), dependency "dummy" instead of "NK" : 8440 times
+  -----+------+------+------+------+------+------
+    Before    |    Focus    |   After     | Count
+  CPOS   word | CPOS   word | CPOS   word |
+  -----+------+------+------+------+------+------
+       |      | NOUN |      |      |      | 7671
+  ADP  |      |      |      |      |      | 2977
+  ADP  |      | NOUN |      |      |      | 2483
+       |      |      |      | VERB |      | 2265
+       |      | NOUN |      | VERB |      | 2110
+  DET  |      |      |      |      |      | 1762
+  DET  |      | NOUN |      |      |      | 1746
+  -----+------+------+------+------+------+------
+
+   3. correct head (after the focus word), dependency "dummy" instead of "MO" : 4174 times
+  -----+------+------+------+------+------+------
+    Before    |    Focus    |   After     | Count
+  CPOS   word | CPOS   word | CPOS   word |
+  -----+------+------+------+------+------+------
+       |      | ADP  |      |      |      | 1847
+       |      | ADV  |      |      |      | 1252
+       |      |      |      | VERB |      | 1023
+       |      |      |      | NOUN |      | 896
+  NOUN |      |      |      |      |      | 831
+       |      | ADP  |      | NOUN |      | 802
+  .S   | .S   |      |      |      |      | 753
+  -----+------+------+------+------+------+------
+
+   4. head two words before the correct head (before the focus word instead ofbefore the focus word), dependency "dummy" instead of "NK" : 4104 times
+  -----+------+------+------+------+------+------
+    Before    |    Focus    |   After     | Count
+  CPOS   word | CPOS   word | CPOS   word |
+  -----+------+------+------+------+------+------
+       |      |      |      | NOUN |      | 3987
+       |      | ADJ  |      |      |      | 2303
+       |      | ADJ  |      | NOUN |      | 2301
+  DET  |      |      |      |      |      | 1137
+  DET  |      |      |      | NOUN |      | 1120
+       |      | PRON |      |      |      | 1119
+       |      | PRON |      | NOUN |      | 1104
+  -----+------+------+------+------+------+------
+
+   5. correct head (after the focus word), dependency "dummy" instead of "SB" : 3419 times
+  -----+------+------+------+------+------+------
+    Before    |    Focus    |   After     | Count
+  CPOS   word | CPOS   word | CPOS   word |
+  -----+------+------+------+------+------+------
+       |      | NOUN |      |      |      | 2106
+       |      |      |      | VERB |      | 1796
+       |      | PRON |      |      |      | 1287
+       |      | NOUN |      | VERB |      | 1141
+  DET  |      |      |      |      |      | 848
+  DET  |      | NOUN |      |      |      | 830
+  .S   | .S   |      |      |      |      | 718
+  -----+------+------+------+------+------+------
+
+   6. head two words before the correct head (before the focus word), dependency "dummy" instead of "CJ" : 3017 times
+  -----+------+------+------+------+------+------
+    Before    |    Focus    |   After     | Count
+  CPOS   word | CPOS   word | CPOS   word |
+  -----+------+------+------+------+------+------
+       |      | NOUN |      |      |      | 1670
+  CONJ |      |      |      |      |      | 1055
+       |      |      |      | .    |      | 962
+  CONJ | und  |      |      |      |      | 887
+       |      | VERB |      |      |      | 733
+  .    |      |      |      |      |      | 596
+       |      | NOUN |      | .    |      | 583
+  -----+------+------+------+------+------+------
+
+   7. head two words before the correct head (after the focus word), dependency "dummy" instead of "MO" : 2456 times
+  -----+------+------+------+------+------+------
+    Before    |    Focus    |   After     | Count
+  CPOS   word | CPOS   word | CPOS   word |
+  -----+------+------+------+------+------+------
+       |      | ADP  |      |      |      | 1565
+       |      |      |      | DET  |      | 1018
+       |      | ADP  |      | DET  |      | 865
+  NOUN |      |      |      |      |      | 588
+       |      | ADV  |      |      |      | 467
+  NOUN |      | ADP  |      |      |      | 452
+  .S   | .S   |      |      |      |      | 449
+  -----+------+------+------+------+------+------
+
+   8. correct head (0), dependency "dummy" instead of "--" : 2412 times
+  -----+------+------+------+------+------+------
+    Before    |    Focus    |   After     | Count
+  CPOS   word | CPOS   word | CPOS   word |
+  -----+------+------+------+------+------+------
+       |      | VERB |      |      |      | 1809
+  NOUN |      |      |      |      |      | 1001
+  NOUN |      | VERB |      |      |      | 967
+       |      | NOUN |      |      |      | 464
+       |      | VERB |      | PRON |      | 445
+  .S   | .S   |      |      |      |      | 422
+       |      |      |      | DET  |      | 409
+  -----+------+------+------+------+------+------
+
+   9. head two words before the correct head (before the focus word), dependency "dummy" instead of "MO" : 2389 times
+  -----+------+------+------+------+------+------
+    Before    |    Focus    |   After     | Count
+  CPOS   word | CPOS   word | CPOS   word |
+  -----+------+------+------+------+------+------
+       |      | ADP  |      |      |      | 1013
+       |      | ADV  |      |      |      | 759
+  NOUN |      |      |      |      |      | 627
+  VERB |      |      |      |      |      | 612
+       |      |      |      | NOUN |      | 486
+       |      | ADP  |      | NOUN |      | 431
+       |      |      |      | .    |      | 414
+  -----+------+------+------+------+------+------
+
+  10. head two words before the correct head (before the focus word), dependency "dummy" instead of "AG" : 1869 times
+  -----+------+------+------+------+------+------
+    Before    |    Focus    |   After     | Count
+  CPOS   word | CPOS   word | CPOS   word |
+  -----+------+------+------+------+------+------
+       |      | NOUN |      |      |      | 1855
+  DET  |      |      |      |      |      | 984
+  DET  |      | NOUN |      |      |      | 976
+  DET  | der  |      |      |      |      | 623
+  DET  | der  | NOUN |      |      |      | 619
+  ADJ  |      | NOUN |      |      |      | 568
+       |      |      |      | .    |      | 546
+  -----+------+------+------+------+------+------
+
+
+  Local contexts involved in several frequent errors:
+  ===================================================
+
+
+  -----+------+------+------+------+------
+    Before    |    Focus    |   After     
+  CPOS   word | CPOS   word | CPOS   word 
+  -----+------+------+------+------+------
+       |      | NOUN |      |      |      
+  -----+------+------+------+------+------
+   2. head two words before the correct head (before the focus word), dependency "dummy" instead of "NK" : 7671 times
+   5. correct head (after the focus word), dependency "dummy" instead of "SB" : 2106 times
+  10. head two words before the correct head (before the focus word), dependency "dummy" instead of "AG" : 1855 times
+   6. head two words before the correct head (before the focus word), dependency "dummy" instead of "CJ" : 1670 times
+   8. correct head (0), dependency "dummy" instead of "--" : 464 times
+
+  -----+------+------+------+------+------
+    Before    |    Focus    |   After     
+  CPOS   word | CPOS   word | CPOS   word 
+  -----+------+------+------+------+------
+  DET  |      |      |      |      |      
+  -----+------+------+------+------+------
+   2. head two words before the correct head (before the focus word), dependency "dummy" instead of "NK" : 1762 times
+   4. head two words before the correct head (before the focus word instead ofbefore the focus word), dependency "dummy" instead of "NK" : 1137 times
+  10. head two words before the correct head (before the focus word), dependency "dummy" instead of "AG" : 984 times
+   5. correct head (after the focus word), dependency "dummy" instead of "SB" : 848 times
+
+  -----+------+------+------+------+------
+    Before    |    Focus    |   After     
+  CPOS   word | CPOS   word | CPOS   word 
+  -----+------+------+------+------+------
+  NOUN |      |      |      |      |      
+  -----+------+------+------+------+------
+   8. correct head (0), dependency "dummy" instead of "--" : 1001 times
+   3. correct head (after the focus word), dependency "dummy" instead of "MO" : 831 times
+   9. head two words before the correct head (before the focus word), dependency "dummy" instead of "MO" : 627 times
+   7. head two words before the correct head (after the focus word), dependency "dummy" instead of "MO" : 588 times
+
+  -----+------+------+------+------+------
+    Before    |    Focus    |   After     
+  CPOS   word | CPOS   word | CPOS   word 
+  -----+------+------+------+------+------
+  .S   | .S   |      |      |      |      
+  -----+------+------+------+------+------
+   3. correct head (after the focus word), dependency "dummy" instead of "MO" : 753 times
+   5. correct head (after the focus word), dependency "dummy" instead of "SB" : 718 times
+   7. head two words before the correct head (after the focus word), dependency "dummy" instead of "MO" : 449 times
+   8. correct head (0), dependency "dummy" instead of "--" : 422 times
+
+  -----+------+------+------+------+------
+    Before    |    Focus    |   After     
+  CPOS   word | CPOS   word | CPOS   word 
+  -----+------+------+------+------+------
+       |      |      |      | NOUN |      
+  -----+------+------+------+------+------
+   1. correct head (after the focus word), dependency "dummy" instead of "NK" : 8970 times
+   4. head two words before the correct head (before the focus word instead ofbefore the focus word), dependency "dummy" instead of "NK" : 3987 times
+   3. correct head (after the focus word), dependency "dummy" instead of "MO" : 896 times
+   9. head two words before the correct head (before the focus word), dependency "dummy" instead of "MO" : 486 times
+
+  -----+------+------+------+------+------
+    Before    |    Focus    |   After     
+  CPOS   word | CPOS   word | CPOS   word 
+  -----+------+------+------+------+------
+  DET  |      | NOUN |      |      |      
+  -----+------+------+------+------+------
+   2. head two words before the correct head (before the focus word), dependency "dummy" instead of "NK" : 1746 times
+  10. head two words before the correct head (before the focus word), dependency "dummy" instead of "AG" : 976 times
+   5. correct head (after the focus word), dependency "dummy" instead of "SB" : 830 times
+
+  -----+------+------+------+------+------
+    Before    |    Focus    |   After     
+  CPOS   word | CPOS   word | CPOS   word 
+  -----+------+------+------+------+------
+       |      | ADP  |      |      |      
+  -----+------+------+------+------+------
+   3. correct head (after the focus word), dependency "dummy" instead of "MO" : 1847 times
+   7. head two words before the correct head (after the focus word), dependency "dummy" instead of "MO" : 1565 times
+   9. head two words before the correct head (before the focus word), dependency "dummy" instead of "MO" : 1013 times
+
+  -----+------+------+------+------+------
+    Before    |    Focus    |   After     
+  CPOS   word | CPOS   word | CPOS   word 
+  -----+------+------+------+------+------
+       |      | ADV  |      |      |      
+  -----+------+------+------+------+------
+   3. correct head (after the focus word), dependency "dummy" instead of "MO" : 1252 times
+   9. head two words before the correct head (before the focus word), dependency "dummy" instead of "MO" : 759 times
+   7. head two words before the correct head (after the focus word), dependency "dummy" instead of "MO" : 467 times
+
+  -----+------+------+------+------+------
+    Before    |    Focus    |   After     
+  CPOS   word | CPOS   word | CPOS   word 
+  -----+------+------+------+------+------
+       |      |      |      | VERB |      
+  -----+------+------+------+------+------
+   2. head two words before the correct head (before the focus word), dependency "dummy" instead of "NK" : 2265 times
+   5. correct head (after the focus word), dependency "dummy" instead of "SB" : 1796 times
+   3. correct head (after the focus word), dependency "dummy" instead of "MO" : 1023 times
+
+  -----+------+------+------+------+------
+    Before    |    Focus    |   After     
+  CPOS   word | CPOS   word | CPOS   word 
+  -----+------+------+------+------+------
+       |      |      |      | .    |      
+  -----+------+------+------+------+------
+   6. head two words before the correct head (before the focus word), dependency "dummy" instead of "CJ" : 962 times
+  10. head two words before the correct head (before the focus word), dependency "dummy" instead of "AG" : 546 times
+   9. head two words before the correct head (before the focus word), dependency "dummy" instead of "MO" : 414 times
+
+  -----+------+------+------+------+------
+    Before    |    Focus    |   After     
+  CPOS   word | CPOS   word | CPOS   word 
+  -----+------+------+------+------+------
+       |      | NOUN |      | VERB |      
+  -----+------+------+------+------+------
+   2. head two words before the correct head (before the focus word), dependency "dummy" instead of "NK" : 2110 times
+   5. correct head (after the focus word), dependency "dummy" instead of "SB" : 1141 times
+
+  -----+------+------+------+------+------
+    Before    |    Focus    |   After     
+  CPOS   word | CPOS   word | CPOS   word 
+  -----+------+------+------+------+------
+       |      | ADJ  |      | NOUN |      
+  -----+------+------+------+------+------
+   1. correct head (after the focus word), dependency "dummy" instead of "NK" : 2475 times
+   4. head two words before the correct head (before the focus word instead ofbefore the focus word), dependency "dummy" instead of "NK" : 2301 times
+
+  -----+------+------+------+------+------
+    Before    |    Focus    |   After     
+  CPOS   word | CPOS   word | CPOS   word 
+  -----+------+------+------+------+------
+       |      | ADJ  |      |      |      
+  -----+------+------+------+------+------
+   1. correct head (after the focus word), dependency "dummy" instead of "NK" : 2604 times
+   4. head two words before the correct head (before the focus word instead ofbefore the focus word), dependency "dummy" instead of "NK" : 2303 times
+
+  -----+------+------+------+------+------
+    Before    |    Focus    |   After     
+  CPOS   word | CPOS   word | CPOS   word 
+  -----+------+------+------+------+------
+       |      | VERB |      |      |      
+  -----+------+------+------+------+------
+   8. correct head (0), dependency "dummy" instead of "--" : 1809 times
+   6. head two words before the correct head (before the focus word), dependency "dummy" instead of "CJ" : 733 times
+
+  -----+------+------+------+------+------
+    Before    |    Focus    |   After     
+  CPOS   word | CPOS   word | CPOS   word 
+  -----+------+------+------+------+------
+       |      | PRON |      |      |      
+  -----+------+------+------+------+------
+   5. correct head (after the focus word), dependency "dummy" instead of "SB" : 1287 times
+   4. head two words before the correct head (before the focus word instead ofbefore the focus word), dependency "dummy" instead of "NK" : 1119 times
+
+  -----+------+------+------+------+------
+    Before    |    Focus    |   After     
+  CPOS   word | CPOS   word | CPOS   word 
+  -----+------+------+------+------+------
+       |      | ADP  |      | NOUN |      
+  -----+------+------+------+------+------
+   3. correct head (after the focus word), dependency "dummy" instead of "MO" : 802 times
+   9. head two words before the correct head (before the focus word), dependency "dummy" instead of "MO" : 431 times
+
+  -----+------+------+------+------+------
+    Before    |    Focus    |   After     
+  CPOS   word | CPOS   word | CPOS   word 
+  -----+------+------+------+------+------
+       |      |      |      | DET  |      
+  -----+------+------+------+------+------
+   7. head two words before the correct head (after the focus word), dependency "dummy" instead of "MO" : 1018 times
+   8. correct head (0), dependency "dummy" instead of "--" : 409 times
+
+  -----+------+------+------+------+------
+    Before    |    Focus    |   After     
+  CPOS   word | CPOS   word | CPOS   word 
+  -----+------+------+------+------+------
+  ADP  |      |      |      |      |      
+  -----+------+------+------+------+------
+   2. head two words before the correct head (before the focus word), dependency "dummy" instead of "NK" : 2977 times
+   1. correct head (after the focus word), dependency "dummy" instead of "NK" : 2795 times
+

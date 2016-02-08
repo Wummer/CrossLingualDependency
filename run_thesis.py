@@ -92,7 +92,7 @@ if RBG == False:
         """
 
 if RBG == True:
-    for i in xrange(len(train)):
+    for i in xrange(1):#len(train)):
 
         print train[i]
         T = Thesis(train[i], test[i], DATA=DATASET, SIZE=SIZE,

@@ -1,0 +1,603 @@
+  Labeled   attachment score: 6708 / 10786 * 100 = 62.19 %
+  Unlabeled attachment score: 8315 / 10786 * 100 = 77.09 %
+  Label accuracy score:       7735 / 10786 * 100 = 71.71 %
+
+  ================================================================================
+
+  Evaluation of the results in UD/bg_vsrest--mvec25-win1retro-nivre.conllu
+  vs. gold standard Original/bg-UD.conllu:
+
+  Legend: '.S' - the beginning of a sentence, '.E' - the end of a sentence
+
+  Number of non-scoring tokens: 1609
+
+  The overall accuracy and its distribution over CPOSTAGs
+
+  -----------+-------+-------+------+-------+------+-------+-------
+  Accuracy   | words | right |   %  | right |   %  | both  |   %
+             |       | head  |      |  dep  |      | right |
+  -----------+-------+-------+------+-------+------+-------+-------
+  total      | 10786 |  8315 |  77% |  7735 |  72% |  6708 |  62%
+  -----------+-------+-------+------+-------+------+-------+-------
+  NOUN       |  2721 |  2007 |  74% |  1943 |  71% |  1507 |  55%
+  ADP        |  1750 |  1684 |  96% |  1706 |  97% |  1664 |  95%
+  VERB       |  1555 |  1058 |  68% |   934 |  60% |   877 |  56%
+  ADJ        |  1097 |   951 |  87% |   955 |  87% |   932 |  85%
+  PRON       |   780 |   588 |  75% |   259 |  33% |   220 |  28%
+  PROPN      |   661 |   358 |  54% |   347 |  52% |   288 |  44%
+  ADV        |   532 |   371 |  70% |   431 |  81% |   304 |  57%
+  PART       |   360 |   283 |  79% |     1 |   0% |     1 |   0%
+  CONJ       |   357 |   217 |  61% |   351 |  98% |   215 |  60%
+  PUNCT      |   215 |   139 |  65% |   215 | 100% |   139 |  65%
+  DET        |   188 |   170 |  90% |   170 |  90% |   166 |  88%
+  AUX        |   173 |   167 |  97% |   171 |  99% |   165 |  95%
+  NUM        |   165 |   145 |  88% |   142 |  86% |   137 |  83%
+  SCONJ      |   119 |    90 |  76% |   106 |  89% |    90 |  76%
+  INTJ       |   113 |    87 |  77% |     4 |   4% |     3 |   3%
+  -----------+-------+-------+------+-------+------+-------+-------
+
+
+  The overall error rate and its distribution over CPOSTAGs
+
+  -----------+-------+-------+------+-------+------+-------+-------
+  Error      | words | head  |   %  |  dep  |   %  | both  |   %
+  Rate       |       | err   |      |  err  |      | wrong |
+  -----------+-------+-------+------+-------+------+-------+-------
+  total      | 10786 |  2471 |  23% |  3051 |  28% |  1444 |  13%
+  -----------+-------+-------+------+-------+------+-------+-------
+  NOUN       |  2721 |   714 |  26% |   778 |  29% |   278 |  10%
+  ADP        |  1750 |    66 |   4% |    44 |   3% |    24 |   1%
+  VERB       |  1555 |   497 |  32% |   621 |  40% |   440 |  28%
+  ADJ        |  1097 |   146 |  13% |   142 |  13% |   123 |  11%
+  PRON       |   780 |   192 |  25% |   521 |  67% |   153 |  20%
+  PROPN      |   661 |   303 |  46% |   314 |  48% |   244 |  37%
+  ADV        |   532 |   161 |  30% |   101 |  19% |    34 |   6%
+  PART       |   360 |    77 |  21% |   359 | 100% |    77 |  21%
+  CONJ       |   357 |   140 |  39% |     6 |   2% |     4 |   1%
+  PUNCT      |   215 |    76 |  35% |     0 |   0% |     0 |   0%
+  DET        |   188 |    18 |  10% |    18 |  10% |    14 |   7%
+  AUX        |   173 |     6 |   3% |     2 |   1% |     0 |   0%
+  NUM        |   165 |    20 |  12% |    23 |  14% |    15 |   9%
+  SCONJ      |   119 |    29 |  24% |    13 |  11% |    13 |  11%
+  INTJ       |   113 |    26 |  23% |   109 |  96% |    25 |  22%
+  -----------+-------+-------+------+-------+------+-------+-------
+
+
+  Precision and recall of DEPREL
+
+  ----------------+------+---------+--------+------------+---------------
+  deprel          | gold | correct | system | recall (%) | precision (%) 
+  ----------------+------+---------+--------+------------+---------------
+  acl             |  106 |      47 |     47 |      44.34 |        100.00
+  advcl           |  119 |      25 |     25 |      21.01 |        100.00
+  advmod          |  437 |     426 |    426 |      97.48 |        100.00
+  amod            |  949 |     915 |    915 |      96.42 |        100.00
+  appos           |    3 |       2 |      2 |      66.67 |        100.00
+  aux             |  459 |     171 |    171 |      37.25 |        100.00
+  case            | 1813 |    1702 |   1702 |      93.88 |        100.00
+  cc              |  357 |     351 |    351 |      98.32 |        100.00
+  ccomp           |  221 |      51 |     51 |      23.08 |        100.00
+  conj            |  423 |     340 |    340 |      80.38 |        100.00
+  cop             |  220 |       0 |      0 |       0.00 |           NaN
+  csubj           |   38 |       0 |      0 |       0.00 |           NaN
+  csubjpass       |    2 |       0 |      0 |       0.00 |           NaN
+  det             |  170 |     170 |    170 |     100.00 |        100.00
+  discourse       |   56 |       4 |      4 |       7.14 |        100.00
+  dobj            |  550 |     320 |    320 |      58.18 |        100.00
+  dummy           |    0 |       0 |   3051 |        NaN |          0.00
+  expl            |  246 |       0 |      0 |       0.00 |           NaN
+  iobj            |  257 |       0 |      0 |       0.00 |           NaN
+  mark            |  136 |     106 |    106 |      77.94 |        100.00
+  mwe             |   75 |       4 |      4 |       5.33 |        100.00
+  name            |  103 |      12 |     12 |      11.65 |        100.00
+  neg             |  106 |       1 |      1 |       0.94 |        100.00
+  nmod            | 1719 |    1440 |   1440 |      83.77 |        100.00
+  nsubj           |  852 |     575 |    575 |      67.49 |        100.00
+  nsubjpass       |   80 |       6 |      6 |       7.50 |        100.00
+  nummod          |  132 |     128 |    128 |      96.97 |        100.00
+  punct           |  215 |     215 |    215 |     100.00 |        100.00
+  root            |  941 |     724 |    724 |      76.94 |        100.00
+  vocative        |    1 |       0 |      0 |       0.00 |           NaN
+
+
+  Precision and recall of DEPREL + ATTACHMENT
+
+  ----------------+------+---------+--------+------------+---------------
+  deprel          | gold | correct | system | recall (%) | precision (%) 
+  ----------------+------+---------+--------+------------+---------------
+  acl             |  106 |      29 |     47 |      27.36 |         61.70
+  advcl           |  119 |      18 |     25 |      15.13 |         72.00
+  advmod          |  437 |     299 |    426 |      68.42 |         70.19
+  amod            |  949 |     898 |    915 |      94.63 |         98.14
+  appos           |    3 |       1 |      2 |      33.33 |         50.00
+  aux             |  459 |     165 |    171 |      35.95 |         96.49
+  case            | 1813 |    1660 |   1702 |      91.56 |         97.53
+  cc              |  357 |     215 |    351 |      60.22 |         61.25
+  ccomp           |  221 |      50 |     51 |      22.62 |         98.04
+  conj            |  423 |     244 |    340 |      57.68 |         71.76
+  cop             |  220 |       0 |      0 |       0.00 |           NaN
+  csubj           |   38 |       0 |      0 |       0.00 |           NaN
+  csubjpass       |    2 |       0 |      0 |       0.00 |           NaN
+  det             |  170 |     166 |    170 |      97.65 |         97.65
+  discourse       |   56 |       3 |      4 |       5.36 |         75.00
+  dobj            |  550 |     308 |    320 |      56.00 |         96.25
+  dummy           |    0 |       0 |   3051 |        NaN |          0.00
+  expl            |  246 |       0 |      0 |       0.00 |           NaN
+  iobj            |  257 |       0 |      0 |       0.00 |           NaN
+  mark            |  136 |      90 |    106 |      66.18 |         84.91
+  mwe             |   75 |       4 |      4 |       5.33 |        100.00
+  name            |  103 |       6 |     12 |       5.83 |         50.00
+  neg             |  106 |       1 |      1 |       0.94 |        100.00
+  nmod            | 1719 |    1053 |   1440 |      61.26 |         73.12
+  nsubj           |  852 |     502 |    575 |      58.92 |         87.30
+  nsubjpass       |   80 |       6 |      6 |       7.50 |        100.00
+  nummod          |  132 |     127 |    128 |      96.21 |         99.22
+  punct           |  215 |     139 |    215 |      64.65 |         64.65
+  root            |  941 |     724 |    724 |      76.94 |        100.00
+  vocative        |    1 |       0 |      0 |       0.00 |           NaN
+
+
+  Precision and recall of binned HEAD direction
+
+  ----------------+------+---------+--------+------------+---------------
+  direction       | gold | correct | system | recall (%) | precision (%) 
+  ----------------+------+---------+--------+------------+---------------
+  to_root         |  941 |     727 |    883 |      77.26 |         82.33
+  left            | 4281 |    4152 |   4309 |      96.99 |         96.36
+  right           | 5564 |    5231 |   5437 |      94.02 |         96.21
+  self            |    0 |       0 |    157 |        NaN |          0.00
+
+
+  Precision and recall of binned HEAD distance
+
+  ----------------+------+---------+--------+------------+---------------
+  distance        | gold | correct | system | recall (%) | precision (%) 
+  ----------------+------+---------+--------+------------+---------------
+  to_root         |  941 |     727 |    883 |      77.26 |         82.33
+  1               | 4619 |    4038 |   4321 |      87.42 |         93.45
+  2               | 2608 |    2222 |   2308 |      85.20 |         96.27
+  3-6             | 2046 |    1668 |   2508 |      81.52 |         66.51
+  7-...           |  572 |     514 |    766 |      89.86 |         67.10
+
+
+  Frame confusions (gold versus system; *...* marks the head token)
+
+  184  ** root / ** 
+  121  / dummy 
+   49  *case* / *case* dummy 
+   48  case *nmod* nmod / case *nmod* 
+   37  case *nmod* / dummy case *nmod* 
+   33  *amod* / *amod* dummy 
+   31  *nmod* name / *nmod* 
+   24  *cop* / dummy *cop* 
+   24  / nmod 
+   24  / dummy dummy 
+   23  *case* / *case* nmod 
+   23  *mark* mwe / *mark* 
+   22  *dobj* / dummy *dobj* 
+   22  nsubj *root* cop / nsubj *root* dummy 
+   21  *nsubj* nmod / *nsubj* 
+   20  *advmod* / *advmod* dummy 
+   20  *case* / *case* punct 
+   19  case *nmod* case / case *nmod* 
+   19  case *nmod* / case *nmod* nmod 
+   19  case *nmod* / case *nmod* dummy 
+   18  case amod *nmod* / dummy case amod *nmod* 
+   18  nsubj *root* cop / *root* 
+   18  ** root / ** dummy root 
+   17  *conj* nmod / *conj* 
+   17  *nsubj* nmod nmod / *nsubj* nmod 
+   17  *nmod* / dummy *nmod* 
+   17  ccomp *root* nsubj / *root* dummy 
+   17  ** root / ** root dummy 
+   17  *nmod* nmod / *nmod* 
+   16  *aux* / *aux* dummy 
+   15  case amod *nmod* nmod / case amod *nmod* 
+   15  nsubj *root* ccomp / nsubj *root* dummy 
+   15  case punct *nmod* punct / case punct *nmod* 
+   14  *nsubj* / dummy *nsubj* 
+   14  *aux* / *aux* nmod 
+   14  *root* dobj / *root* 
+   13  *nsubj* acl / *nsubj* 
+   13  *case* / dummy *case* 
+   13  *name* / dummy *name* 
+   12  *aux* / dummy *aux* 
+   12  case *nmod* nmod nmod / case *nmod* nmod 
+   12  *advmod* / dummy *advmod* 
+   12  *nsubj* / *nsubj* dummy 
+   12  *advmod* / advmod *advmod* 
+   12  aux *ccomp* dobj / dummy *ccomp* dobj 
+   11  ** root / ** dummy 
+   11  cop *root* nsubj / dummy *root* dummy 
+   11  *cc* / cc *cc* 
+   11  *root* ccomp / *root* 
+   10  *advmod* nmod / *advmod* 
+   10  case *nmod* nmod nmod / case *nmod* 
+   10  case *nmod* / *nmod* 
+   10  *nsubj* case / *nsubj* 
+   10  case amod *nmod* / case amod *nmod* dummy 
+   10  *conj* / dummy *conj* 
+   10  case *nmod* nmod / case *nmod* dummy 
+    9  *dobj* / *dobj* dummy 
+    9  nsubj *root* dobj nmod / nsubj *root* dobj 
+    9  *nsubj* / *nsubj* nmod 
+    9  *cc* / *cc* dummy 
+    9  *amod* case / *amod* 
+    9  aux *ccomp* / dummy *ccomp* 
+    8  *dobj* case / *dobj* 
+    8  / advmod 
+    8  *punct* / dummy *punct* 
+    8  case *nmod* acl / case *nmod* 
+    8  case amod *nmod* / case amod *nmod* nmod 
+    8  nsubj expl *root* iobj / nsubj dummy *root* dummy 
+    8  *dobj* acl / *dobj* 
+    8  *amod* / dummy *amod* 
+    7  mark *advcl* dobj / dummy *advcl* dobj 
+    7  *conj* ccomp / *conj* dummy 
+    7  aux dobj *ccomp* / dummy dummy *ccomp* 
+    7  ** root / ** root nmod 
+    7  amod *nsubj* nmod / amod *nsubj* 
+    7  *amod* / *amod* nmod 
+    7  nsubj *root* dobj / *root* dobj 
+    7  *punct* / *punct* punct 
+    7  ** root / ** advmod root 
+    6  nsubj *root* cop / *root* dummy 
+    6  *case* / advmod *case* 
+    6  case *iobj* case / case *iobj* 
+    6  case *nmod* case nmod / case *nmod* 
+    6  nsubjpass aux *root* iobj / dummy aux *root* dummy 
+    6  *dobj* nmod / *dobj* 
+    6  *punct* / *punct* dummy 
+    6  advmod *advmod* / *advmod* 
+    6  *name* / *name* dummy 
+    6  *nsubj* nmod / *nsubj* dummy 
+    6  / dummy dummy dummy nmod 
+    6  *cc* / *cc* nmod 
+    5  *amod* case / *amod* dummy 
+    5  ** root / ** dummy dummy 
+    5  mark nsubj *ccomp* cop / *ccomp* 
+    5  amod *nsubj* / amod *nsubj* dummy 
+    5  *amod* nmod nmod / *amod* nmod 
+    5  *case* / cc *case* 
+    5  aux *ccomp* iobj / dummy *ccomp* dummy 
+    5  aux expl *ccomp* iobj / dummy dummy *ccomp* dummy 
+    5  *case* mwe mwe / *case* 
+    5  *conj* / *conj* nmod 
+    5  amod *nsubj* / dummy amod *nsubj* 
+    5  *nmod* name / dummy *nmod* 
+    5  amod *dobj* / dummy amod *dobj* 
+    5  *nsubj* name / *nsubj* 
+    5  case det *nmod* / dummy case det *nmod* 
+    5  *nsubj* nmod / *nsubj* nmod nmod 
+    5  *amod* case / case dummy *amod* 
+    5  *case* / *case* advmod 
+    5  case det *nmod* / case det *nmod* dummy 
+    5  *amod* case / dummy *amod* 
+    5  *nmod* advmod / *nmod* 
+    5  *nmod* / *nmod* dummy 
+    5  *cc* / *cc* dummy dummy 
+    5  *punct* / punct *punct* punct 
+    5  nsubj *conj* dobj / *conj* 
+
+
+  5 focus words where most of the errors occur:
+
+            | any  | head | dep  | both
+  ----------+------+------+------+------
+  се / PRON |  211 |   24 |  211 |   24
+  да / PART |  198 |   27 |  198 |   27
+  и / CONJ  |  114 |  112 |    6 |    4
+  не / INTJ |   97 |   21 |   97 |   21
+  ще / PART |   92 |   10 |   92 |   10
+  ----------+------+------+------+------
+
+
+  one-token preceeding contexts where most of the errors occur:
+
+  CPOS       | any  | head | dep  | both  ||  word                       | any  | head | dep  | both
+  -----------+------+------+------+-------++-----------------------------+------+------+------+-----
+  VERB       |  543 |  253 |  457 |  167  ||  , / PUNCT                  |  236 |  175 |  152 |   91
+  ADP        |  505 |  322 |  282 |   99  ||  да / PART                  |  173 |   38 |  173 |   38
+  NOUN       |  501 |  357 |  370 |  226  ||  на / ADP                   |   95 |   74 |   36 |   15
+  -----------+------+------+------+-------++-----------------------------+------+------+------+-----
+
+
+  two-token preceeding contexts where most of the errors occur:
+
+  CPOS       | any  | head | dep  | both  ||  word                       | any  | head | dep  | both
+  -----------+------+------+------+-------++-----------------------------+------+------+------+-----
+  .S+.S      |  282 |  205 |  214 |  137  ||  да / PART + се / PRON      |   32 |    7 |   31 |    6
+  NOUN+PUNCT |  169 |  113 |  116 |   60  ||  , / PUNCT + че / SCONJ     |   31 |   13 |   24 |    6
+  ADP+ADJ    |  163 |  116 |   77 |   30  ||  .S + - / PUNCT             |   22 |   11 |   17 |    6
+  -----------+------+------+------+-------++-----------------------------+------+------+------+-----
+
+
+  one-token following contexts where most of the errors occur:
+
+  CPOS       | any  | head | dep  | both  ||  word                       | any  | head | dep  | both
+  -----------+------+------+------+-------++-----------------------------+------+------+------+-----
+  PUNCT      |  865 |  538 |  640 |  313  ||  . / PUNCT                  |  380 |  229 |  271 |  120
+  ADP        |  774 |  520 |  493 |  239  ||  , / PUNCT                  |  307 |  184 |  236 |  113
+  VERB       |  757 |  226 |  677 |  146  ||  на / ADP                   |  305 |  189 |  187 |   71
+  -----------+------+------+------+-------++-----------------------------+------+------+------+-----
+
+
+  two-token following contexts where most of the errors occur:
+
+  CPOS       | any  | head | dep  | both  ||  word                       | any  | head | dep  | both
+  -----------+------+------+------+-------++-----------------------------+------+------+------+-----
+  PUNCT+.E   |  418 |  255 |  296 |  133  ||  . / PUNCT + .E             |  379 |  229 |  270 |  120
+  ADP+NOUN   |  382 |  257 |  234 |  109  ||  , / PUNCT + че / SCONJ     |   29 |   14 |   25 |   10
+  ADP+ADJ    |  196 |  130 |  128 |   62  ||  &quot; / PUNCT + . / PUNCT |   19 |   11 |   13 |    5
+             |      |      |      |       ||  ? / PUNCT + .E             |   19 |   12 |   16 |    9
+  -----------+------+------+------+-------++-----------------------------+------+------+------+-----
+
+
+  Sentence with the highest number of word errors:
+   Sentence 295 line 3577, 10 head errors, 15 dependency errors, 21 word errors
+
+
+  Sentence with the highest number of head errors:
+   Sentence 170 line 1877, 16 head errors, 9 dependency errors, 17 word errors
+
+
+  Sentence with the highest number of dependency errors:
+   Sentence 295 line 3577, 10 head errors, 15 dependency errors, 21 word errors
+
+
+  Specific errors, 10 most frequent errors:
+  =========================================
+
+   1. head two words before the correct head (before the focus word), correct dependency : 668 times
+  ------+------+-------+------+-------+------+------
+    Before     |    Focus     |   After      | Count
+  CPOS    word | CPOS    word | CPOS    word |
+  ------+------+-------+------+-------+------+------
+        |      | NOUN  |      |       |      | 346
+        |      |       |      | ADP   |      | 204
+        |      |       |      | PUNCT |      | 201
+  ADP   |      |       |      |       |      | 189
+        |      | NOUN  |      | ADP   |      | 148
+  ADP   |      | NOUN  |      |       |      | 146
+  ADJ   |      |       |      |       |      | 111
+  ------+------+-------+------+-------+------+------
+
+   2. correct head (after the focus word), dependency "dummy" instead of "aux" : 265 times
+  ------+------+-------+------+-------+------+------
+    Before     |    Focus     |   After      | Count
+  CPOS    word | CPOS    word | CPOS    word |
+  ------+------+-------+------+-------+------+------
+        |      | PART  |      |       |      | 264
+        |      | PART  | да   |       |      | 171
+        |      |       |      | VERB  |      | 151
+        |      | PART  |      | VERB  |      | 150
+  VERB  |      | PART  |      |       |      | 108
+  VERB  |      | PART  | да   |       |      | 107
+        |      | PART  | да   | VERB  |      |  94
+  ------+------+-------+------+-------+------+------
+
+   3. correct head (after the focus word), dependency "dummy" instead of "expl" : 195 times
+  ------+------+-------+------+-------+------+------
+    Before     |    Focus     |   After      | Count
+  CPOS    word | CPOS    word | CPOS    word |
+  ------+------+-------+------+-------+------+------
+        |      | PRON  |      |       |      | 195
+        |      | PRON  |      | VERB  |      | 191
+        |      | PRON  | се   |       |      | 170
+        |      | PRON  | се   | VERB  |      | 168
+  PART  |      | PRON  |      | VERB  |      |  59
+  PART  |      | PRON  | се   | VERB  |      |  51
+  NOUN  |      | PRON  |      |       |      |  43
+  NOUN  |      | PRON  | се   |       |      |  41
+  NOUN  |      | PRON  |      | VERB  |      |  41
+  ------+------+-------+------+-------+------+------
+
+   4. correct head (before the focus word), dependency "dummy" instead of "iobj" : 187 times
+  ------+------+-------+------+-------+------+------
+    Before     |    Focus     |   After      | Count
+  CPOS    word | CPOS    word | CPOS    word |
+  ------+------+-------+------+-------+------+------
+        |      | NOUN  |      |       |      | 153
+  ADP   |      |       |      |       |      | 123
+  ADP   |      | NOUN  |      |       |      |  94
+        |      |       |      | PUNCT |      |  90
+        |      | NOUN  |      | PUNCT |      |  73
+        |      |       |      | ADP   |      |  55
+  ADP   |      |       |      | PUNCT |      |  53
+  ------+------+-------+------+-------+------+------
+
+   5. head two words before the correct head (before the focus word), dependency "dummy" instead of "nmod" : 176 times
+  ------+------+-------+------+-------+------+------
+    Before     |    Focus     |   After      | Count
+  CPOS    word | CPOS    word | CPOS    word |
+  ------+------+-------+------+-------+------+------
+        |      | PROPN |      |       |      |  96
+        |      | NOUN  |      |       |      |  68
+        |      | PROPN |      | PROPN |      |  66
+        |      |       |      | PUNCT |      |  64
+  NOUN  |      |       |      |       |      |  52
+  NOUN  |      | PROPN |      |       |      |  48
+  NOUN  |      | PROPN |      | PROPN |      |  46
+  ------+------+-------+------+-------+------+------
+
+   6. head two words before the correct head (after the focus word), correct dependency : 135 times
+  ------+------+-------+------+-------+------+------
+    Before     |    Focus     |   After      | Count
+  CPOS    word | CPOS    word | CPOS    word |
+  ------+------+-------+------+-------+------+------
+        |      |       |      | ADP   |      |  43
+        |      | NOUN  |      |       |      |  41
+  .S    | .S   |       |      |       |      |  38
+        |      | ADV   |      |       |      |  31
+        |      |       |      | ADJ   |      |  26
+        |      | NOUN  |      | ADP   |      |  22
+        |      |       |      | NOUN  |      |  21
+  PUNCT |      |       |      |       |      |  21
+        |      | ADP   |      |       |      |  21
+  ------+------+-------+------+-------+------+------
+
+   7. correct head (before the focus word), dependency "dummy" instead of "cop" : 119 times
+  ------+------+-------+------+-------+------+------
+    Before     |    Focus     |   After      | Count
+  CPOS    word | CPOS    word | CPOS    word |
+  ------+------+-------+------+-------+------+------
+        |      | NOUN  |      |       |      |  91
+  VERB  |      |       |      |       |      |  48
+        |      |       |      | ADP   |      |  48
+        |      | NOUN  |      | ADP   |      |  45
+        |      |       |      | PUNCT |      |  44
+  ADJ   |      | NOUN  |      |       |      |  37
+  VERB  | е    |       |      |       |      |  33
+  ------+------+-------+------+-------+------+------
+
+   8. correct head (before the focus word), dependency "dummy" instead of "nsubj" : 105 times
+  ------+------+-------+------+-------+------+------
+    Before     |    Focus     |   After      | Count
+  CPOS    word | CPOS    word | CPOS    word |
+  ------+------+-------+------+-------+------+------
+        |      | NOUN  |      |       |      |  92
+  VERB  |      |       |      |       |      |  64
+  VERB  |      | NOUN  |      |       |      |  56
+        |      |       |      | ADP   |      |  49
+        |      |       |      | PUNCT |      |  48
+        |      | NOUN  |      | ADP   |      |  47
+        |      | NOUN  |      | PUNCT |      |  37
+  ------+------+-------+------+-------+------+------
+
+   9. correct head (before the focus word), dependency "dummy" instead of "ccomp" : 99 times
+  ------+------+-------+------+-------+------+------
+    Before     |    Focus     |   After      | Count
+  CPOS    word | CPOS    word | CPOS    word |
+  ------+------+-------+------+-------+------+------
+        |      | VERB  |      |       |      |  99
+  PART  |      | VERB  |      |       |      |  52
+  PART  | да   | VERB  |      |       |      |  51
+  PRON  |      | VERB  |      |       |      |  36
+        |      | VERB  |      | PUNCT |      |  26
+        |      | VERB  |      | ADP   |      |  25
+  PRON  | се   | VERB  |      |       |      |  20
+        |      | VERB  |      | NOUN  |      |  18
+  ------+------+-------+------+-------+------+------
+
+  10. head two words before the correct head (before the focus word), dependency "dummy" instead of "case" : 91 times
+  ------+------+-------+------+-------+------+------
+    Before     |    Focus     |   After      | Count
+  CPOS    word | CPOS    word | CPOS    word |
+  ------+------+-------+------+-------+------+------
+        |      | PRON  |      |       |      |  91
+  NOUN  |      | PRON  |      |       |      |  70
+        |      | PRON  | си   |       |      |  39
+  NOUN  |      | PRON  | си   |       |      |  27
+        |      | PRON  | му   |       |      |  26
+        |      | PRON  |      | PUNCT |      |  25
+  NOUN  |      | PRON  |      | PUNCT |      |  23
+  NOUN  |      | PRON  | му   |       |      |  22
+  ------+------+-------+------+-------+------+------
+
+
+  Local contexts involved in several frequent errors:
+  ===================================================
+
+
+  ------+------+-------+------+-------+------
+    Before     |    Focus     |   After      
+  CPOS    word | CPOS    word | CPOS    word 
+  ------+------+-------+------+-------+------
+        |      | NOUN  |      |       |      
+  ------+------+-------+------+-------+------
+   1. head two words before the correct head (before the focus word), correct dependency : 346 times
+   4. correct head (before the focus word), dependency "dummy" instead of "iobj" : 153 times
+   8. correct head (before the focus word), dependency "dummy" instead of "nsubj" : 92 times
+   7. correct head (before the focus word), dependency "dummy" instead of "cop" : 91 times
+   5. head two words before the correct head (before the focus word), dependency "dummy" instead of "nmod" : 68 times
+   6. head two words before the correct head (after the focus word), correct dependency : 41 times
+
+  ------+------+-------+------+-------+------
+    Before     |    Focus     |   After      
+  CPOS    word | CPOS    word | CPOS    word 
+  ------+------+-------+------+-------+------
+        |      |       |      | ADP   |      
+  ------+------+-------+------+-------+------
+   1. head two words before the correct head (before the focus word), correct dependency : 204 times
+   4. correct head (before the focus word), dependency "dummy" instead of "iobj" : 55 times
+   8. correct head (before the focus word), dependency "dummy" instead of "nsubj" : 49 times
+   7. correct head (before the focus word), dependency "dummy" instead of "cop" : 48 times
+   6. head two words before the correct head (after the focus word), correct dependency : 43 times
+
+  ------+------+-------+------+-------+------
+    Before     |    Focus     |   After      
+  CPOS    word | CPOS    word | CPOS    word 
+  ------+------+-------+------+-------+------
+        |      |       |      | PUNCT |      
+  ------+------+-------+------+-------+------
+   1. head two words before the correct head (before the focus word), correct dependency : 201 times
+   4. correct head (before the focus word), dependency "dummy" instead of "iobj" : 90 times
+   5. head two words before the correct head (before the focus word), dependency "dummy" instead of "nmod" : 64 times
+   8. correct head (before the focus word), dependency "dummy" instead of "nsubj" : 48 times
+   7. correct head (before the focus word), dependency "dummy" instead of "cop" : 44 times
+
+  ------+------+-------+------+-------+------
+    Before     |    Focus     |   After      
+  CPOS    word | CPOS    word | CPOS    word 
+  ------+------+-------+------+-------+------
+        |      | NOUN  |      | ADP   |      
+  ------+------+-------+------+-------+------
+   1. head two words before the correct head (before the focus word), correct dependency : 148 times
+   8. correct head (before the focus word), dependency "dummy" instead of "nsubj" : 47 times
+   7. correct head (before the focus word), dependency "dummy" instead of "cop" : 45 times
+   6. head two words before the correct head (after the focus word), correct dependency : 22 times
+
+  ------+------+-------+------+-------+------
+    Before     |    Focus     |   After      
+  CPOS    word | CPOS    word | CPOS    word 
+  ------+------+-------+------+-------+------
+  ADP   |      | NOUN  |      |       |      
+  ------+------+-------+------+-------+------
+   1. head two words before the correct head (before the focus word), correct dependency : 146 times
+   4. correct head (before the focus word), dependency "dummy" instead of "iobj" : 94 times
+
+  ------+------+-------+------+-------+------
+    Before     |    Focus     |   After      
+  CPOS    word | CPOS    word | CPOS    word 
+  ------+------+-------+------+-------+------
+  VERB  |      |       |      |       |      
+  ------+------+-------+------+-------+------
+   8. correct head (before the focus word), dependency "dummy" instead of "nsubj" : 64 times
+   7. correct head (before the focus word), dependency "dummy" instead of "cop" : 48 times
+
+  ------+------+-------+------+-------+------
+    Before     |    Focus     |   After      
+  CPOS    word | CPOS    word | CPOS    word 
+  ------+------+-------+------+-------+------
+        |      | NOUN  |      | PUNCT |      
+  ------+------+-------+------+-------+------
+   4. correct head (before the focus word), dependency "dummy" instead of "iobj" : 73 times
+   8. correct head (before the focus word), dependency "dummy" instead of "nsubj" : 37 times
+
+  ------+------+-------+------+-------+------
+    Before     |    Focus     |   After      
+  CPOS    word | CPOS    word | CPOS    word 
+  ------+------+-------+------+-------+------
+        |      | PRON  |      |       |      
+  ------+------+-------+------+-------+------
+   3. correct head (after the focus word), dependency "dummy" instead of "expl" : 195 times
+  10. head two words before the correct head (before the focus word), dependency "dummy" instead of "case" : 91 times
+
+  ------+------+-------+------+-------+------
+    Before     |    Focus     |   After      
+  CPOS    word | CPOS    word | CPOS    word 
+  ------+------+-------+------+-------+------
+  NOUN  |      | PRON  |      |       |      
+  ------+------+-------+------+-------+------
+  10. head two words before the correct head (before the focus word), dependency "dummy" instead of "case" : 70 times
+   3. correct head (after the focus word), dependency "dummy" instead of "expl" : 43 times
+
+  ------+------+-------+------+-------+------
+    Before     |    Focus     |   After      
+  CPOS    word | CPOS    word | CPOS    word 
+  ------+------+-------+------+-------+------
+  ADP   |      |       |      |       |      
+  ------+------+-------+------+-------+------
+   1. head two words before the correct head (before the focus word), correct dependency : 189 times
+   4. correct head (before the focus word), dependency "dummy" instead of "iobj" : 123 times
+

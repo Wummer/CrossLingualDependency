@@ -74,7 +74,9 @@ if __name__ == '__main__':
                     word = "!YEAR"
                 else:
                     word = "!DIGITS"
-
+            elif parts[6] == "_" and parts[7] == "_" and parts[3] == "_" and parts[4] == "_":
+                continue
+            
             sent['word'].append(word)
             sent['cpos'].append(parts[3])
             sent['pos'].append(parts[4])
@@ -94,8 +96,7 @@ if __name__ == '__main__':
                         repeat = False
                     sent['dependency'].append(to_append)
 
-                elif parts[6] == "_" and parts[7] == "_" and parts[3] == "_" and parts[4] == "_":
-                    continue
+
                     
                 else:
                     print "the other case"

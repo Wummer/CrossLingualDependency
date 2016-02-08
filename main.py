@@ -45,7 +45,8 @@ class Thesis:
     """
 
     def __init__(self, train_file, test_file, DATA="UD",
-                 METHOD="mvectors", LOADMODEL=False, P=[0.2, 0.8], SIZE=25, WINDOW=2, WORKERS=4,RETRO=True,ITER=10,RBG=False):
+                 METHOD="mvectors", LOADMODEL=False, P=[0.2, 0.8],
+                 SIZE=25, WINDOW=2, WORKERS=4, RETRO=True, ITER=10, RBG=False):
         
         """ 
         Here we 'initialize' all relevant variables and run the methods. 
@@ -143,7 +144,11 @@ class Thesis:
 
                     if tline[4] != "_":
                         if self.DATA == "UD":
-                            t_fpos.append(tline[4].replace("|", "+").split(",")[0])
+                            try:
+                                t_fpos.append(tline[4].replace("|", "+").split(",")[0]+"+"+tline[14])
+                            except IndexError:
+                                lang = file.split("/")[-1][:2]
+                                t_fpos.append(tline[4].replace("|", "+").split(",")[0]+"+"+lang)
                         else:
                             try:
                                 t_fpos.append(tline[4].replace("|", "+")+"+"+tline[14])
@@ -238,26 +243,28 @@ class Thesis:
     def create_WALSvectors(self,pos, vector):
         lang = pos[-2:]
         WALSvector = [pos]+vector.tolist()
+        
         WALS = {"bg": ["81a_svo", "85a_prep", "86a_none", "87a_an"],
-        "hr": ["81a_svo", "85a_prep", "86a_none", "87a_an"],
-        "cs": ["81a_svo", "85a_prep", "86a_gn", "87a_an"],
-        "da": ["81a_svo", "85a_prep", "86a_none", "87a_an"],
-        "en": ["81a_svo", "85a_prep", "86a_none", "87a_an"],
-        "fi": ["81a_svo", "85a_post", "86a_gn", "87a_an"],
-        "fi_ftb": ["81a_svo", "85a_post", "86a_gn", "87a_an"],
-        "el": ["81a_none", "85a_prep", "86a_ng", "87a_an"],
-        "he": ["81a_svo", "85a_prep", "86a_ng", "87a_na"],
-        "hu": ["81a_none", "85a_post", "86a_gn", "87a_an"],
-        "it": ["81a_svo", "85a_prep", "86a_ng", "87a_na"],
-        "fa": ["81a_sov", "85a_prep", "86a_ng", "87a_na"],
-        "sv": ["81a_svo", "85a_prep", "86a_gn", "87a_an"],
-        "fr": ["81a_svo", "85a_prep", "86a_ng", "87a_na"],
-        "de": ["81a_none", "85a_prep", "86a_ng", "87a_an"],
-        "pl": ["81a_svo", "85a_prep", "86a_ng", "87a_an"],
+                "hr": ["81a_svo", "85a_prep", "86a_none", "87a_an"],
+                "cs": ["81a_svo", "85a_prep", "86a_gn", "87a_an"],
+                "da": ["81a_svo", "85a_prep", "86a_none", "87a_an"],
+                "en": ["81a_svo", "85a_prep", "86a_none", "87a_an"],
+                "fi": ["81a_svo", "85a_post", "86a_gn", "87a_an"],
+                "fi_ftb": ["81a_svo", "85a_post", "86a_gn", "87a_an"],
+                "el": ["81a_none", "85a_prep", "86a_ng", "87a_an"],
+                "he": ["81a_svo", "85a_prep", "86a_ng", "87a_na"],
+                "hu": ["81a_none", "85a_post", "86a_gn", "87a_an"],
+                "it": ["81a_svo", "85a_prep", "86a_ng", "87a_na"],
+                "fa": ["81a_sov", "85a_prep", "86a_ng", "87a_na"],
+                "sv": ["81a_svo", "85a_prep", "86a_gn", "87a_an"],
+                "fr": ["81a_svo", "85a_prep", "86a_ng", "87a_na"],
+                "de": ["81a_none", "85a_prep", "86a_ng", "87a_an"],
+                "pl": ["81a_svo", "85a_prep", "86a_ng", "87a_an"],
         }
 
         if lang not in WALS.keys():
-            WALSvector += vector*8
+            vec = np.zeros(self.SIZE*8).tolist()
+            WALSvector += vec
 
         else:
         #Here we increase the vector size for 
@@ -267,44 +274,44 @@ class Thesis:
                 if feat == "81a_svo":
                     WALSvector += vector
                 else:
-                    WALSvector += self.mean_vector
+                    WALSvector += np.zeros(self.SIZE).tolist()
                 if feat == "81a_sov":
                     WALSvector += vector
                 else:
-                    WALSvector += self.mean_vector
+                    WALSvector += np.zeros(self.SIZE).tolist()
 
                 #85a features:
                 if feat == "85a_prep":
                     WALSvector += vector
                 else:
-                    WALSvector += self.mean_vector
+                    WALSvector += np.zeros(self.SIZE).tolist()
 
                 if feat == "85a_post":
                     WALSvector += vector
                 else:
-                    WALSvector += self.mean_vector
+                    WALSvector += np.zeros(self.SIZE).tolist()
 
                 #86a
                 if feat == "86a_gn":
                     WALSvector += vector
                 else:
-                    WALSvector +=self.mean_vector
+                    WALSvector +=np.zeros(self.SIZE).tolist()
 
                 if feat == "86a_ng":
                     WALSvector += vector
                 else:
-                    WALSvector += self.mean_vector
+                    WALSvector += np.zeros(self.SIZE).tolist()
 
                 #87a
                 if feat == "87a_na":
                     WALSvector += vector
                 else:
-                    WALSvector += self.mean_vector
+                    WALSvector += np.zeros(self.SIZE).tolist()
 
                 if feat == "87a_an":
                     WALSvector += vector
                 else:
-                    WALSvector += self.mean_vector
+                    WALSvector += np.zeros(self.SIZE).tolist()
 
         return WALSvector
 
@@ -410,7 +417,7 @@ class Thesis:
         train_out = "Data_RBG/"+self.DATA+"/"+self.train_file.split("/")[-1].replace(".conllu","-rbg.conllu")
         test_out ="Data_RBG/"+self.DATA+"/"+self.test_file.split("/")[-1].replace(".conllu","-rbg.conllu")
 
-        vec_file = "Vectors/RBG/" + "mvectors" + str(self.SIZE) + "-win" + str(self.WINDOW) + "retro"
+        vec_file = "Vectors/RBG/" + self.DATA + "/" + "mvectors" + str(self.SIZE) + "-win" + str(self.WINDOW) + "retro"
         lang = []
 
 
@@ -425,20 +432,18 @@ class Thesis:
         with codecs.open(vec_file,"w") as f:
             for _pos,vec in self.model.iteritems():
                 #vec = (vec - self.min_vector) / self.max_vector * 1e-4 
-                line_out = _pos + " " + " ".join(str(x) for x in vec) 
+                line_out = _pos.replace("|","+") + " " + " ".join(str(x) for x in vec) 
                 print  >> f, line_out
             print >> f, "*UNKNOWN*" + " " + " ".join(str(x) for x in self.model["x"])
 
         with codecs.open(vec_file+"-wals","w") as f:
             for _pos,vec in self.model.iteritems():
-                WALSvec = self.create_WALSvectors(_pos, vec)
+                WALSvec = self.create_WALSvectors(_pos.replace("|","+"), vec)
                 #vec = (vec - self.min_vector) / self.max_vector * 1e-4 
                 line_out = " ".join(str(x) for x in WALSvec)
                 print  >> f, line_out
 
             print >> f, "*UNKNOWN*" + " " + " ".join(str(x) for x in self.model["x"]*8)
-
-
 
 
         for idx in xrange(len(write_files)):
@@ -457,6 +462,9 @@ class Thesis:
 
                     
                     tline = line.strip().split()
+                    if tline[6] == "_" and tline[7] == "_" and tline[3] == "_" and tline[4] == "_":
+                        continue 
+
                     try:
                         tline[1] = tline[4]+"+"+tline[14]
                     except IndexError:
@@ -464,10 +472,13 @@ class Thesis:
                     tline[2] = "_"
                     tline[4] = "_"
                     tline[5] = "_"
+
+                    if self.DATA == "SPMRL":
+                        tline[7] = "_"
                     tline = tline[:-5]
                     print >> f, "\t".join(tline)
 
-            #Our basic model in the works!
+            #Our model with lemmas in the works!
             lang_idx = 0
             with codecs.open(write_files[idx][:-7]
                              + "-mvectors" + str(self.SIZE) + "-lemma.conllu","w") as f:
@@ -482,12 +493,17 @@ class Thesis:
 
                     
                     tline = line.strip().split()
+                    if tline[6] == "_" and tline[7] == "_" and tline[3] == "_" and tline[4] == "_":
+                        continue
+
                     try:
                         tline[1] = tline[4]+"+"+tline[14]
                     except IndexError:
                         tline[1] = tline[4]+"+"+read_files[idx].split("/")[-1][:2]
                     tline[4] = "_"
                     tline[5] = "_"
+                    if self.DATA == "SPMRL":
+                        tline[7] = "_"
                     tline = tline[:-5]
                     lang_idx +=1
                     print >> f, "\t".join(tline)
@@ -506,13 +522,18 @@ class Thesis:
 
                     
                     tline = line.strip().split()
+                    if tline[6] == "_" and tline[7] == "_" and tline[3] == "_" and tline[4] == "_":
+                        continue
+
                     try:
                         tline[1] = tline[4]+"+"+tline[14]
                     except IndexError:
                         tline[1] = tline[4]+"+"+read_files[idx].split("/")[-1][:2] 
                     tline[2] = "_"
                     tline[4] = "_"
-                    tline[5] = ""
+                    tline[5] = "_"
+                    if self.DATA == "SPMRL":
+                        tline[7] = "_"
 
                     """
                     for feat in tline[-5:-1]:
@@ -524,7 +545,7 @@ class Thesis:
                         tline[5] += feat + " " + " ".join(str(x) for x in vec)
                     """ 
                     #WALS as words
-                    tline[5] = "|".join(tline[-4:])
+                    #tline[5] = "|".join(tline[-4:])
 
                     """
                     if tline[5] == "_":
@@ -532,7 +553,7 @@ class Thesis:
                     else:
                         tline[5] += "|" + "|".join(tline[-4:])
                     """
-                    tline = tline[:-4]
+                    tline = tline[:-5]
                     print >> f, "\t".join(tline)
 
             #Baseline-nowords in the making:
@@ -544,12 +565,19 @@ class Thesis:
 
                     if line.startswith("#"):
                         continue
+                    
+
                     #Baseline-nowords in the making:
                     tline = line.strip().split()
+                    if tline[6] == "_" and tline[7] == "_" and tline[3] == "_" and tline[4] == "_":
+                        continue
+
                     tline[1] = "_"
                     tline[2] = "_"
                     tline[4] = "_"
                     tline[5] = "_"
+                    if self.DATA == "SPMRL":
+                        tline[7] = "_"
                     tline = tline[:-5]
                     print >> f, "\t".join(tline)
 
@@ -564,8 +592,13 @@ class Thesis:
                         continue
                     #Baseline-nowords in the making:
                     tline = line.strip().split()
+                    if tline[6] == "_" and tline[7] == "_" and tline[3] == "_" and tline[4] == "_":
+                        continue
+                        
                     tline[5] = "_"
                     tline[4] = "_"
+                    if self.DATA == "SPMRL":
+                        tline[7] = "_"
                     tline = tline[:-5]
                     print >> f, "\t".join(tline)
 

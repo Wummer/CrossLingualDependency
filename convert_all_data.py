@@ -54,6 +54,7 @@ elif dataset == "SPMRL":
 
     test1 = list(set(glob.glob("SPMRL mapped/*/*-test.conllu")) -
                  set(glob.glob("SPMRL mapped/*/*_vsrest-spmrl-test.conllu")))
+    
     illeagle = [""]
 
 else:

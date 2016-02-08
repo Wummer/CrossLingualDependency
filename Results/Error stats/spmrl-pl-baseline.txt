@@ -1,0 +1,676 @@
+  Labeled   attachment score: 141 / 6973 * 100 = 2.02 %
+  Unlabeled attachment score: 2357 / 6973 * 100 = 33.80 %
+  Label accuracy score:       165 / 6973 * 100 = 2.37 %
+
+  ================================================================================
+
+  Evaluation of the results in SPMRL/pl_vsrest-baseline.conllu
+  vs. gold standard Original/pl-SPMRL.conllu:
+
+  Legend: '.S' - the beginning of a sentence, '.E' - the end of a sentence
+
+  Number of non-scoring tokens: 1358
+
+  The overall accuracy and its distribution over CPOSTAGs
+
+  -----------+-------+-------+------+-------+------+-------+-------
+  Accuracy   | words | right |   %  | right |   %  | both  |   %
+             |       | head  |      |  dep  |      | right |
+  -----------+-------+-------+------+-------+------+-------+-------
+  total      |  6973 |  2357 |  34% |   165 |   2% |   141 |   2%
+  -----------+-------+-------+------+-------+------+-------+-------
+  NOUN       |  2378 |   635 |  27% |   135 |   6% |   124 |   5%
+  VERB       |  1447 |   588 |  41% |     0 |   0% |     0 |   0%
+  ADP        |   883 |   168 |  19% |    14 |   2% |     4 |   0%
+  ADJ        |   848 |   347 |  41% |     0 |   0% |     0 |   0%
+  ADV        |   792 |   433 |  55% |     0 |   0% |     0 |   0%
+  CONJ       |   315 |   102 |  32% |     0 |   0% |     0 |   0%
+  PRON       |   189 |    64 |  34% |    16 |   8% |    13 |   7%
+  NUM        |    97 |    16 |  16% |     0 |   0% |     0 |   0%
+  X          |    24 |     4 |  17% |     0 |   0% |     0 |   0%
+  -----------+-------+-------+------+-------+------+-------+-------
+
+
+  The overall error rate and its distribution over CPOSTAGs
+
+  -----------+-------+-------+------+-------+------+-------+-------
+  Error      | words | head  |   %  |  dep  |   %  | both  |   %
+  Rate       |       | err   |      |  err  |      | wrong |
+  -----------+-------+-------+------+-------+------+-------+-------
+  total      |  6973 |  4616 |  66% |  6808 |  98% |  4592 |  66%
+  -----------+-------+-------+------+-------+------+-------+-------
+  NOUN       |  2378 |  1743 |  73% |  2243 |  94% |  1732 |  73%
+  VERB       |  1447 |   859 |  59% |  1447 | 100% |   859 |  59%
+  ADP        |   883 |   715 |  81% |   869 |  98% |   705 |  80%
+  ADJ        |   848 |   501 |  59% |   848 | 100% |   501 |  59%
+  ADV        |   792 |   359 |  45% |   792 | 100% |   359 |  45%
+  CONJ       |   315 |   213 |  68% |   315 | 100% |   213 |  68%
+  PRON       |   189 |   125 |  66% |   173 |  92% |   122 |  65%
+  NUM        |    97 |    81 |  84% |    97 | 100% |    81 |  84%
+  X          |    24 |    20 |  83% |    24 | 100% |    20 |  83%
+  -----------+-------+-------+------+-------+------+-------+-------
+
+
+  Precision and recall of DEPREL
+
+  ----------------+------+---------+--------+------------+---------------
+  deprel          | gold | correct | system | recall (%) | precision (%) 
+  ----------------+------+---------+--------+------------+---------------
+  adjunct         | 2350 |       0 |      0 |       0.00 |           NaN
+  aglt            |   56 |       0 |      0 |       0.00 |           NaN
+  app             |   48 |       0 |      0 |       0.00 |           NaN
+  aux             |   59 |       0 |      0 |       0.00 |           NaN
+  comp            | 1304 |      14 |     14 |       1.07 |        100.00
+  comp_fin        |   96 |       0 |      0 |       0.00 |           NaN
+  comp_inf        |  108 |       0 |      0 |       0.00 |           NaN
+  complm          |   58 |       0 |      0 |       0.00 |           NaN
+  cond            |   19 |       0 |      0 |       0.00 |           NaN
+  conjunct        |  523 |       0 |      0 |       0.00 |           NaN
+  coord           |   29 |       0 |      0 |       0.00 |           NaN
+  dummy           |    0 |       0 |   6808 |        NaN |          0.00
+  imp             |    4 |       0 |      0 |       0.00 |           NaN
+  mwe             |   43 |       0 |      0 |       0.00 |           NaN
+  ne              |   79 |       0 |      0 |       0.00 |           NaN
+  neg             |  110 |       0 |      0 |       0.00 |           NaN
+  obj             |  398 |     151 |    151 |      37.94 |        100.00
+  obj_th          |   77 |       0 |      0 |       0.00 |           NaN
+  pd              |  107 |       0 |      0 |       0.00 |           NaN
+  pre_coord       |    2 |       0 |      0 |       0.00 |           NaN
+  pred            |  750 |       0 |      0 |       0.00 |           NaN
+  refl            |  160 |       0 |      0 |       0.00 |           NaN
+  subj            |  593 |       0 |      0 |       0.00 |           NaN
+
+
+  Precision and recall of DEPREL + ATTACHMENT
+
+  ----------------+------+---------+--------+------------+---------------
+  deprel          | gold | correct | system | recall (%) | precision (%) 
+  ----------------+------+---------+--------+------------+---------------
+  adjunct         | 2350 |       0 |      0 |       0.00 |           NaN
+  aglt            |   56 |       0 |      0 |       0.00 |           NaN
+  app             |   48 |       0 |      0 |       0.00 |           NaN
+  aux             |   59 |       0 |      0 |       0.00 |           NaN
+  comp            | 1304 |       4 |     14 |       0.31 |         28.57
+  comp_fin        |   96 |       0 |      0 |       0.00 |           NaN
+  comp_inf        |  108 |       0 |      0 |       0.00 |           NaN
+  complm          |   58 |       0 |      0 |       0.00 |           NaN
+  cond            |   19 |       0 |      0 |       0.00 |           NaN
+  conjunct        |  523 |       0 |      0 |       0.00 |           NaN
+  coord           |   29 |       0 |      0 |       0.00 |           NaN
+  dummy           |    0 |       0 |   6808 |        NaN |          0.00
+  imp             |    4 |       0 |      0 |       0.00 |           NaN
+  mwe             |   43 |       0 |      0 |       0.00 |           NaN
+  ne              |   79 |       0 |      0 |       0.00 |           NaN
+  neg             |  110 |       0 |      0 |       0.00 |           NaN
+  obj             |  398 |     137 |    151 |      34.42 |         90.73
+  obj_th          |   77 |       0 |      0 |       0.00 |           NaN
+  pd              |  107 |       0 |      0 |       0.00 |           NaN
+  pre_coord       |    2 |       0 |      0 |       0.00 |           NaN
+  pred            |  750 |       0 |      0 |       0.00 |           NaN
+  refl            |  160 |       0 |      0 |       0.00 |           NaN
+  subj            |  593 |       0 |      0 |       0.00 |           NaN
+
+
+  Precision and recall of binned HEAD direction
+
+  ----------------+------+---------+--------+------------+---------------
+  direction       | gold | correct | system | recall (%) | precision (%) 
+  ----------------+------+---------+--------+------------+---------------
+  to_root         |  779 |     558 |   1036 |      71.63 |         53.86
+  left            | 3839 |    3447 |   3853 |      89.79 |         89.46
+  right           | 2355 |    1743 |   1961 |      74.01 |         88.88
+  self            |    0 |       0 |    123 |        NaN |          0.00
+
+
+  Precision and recall of binned HEAD distance
+
+  ----------------+------+---------+--------+------------+---------------
+  distance        | gold | correct | system | recall (%) | precision (%) 
+  ----------------+------+---------+--------+------------+---------------
+  to_root         |  779 |     558 |   1036 |      71.63 |         53.86
+  1               | 3832 |    1449 |   1687 |      37.81 |         85.89
+  2               | 1177 |     382 |    468 |      32.46 |         81.62
+  3-6             | 1017 |     703 |   3489 |      69.12 |         20.15
+  7-...           |  168 |     126 |    293 |      75.00 |         43.00
+
+
+  Frame confusions (gold versus system; *...* marks the head token)
+
+  389  / dummy 
+  375  ** pred / ** dummy 
+  303  *adjunct* comp / *adjunct* 
+  292  *adjunct* / *adjunct* dummy 
+  187  ** pred / ** dummy dummy 
+  172  *comp* comp / *comp* 
+  165  *adjunct* comp / *adjunct* dummy 
+  130  *comp* adjunct / *comp* 
+  108  ** pred / ** 
+  103  / dummy dummy 
+   88  *comp* / *comp* dummy 
+   81  *adjunct* / *adjunct* dummy dummy 
+   62  ** pred / ** dummy dummy dummy 
+   62  *subj* / *subj* dummy 
+   61  *adjunct* adjunct / *adjunct* 
+   60  adjunct *comp* / dummy *comp* 
+   60  *subj* adjunct / *subj* 
+   59  *obj* adjunct / *obj* 
+   59  *comp* comp / *comp* dummy 
+   51  *comp* / dummy *comp* 
+   41  *comp* adjunct / *comp* dummy 
+   40  *adjunct* comp / *adjunct* dummy dummy 
+   40  adjunct *subj* / *subj* 
+   38  adjunct *comp* / *comp* 
+   36  *adjunct* / dummy *adjunct* dummy 
+   34  *obj* / *obj* dummy 
+   33  *subj* adjunct / *subj* dummy 
+   32  adjunct *adjunct* / *adjunct* 
+   32  *adjunct* adjunct / *adjunct* dummy 
+   32  *adjunct* / dummy *adjunct* 
+   31  *refl* / *refl* dummy 
+   29  conjunct conjunct / 
+   29  adjunct *adjunct* / dummy *adjunct* 
+   27  / dummy dummy dummy 
+   27  adjunct *obj* / dummy *obj* 
+   26  *obj* / dummy *obj* 
+   23  adjunct *comp* adjunct / *comp* 
+   22  adjunct *subj* / dummy *subj* 
+   22  *aux* / *aux* dummy 
+   22  *neg* / *neg* dummy 
+   21  *conjunct* adjunct / *conjunct* 
+   21  *adjunct* / dummy *adjunct* dummy dummy 
+   20  *comp* / *comp* dummy dummy 
+   20  *ne* / *ne* dummy 
+   19  *conjunct* comp / *conjunct* 
+   19  conjunct conjunct / dummy 
+   19  *conjunct* / *conjunct* dummy 
+   17  *adjunct* comp / dummy *adjunct* dummy 
+   17  *comp* comp / *comp* dummy dummy 
+   17  conjunct *coord* conjunct / *coord* 
+   17  *obj* adjunct / *obj* dummy 
+   16  *obj_th* / *obj_th* dummy 
+   16  *aglt* / *aglt* dummy 
+   16  ** coord / ** 
+   16  *subj* / *subj* dummy dummy 
+   15  *pd* adjunct / *pd* 
+   15  adjunct *comp* / dummy dummy *comp* 
+   14  ** pred / ** dummy dummy dummy dummy 
+   14  conjunct *comp* conjunct / *comp* 
+   14  *adjunct* comp_fin / *adjunct* 
+   14  adjunct *pd* / dummy *pd* 
+   14  *complm* / *complm* dummy 
+   13  *comp* adjunct / *comp* dummy dummy 
+   13  adjunct *conjunct* / dummy *conjunct* 
+   13  *adjunct* mwe / *adjunct* 
+   13  adjunct *subj* adjunct / *subj* 
+   12  adjunct *comp* / *comp* dummy 
+   12  adjunct *adjunct* / *adjunct* dummy 
+   11  *comp_inf* comp / *comp_inf* 
+   11  *adjunct* / dummy dummy *adjunct* dummy 
+   11  *comp* / dummy *comp* dummy 
+   11  conjunct *pred* conjunct / *pred* dummy 
+   11  *pred* comp_fin / *pred* 
+   10  adjunct *obj* adjunct / *obj* 
+   10  *subj* app / *subj* 
+   10  *pd* / *pd* dummy 
+   10  adjunct *comp* adjunct / *comp* dummy 
+   10  conjunct *pred* conjunct / *pred* 
+   10  subj *pred* comp / dummy *pred* 
+    9  *subj* comp / *subj* 
+    9  *app* ne / *app* 
+    9  adjunct *subj* / *subj* dummy 
+    9  adjunct *adjunct* comp / *adjunct* 
+    9  ** / ** dummy 
+    9  *subj* adjunct / *subj* dummy dummy 
+    9  *conjunct* / dummy *conjunct* 
+    9  conjunct *coord* conjunct / *coord* dummy 
+    9  *comp* ne / *comp* 
+    9  subj *pred* comp_fin / dummy *pred* 
+    8  subj *pred* pd / dummy *pred* dummy 
+    8  adjunct *obj* / *obj* 
+    8  adjunct *pred* obj / dummy *pred* obj 
+    8  *subj* ne / *subj* 
+    8  *comp* comp / dummy *comp* 
+    8  adjunct *comp* / dummy *comp* dummy 
+    8  conjunct *subj* conjunct / *subj* 
+    8  ** coord / ** dummy 
+    8  subj *pred* refl comp / dummy *pred* dummy 
+    8  *obj* comp / *obj* 
+    8  adjunct *comp* adjunct / dummy *comp* 
+    8  adjunct *adjunct* adjunct / *adjunct* 
+    8  *subj* adjunct adjunct / *subj* 
+    8  adjunct *subj* adjunct / *subj* dummy 
+    7  subj conjunct *pred* conjunct / *pred* 
+    7  conjunct *adjunct* conjunct / *adjunct* 
+    7  subj conjunct *pred* conjunct / *pred* dummy 
+    7  *conjunct* comp / *conjunct* dummy 
+    7  *adjunct* comp_fin / *adjunct* dummy 
+    7  *adjunct* comp / dummy *adjunct* 
+    6  conjunct *obj* conjunct / *obj* 
+    6  *refl* / dummy *refl* dummy 
+    6  adjunct *subj* / dummy dummy *subj* 
+    6  *ne* / dummy *ne* 
+    6  *adjunct* refl comp / *adjunct* dummy 
+    6  conjunct conjunct / dummy dummy 
+    6  *complm* / dummy *complm* dummy dummy 
+    6  *subj* / dummy *subj* 
+    6  *comp* adjunct / dummy *comp* dummy 
+    6  *comp* comp / dummy *comp* dummy 
+    6  *comp* adjunct adjunct / *comp* dummy 
+    6  *conjunct* adjunct / dummy *conjunct* dummy 
+    6  *obj* / *obj* dummy dummy 
+    6  adjunct *obj* adjunct / *obj* dummy 
+    6  subj *pred* / dummy *pred* 
+    6  *pd* adjunct / *pd* dummy 
+    6  *adjunct* / *adjunct* dummy dummy dummy 
+    6  adjunct *obj* / *obj* dummy 
+    6  adjunct *adjunct* / dummy dummy *adjunct* 
+    6  *comp* adjunct adjunct / *comp* 
+    6  *subj* ne / *subj* dummy 
+    6  *app* / *app* dummy 
+    6  *aglt* / dummy *aglt* 
+    6  subj *pred* refl adjunct / dummy *pred* dummy 
+    6  *obj* / dummy *obj* dummy 
+    6  obj *pred* subj / dummy *pred* dummy 
+    6  adjunct subj *pred* pd / dummy dummy *pred* dummy 
+    6  *adjunct* ne / *adjunct* 
+    5  *subj* comp / *subj* dummy 
+    5  *adjunct* app / *adjunct* 
+    5  *adjunct* adjunct / *adjunct* dummy dummy 
+    5  subj *pred* obj / dummy *pred* obj 
+    5  *pd* / dummy *pd* 
+    5  *pred* refl subj / *pred* dummy 
+    5  *pred* comp_inf / *pred* 
+    5  *pred* subj / *pred* 
+    5  adjunct *pd* / *pd* 
+    5  *adjunct* mwe / *adjunct* dummy 
+    5  *comp* comp / dummy dummy *comp* dummy 
+    5  adjunct *comp* / dummy dummy *comp* dummy 
+    5  *conjunct* pd / *conjunct* dummy 
+    5  *adjunct* adjunct / dummy *adjunct* 
+    5  conjunct *conjunct* conjunct / *conjunct* 
+    5  *pred* obj / *pred* dummy 
+    5  *adjunct* comp / dummy *adjunct* dummy dummy dummy 
+    5  / dummy obj 
+    5  subj *pred* comp_inf / *pred* 
+    5  *pred* comp_inf / *pred* dummy 
+    5  adjunct *obj* / dummy *obj* dummy 
+    5  adjunct adjunct *obj* / dummy dummy *obj* 
+
+
+  5 focus words where most of the errors occur:
+
+            | any  | head | dep  | both
+  ----------+------+------+------+------
+  w / ADP   |  170 |  148 |  169 |  147
+  się / ADV |  161 |  120 |  161 |  120
+  i / CONJ  |  125 |  100 |  125 |  100
+  na / ADP  |  116 |  106 |  114 |  104
+  z / ADP   |  106 |   93 |  105 |   92
+  ----------+------+------+------+------
+
+
+  one-token preceeding contexts where most of the errors occur:
+
+  CPOS      | any  | head | dep  | both  ||  word              | any  | head | dep  | both
+  ----------+------+------+------+-------++--------------------+------+------+------+-----
+  NOUN      | 1621 | 1169 | 1620 | 1168  ||  , / .             |  396 |  231 |  396 |  231
+  VERB      | 1125 |  876 | 1104 |  855  ||  w / ADP           |  171 |  143 |  171 |  143
+  ADP       |  879 |  775 |  879 |  775  ||  się / ADV         |  154 |  113 |  154 |  113
+  ----------+------+------+------+-------++--------------------+------+------+------+-----
+
+
+  two-token preceeding contexts where most of the errors occur:
+
+  CPOS      | any  | head | dep  | both  ||  word              | any  | head | dep  | both
+  ----------+------+------+------+-------++--------------------+------+------+------+-----
+  .S+.S     |  736 |  277 |  736 |  277  ||  .S + - / .        |   58 |   16 |   58 |   16
+  NOUN+VERB |  372 |  297 |  369 |  294  ||  , / . + że / CONJ |   55 |   31 |   55 |   31
+  ADP+NOUN  |  360 |  272 |  360 |  272  ||  .S + W / ADP      |   44 |   43 |   44 |   43
+  ----------+------+------+------+-------++--------------------+------+------+------+-----
+
+
+  one-token following contexts where most of the errors occur:
+
+  CPOS      | any  | head | dep  | both  ||  word              | any  | head | dep  | both
+  ----------+------+------+------+-------++--------------------+------+------+------+-----
+  NOUN      | 2104 | 1527 | 2098 | 1521  ||  . / .             |  679 |  495 |  674 |  490
+  VERB      | 1175 |  582 | 1174 |  581  ||  , / .             |  381 |  310 |  380 |  309
+  .         | 1151 |  840 | 1142 |  831  ||  się / ADV         |  161 |   78 |  161 |   78
+  ----------+------+------+------+-------++--------------------+------+------+------+-----
+
+
+  two-token following contexts where most of the errors occur:
+
+  CPOS      | any  | head | dep  | both  ||  word              | any  | head | dep  | both
+  ----------+------+------+------+-------++--------------------+------+------+------+-----
+  .+.E      |  730 |  500 |  722 |  492  ||  . / . + .E        |  655 |  478 |  650 |  473
+  NOUN+.    |  724 |  481 |  723 |  480  ||  ? / . + .E        |   57 |   15 |   55 |   13
+  ADP+NOUN  |  435 |  336 |  432 |  333  ||  , / . + że / CONJ |   55 |   31 |   55 |   31
+  ----------+------+------+------+-------++--------------------+------+------+------+-----
+
+
+  Sentence with the highest number of word errors:
+   Sentence 209 line 2367, 32 head errors, 32 dependency errors, 32 word errors
+
+
+  Sentence with the highest number of head errors:
+   Sentence 209 line 2367, 32 head errors, 32 dependency errors, 32 word errors
+
+
+  Sentence with the highest number of dependency errors:
+   Sentence 209 line 2367, 32 head errors, 32 dependency errors, 32 word errors
+
+
+  Specific errors, 10 most frequent errors:
+  =========================================
+
+   1. head two words before the correct head (before the focus word), dependency "dummy" instead of "comp" : 1035 times
+  -----+------+------+------+------+------+------
+    Before    |    Focus    |   After     | Count
+  CPOS   word | CPOS   word | CPOS   word |
+  -----+------+------+------+------+------+------
+       |      | NOUN |      |      |      | 711
+  ADP  |      |      |      |      |      | 561
+  ADP  |      | NOUN |      |      |      | 462
+       |      |      |      | NOUN |      | 319
+       |      |      |      | .    |      | 266
+       |      | NOUN |      | .    |      | 246
+       |      |      |      | .    | .    | 202
+  -----+------+------+------+------+------+------
+
+   2. head two words before the correct head (before the focus word), dependency "dummy" instead of "adjunct" : 996 times
+  -----+------+------+------+------+------+------
+    Before    |    Focus    |   After     | Count
+  CPOS   word | CPOS   word | CPOS   word |
+  -----+------+------+------+------+------+------
+  NOUN |      |      |      |      |      | 620
+       |      |      |      | NOUN |      | 352
+       |      | ADP  |      |      |      | 327
+       |      | NOUN |      |      |      | 320
+  NOUN |      | NOUN |      |      |      | 238
+       |      |      |      | .    |      | 222
+       |      | ADP  |      | NOUN |      | 216
+  -----+------+------+------+------+------+------
+
+   3. correct head (after the focus word), dependency "dummy" instead of "adjunct" : 684 times
+  -----+------+------+------+------+------+------
+    Before    |    Focus    |   After     | Count
+  CPOS   word | CPOS   word | CPOS   word |
+  -----+------+------+------+------+------+------
+       |      |      |      | NOUN |      | 347
+       |      | ADV  |      |      |      | 252
+       |      | ADJ  |      |      |      | 246
+       |      | ADJ  |      | NOUN |      | 226
+       |      |      |      | VERB |      | 165
+  .S   | .S   |      |      |      |      | 163
+       |      | ADV  |      | VERB |      | 141
+  -----+------+------+------+------+------+------
+
+   4. correct head (0), dependency "dummy" instead of "pred" : 555 times
+  -----+------+------+------+------+------+------
+    Before    |    Focus    |   After     | Count
+  CPOS   word | CPOS   word | CPOS   word |
+  -----+------+------+------+------+------+------
+       |      | VERB |      |      |      | 540
+  NOUN |      |      |      |      |      | 226
+  NOUN |      | VERB |      |      |      | 218
+  ADV  |      |      |      |      |      | 130
+  ADV  |      | VERB |      |      |      | 129
+       |      |      |      | NOUN |      | 114
+       |      | VERB |      | NOUN |      | 113
+  -----+------+------+------+------+------+------
+
+   5. correct head (after the focus word), dependency "dummy" instead of "subj" : 321 times
+  -----+------+------+------+------+------+------
+    Before    |    Focus    |   After     | Count
+  CPOS   word | CPOS   word | CPOS   word |
+  -----+------+------+------+------+------+------
+       |      | NOUN |      |      |      | 276
+       |      |      |      | VERB |      | 156
+       |      | NOUN |      | VERB |      | 132
+  .S   | .S   |      |      |      |      | 128
+  .S   | .S   | NOUN |      |      |      | 117
+       |      |      |      | NOUN |      |  59
+  .S   | .S   |      |      | VERB |      |  57
+  -----+------+------+------+------+------+------
+
+   6. head two words before the correct head (before the focus word instead ofbefore the focus word), dependency "dummy" instead of "adjunct" : 280 times
+  -----+------+------+------+------+------+------
+    Before    |    Focus    |   After     | Count
+  CPOS   word | CPOS   word | CPOS   word |
+  -----+------+------+------+------+------+------
+       |      |      |      | NOUN |      | 232
+       |      | ADJ  |      |      |      | 189
+       |      | ADJ  |      | NOUN |      | 185
+  ADP  |      |      |      |      |      |  93
+  ADP  |      |      |      | NOUN |      |  89
+  ADP  |      | ADJ  |      |      |      |  74
+  ADP  |      | ADJ  |      | NOUN |      |  72
+  -----+------+------+------+------+------+------
+
+   7. head two words before the correct head (before the focus word), dependency "dummy" instead of "conjunct" : 229 times
+  -----+------+------+------+------+------+------
+    Before    |    Focus    |   After     | Count
+  CPOS   word | CPOS   word | CPOS   word |
+  -----+------+------+------+------+------+------
+       |      | VERB |      |      |      | 125
+  CONJ |      |      |      |      |      |  99
+       | i    |      |      |      |      |  89
+  CONJ | i    |      |      |      |      |  88
+       |      | NOUN |      |      |      |  72
+       |      |      |      | .    |      |  62
+       |      |      |      | NOUN |      |  54
+  -----+------+------+------+------+------+------
+
+   8. head two words before the correct head (before the focus word), dependency "dummy" instead of "obj" : 140 times
+  -----+------+------+------+------+------+------
+    Before    |    Focus    |   After     | Count
+  CPOS   word | CPOS   word | CPOS   word |
+  -----+------+------+------+------+------+------
+       |      | NOUN |      |      |      | 103
+  VERB |      |      |      |      |      |  67
+  VERB |      | NOUN |      |      |      |  43
+       |      |      |      | NOUN |      |  39
+       |      |      |      | ADP  |      |  34
+  ADJ  |      |      |      |      |      |  30
+  ADJ  |      | NOUN |      |      |      |  29
+  -----+------+------+------+------+------+------
+
+   9. head two words before the correct head (after the focus word), dependency "dummy" instead of "conjunct" : 138 times
+  -----+------+------+------+------+------+------
+    Before    |    Focus    |   After     | Count
+  CPOS   word | CPOS   word | CPOS   word |
+  -----+------+------+------+------+------+------
+       |      | VERB |      |      |      | 103
+  NOUN |      |      |      |      |      |  39
+  NOUN |      | VERB |      |      |      |  36
+       |      |      |      | NOUN |      |  32
+       |      |      |      | ADP  |      |  29
+       |      | NOUN |      |      |      |  29
+       |      | VERB |      | ADP  |      |  25
+  .S   | .S   |      |      |      |      |  25
+       |      | VERB |      | NOUN |      |  25
+  -----+------+------+------+------+------+------
+
+  10. head = 0 instead of before the focus word, dependency "dummy" instead of "adjunct" : 134 times
+  -----+------+------+------+------+------+------
+    Before    |    Focus    |   After     | Count
+  CPOS   word | CPOS   word | CPOS   word |
+  -----+------+------+------+------+------+------
+  NOUN |      |      |      |      |      |  60
+       |      |      |      | NOUN |      |  52
+       |      | ADP  |      |      |      |  49
+       |      | ADP  |      | NOUN |      |  34
+       |      | NOUN |      |      |      |  27
+  VERB |      |      |      |      |      |  26
+       |      |      |      | VERB |      |  23
+  -----+------+------+------+------+------+------
+
+
+  Local contexts involved in several frequent errors:
+  ===================================================
+
+
+  -----+------+------+------+------+------
+    Before    |    Focus    |   After     
+  CPOS   word | CPOS   word | CPOS   word 
+  -----+------+------+------+------+------
+       |      |      |      | NOUN |      
+  -----+------+------+------+------+------
+   2. head two words before the correct head (before the focus word), dependency "dummy" instead of "adjunct" : 352 times
+   3. correct head (after the focus word), dependency "dummy" instead of "adjunct" : 347 times
+   1. head two words before the correct head (before the focus word), dependency "dummy" instead of "comp" : 319 times
+   6. head two words before the correct head (before the focus word instead ofbefore the focus word), dependency "dummy" instead of "adjunct" : 232 times
+   4. correct head (0), dependency "dummy" instead of "pred" : 114 times
+   5. correct head (after the focus word), dependency "dummy" instead of "subj" : 59 times
+   7. head two words before the correct head (before the focus word), dependency "dummy" instead of "conjunct" : 54 times
+  10. head = 0 instead of before the focus word, dependency "dummy" instead of "adjunct" : 52 times
+   8. head two words before the correct head (before the focus word), dependency "dummy" instead of "obj" : 39 times
+   9. head two words before the correct head (after the focus word), dependency "dummy" instead of "conjunct" : 32 times
+
+  -----+------+------+------+------+------
+    Before    |    Focus    |   After     
+  CPOS   word | CPOS   word | CPOS   word 
+  -----+------+------+------+------+------
+       |      | NOUN |      |      |      
+  -----+------+------+------+------+------
+   1. head two words before the correct head (before the focus word), dependency "dummy" instead of "comp" : 711 times
+   2. head two words before the correct head (before the focus word), dependency "dummy" instead of "adjunct" : 320 times
+   5. correct head (after the focus word), dependency "dummy" instead of "subj" : 276 times
+   8. head two words before the correct head (before the focus word), dependency "dummy" instead of "obj" : 103 times
+   7. head two words before the correct head (before the focus word), dependency "dummy" instead of "conjunct" : 72 times
+   9. head two words before the correct head (after the focus word), dependency "dummy" instead of "conjunct" : 29 times
+  10. head = 0 instead of before the focus word, dependency "dummy" instead of "adjunct" : 27 times
+
+  -----+------+------+------+------+------
+    Before    |    Focus    |   After     
+  CPOS   word | CPOS   word | CPOS   word 
+  -----+------+------+------+------+------
+  NOUN |      |      |      |      |      
+  -----+------+------+------+------+------
+   2. head two words before the correct head (before the focus word), dependency "dummy" instead of "adjunct" : 620 times
+   4. correct head (0), dependency "dummy" instead of "pred" : 226 times
+  10. head = 0 instead of before the focus word, dependency "dummy" instead of "adjunct" : 60 times
+   9. head two words before the correct head (after the focus word), dependency "dummy" instead of "conjunct" : 39 times
+
+  -----+------+------+------+------+------
+    Before    |    Focus    |   After     
+  CPOS   word | CPOS   word | CPOS   word 
+  -----+------+------+------+------+------
+  .S   | .S   |      |      |      |      
+  -----+------+------+------+------+------
+   3. correct head (after the focus word), dependency "dummy" instead of "adjunct" : 163 times
+   5. correct head (after the focus word), dependency "dummy" instead of "subj" : 128 times
+   9. head two words before the correct head (after the focus word), dependency "dummy" instead of "conjunct" : 25 times
+
+  -----+------+------+------+------+------
+    Before    |    Focus    |   After     
+  CPOS   word | CPOS   word | CPOS   word 
+  -----+------+------+------+------+------
+       |      |      |      | VERB |      
+  -----+------+------+------+------+------
+   3. correct head (after the focus word), dependency "dummy" instead of "adjunct" : 165 times
+   5. correct head (after the focus word), dependency "dummy" instead of "subj" : 156 times
+  10. head = 0 instead of before the focus word, dependency "dummy" instead of "adjunct" : 23 times
+
+  -----+------+------+------+------+------
+    Before    |    Focus    |   After     
+  CPOS   word | CPOS   word | CPOS   word 
+  -----+------+------+------+------+------
+       |      | VERB |      |      |      
+  -----+------+------+------+------+------
+   4. correct head (0), dependency "dummy" instead of "pred" : 540 times
+   7. head two words before the correct head (before the focus word), dependency "dummy" instead of "conjunct" : 125 times
+   9. head two words before the correct head (after the focus word), dependency "dummy" instead of "conjunct" : 103 times
+
+  -----+------+------+------+------+------
+    Before    |    Focus    |   After     
+  CPOS   word | CPOS   word | CPOS   word 
+  -----+------+------+------+------+------
+       |      |      |      | .    |      
+  -----+------+------+------+------+------
+   1. head two words before the correct head (before the focus word), dependency "dummy" instead of "comp" : 266 times
+   2. head two words before the correct head (before the focus word), dependency "dummy" instead of "adjunct" : 222 times
+   7. head two words before the correct head (before the focus word), dependency "dummy" instead of "conjunct" : 62 times
+
+  -----+------+------+------+------+------
+    Before    |    Focus    |   After     
+  CPOS   word | CPOS   word | CPOS   word 
+  -----+------+------+------+------+------
+       |      | VERB |      | NOUN |      
+  -----+------+------+------+------+------
+   4. correct head (0), dependency "dummy" instead of "pred" : 113 times
+   9. head two words before the correct head (after the focus word), dependency "dummy" instead of "conjunct" : 25 times
+
+  -----+------+------+------+------+------
+    Before    |    Focus    |   After     
+  CPOS   word | CPOS   word | CPOS   word 
+  -----+------+------+------+------+------
+  ADP  |      |      |      |      |      
+  -----+------+------+------+------+------
+   1. head two words before the correct head (before the focus word), dependency "dummy" instead of "comp" : 561 times
+   6. head two words before the correct head (before the focus word instead ofbefore the focus word), dependency "dummy" instead of "adjunct" : 93 times
+
+  -----+------+------+------+------+------
+    Before    |    Focus    |   After     
+  CPOS   word | CPOS   word | CPOS   word 
+  -----+------+------+------+------+------
+  VERB |      |      |      |      |      
+  -----+------+------+------+------+------
+   8. head two words before the correct head (before the focus word), dependency "dummy" instead of "obj" : 67 times
+  10. head = 0 instead of before the focus word, dependency "dummy" instead of "adjunct" : 26 times
+
+  -----+------+------+------+------+------
+    Before    |    Focus    |   After     
+  CPOS   word | CPOS   word | CPOS   word 
+  -----+------+------+------+------+------
+       |      |      |      | ADP  |      
+  -----+------+------+------+------+------
+   8. head two words before the correct head (before the focus word), dependency "dummy" instead of "obj" : 34 times
+   9. head two words before the correct head (after the focus word), dependency "dummy" instead of "conjunct" : 29 times
+
+  -----+------+------+------+------+------
+    Before    |    Focus    |   After     
+  CPOS   word | CPOS   word | CPOS   word 
+  -----+------+------+------+------+------
+       |      | ADP  |      | NOUN |      
+  -----+------+------+------+------+------
+   2. head two words before the correct head (before the focus word), dependency "dummy" instead of "adjunct" : 216 times
+  10. head = 0 instead of before the focus word, dependency "dummy" instead of "adjunct" : 34 times
+
+  -----+------+------+------+------+------
+    Before    |    Focus    |   After     
+  CPOS   word | CPOS   word | CPOS   word 
+  -----+------+------+------+------+------
+       |      | ADJ  |      | NOUN |      
+  -----+------+------+------+------+------
+   3. correct head (after the focus word), dependency "dummy" instead of "adjunct" : 226 times
+   6. head two words before the correct head (before the focus word instead ofbefore the focus word), dependency "dummy" instead of "adjunct" : 185 times
+
+  -----+------+------+------+------+------
+    Before    |    Focus    |   After     
+  CPOS   word | CPOS   word | CPOS   word 
+  -----+------+------+------+------+------
+       |      | ADP  |      |      |      
+  -----+------+------+------+------+------
+   2. head two words before the correct head (before the focus word), dependency "dummy" instead of "adjunct" : 327 times
+  10. head = 0 instead of before the focus word, dependency "dummy" instead of "adjunct" : 49 times
+
+  -----+------+------+------+------+------
+    Before    |    Focus    |   After     
+  CPOS   word | CPOS   word | CPOS   word 
+  -----+------+------+------+------+------
+  NOUN |      | VERB |      |      |      
+  -----+------+------+------+------+------
+   4. correct head (0), dependency "dummy" instead of "pred" : 218 times
+   9. head two words before the correct head (after the focus word), dependency "dummy" instead of "conjunct" : 36 times
+
+  -----+------+------+------+------+------
+    Before    |    Focus    |   After     
+  CPOS   word | CPOS   word | CPOS   word 
+  -----+------+------+------+------+------
+       |      | ADJ  |      |      |      
+  -----+------+------+------+------+------
+   3. correct head (after the focus word), dependency "dummy" instead of "adjunct" : 246 times
+   6. head two words before the correct head (before the focus word instead ofbefore the focus word), dependency "dummy" instead of "adjunct" : 189 times
+

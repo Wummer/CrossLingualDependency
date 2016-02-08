@@ -1,0 +1,2967 @@
+  Labeled   attachment score: 550 / 179886 * 100 = 0.31 %
+  Unlabeled attachment score: 89125 / 179886 * 100 = 49.55 %
+  Label accuracy score:       554 / 179886 * 100 = 0.31 %
+
+  ================================================================================
+
+  Evaluation of the results in SPMRL/all-spmrl-mvec25-win1retro-wals5.conllu
+  vs. gold standard Original/all-SPMRL.conllu:
+
+  Legend: '.S' - the beginning of a sentence, '.E' - the end of a sentence
+
+  Number of non-scoring tokens: 26248
+
+  The overall accuracy and its distribution over CPOSTAGs
+
+  -----------+-------+-------+------+-------+------+-------+-------
+  Accuracy   | words | right |   %  | right |   %  | both  |   %
+             |       | head  |      |  dep  |      | right |
+  -----------+-------+-------+------+-------+------+-------+-------
+  total      | 179886 | 89125 |  50% |   554 |   0% |   550 |   0%
+  -----------+-------+-------+------+-------+------+-------+-------
+  NOUN       | 52703 | 24927 |  47% |     3 |   0% |     3 |   0%
+  VERB       | 24121 |  8264 |  34% |   545 |   2% |   545 |   2%
+  ADP        | 23761 | 11978 |  50% |     4 |   0% |     0 |   0%
+  DET        | 23624 | 19403 |  82% |     0 |   0% |     0 |   0%
+  ADJ        | 17035 | 11220 |  66% |     0 |   0% |     0 |   0%
+  PRON       | 11437 |  4570 |  40% |     0 |   0% |     0 |   0%
+  ADV        | 10992 |  4379 |  40% |     0 |   0% |     0 |   0%
+  CONJ       |  8165 |  2212 |  27% |     0 |   0% |     0 |   0%
+  .          |  3056 |   620 |  20% |     0 |   0% |     0 |   0%
+  NUM        |  2475 |   672 |  27% |     1 |   0% |     1 |   0%
+  PRT        |  1763 |   570 |  32% |     0 |   0% |     0 |   0%
+  X          |   754 |   310 |  41% |     1 |   0% |     1 |   0%
+  -----------+-------+-------+------+-------+------+-------+-------
+
+
+  The overall error rate and its distribution over CPOSTAGs
+
+  -----------+-------+-------+------+-------+------+-------+-------
+  Error      | words | head  |   %  |  dep  |   %  | both  |   %
+  Rate       |       | err   |      |  err  |      | wrong |
+  -----------+-------+-------+------+-------+------+-------+-------
+  total      | 179886 | 90761 |  50% | 179332 | 100% | 90757 |  50%
+  -----------+-------+-------+------+-------+------+-------+-------
+  NOUN       | 52703 | 27776 |  53% | 52700 | 100% | 27776 |  53%
+  VERB       | 24121 | 15857 |  66% | 23576 |  98% | 15857 |  66%
+  ADP        | 23761 | 11783 |  50% | 23757 | 100% | 11779 |  50%
+  DET        | 23624 |  4221 |  18% | 23624 | 100% |  4221 |  18%
+  ADJ        | 17035 |  5815 |  34% | 17035 | 100% |  5815 |  34%
+  PRON       | 11437 |  6867 |  60% | 11437 | 100% |  6867 |  60%
+  ADV        | 10992 |  6613 |  60% | 10992 | 100% |  6613 |  60%
+  CONJ       |  8165 |  5953 |  73% |  8165 | 100% |  5953 |  73%
+  .          |  3056 |  2436 |  80% |  3056 | 100% |  2436 |  80%
+  NUM        |  2475 |  1803 |  73% |  2474 | 100% |  1803 |  73%
+  PRT        |  1763 |  1193 |  68% |  1763 | 100% |  1193 |  68%
+  X          |   754 |   444 |  59% |   753 | 100% |   444 |  59%
+  -----------+-------+-------+------+-------+------+-------+-------
+
+
+  Precision and recall of DEPREL
+
+  ----------------+------+---------+--------+------------+---------------
+  deprel          | gold | correct | system | recall (%) | precision (%) 
+  ----------------+------+---------+--------+------------+---------------
+  +A              |  102 |       0 |      0 |       0.00 |           NaN
+  +F              |  123 |       0 |      0 |       0.00 |           NaN
+  --              | 6982 |       0 |      0 |       0.00 |           NaN
+  AA              |  540 |       0 |      0 |       0.00 |           NaN
+  AC              |  127 |       0 |      0 |       0.00 |           NaN
+  ADC             |    4 |       0 |      0 |       0.00 |           NaN
+  AG              | 2249 |       0 |      0 |       0.00 |           NaN
+  AMS             |   75 |       0 |      0 |       0.00 |           NaN
+  AN              |   56 |       0 |      0 |       0.00 |           NaN
+  APP             |  461 |       0 |      0 |       0.00 |           NaN
+  APPEND          |  101 |       0 |      0 |       0.00 |           NaN
+  APPEND-VAN-OBL  |    1 |       0 |      0 |       0.00 |           NaN
+  APPEND-VAN-PRED |    2 |       0 |      0 |       0.00 |           NaN
+  APPEND-VAN-PUNCT |    2 |       0 |      0 |       0.00 |           NaN
+  APPEND-VAN-SUBJ |    2 |       0 |      0 |       0.00 |           NaN
+  AT              |  443 |       0 |      0 |       0.00 |           NaN
+  ATT             | 4226 |       0 |      0 |       0.00 |           NaN
+  ATT-ELL-ATT     |    5 |       0 |      0 |       0.00 |           NaN
+  ATT-ELL-CONJ    |    2 |       0 |      0 |       0.00 |           NaN
+  ATT-ELL-COORD-ELL-ATT |    1 |       0 |      0 |       0.00 |           NaN
+  ATT-ELL-COORD-ELL-COORD-ELL-ATT |    1 |       0 |      0 |       0.00 |           NaN
+  ATT-ELL-COORD-ELL-COORD-ELL-COORD |    1 |       0 |      0 |       0.00 |           NaN
+  ATT-ELL-COORD-ELL-COORD-ELL-DET |    1 |       0 |      0 |       0.00 |           NaN
+  ATT-ELL-COORD-ELL-DET |    1 |       0 |      0 |       0.00 |           NaN
+  ATT-ELL-DET     |    2 |       0 |      0 |       0.00 |           NaN
+  ATT-ELL-MODE    |    6 |       0 |      0 |       0.00 |           NaN
+  ATT-ELL-NEG     |    2 |       0 |      0 |       0.00 |           NaN
+  ATT-ELL-OBJ     |    3 |       0 |      0 |       0.00 |           NaN
+  ATT-ELL-OBL     |    4 |       0 |      0 |       0.00 |           NaN
+  ATT-ELL-SUBJ    |    3 |       0 |      0 |       0.00 |           NaN
+  ATT-VAN-APPEND  |    1 |       0 |      0 |       0.00 |           NaN
+  ATT-VAN-ATT     |    6 |       0 |      0 |       0.00 |           NaN
+  ATT-VAN-ATT-VAN-COORD-VAN-PRED |    1 |       0 |      0 |       0.00 |           NaN
+  ATT-VAN-ATT-VAN-SUBJ |    1 |       0 |      0 |       0.00 |           NaN
+  ATT-VAN-CONJ    |   24 |       0 |      0 |       0.00 |           NaN
+  ATT-VAN-COORD   |    4 |       0 |      0 |       0.00 |           NaN
+  ATT-VAN-DAT     |    1 |       0 |      0 |       0.00 |           NaN
+  ATT-VAN-INF     |    5 |       0 |      0 |       0.00 |           NaN
+  ATT-VAN-LOCY    |    5 |       0 |      0 |       0.00 |           NaN
+  ATT-VAN-MODE    |   16 |       0 |      0 |       0.00 |           NaN
+  ATT-VAN-NEG     |   11 |       0 |      0 |       0.00 |           NaN
+  ATT-VAN-OBL     |   17 |       0 |      0 |       0.00 |           NaN
+  ATT-VAN-PRED    |   59 |       0 |      0 |       0.00 |           NaN
+  ATT-VAN-PREVERB |    1 |       0 |      0 |       0.00 |           NaN
+  ATT-VAN-SUBJ    |   46 |       0 |      0 |       0.00 |           NaN
+  ATT-VAN-TFROM   |    1 |       0 |      0 |       0.00 |           NaN
+  ATT-VAN-TLOCY   |    3 |       0 |      0 |       0.00 |           NaN
+  ATT-VAN-TO      |    1 |       0 |      0 |       0.00 |           NaN
+  AUX             |   15 |       0 |      0 |       0.00 |           NaN
+  AVC             |    4 |       0 |      0 |       0.00 |           NaN
+  CA              |   89 |       0 |      0 |       0.00 |           NaN
+  CC              |  238 |       0 |      0 |       0.00 |           NaN
+  CD              | 2223 |       0 |      0 |       0.00 |           NaN
+  CJ              | 3997 |       1 |      1 |       0.03 |        100.00
+  CM              |  298 |       0 |      0 |       0.00 |           NaN
+  CONJ            | 1108 |       0 |      0 |       0.00 |           NaN
+  COORD           |  981 |       0 |      0 |       0.00 |           NaN
+  COORD-ELL-ATT   |    3 |       0 |      0 |       0.00 |           NaN
+  COORD-ELL-CONJ  |    5 |       0 |      0 |       0.00 |           NaN
+  COORD-ELL-COORD |    1 |       0 |      0 |       0.00 |           NaN
+  COORD-ELL-LOCY  |    1 |       0 |      0 |       0.00 |           NaN
+  COORD-ELL-MODE  |    5 |       0 |      0 |       0.00 |           NaN
+  COORD-ELL-NEG   |    1 |       0 |      0 |       0.00 |           NaN
+  COORD-ELL-OBJ   |    3 |       0 |      0 |       0.00 |           NaN
+  COORD-ELL-OBL   |    6 |       0 |      0 |       0.00 |           NaN
+  COORD-ELL-PRED  |    2 |       0 |      0 |       0.00 |           NaN
+  COORD-ELL-SUBJ  |    9 |       0 |      0 |       0.00 |           NaN
+  COORD-VAN-APPEND |    1 |       0 |      0 |       0.00 |           NaN
+  COORD-VAN-ATT   |    4 |       0 |      0 |       0.00 |           NaN
+  COORD-VAN-ATT-ELL-ATT |    1 |       0 |      0 |       0.00 |           NaN
+  COORD-VAN-ATT-ELL-COORD |    1 |       0 |      0 |       0.00 |           NaN
+  COORD-VAN-ATT-ELL-DAT |    1 |       0 |      0 |       0.00 |           NaN
+  COORD-VAN-ATT-ELL-OBL |    1 |       0 |      0 |       0.00 |           NaN
+  COORD-VAN-ATT-ELL-SUBJ |    1 |       0 |      0 |       0.00 |           NaN
+  COORD-VAN-CONJ  |   17 |       0 |      0 |       0.00 |           NaN
+  COORD-VAN-COORD |    2 |       0 |      0 |       0.00 |           NaN
+  COORD-VAN-COORD-ELL-CONJ |    1 |       0 |      0 |       0.00 |           NaN
+  COORD-VAN-COORD-ELL-LOCY |    1 |       0 |      0 |       0.00 |           NaN
+  COORD-VAN-COORD-ELL-SUBJ |    1 |       0 |      0 |       0.00 |           NaN
+  COORD-VAN-COORD-VAN-CONJ |    2 |       0 |      0 |       0.00 |           NaN
+  COORD-VAN-COORD-VAN-PRED |    2 |       0 |      0 |       0.00 |           NaN
+  COORD-VAN-COORD-VAN-TLOCY |    2 |       0 |      0 |       0.00 |           NaN
+  COORD-VAN-INF   |    7 |       0 |      0 |       0.00 |           NaN
+  COORD-VAN-MODE  |   17 |       0 |      0 |       0.00 |           NaN
+  COORD-VAN-NEG   |    4 |       0 |      0 |       0.00 |           NaN
+  COORD-VAN-OBJ   |    1 |       0 |      0 |       0.00 |           NaN
+  COORD-VAN-OBL   |   14 |       0 |      0 |       0.00 |           NaN
+  COORD-VAN-PRED  |   48 |       0 |      0 |       0.00 |           NaN
+  COORD-VAN-SUBJ  |   33 |       0 |      0 |       0.00 |           NaN
+  COORD-VAN-TLOCY |    6 |       0 |      0 |       0.00 |           NaN
+  CP              |  788 |       0 |      0 |       0.00 |           NaN
+  CVC             |   71 |       0 |      0 |       0.00 |           NaN
+  DA              |  568 |       0 |      0 |       0.00 |           NaN
+  DAT             |  124 |       0 |      0 |       0.00 |           NaN
+  DAT-ELL-ATT     |    1 |       0 |      0 |       0.00 |           NaN
+  DAT-ELL-CONJ    |    1 |       0 |      0 |       0.00 |           NaN
+  DAT-ELL-DET     |    1 |       0 |      0 |       0.00 |           NaN
+  DB              |    8 |       0 |      0 |       0.00 |           NaN
+  DET             | 2266 |       0 |      0 |       0.00 |           NaN
+  DM              |   18 |       0 |      0 |       0.00 |           NaN
+  DT              | 1063 |       0 |      0 |       0.00 |           NaN
+  EF              |    9 |       0 |      0 |       0.00 |           NaN
+  EP              |  186 |       0 |      0 |       0.00 |           NaN
+  ES              |   43 |       0 |      0 |       0.00 |           NaN
+  ET              |  555 |       0 |      0 |       0.00 |           NaN
+  FP              |    5 |       0 |      0 |       0.00 |           NaN
+  FROM            |   13 |       0 |      0 |       0.00 |           NaN
+  FS              |   43 |       0 |      0 |       0.00 |           NaN
+  HD              |  232 |       0 |      0 |       0.00 |           NaN
+  IC              |    2 |       0 |      0 |       0.00 |           NaN
+  IF              |  106 |       0 |      0 |       0.00 |           NaN
+  IG              |   13 |       0 |      0 |       0.00 |           NaN
+  INF             |  131 |       0 |      0 |       0.00 |           NaN
+  IO              |   23 |       0 |      0 |       0.00 |           NaN
+  IR              |   30 |       0 |      0 |       0.00 |           NaN
+  JC              |    2 |       0 |      0 |       0.00 |           NaN
+  JR              |   31 |       0 |      0 |       0.00 |           NaN
+  JU              |  228 |       0 |      0 |       0.00 |           NaN
+  KA              |   33 |       0 |      0 |       0.00 |           NaN
+  LOCY            |   70 |       0 |      0 |       0.00 |           NaN
+  MA              |   32 |       0 |      0 |       0.00 |           NaN
+  MNR             | 2554 |       0 |      0 |       0.00 |           NaN
+  MO              | 12102 |       0 |      0 |       0.00 |           NaN
+  MODE            |  966 |       0 |      0 |       0.00 |           NaN
+  MS              |  248 |       0 |      0 |       0.00 |           NaN
+  NA              |   90 |       0 |      0 |       0.00 |           NaN
+  NE              |  481 |       0 |      0 |       0.00 |           NaN
+  NEG             |  193 |       0 |      0 |       0.00 |           NaN
+  NG              |  514 |       0 |      0 |       0.00 |           NaN
+  NK              | 27902 |       0 |      0 |       0.00 |           NaN
+  NMC             |  321 |       0 |      0 |       0.00 |           NaN
+  NUM             |   22 |       0 |      0 |       0.00 |           NaN
+  OA              | 3433 |       0 |      0 |       0.00 |           NaN
+  OA2             |    5 |       0 |      0 |       0.00 |           NaN
+  OBJ             |  859 |       0 |      0 |       0.00 |           NaN
+  OBL             | 1571 |       0 |      0 |       0.00 |           NaN
+  OBL-ELL-ATT     |    1 |       0 |      0 |       0.00 |           NaN
+  OBL-ELL-CONJ    |    1 |       0 |      0 |       0.00 |           NaN
+  OBL-ELL-DET     |    1 |       0 |      0 |       0.00 |           NaN
+  OC              | 3652 |       0 |      0 |       0.00 |           NaN
+  OG              |   21 |       0 |      0 |       0.00 |           NaN
+  OO              |  558 |       0 |      0 |       0.00 |           NaN
+  OP              |  676 |       0 |      0 |       0.00 |           NaN
+  PA              | 1067 |       0 |      0 |       0.00 |           NaN
+  PAR             |  429 |       0 |      0 |       0.00 |           NaN
+  PD              | 1045 |       0 |      0 |       0.00 |           NaN
+  PG              |  388 |       0 |      0 |       0.00 |           NaN
+  PH              |   30 |       0 |      0 |       0.00 |           NaN
+  PL              |   86 |       0 |      0 |       0.00 |           NaN
+  PM              |  432 |       0 |      0 |       0.00 |           NaN
+  PNC             | 1240 |       0 |      0 |       0.00 |           NaN
+  PRED            |   91 |       0 |      0 |       0.00 |           NaN
+  PREVERB         |  233 |       0 |      0 |       0.00 |           NaN
+  PT              |   20 |       0 |      0 |       0.00 |           NaN
+  PUNCT           |  112 |       0 |      0 |       0.00 |           NaN
+  QUE             |    6 |       0 |      0 |       0.00 |           NaN
+  RA              |  232 |       0 |      0 |       0.00 |           NaN
+  RC              |  765 |       0 |      0 |       0.00 |           NaN
+  RE              |  268 |       0 |      0 |       0.00 |           NaN
+  ROOT            | 1570 |     550 |    550 |      35.03 |        100.00
+  ROOT-ELL-ATT    |    1 |       0 |      0 |       0.00 |           NaN
+  ROOT-ELL-CONJ   |    2 |       0 |      0 |       0.00 |           NaN
+  ROOT-ELL-COORD  |    3 |       0 |      0 |       0.00 |           NaN
+  ROOT-ELL-COORD-ELL-COORD-ELL-COORD-ELL-COORD-ELL-COORD-ELL-COORD |    1 |       0 |      0 |       0.00 |           NaN
+  ROOT-ELL-COORD-ELL-COORD-ELL-COORD-ELL-COORD-ELL-COORD-ELL-OBL |    1 |       0 |      0 |       0.00 |           NaN
+  ROOT-ELL-COORD-ELL-COORD-ELL-COORD-ELL-COORD-ELL-COORD-ELL-SUBJ |    1 |       0 |      0 |       0.00 |           NaN
+  ROOT-ELL-COORD-ELL-COORD-ELL-COORD-ELL-COORD-ELL-OBL |    1 |       0 |      0 |       0.00 |           NaN
+  ROOT-ELL-COORD-ELL-COORD-ELL-COORD-ELL-COORD-ELL-SUBJ |    1 |       0 |      0 |       0.00 |           NaN
+  ROOT-ELL-COORD-ELL-COORD-ELL-COORD-ELL-OBL |    1 |       0 |      0 |       0.00 |           NaN
+  ROOT-ELL-COORD-ELL-COORD-ELL-COORD-ELL-SUBJ |    1 |       0 |      0 |       0.00 |           NaN
+  ROOT-ELL-COORD-ELL-COORD-ELL-OBL |    1 |       0 |      0 |       0.00 |           NaN
+  ROOT-ELL-COORD-ELL-COORD-ELL-SUBJ |    1 |       0 |      0 |       0.00 |           NaN
+  ROOT-ELL-COORD-ELL-OBL |    1 |       0 |      0 |       0.00 |           NaN
+  ROOT-ELL-COORD-ELL-SUBJ |    1 |       0 |      0 |       0.00 |           NaN
+  ROOT-ELL-MODE   |    3 |       0 |      0 |       0.00 |           NaN
+  ROOT-ELL-NEG    |    1 |       0 |      0 |       0.00 |           NaN
+  ROOT-ELL-OBJ    |    1 |       0 |      0 |       0.00 |           NaN
+  ROOT-ELL-OBL    |    2 |       0 |      0 |       0.00 |           NaN
+  ROOT-ELL-SUBJ   |    3 |       0 |      0 |       0.00 |           NaN
+  ROOT-ELL-TFROM  |    1 |       0 |      0 |       0.00 |           NaN
+  ROOT-ELL-TLOCY  |    1 |       0 |      0 |       0.00 |           NaN
+  ROOT-VAN-ATT    |   18 |       0 |      0 |       0.00 |           NaN
+  ROOT-VAN-ATT-VAN-CONJ |    1 |       0 |      0 |       0.00 |           NaN
+  ROOT-VAN-ATT-VAN-LOCY |    1 |       0 |      0 |       0.00 |           NaN
+  ROOT-VAN-ATT-VAN-MODE |    1 |       0 |      0 |       0.00 |           NaN
+  ROOT-VAN-ATT-VAN-OBL |    1 |       0 |      0 |       0.00 |           NaN
+  ROOT-VAN-ATT-VAN-PRED |    5 |       0 |      0 |       0.00 |           NaN
+  ROOT-VAN-ATT-VAN-SUBJ |    4 |       0 |      0 |       0.00 |           NaN
+  ROOT-VAN-CONJ   |   45 |       0 |      0 |       0.00 |           NaN
+  ROOT-VAN-COORD  |   13 |       0 |      0 |       0.00 |           NaN
+  ROOT-VAN-COORD-ELL-COORD |    1 |       0 |      0 |       0.00 |           NaN
+  ROOT-VAN-COORD-ELL-COORD-ELL-COORD-ELL-CONJ |    1 |       0 |      0 |       0.00 |           NaN
+  ROOT-VAN-COORD-ELL-COORD-ELL-COORD-ELL-OBL |    1 |       0 |      0 |       0.00 |           NaN
+  ROOT-VAN-COORD-ELL-COORD-ELL-COORD-ELL-SUBJ |    1 |       0 |      0 |       0.00 |           NaN
+  ROOT-VAN-COORD-ELL-COORD-ELL-OBL |    1 |       0 |      0 |       0.00 |           NaN
+  ROOT-VAN-COORD-ELL-COORD-ELL-SUBJ |    1 |       0 |      0 |       0.00 |           NaN
+  ROOT-VAN-COORD-ELL-DAT |    1 |       0 |      0 |       0.00 |           NaN
+  ROOT-VAN-COORD-ELL-MODE |    1 |       0 |      0 |       0.00 |           NaN
+  ROOT-VAN-COORD-ELL-OBJ |    1 |       0 |      0 |       0.00 |           NaN
+  ROOT-VAN-COORD-ELL-OBL |    1 |       0 |      0 |       0.00 |           NaN
+  ROOT-VAN-COORD-ELL-SUBJ |    1 |       0 |      0 |       0.00 |           NaN
+  ROOT-VAN-COORD-VAN-CONJ |    1 |       0 |      0 |       0.00 |           NaN
+  ROOT-VAN-COORD-VAN-COORD |    1 |       0 |      0 |       0.00 |           NaN
+  ROOT-VAN-COORD-VAN-MODE |    1 |       0 |      0 |       0.00 |           NaN
+  ROOT-VAN-COORD-VAN-OBL |    2 |       0 |      0 |       0.00 |           NaN
+  ROOT-VAN-COORD-VAN-PRED |    5 |       0 |      0 |       0.00 |           NaN
+  ROOT-VAN-COORD-VAN-SUBJ |    5 |       0 |      0 |       0.00 |           NaN
+  ROOT-VAN-COORD-VAN-TLOCY |    2 |       0 |      0 |       0.00 |           NaN
+  ROOT-VAN-DAT    |    5 |       0 |      0 |       0.00 |           NaN
+  ROOT-VAN-INF    |    3 |       0 |      0 |       0.00 |           NaN
+  ROOT-VAN-LOCY   |    3 |       0 |      0 |       0.00 |           NaN
+  ROOT-VAN-MODE   |   31 |       0 |      0 |       0.00 |           NaN
+  ROOT-VAN-NEG    |    6 |       0 |      0 |       0.00 |           NaN
+  ROOT-VAN-OBL    |   18 |       0 |      0 |       0.00 |           NaN
+  ROOT-VAN-PRED   |   90 |       0 |      0 |       0.00 |           NaN
+  ROOT-VAN-SUBJ   |   85 |       0 |      0 |       0.00 |           NaN
+  ROOT-VAN-TFROM  |    1 |       0 |      0 |       0.00 |           NaN
+  ROOT-VAN-TLOCY  |    3 |       0 |      0 |       0.00 |           NaN
+  RS              |   35 |       0 |      0 |       0.00 |           NaN
+  SB              | 6638 |       0 |      0 |       0.00 |           NaN
+  SBP             |  156 |       0 |      0 |       0.00 |           NaN
+  SP              |  299 |       0 |      0 |       0.00 |           NaN
+  SS              | 1059 |       0 |      0 |       0.00 |           NaN
+  SUBJ            | 1120 |       0 |      0 |       0.00 |           NaN
+  SUBJ-ELL-ATT    |    4 |       0 |      0 |       0.00 |           NaN
+  SUBJ-ELL-CONJ   |    3 |       0 |      0 |       0.00 |           NaN
+  SUBJ-ELL-DET    |    3 |       0 |      0 |       0.00 |           NaN
+  SVP             |  499 |       0 |      0 |       0.00 |           NaN
+  TA              |  307 |       0 |      0 |       0.00 |           NaN
+  TFROM           |   27 |       0 |      0 |       0.00 |           NaN
+  TLOCY           |  449 |       0 |      0 |       0.00 |           NaN
+  TO              |   25 |       0 |      0 |       0.00 |           NaN
+  TTO             |   15 |       0 |      0 |       0.00 |           NaN
+  UA              |  250 |       0 |      0 |       0.00 |           NaN
+  UC              |   89 |       0 |      0 |       0.00 |           NaN
+  VA              |   23 |       0 |      0 |       0.00 |           NaN
+  VG              |  276 |       0 |      0 |       0.00 |           NaN
+  VO              |   17 |       0 |      0 |       0.00 |           NaN
+  VS              |    7 |       0 |      0 |       0.00 |           NaN
+  XA              |    3 |       0 |      0 |       0.00 |           NaN
+  XF              |    1 |       0 |      0 |       0.00 |           NaN
+  XT              |    7 |       0 |      0 |       0.00 |           NaN
+  XX              |   10 |       0 |      0 |       0.00 |           NaN
+  a_obj           |  684 |       0 |      0 |       0.00 |           NaN
+  adjunct         | 2350 |       0 |      0 |       0.00 |           NaN
+  aff             |  456 |       0 |      0 |       0.00 |           NaN
+  aglt            |   56 |       0 |      0 |       0.00 |           NaN
+  app             |   48 |       0 |      0 |       0.00 |           NaN
+  arg             |   63 |       0 |      0 |       0.00 |           NaN
+  at0             |    2 |       0 |      0 |       0.00 |           NaN
+  ato             |   71 |       0 |      0 |       0.00 |           NaN
+  ats             |  735 |       0 |      0 |       0.00 |           NaN
+  aux             |   59 |       0 |      0 |       0.00 |           NaN
+  aux.caus        |   56 |       0 |      0 |       0.00 |           NaN
+  aux.pass        |  419 |       0 |      0 |       0.00 |           NaN
+  aux.tps         |  863 |       0 |      0 |       0.00 |           NaN
+  comp            | 1306 |       3 |      3 |       0.23 |        100.00
+  comp_fin        |   96 |       0 |      0 |       0.00 |           NaN
+  comp_inf        |  108 |       0 |      0 |       0.00 |           NaN
+  complm          |   58 |       0 |      0 |       0.00 |           NaN
+  cond            |   19 |       0 |      0 |       0.00 |           NaN
+  conjunct        |  523 |       0 |      0 |       0.00 |           NaN
+  coord           | 1450 |       0 |      0 |       0.00 |           NaN
+  de_obj          |  565 |       0 |      0 |       0.00 |           NaN
+  dep             | 5253 |       0 |      0 |       0.00 |           NaN
+  dep.coord       | 1837 |       0 |      0 |       0.00 |           NaN
+  dep_cpd         | 5698 |       0 |      0 |       0.00 |           NaN
+  det             | 10148 |       0 |      0 |       0.00 |           NaN
+  dummy           |    0 |       0 | 179332 |        NaN |          0.00
+  imp             |    4 |       0 |      0 |       0.00 |           NaN
+  mod             | 13986 |       0 |      0 |       0.00 |           NaN
+  mod.rel         |  696 |       0 |      0 |       0.00 |           NaN
+  mwe             |   43 |       0 |      0 |       0.00 |           NaN
+  ne              |   79 |       0 |      0 |       0.00 |           NaN
+  neg             |  110 |       0 |      0 |       0.00 |           NaN
+  obj             | 3770 |       0 |      0 |       0.00 |           NaN
+  obj.cpl         |  778 |       0 |      0 |       0.00 |           NaN
+  obj.p           | 10039 |       0 |      0 |       0.00 |           NaN
+  obj_th          |   77 |       0 |      0 |       0.00 |           NaN
+  p_obj           |  549 |       0 |      0 |       0.00 |           NaN
+  pd              |  107 |       0 |      0 |       0.00 |           NaN
+  ponct           | 1074 |       0 |      0 |       0.00 |           NaN
+  pre_coord       |    2 |       0 |      0 |       0.00 |           NaN
+  pred            |  750 |       0 |      0 |       0.00 |           NaN
+  refl            |  160 |       0 |      0 |       0.00 |           NaN
+  root            | 2540 |       0 |      0 |       0.00 |           NaN
+  subj            |  593 |       0 |      0 |       0.00 |           NaN
+  suj             | 4124 |       0 |      0 |       0.00 |           NaN
+
+
+  Precision and recall of DEPREL + ATTACHMENT
+
+  ----------------+------+---------+--------+------------+---------------
+  deprel          | gold | correct | system | recall (%) | precision (%) 
+  ----------------+------+---------+--------+------------+---------------
+  +A              |  102 |       0 |      0 |       0.00 |           NaN
+  +F              |  123 |       0 |      0 |       0.00 |           NaN
+  --              | 6982 |       0 |      0 |       0.00 |           NaN
+  AA              |  540 |       0 |      0 |       0.00 |           NaN
+  AC              |  127 |       0 |      0 |       0.00 |           NaN
+  ADC             |    4 |       0 |      0 |       0.00 |           NaN
+  AG              | 2249 |       0 |      0 |       0.00 |           NaN
+  AMS             |   75 |       0 |      0 |       0.00 |           NaN
+  AN              |   56 |       0 |      0 |       0.00 |           NaN
+  APP             |  461 |       0 |      0 |       0.00 |           NaN
+  APPEND          |  101 |       0 |      0 |       0.00 |           NaN
+  APPEND-VAN-OBL  |    1 |       0 |      0 |       0.00 |           NaN
+  APPEND-VAN-PRED |    2 |       0 |      0 |       0.00 |           NaN
+  APPEND-VAN-PUNCT |    2 |       0 |      0 |       0.00 |           NaN
+  APPEND-VAN-SUBJ |    2 |       0 |      0 |       0.00 |           NaN
+  AT              |  443 |       0 |      0 |       0.00 |           NaN
+  ATT             | 4226 |       0 |      0 |       0.00 |           NaN
+  ATT-ELL-ATT     |    5 |       0 |      0 |       0.00 |           NaN
+  ATT-ELL-CONJ    |    2 |       0 |      0 |       0.00 |           NaN
+  ATT-ELL-COORD-ELL-ATT |    1 |       0 |      0 |       0.00 |           NaN
+  ATT-ELL-COORD-ELL-COORD-ELL-ATT |    1 |       0 |      0 |       0.00 |           NaN
+  ATT-ELL-COORD-ELL-COORD-ELL-COORD |    1 |       0 |      0 |       0.00 |           NaN
+  ATT-ELL-COORD-ELL-COORD-ELL-DET |    1 |       0 |      0 |       0.00 |           NaN
+  ATT-ELL-COORD-ELL-DET |    1 |       0 |      0 |       0.00 |           NaN
+  ATT-ELL-DET     |    2 |       0 |      0 |       0.00 |           NaN
+  ATT-ELL-MODE    |    6 |       0 |      0 |       0.00 |           NaN
+  ATT-ELL-NEG     |    2 |       0 |      0 |       0.00 |           NaN
+  ATT-ELL-OBJ     |    3 |       0 |      0 |       0.00 |           NaN
+  ATT-ELL-OBL     |    4 |       0 |      0 |       0.00 |           NaN
+  ATT-ELL-SUBJ    |    3 |       0 |      0 |       0.00 |           NaN
+  ATT-VAN-APPEND  |    1 |       0 |      0 |       0.00 |           NaN
+  ATT-VAN-ATT     |    6 |       0 |      0 |       0.00 |           NaN
+  ATT-VAN-ATT-VAN-COORD-VAN-PRED |    1 |       0 |      0 |       0.00 |           NaN
+  ATT-VAN-ATT-VAN-SUBJ |    1 |       0 |      0 |       0.00 |           NaN
+  ATT-VAN-CONJ    |   24 |       0 |      0 |       0.00 |           NaN
+  ATT-VAN-COORD   |    4 |       0 |      0 |       0.00 |           NaN
+  ATT-VAN-DAT     |    1 |       0 |      0 |       0.00 |           NaN
+  ATT-VAN-INF     |    5 |       0 |      0 |       0.00 |           NaN
+  ATT-VAN-LOCY    |    5 |       0 |      0 |       0.00 |           NaN
+  ATT-VAN-MODE    |   16 |       0 |      0 |       0.00 |           NaN
+  ATT-VAN-NEG     |   11 |       0 |      0 |       0.00 |           NaN
+  ATT-VAN-OBL     |   17 |       0 |      0 |       0.00 |           NaN
+  ATT-VAN-PRED    |   59 |       0 |      0 |       0.00 |           NaN
+  ATT-VAN-PREVERB |    1 |       0 |      0 |       0.00 |           NaN
+  ATT-VAN-SUBJ    |   46 |       0 |      0 |       0.00 |           NaN
+  ATT-VAN-TFROM   |    1 |       0 |      0 |       0.00 |           NaN
+  ATT-VAN-TLOCY   |    3 |       0 |      0 |       0.00 |           NaN
+  ATT-VAN-TO      |    1 |       0 |      0 |       0.00 |           NaN
+  AUX             |   15 |       0 |      0 |       0.00 |           NaN
+  AVC             |    4 |       0 |      0 |       0.00 |           NaN
+  CA              |   89 |       0 |      0 |       0.00 |           NaN
+  CC              |  238 |       0 |      0 |       0.00 |           NaN
+  CD              | 2223 |       0 |      0 |       0.00 |           NaN
+  CJ              | 3997 |       0 |      1 |       0.00 |          0.00
+  CM              |  298 |       0 |      0 |       0.00 |           NaN
+  CONJ            | 1108 |       0 |      0 |       0.00 |           NaN
+  COORD           |  981 |       0 |      0 |       0.00 |           NaN
+  COORD-ELL-ATT   |    3 |       0 |      0 |       0.00 |           NaN
+  COORD-ELL-CONJ  |    5 |       0 |      0 |       0.00 |           NaN
+  COORD-ELL-COORD |    1 |       0 |      0 |       0.00 |           NaN
+  COORD-ELL-LOCY  |    1 |       0 |      0 |       0.00 |           NaN
+  COORD-ELL-MODE  |    5 |       0 |      0 |       0.00 |           NaN
+  COORD-ELL-NEG   |    1 |       0 |      0 |       0.00 |           NaN
+  COORD-ELL-OBJ   |    3 |       0 |      0 |       0.00 |           NaN
+  COORD-ELL-OBL   |    6 |       0 |      0 |       0.00 |           NaN
+  COORD-ELL-PRED  |    2 |       0 |      0 |       0.00 |           NaN
+  COORD-ELL-SUBJ  |    9 |       0 |      0 |       0.00 |           NaN
+  COORD-VAN-APPEND |    1 |       0 |      0 |       0.00 |           NaN
+  COORD-VAN-ATT   |    4 |       0 |      0 |       0.00 |           NaN
+  COORD-VAN-ATT-ELL-ATT |    1 |       0 |      0 |       0.00 |           NaN
+  COORD-VAN-ATT-ELL-COORD |    1 |       0 |      0 |       0.00 |           NaN
+  COORD-VAN-ATT-ELL-DAT |    1 |       0 |      0 |       0.00 |           NaN
+  COORD-VAN-ATT-ELL-OBL |    1 |       0 |      0 |       0.00 |           NaN
+  COORD-VAN-ATT-ELL-SUBJ |    1 |       0 |      0 |       0.00 |           NaN
+  COORD-VAN-CONJ  |   17 |       0 |      0 |       0.00 |           NaN
+  COORD-VAN-COORD |    2 |       0 |      0 |       0.00 |           NaN
+  COORD-VAN-COORD-ELL-CONJ |    1 |       0 |      0 |       0.00 |           NaN
+  COORD-VAN-COORD-ELL-LOCY |    1 |       0 |      0 |       0.00 |           NaN
+  COORD-VAN-COORD-ELL-SUBJ |    1 |       0 |      0 |       0.00 |           NaN
+  COORD-VAN-COORD-VAN-CONJ |    2 |       0 |      0 |       0.00 |           NaN
+  COORD-VAN-COORD-VAN-PRED |    2 |       0 |      0 |       0.00 |           NaN
+  COORD-VAN-COORD-VAN-TLOCY |    2 |       0 |      0 |       0.00 |           NaN
+  COORD-VAN-INF   |    7 |       0 |      0 |       0.00 |           NaN
+  COORD-VAN-MODE  |   17 |       0 |      0 |       0.00 |           NaN
+  COORD-VAN-NEG   |    4 |       0 |      0 |       0.00 |           NaN
+  COORD-VAN-OBJ   |    1 |       0 |      0 |       0.00 |           NaN
+  COORD-VAN-OBL   |   14 |       0 |      0 |       0.00 |           NaN
+  COORD-VAN-PRED  |   48 |       0 |      0 |       0.00 |           NaN
+  COORD-VAN-SUBJ  |   33 |       0 |      0 |       0.00 |           NaN
+  COORD-VAN-TLOCY |    6 |       0 |      0 |       0.00 |           NaN
+  CP              |  788 |       0 |      0 |       0.00 |           NaN
+  CVC             |   71 |       0 |      0 |       0.00 |           NaN
+  DA              |  568 |       0 |      0 |       0.00 |           NaN
+  DAT             |  124 |       0 |      0 |       0.00 |           NaN
+  DAT-ELL-ATT     |    1 |       0 |      0 |       0.00 |           NaN
+  DAT-ELL-CONJ    |    1 |       0 |      0 |       0.00 |           NaN
+  DAT-ELL-DET     |    1 |       0 |      0 |       0.00 |           NaN
+  DB              |    8 |       0 |      0 |       0.00 |           NaN
+  DET             | 2266 |       0 |      0 |       0.00 |           NaN
+  DM              |   18 |       0 |      0 |       0.00 |           NaN
+  DT              | 1063 |       0 |      0 |       0.00 |           NaN
+  EF              |    9 |       0 |      0 |       0.00 |           NaN
+  EP              |  186 |       0 |      0 |       0.00 |           NaN
+  ES              |   43 |       0 |      0 |       0.00 |           NaN
+  ET              |  555 |       0 |      0 |       0.00 |           NaN
+  FP              |    5 |       0 |      0 |       0.00 |           NaN
+  FROM            |   13 |       0 |      0 |       0.00 |           NaN
+  FS              |   43 |       0 |      0 |       0.00 |           NaN
+  HD              |  232 |       0 |      0 |       0.00 |           NaN
+  IC              |    2 |       0 |      0 |       0.00 |           NaN
+  IF              |  106 |       0 |      0 |       0.00 |           NaN
+  IG              |   13 |       0 |      0 |       0.00 |           NaN
+  INF             |  131 |       0 |      0 |       0.00 |           NaN
+  IO              |   23 |       0 |      0 |       0.00 |           NaN
+  IR              |   30 |       0 |      0 |       0.00 |           NaN
+  JC              |    2 |       0 |      0 |       0.00 |           NaN
+  JR              |   31 |       0 |      0 |       0.00 |           NaN
+  JU              |  228 |       0 |      0 |       0.00 |           NaN
+  KA              |   33 |       0 |      0 |       0.00 |           NaN
+  LOCY            |   70 |       0 |      0 |       0.00 |           NaN
+  MA              |   32 |       0 |      0 |       0.00 |           NaN
+  MNR             | 2554 |       0 |      0 |       0.00 |           NaN
+  MO              | 12102 |       0 |      0 |       0.00 |           NaN
+  MODE            |  966 |       0 |      0 |       0.00 |           NaN
+  MS              |  248 |       0 |      0 |       0.00 |           NaN
+  NA              |   90 |       0 |      0 |       0.00 |           NaN
+  NE              |  481 |       0 |      0 |       0.00 |           NaN
+  NEG             |  193 |       0 |      0 |       0.00 |           NaN
+  NG              |  514 |       0 |      0 |       0.00 |           NaN
+  NK              | 27902 |       0 |      0 |       0.00 |           NaN
+  NMC             |  321 |       0 |      0 |       0.00 |           NaN
+  NUM             |   22 |       0 |      0 |       0.00 |           NaN
+  OA              | 3433 |       0 |      0 |       0.00 |           NaN
+  OA2             |    5 |       0 |      0 |       0.00 |           NaN
+  OBJ             |  859 |       0 |      0 |       0.00 |           NaN
+  OBL             | 1571 |       0 |      0 |       0.00 |           NaN
+  OBL-ELL-ATT     |    1 |       0 |      0 |       0.00 |           NaN
+  OBL-ELL-CONJ    |    1 |       0 |      0 |       0.00 |           NaN
+  OBL-ELL-DET     |    1 |       0 |      0 |       0.00 |           NaN
+  OC              | 3652 |       0 |      0 |       0.00 |           NaN
+  OG              |   21 |       0 |      0 |       0.00 |           NaN
+  OO              |  558 |       0 |      0 |       0.00 |           NaN
+  OP              |  676 |       0 |      0 |       0.00 |           NaN
+  PA              | 1067 |       0 |      0 |       0.00 |           NaN
+  PAR             |  429 |       0 |      0 |       0.00 |           NaN
+  PD              | 1045 |       0 |      0 |       0.00 |           NaN
+  PG              |  388 |       0 |      0 |       0.00 |           NaN
+  PH              |   30 |       0 |      0 |       0.00 |           NaN
+  PL              |   86 |       0 |      0 |       0.00 |           NaN
+  PM              |  432 |       0 |      0 |       0.00 |           NaN
+  PNC             | 1240 |       0 |      0 |       0.00 |           NaN
+  PRED            |   91 |       0 |      0 |       0.00 |           NaN
+  PREVERB         |  233 |       0 |      0 |       0.00 |           NaN
+  PT              |   20 |       0 |      0 |       0.00 |           NaN
+  PUNCT           |  112 |       0 |      0 |       0.00 |           NaN
+  QUE             |    6 |       0 |      0 |       0.00 |           NaN
+  RA              |  232 |       0 |      0 |       0.00 |           NaN
+  RC              |  765 |       0 |      0 |       0.00 |           NaN
+  RE              |  268 |       0 |      0 |       0.00 |           NaN
+  ROOT            | 1570 |     550 |    550 |      35.03 |        100.00
+  ROOT-ELL-ATT    |    1 |       0 |      0 |       0.00 |           NaN
+  ROOT-ELL-CONJ   |    2 |       0 |      0 |       0.00 |           NaN
+  ROOT-ELL-COORD  |    3 |       0 |      0 |       0.00 |           NaN
+  ROOT-ELL-COORD-ELL-COORD-ELL-COORD-ELL-COORD-ELL-COORD-ELL-COORD |    1 |       0 |      0 |       0.00 |           NaN
+  ROOT-ELL-COORD-ELL-COORD-ELL-COORD-ELL-COORD-ELL-COORD-ELL-OBL |    1 |       0 |      0 |       0.00 |           NaN
+  ROOT-ELL-COORD-ELL-COORD-ELL-COORD-ELL-COORD-ELL-COORD-ELL-SUBJ |    1 |       0 |      0 |       0.00 |           NaN
+  ROOT-ELL-COORD-ELL-COORD-ELL-COORD-ELL-COORD-ELL-OBL |    1 |       0 |      0 |       0.00 |           NaN
+  ROOT-ELL-COORD-ELL-COORD-ELL-COORD-ELL-COORD-ELL-SUBJ |    1 |       0 |      0 |       0.00 |           NaN
+  ROOT-ELL-COORD-ELL-COORD-ELL-COORD-ELL-OBL |    1 |       0 |      0 |       0.00 |           NaN
+  ROOT-ELL-COORD-ELL-COORD-ELL-COORD-ELL-SUBJ |    1 |       0 |      0 |       0.00 |           NaN
+  ROOT-ELL-COORD-ELL-COORD-ELL-OBL |    1 |       0 |      0 |       0.00 |           NaN
+  ROOT-ELL-COORD-ELL-COORD-ELL-SUBJ |    1 |       0 |      0 |       0.00 |           NaN
+  ROOT-ELL-COORD-ELL-OBL |    1 |       0 |      0 |       0.00 |           NaN
+  ROOT-ELL-COORD-ELL-SUBJ |    1 |       0 |      0 |       0.00 |           NaN
+  ROOT-ELL-MODE   |    3 |       0 |      0 |       0.00 |           NaN
+  ROOT-ELL-NEG    |    1 |       0 |      0 |       0.00 |           NaN
+  ROOT-ELL-OBJ    |    1 |       0 |      0 |       0.00 |           NaN
+  ROOT-ELL-OBL    |    2 |       0 |      0 |       0.00 |           NaN
+  ROOT-ELL-SUBJ   |    3 |       0 |      0 |       0.00 |           NaN
+  ROOT-ELL-TFROM  |    1 |       0 |      0 |       0.00 |           NaN
+  ROOT-ELL-TLOCY  |    1 |       0 |      0 |       0.00 |           NaN
+  ROOT-VAN-ATT    |   18 |       0 |      0 |       0.00 |           NaN
+  ROOT-VAN-ATT-VAN-CONJ |    1 |       0 |      0 |       0.00 |           NaN
+  ROOT-VAN-ATT-VAN-LOCY |    1 |       0 |      0 |       0.00 |           NaN
+  ROOT-VAN-ATT-VAN-MODE |    1 |       0 |      0 |       0.00 |           NaN
+  ROOT-VAN-ATT-VAN-OBL |    1 |       0 |      0 |       0.00 |           NaN
+  ROOT-VAN-ATT-VAN-PRED |    5 |       0 |      0 |       0.00 |           NaN
+  ROOT-VAN-ATT-VAN-SUBJ |    4 |       0 |      0 |       0.00 |           NaN
+  ROOT-VAN-CONJ   |   45 |       0 |      0 |       0.00 |           NaN
+  ROOT-VAN-COORD  |   13 |       0 |      0 |       0.00 |           NaN
+  ROOT-VAN-COORD-ELL-COORD |    1 |       0 |      0 |       0.00 |           NaN
+  ROOT-VAN-COORD-ELL-COORD-ELL-COORD-ELL-CONJ |    1 |       0 |      0 |       0.00 |           NaN
+  ROOT-VAN-COORD-ELL-COORD-ELL-COORD-ELL-OBL |    1 |       0 |      0 |       0.00 |           NaN
+  ROOT-VAN-COORD-ELL-COORD-ELL-COORD-ELL-SUBJ |    1 |       0 |      0 |       0.00 |           NaN
+  ROOT-VAN-COORD-ELL-COORD-ELL-OBL |    1 |       0 |      0 |       0.00 |           NaN
+  ROOT-VAN-COORD-ELL-COORD-ELL-SUBJ |    1 |       0 |      0 |       0.00 |           NaN
+  ROOT-VAN-COORD-ELL-DAT |    1 |       0 |      0 |       0.00 |           NaN
+  ROOT-VAN-COORD-ELL-MODE |    1 |       0 |      0 |       0.00 |           NaN
+  ROOT-VAN-COORD-ELL-OBJ |    1 |       0 |      0 |       0.00 |           NaN
+  ROOT-VAN-COORD-ELL-OBL |    1 |       0 |      0 |       0.00 |           NaN
+  ROOT-VAN-COORD-ELL-SUBJ |    1 |       0 |      0 |       0.00 |           NaN
+  ROOT-VAN-COORD-VAN-CONJ |    1 |       0 |      0 |       0.00 |           NaN
+  ROOT-VAN-COORD-VAN-COORD |    1 |       0 |      0 |       0.00 |           NaN
+  ROOT-VAN-COORD-VAN-MODE |    1 |       0 |      0 |       0.00 |           NaN
+  ROOT-VAN-COORD-VAN-OBL |    2 |       0 |      0 |       0.00 |           NaN
+  ROOT-VAN-COORD-VAN-PRED |    5 |       0 |      0 |       0.00 |           NaN
+  ROOT-VAN-COORD-VAN-SUBJ |    5 |       0 |      0 |       0.00 |           NaN
+  ROOT-VAN-COORD-VAN-TLOCY |    2 |       0 |      0 |       0.00 |           NaN
+  ROOT-VAN-DAT    |    5 |       0 |      0 |       0.00 |           NaN
+  ROOT-VAN-INF    |    3 |       0 |      0 |       0.00 |           NaN
+  ROOT-VAN-LOCY   |    3 |       0 |      0 |       0.00 |           NaN
+  ROOT-VAN-MODE   |   31 |       0 |      0 |       0.00 |           NaN
+  ROOT-VAN-NEG    |    6 |       0 |      0 |       0.00 |           NaN
+  ROOT-VAN-OBL    |   18 |       0 |      0 |       0.00 |           NaN
+  ROOT-VAN-PRED   |   90 |       0 |      0 |       0.00 |           NaN
+  ROOT-VAN-SUBJ   |   85 |       0 |      0 |       0.00 |           NaN
+  ROOT-VAN-TFROM  |    1 |       0 |      0 |       0.00 |           NaN
+  ROOT-VAN-TLOCY  |    3 |       0 |      0 |       0.00 |           NaN
+  RS              |   35 |       0 |      0 |       0.00 |           NaN
+  SB              | 6638 |       0 |      0 |       0.00 |           NaN
+  SBP             |  156 |       0 |      0 |       0.00 |           NaN
+  SP              |  299 |       0 |      0 |       0.00 |           NaN
+  SS              | 1059 |       0 |      0 |       0.00 |           NaN
+  SUBJ            | 1120 |       0 |      0 |       0.00 |           NaN
+  SUBJ-ELL-ATT    |    4 |       0 |      0 |       0.00 |           NaN
+  SUBJ-ELL-CONJ   |    3 |       0 |      0 |       0.00 |           NaN
+  SUBJ-ELL-DET    |    3 |       0 |      0 |       0.00 |           NaN
+  SVP             |  499 |       0 |      0 |       0.00 |           NaN
+  TA              |  307 |       0 |      0 |       0.00 |           NaN
+  TFROM           |   27 |       0 |      0 |       0.00 |           NaN
+  TLOCY           |  449 |       0 |      0 |       0.00 |           NaN
+  TO              |   25 |       0 |      0 |       0.00 |           NaN
+  TTO             |   15 |       0 |      0 |       0.00 |           NaN
+  UA              |  250 |       0 |      0 |       0.00 |           NaN
+  UC              |   89 |       0 |      0 |       0.00 |           NaN
+  VA              |   23 |       0 |      0 |       0.00 |           NaN
+  VG              |  276 |       0 |      0 |       0.00 |           NaN
+  VO              |   17 |       0 |      0 |       0.00 |           NaN
+  VS              |    7 |       0 |      0 |       0.00 |           NaN
+  XA              |    3 |       0 |      0 |       0.00 |           NaN
+  XF              |    1 |       0 |      0 |       0.00 |           NaN
+  XT              |    7 |       0 |      0 |       0.00 |           NaN
+  XX              |   10 |       0 |      0 |       0.00 |           NaN
+  a_obj           |  684 |       0 |      0 |       0.00 |           NaN
+  adjunct         | 2350 |       0 |      0 |       0.00 |           NaN
+  aff             |  456 |       0 |      0 |       0.00 |           NaN
+  aglt            |   56 |       0 |      0 |       0.00 |           NaN
+  app             |   48 |       0 |      0 |       0.00 |           NaN
+  arg             |   63 |       0 |      0 |       0.00 |           NaN
+  at0             |    2 |       0 |      0 |       0.00 |           NaN
+  ato             |   71 |       0 |      0 |       0.00 |           NaN
+  ats             |  735 |       0 |      0 |       0.00 |           NaN
+  aux             |   59 |       0 |      0 |       0.00 |           NaN
+  aux.caus        |   56 |       0 |      0 |       0.00 |           NaN
+  aux.pass        |  419 |       0 |      0 |       0.00 |           NaN
+  aux.tps         |  863 |       0 |      0 |       0.00 |           NaN
+  comp            | 1306 |       0 |      3 |       0.00 |          0.00
+  comp_fin        |   96 |       0 |      0 |       0.00 |           NaN
+  comp_inf        |  108 |       0 |      0 |       0.00 |           NaN
+  complm          |   58 |       0 |      0 |       0.00 |           NaN
+  cond            |   19 |       0 |      0 |       0.00 |           NaN
+  conjunct        |  523 |       0 |      0 |       0.00 |           NaN
+  coord           | 1450 |       0 |      0 |       0.00 |           NaN
+  de_obj          |  565 |       0 |      0 |       0.00 |           NaN
+  dep             | 5253 |       0 |      0 |       0.00 |           NaN
+  dep.coord       | 1837 |       0 |      0 |       0.00 |           NaN
+  dep_cpd         | 5698 |       0 |      0 |       0.00 |           NaN
+  det             | 10148 |       0 |      0 |       0.00 |           NaN
+  dummy           |    0 |       0 | 179332 |        NaN |          0.00
+  imp             |    4 |       0 |      0 |       0.00 |           NaN
+  mod             | 13986 |       0 |      0 |       0.00 |           NaN
+  mod.rel         |  696 |       0 |      0 |       0.00 |           NaN
+  mwe             |   43 |       0 |      0 |       0.00 |           NaN
+  ne              |   79 |       0 |      0 |       0.00 |           NaN
+  neg             |  110 |       0 |      0 |       0.00 |           NaN
+  obj             | 3770 |       0 |      0 |       0.00 |           NaN
+  obj.cpl         |  778 |       0 |      0 |       0.00 |           NaN
+  obj.p           | 10039 |       0 |      0 |       0.00 |           NaN
+  obj_th          |   77 |       0 |      0 |       0.00 |           NaN
+  p_obj           |  549 |       0 |      0 |       0.00 |           NaN
+  pd              |  107 |       0 |      0 |       0.00 |           NaN
+  ponct           | 1074 |       0 |      0 |       0.00 |           NaN
+  pre_coord       |    2 |       0 |      0 |       0.00 |           NaN
+  pred            |  750 |       0 |      0 |       0.00 |           NaN
+  refl            |  160 |       0 |      0 |       0.00 |           NaN
+  root            | 2540 |       0 |      0 |       0.00 |           NaN
+  subj            |  593 |       0 |      0 |       0.00 |           NaN
+  suj             | 4124 |       0 |      0 |       0.00 |           NaN
+
+
+  Precision and recall of binned HEAD direction
+
+  ----------------+------+---------+--------+------------+---------------
+  direction       | gold | correct | system | recall (%) | precision (%) 
+  ----------------+------+---------+--------+------------+---------------
+  to_root         | 10217 |    5253 |   5253 |      51.41 |        100.00
+  left            | 90592 |   42082 |  42082 |      46.45 |        100.00
+  right           | 79077 |   79077 | 132551 |     100.00 |         59.66
+  self            |    0 |       0 |      0 |        NaN |           NaN
+
+
+  Precision and recall of binned HEAD distance
+
+  ----------------+------+---------+--------+------------+---------------
+  distance        | gold | correct | system | recall (%) | precision (%) 
+  ----------------+------+---------+--------+------------+---------------
+  to_root         | 10217 |    5253 |   5253 |      51.41 |        100.00
+  1               | 86961 |   55837 |  55837 |      64.21 |        100.00
+  2               | 34253 |   16587 |  16587 |      48.42 |        100.00
+  3-6             | 31710 |    9166 |   9166 |      28.91 |        100.00
+  7-...           | 16745 |   16745 |  93043 |     100.00 |         18.00
+
+
+  Frame confusions (gold versus system; *...* marks the head token)
+
+  4376  *dep* obj.p / *dep* dummy 
+  4040  *MO* NK / *MO* 
+  2532  ** -- / ** dummy 
+  2344  ** -- / ** 
+  2225  *MNR* NK / *MNR* 
+  2039  *CD* CJ / *CD* 
+  1886  NK *NK* / dummy *NK* 
+  1701  *mod* obj.p / *mod* dummy 
+  1509  ** root / ** 
+  1382  det *obj.p* / dummy *obj.p* 
+  1119  *coord* dep.coord / *coord* dummy 
+  1046  NK *SB* / dummy *SB* 
+  1031  ** root / ** dummy 
+  995  NK *AG* / dummy *AG* 
+  828  det *suj* / dummy *suj* 
+  719  det *obj.p* dep / dummy *obj.p* dummy 
+  682  ** ROOT / ** 
+  580  *det* dep_cpd / *det* 
+  562  ** pred / ** dummy 
+  555  *MO* NK / *MO* dummy 
+  536  NK *OA* / dummy *OA* 
+  515  *obj.p* dep / *obj.p* dummy 
+  489  *OP* NK / *OP* 
+  465  det *obj* / dummy *obj* 
+  463  *p_obj* obj.p / *p_obj* dummy 
+  463  NK NK *NK* / dummy dummy *NK* 
+  452  MO *NK* / *NK* 
+  450  *mod* dep_cpd / *mod* dummy 
+  443  det *obj* dep / dummy *obj* dummy 
+  442  NK *NK* / *NK* 
+  422  *a_obj* obj.p / *a_obj* dummy 
+  413  det *suj* dep / dummy *suj* dummy 
+  410  *obj.p* mod / *obj.p* dummy 
+  395  *dep.coord* obj.p / *dep.coord* dummy 
+  383  PNC *NK* / *NK* 
+  376  *CONJ* COORD / *CONJ* dummy 
+  363  *PG* NK / *PG* 
+  351  DET *ATT* / dummy *ATT* 
+  336  ** ROOT / ** dummy 
+  333  *adjunct* comp / *adjunct* dummy 
+  327  *mod* obj.p / *mod* 
+  326  det *obj.p* mod / dummy *obj.p* dummy 
+  324  *NK* CD / *NK* 
+  322  *obj.p* obj / *obj.p* dummy 
+  308  SB *--* OC / dummy *--* 
+  300  NK *NK* AG / dummy *NK* 
+  278  NK NK *SB* / dummy dummy *SB* 
+  275  *de_obj* obj.p / *de_obj* dummy 
+  274  NK *SB* / *SB* 
+  272  ATT *OBL* / *OBL* 
+  271  det / 
+  269  MO *MO* / *MO* 
+  268  *ET* PA / *ET* dummy 
+  266  mod *mod* / *mod* 
+  260  OC *OC* / *OC* 
+  254  NK NK *AG* / dummy dummy *AG* 
+  250  *NK* AG / *NK* 
+  249  *obj.p* mod / *obj.p* 
+  247  NK *NK* MNR / dummy *NK* 
+  246  *dep* obj.p / *dep* 
+  243  det *obj.p* mod / dummy *obj.p* 
+  235  *--* SB OC / *--* dummy 
+  231  *NK* MNR / *NK* 
+  230  DET *SUBJ* / dummy *SUBJ* 
+  230  *mod* dep_cpd / *mod* 
+  220  MO *OC* / *OC* 
+  215  *adjunct* comp / *adjunct* 
+  210  *mod* mod / *mod* dummy 
+  202  ATT *ATT* / *ATT* 
+  202  MO *MO* NK / *MO* 
+  202  DET *OBL* / dummy *OBL* 
+  188  *obj.p* dep_cpd / *obj.p* 
+  188  ** pred / ** 
+  187  det *suj* mod / dummy *suj* 
+  186  *comp* adjunct / *comp* 
+  185  NK NK *OA* / dummy dummy *OA* 
+  183  *obj* obj.p / *obj* 
+  179  *comp* comp / *comp* dummy 
+  178  SB OC *RC* / *RC* 
+  175  NK *CJ* / dummy *CJ* 
+  174  dep.coord / 
+  167  *OA* PA / *OA* dummy 
+  161  det *dep.coord* / dummy *dep.coord* 
+  155  *CONJ* ATT / *CONJ* dummy 
+  153  ATT *OBJ* / *OBJ* 
+  150  *mod* dep_cpd dep_cpd / *mod* dummy 
+  149  SB *--* OC / dummy *--* dummy 
+  149  ATT *MODE* / *MODE* 
+  148  *obj* obj.cpl / *obj* dummy 
+  147  *dep* obj.p coord / *dep* dummy 
+  145  *NK* CJ / *NK* 
+  143  NK *SB* AG / dummy *SB* 
+  142  *CJ* CJ / *CJ* 
+  141  *CJ* CD / *CJ* 
+  141  *mod* dep_cpd dep_cpd obj.p / *mod* dummy 
+  140  *RA* PA / *RA* dummy 
+  137  *obj.p* dep_cpd / *obj.p* dummy 
+  137  *SBP* NK / *SBP* 
+  137  DET ATT *ATT* / *ATT* 
+  135  MO MO *OC* / *OC* 
+  133  NK *OA* / *OA* 
+  133  NK *DA* / dummy *DA* 
+  130  *root* dep.coord / *root* 
+  129  det mod *obj.p* / dummy dummy *obj.p* 
+  126  *a_obj* obj.p / *a_obj* 
+  124  *coord* dep.coord / *coord* 
+  124  adjunct *comp* / dummy *comp* 
+  123  mod *obj.p* / dummy *obj.p* 
+  123  DET *OBJ* / dummy *OBJ* 
+  123  det *mod* / dummy *mod* 
+  122  det *obj* mod / dummy *obj* dummy 
+  121  *CJ* NK / *CJ* 
+  119  MO *OC* / dummy *OC* 
+  118  OA *OC* / *OC* 
+  118  OA *OC* / dummy *OC* 
+  110  DET ATT *OBL* / *OBL* 
+  107  *subj* adjunct / *subj* 
+  106  *NK* NK / *NK* 
+  106  *obj* obj.cpl / *obj* 
+  106  NK *OA* AG / dummy *OA* 
+  105  ATT *OBL* / dummy *OBL* 
+  105  NK *OA* MNR / dummy *OA* 
+  105  det / dummy 
+  104  *de_obj* obj.p / *de_obj* 
+  104  *obj* obj / *obj* dummy 
+  103  NK *SB* MNR / dummy *SB* dummy 
+  103  *mod* dep / *mod* dummy 
+  102  *AA* PA / *AA* dummy 
+  101  *adjunct* adjunct / *adjunct* 
+  100  *--* SB OC / *--* 
+   99  ATT *SUBJ* / *SUBJ* 
+   99  MO *PD* / *PD* 
+   98  *comp* comp / *comp* 
+   96  *mod* p_obj / *mod* dummy 
+   95  NK NK *NK* / dummy *NK* 
+   95  *mod* coord / *mod* dummy 
+   94  ATT *ATT* / dummy *ATT* 
+   94  *MNR* NK / *MNR* dummy 
+   93  SB *--* PD / dummy *--* dummy 
+   92  DT *PA* / dummy *PA* 
+   92  det *obj* mod / dummy *obj* 
+   91  *MO* CC / *MO* 
+   90  OBL *ATT* / *ATT* 
+   90  OC *--* SB / *--* dummy 
+   88  *CONJ* COORD / *CONJ* 
+   85  det *suj* mod / dummy *suj* dummy 
+   85  det mod *obj.p* dep / dummy dummy *obj.p* dummy 
+   83  NK *AG* / *AG* 
+   83  *mod* obj.cpl / *mod* dummy 
+   83  SB *--* OA / dummy *--* dummy 
+   82  *dep* obj.cpl / *dep* dummy 
+   81  *mod* obj.cpl / *mod* 
+   81  *obj* adjunct / *obj* 
+   80  DET ATT *SUBJ* / *SUBJ* 
+   78  suj *mod.rel* obj / *mod.rel* dummy 
+   78  det *obj.p* mod dep / dummy *obj.p* dummy dummy 
+   78  NK *SB* MNR / dummy *SB* 
+   77  *CONJ* ATT / *CONJ* 
+   76  DT *PA* / *PA* 
+   76  MO MO *OC* / dummy *OC* 
+   76  MO *PD* / dummy *PD* 
+   75  *mod* mod mod / *mod* dummy 
+   75  NK NK *SB* / dummy *SB* 
+   75  det *obj.p* mod.rel / dummy *obj.p* 
+   74  *--* NK / *--* 
+   74  NG *MO* / *MO* 
+   73  det mod *mod* / dummy dummy *mod* 
+   73  NK *AG* MNR / dummy *AG* 
+   73  MO *NK* / dummy *NK* 
+   72  det *obj.p* dep_cpd / dummy *obj.p* dummy 
+   72  NK *NK* RC / dummy *NK* 
+   72  *TA* PA / *TA* dummy 
+   71  mod *ats* / *ats* 
+   71  ** ROOT-VAN-PRED / ** 
+   71  NK *MO* / *MO* 
+   70  *obj.p* dep_cpd dep_cpd / *obj.p* dummy 
+   69  det *obj.p* dep_cpd dep_cpd / dummy *obj.p* dummy 
+   69  *SB* NK / *SB* 
+   68  NK NK *NK* AG / dummy dummy *NK* 
+   67  SB *--* OC / *--* 
+   67  DET ATT *ATT* / dummy *ATT* 
+   67  *obj.p* mod.rel / *obj.p* 
+   66  NK NK *NK* MNR / dummy dummy *NK* 
+   66  *SB* RE / *SB* 
+   65  adjunct *subj* / dummy *subj* 
+   65  CJ *CD* / dummy *CD* 
+   65  MO MO *NK* / *NK* 
+   65  OA MO *OC* / *OC* 
+   65  NE *ATT* / *ATT* 
+   64  det mod *obj* / dummy dummy *obj* 
+   64  NE *NE* / *NE* 
+   64  NK *APP* / dummy *APP* 
+   64  -- *NK* / *NK* 
+   64  ATT *TLOCY* / *TLOCY* 
+   63  *CVC* NK / *CVC* 
+   63  -- *PAR* -- / *PAR* 
+   63  *--* SB OC / *--* dummy dummy 
+   63  MO *MO* NK / dummy *MO* 
+   62  SB *--* MO / dummy *--* dummy 
+   62  *SB* CD / *SB* 
+   62  det mod *suj* / dummy dummy *suj* 
+   62  *mod* mod mod / *mod* dummy dummy 
+   62  *suj* dep_cpd / *suj* 
+   61  *MO* MO / *MO* 
+   61  *MO* RE / *MO* 
+   61  NK *NK* CD / dummy *NK* 
+   61  *mod* mod / *mod* 
+   61  *mod* a_obj / *mod* dummy 
+   61  *mod* dep_cpd obj.cpl / *mod* dummy 
+   60  CP SB OC *MO* / *MO* 
+   60  *mod* dep_cpd obj.p / *mod* dummy 
+   60  det *dep.coord* dep / dummy *dep.coord* dummy 
+   60  NK NK *OA* / dummy *OA* 
+   59  *mod* obj / *mod* dummy 
+   59  det dep / dummy dummy 
+   59  ATT *SUBJ* / dummy *SUBJ* 
+   58  NK *NK* NK / dummy *NK* 
+   58  PNC *SB* / *SB* 
+   58  *obj.p* obj mod / *obj.p* dummy 
+   58  det *obj.p* dep dep / dummy *obj.p* dummy 
+   57  NK *AMS* / *AMS* 
+   57  NK *SB* RC / dummy *SB* 
+   57  ATT *COORD* / *COORD* 
+   57  NK *--* / dummy *--* 
+   57  suj *root* obj / dummy *root* dummy 
+   57  AC *MO* NK / *MO* 
+   57  *mod* dep_cpd dep_cpd dep_cpd obj.p / *mod* dummy 
+   56  -- *APP* -- / *APP* 
+   56  conjunct conjunct / 
+   56  *mod* dep_cpd obj.p / *mod* 
+   56  NK *PD* / dummy *PD* 
+   56  MO *MO* / dummy *MO* 
+   55  *NK* RC / *NK* 
+   55  DET ATT *OBJ* / *OBJ* 
+   54  *MO* NK CD / *MO* 
+   54  *PA* ET / *PA* 
+   54  OA MO *OC* / dummy *OC* 
+   53  suj *obj.cpl* obj / *obj.cpl* dummy 
+   53  det *obj.p* dep_cpd / dummy *obj.p* 
+   53  adjunct *adjunct* / dummy *adjunct* 
+   53  NK NK *CJ* / dummy dummy *CJ* 
+   52  DT *PA* ET / dummy *PA* 
+   52  *AA* PA / *AA* 
+   52  MO OA *OC* / dummy *OC* 
+   52  *mod* dep_cpd obj.cpl / *mod* 
+   52  ATT ATT *OBL* / *OBL* 
+   52  *MO* CD / *MO* 
+   51  *OA* MNR / *OA* 
+   50  det mod *obj* dep / dummy dummy *obj* dummy 
+   50  NK *OA* MNR / dummy *OA* dummy 
+   50  *suj* mod / *suj* dummy 
+   49  det *suj* dep_cpd / dummy *suj* 
+   49  *ET* PA / *ET* 
+   49  *OP* NK / *OP* dummy 
+   49  AT *PA* / dummy *PA* 
+   49  det *obj.p* / *obj.p* 
+   48  MO *CJ* / *CJ* 
+   48  -- *--* -- / *--* dummy 
+   48  ATT ATT *OBJ* / *OBJ* 
+   48  *OA* PA / *OA* 
+   48  RE *MO* / *MO* 
+   47  *mod* suj / *mod* dummy 
+   47  mod *mod* / dummy *mod* 
+   47  *SS* ET / *SS* 
+   47  *dep.coord* obj.p / *dep.coord* 
+   47  MODE *ATT* / *ATT* 
+   47  *VG* OO / *VG* dummy 
+   46  *NK* PG / *NK* 
+   46  DET ATT *OBL* / dummy *OBL* 
+   46  *obj.p* mod mod / *obj.p* dummy 
+   45  NK *SB* NK / *SB* 
+   45  *mod* obj.p coord / *mod* dummy 
+   45  MO *CJ* / dummy *CJ* 
+   45  NK *NK* PG / dummy *NK* 
+   44  det *obj* mod dep / dummy *obj* dummy dummy 
+   44  *coord* mod dep.coord / *coord* dummy dummy 
+   44  DT *SS* / dummy *SS* 
+   44  SB *OC* OC / dummy *OC* dummy 
+   43  MO OA *OC* / *OC* 
+   43  adjunct *obj* / dummy *obj* 
+   43  NK NK *SB* MNR / dummy dummy *SB* dummy 
+   43  *mod* dep_cpd dep_cpd obj.p / *mod* 
+   43  det *mod* dep / dummy *mod* dummy 
+   43  *NG* MO / *NG* 
+   43  *obj.p* mod dep / *obj.p* dummy dummy 
+   42  NK NK *DA* / dummy dummy *DA* 
+   42  *dep.coord* obj / *dep.coord* dummy 
+   42  det *obj* dep dep / dummy *obj* dummy 
+   42  DT AT *PA* / dummy dummy *PA* 
+   42  *arg* obj.p / *arg* dummy 
+   41  *OP* RE / *OP* 
+   41  *NK* CC / *NK* 
+   41  NK *NK* NK / *NK* 
+   41  CJ *CD* / *CD* 
+   41  mod suj *root* obj / *root* dummy 
+   40  suj *root* obj / *root* dummy 
+   40  MO *--* SB / dummy *--* dummy 
+   40  det *mod* mod / dummy *mod* dummy 
+   39  MO MO MO *OC* / *OC* 
+   39  CP SB OC *OC* / *OC* 
+   39  det *obj.p* coord / dummy *obj.p* dummy 
+   39  det *suj* mod.rel / dummy *suj* 
+   38  *suj* mod / *suj* 
+   38  *dep* dep_cpd dep_cpd obj.p / *dep* dummy 
+   38  det *ats* / dummy *ats* 
+   38  det *suj* dep mod / dummy *suj* dummy 
+   38  PNC *APP* / *APP* 
+   38  NK NK *OA* MNR / dummy dummy *OA* 
+   38  mod *obj.p* dep / dummy *obj.p* dummy 
+   38  MO *--* SB OC / dummy *--* dummy 
+   38  DT *SS* / *SS* 
+   37  *ats* obj.p / *ats* dummy 
+   37  *--* MNR / *--* dummy 
+   37  NK NK *SB* NK / dummy *SB* 
+   37  *ATT* CONJ / *ATT* dummy 
+   36  *COORD* COORD / *COORD* 
+   36  *CD* CJ / *CD* dummy 
+   36  *PA* IF / *PA* 
+   36  CM *CC* / *CC* 
+   36  *conjunct* adjunct / *conjunct* 
+   35  det *suj* mod dep / dummy *suj* dummy dummy 
+   35  SB *--* PD / dummy *--* 
+   35  *mod* dep_cpd dep_cpd dep_cpd / *mod* dummy 
+   35  det *suj* dep_cpd dep_cpd / dummy *suj* dummy 
+   35  MO MO *OC* / dummy dummy *OC* 
+   35  *obj* obj mod / *obj* dummy 
+   35  -- *CJ* -- / *CJ* dummy 
+   35  OBL *ATT* / dummy *ATT* 
+   35  det dep / dummy 
+   35  det *obj* mod.rel / dummy *obj* 
+   35  adjunct *adjunct* / *adjunct* 
+   35  PD *OC* / dummy *OC* 
+   35  OA PM *OC* / *OC* 
+   34  ATT ATT *SUBJ* / *SUBJ* 
+   34  det *ats* dep / dummy *ats* dummy 
+   34  DET ATT *SUBJ* / dummy *SUBJ* 
+   34  *obj.p* dep / *obj.p* 
+   34  NK *SB* AG / dummy *SB* dummy 
+   34  *mod* mod.rel / *mod* 
+   34  NK NK *SB* AG / dummy dummy *SB* 
+   34  PNC *CJ* / *CJ* 
+   34  *mod* dep_cpd dep_cpd / *mod* 
+   33  *mod* de_obj / *mod* dummy 
+   33  SB *--* PD / *--* dummy 
+   33  det *suj* dep dep / dummy *suj* dummy 
+   33  *obj.p* mod obj / *obj.p* dummy 
+   33  *CJ* OC / *CJ* 
+   33  SB *--* OC / *--* dummy 
+   33  OA MO *OC* / dummy dummy *OC* 
+   33  mod suj aux.tps *root* obj / *root* dummy 
+   33  NK *CJ* CJ / dummy *CJ* 
+   33  AG *SB* / *SB* 
+   33  *SB* MNR / *SB* 
+   33  *--* APP CJ / *--* 
+   33  SB *OC* OC / dummy *OC* 
+   33  mod *obj.p* mod / dummy *obj.p* dummy 
+   32  DT *OO* / *OO* 
+   32  NK *NK* AG MNR / dummy *NK* 
+   32  NK *CJ* CD / dummy *CJ* 
+   32  NK *DA* / *DA* 
+   32  NMC *NK* / dummy *NK* 
+   32  ATT *OBJ* / dummy *OBJ* 
+   31  NK *SB* NK / *SB* dummy 
+   31  NK NK *PD* / dummy dummy *PD* 
+   31  SB *--* OA MO / dummy *--* dummy dummy 
+   31  *OC* OC / *OC* 
+   31  NK *SB* CD / dummy *SB* 
+   31  *ROOT* MS / *ROOT* 
+   31  NK NK *SB* / *SB* 
+   31  CP SB OC *RE* / *RE* 
+   31  suj *obj.cpl* obj / dummy *obj.cpl* dummy 
+   31  OP *OC* / *OC* 
+   31  ATT ATT *ATT* / *ATT* 
+   31  DT *OO* / dummy *OO* 
+   30  DT *DT* / dummy *DT* 
+   30  OBJ *ATT* / *ATT* 
+   30  PNC *AG* / *AG* 
+   30  *obj.p* coord / *obj.p* dummy 
+   30  det *obj* dep_cpd dep_cpd / dummy *obj* dummy 
+   30  *NK* AG / *NK* dummy 
+   30  det *obj.p* dep mod / dummy *obj.p* dummy 
+   30  SB *--* OP / dummy *--* dummy 
+   30  NK *OA* RC / dummy *OA* 
+   29  ** -- -- -- / ** dummy dummy dummy 
+   29  SB OA *RC* / dummy dummy *RC* 
+   29  MO *NG* / *NG* 
+   29  PNC PNC *NK* / *NK* 
+   29  AA *AT* / *AT* 
+   29  det *obj* dep mod / dummy *obj* dummy 
+   28  NK *MO* / dummy *MO* 
+   28  NK *CJ* MNR / dummy *CJ* dummy 
+   28  ** coord / ** 
+   28  NK *CJ* / *CJ* 
+   28  NK *AG* RC / dummy *AG* 
+   28  NK NK *AG* / dummy *AG* 
+   28  *dep* obj.cpl / *dep* 
+   28  *coord* dep.coord dep.coord / *coord* dummy 
+   28  *SB* RC / *SB* 
+   27  *IF* OO / *IF* dummy 
+   27  DET ATT *COORD* / *COORD* 
+   27  *CJ* PA / *CJ* dummy 
+   27  MO *--* SB MO / dummy *--* dummy dummy 
+   27  NE *COORD* / *COORD* 
+   27  det *obj.p* dep / *obj.p* dummy 
+   27  NK NK *OA* AG / dummy dummy *OA* 
+   27  *obj.cpl* obj.p / *obj.cpl* dummy 
+   27  *obj.p* dep dep / *obj.p* dummy 
+   27  mod *mod* dep / *mod* dummy 
+   27  NK *OA* AG / dummy *OA* dummy 
+   27  *SS* ET / *SS* dummy 
+   27  det mod *suj* dep / dummy dummy *suj* dummy 
+   27  DT AT *SS* / dummy dummy *SS* 
+   27  *CJ* NK / *CJ* dummy 
+   27  NE *NE* / dummy *NE* 
+   26  *SB* AG / *SB* 
+   26  MS *ROOT* +F / *ROOT* dummy 
+   26  SBP *NK* / *NK* 
+   26  MO *--* SB OC / dummy *--* 
+   26  PNC *NK* / dummy *NK* 
+   26  PD *--* SB / dummy *--* dummy 
+   26  NK *AG* NK / *AG* 
+   26  DET *COORD* / dummy *COORD* 
+   26  ** -- -- / ** dummy 
+   26  *obj* mod / *obj* dummy 
+   26  suj *obj.cpl* ats / *obj.cpl* dummy 
+   25  NE *ATT* / dummy *ATT* 
+   25  adjunct *comp* adjunct / dummy *comp* 
+   25  MO *MNR* NK / *MNR* 
+   25  *PD* AG / *PD* 
+   25  NK NK *NK* / *NK* 
+   25  *OA* AG / *OA* 
+   25  *OO* UA / *OO* dummy 
+   25  AT *SS* / dummy *SS* 
+   25  NK *AG* CD / dummy *AG* 
+   25  *mod* a_obj / *mod* 
+   25  det *dep.coord* mod / dummy *dep.coord* dummy 
+   25  *mod* de_obj / *mod* 
+   25  *NK* NK / *NK* dummy 
+   25  NK *NK* NK / *NK* dummy 
+   25  *dep.coord* obj.cpl / *dep.coord* dummy 
+   25  MO OA *OC* / dummy dummy *OC* 
+   25  DET *DAT* / dummy *DAT* 
+   24  NK *NK* AG / dummy *NK* dummy 
+   24  SB *--* MO OC / dummy *--* dummy 
+   24  NK NK *SB* MNR / dummy dummy *SB* 
+   24  NK NK *AG* / *AG* 
+   24  OA MO PM *OC* / *OC* 
+   24  SB *--* OA SVP / dummy *--* dummy dummy 
+   24  *AA* UA / *AA* 
+   24  NK *AG* AG / dummy *AG* 
+   24  mod det *obj.p* / dummy *obj.p* 
+   24  adjunct *pd* / dummy *pd* 
+   24  det *obj.p* dep mod.rel / dummy *obj.p* dummy 
+   24  suj *root* ats / dummy *root* dummy 
+   24  NK NK *NK* NK / dummy *NK* 
+   24  det *dep.coord* mod / dummy *dep.coord* 
+   24  AMS *MO* / *MO* 
+   24  mod suj *root* obj / dummy *root* dummy 
+   24  det *obj.p* mod mod / dummy *obj.p* dummy 
+   24  PNC *--* / *--* 
+   24  *RA* PA / *RA* 
+   23  *mod* dep_cpd dep / *mod* 
+   23  ** -- -- / ** 
+   23  *SB* MNR / *SB* dummy 
+   23  MO NK *SB* / dummy *SB* 
+   23  mod *ats* dep / *ats* dummy 
+   23  MO MO PM *OC* / *OC* 
+   23  DET ATT ATT *ATT* / *ATT* 
+   23  *a_obj* obj.p coord / *a_obj* dummy 
+   23  AA *DT* / *DT* 
+   23  *ats* obj.p / *ats* 
+   23  OC PM *OC* / *OC* 
+   23  *dep.coord* mod / *dep.coord* dummy 
+   23  MO PM *OC* / *OC* 
+   23  NK *PD* AG / dummy *PD* 
+   23  AA *SP* / *SP* 
+   23  OBL *MODE* / *MODE* 
+   23  MO MO *PD* / *PD* 
+   23  OC *OC* / dummy *OC* 
+   23  mod *mod* obj.p / *mod* dummy 
+   22  suj *root* ats mod / dummy *root* dummy 
+   22  *obj.p* mod mod / *obj.p* dummy dummy 
+   22  NK NK *SB* RC / dummy dummy *SB* 
+   22  suj *mod* obj / *mod* dummy 
+   22  det *obj* dep_cpd / dummy *obj* dummy 
+   22  SB *--* MO PD / dummy *--* dummy 
+   22  *pd* adjunct / *pd* 
+   22  *root* dep / *root* dummy 
+   22  MO *MO* NK / *MO* dummy 
+   22  *MO* NK MO / *MO* 
+   22  *root* mod / *root* 
+   22  SB *--* MO OA / dummy *--* dummy 
+   22  adjunct *comp* adjunct / *comp* 
+   22  NE *SUBJ* / dummy *SUBJ* 
+   22  SS *ROOT* OO / dummy *ROOT* dummy 
+   22  NK NK *AG* MNR / dummy dummy *AG* 
+   21  det *mod* mod / dummy *mod* 
+   21  MO *--* SB OA / dummy *--* dummy 
+   21  suj *root* mod obj / dummy *root* dummy 
+   21  *--* OC / *--* 
+   21  suj *root* obj mod / dummy *root* dummy 
+   21  OBL DET *OBL* / dummy *OBL* 
+   21  SB *CJ* OC / dummy *CJ* 
+   21  MS *ROOT* MS / *ROOT* dummy 
+   21  SB *--* MO MO / dummy *--* dummy dummy 
+   21  MO MO OA *OC* / *OC* 
+   21  det *suj* dep_cpd dep_cpd dep / dummy *suj* dummy 
+   21  *PAR* NK / *PAR* 
+   21  adjunct *comp* / *comp* 
+   21  AMS *NK* / *NK* 
+   21  SB OC *RC* / dummy *RC* 
+   21  det *suj* mod mod / dummy *suj* dummy 
+   21  *CJ* NK CJ / *CJ* 
+   21  DT AT *OO* / dummy dummy *OO* 
+   20  AG *NK* / *NK* 
+   20  AT *OO* / *OO* 
+   20  *p_obj* obj.p / *p_obj* 
+   20  SB OC *OC* / *OC* 
+   20  SB *--* MO OC / dummy *--* 
+   20  *obj.p* dep mod / *obj.p* dummy 
+   20  MO *--* SB OA / dummy *--* dummy dummy 
+   20  *mod* mod p_obj / *mod* dummy 
+   20  MO MO MO *OC* / dummy *OC* 
+   20  NK *SB* AG / *SB* 
+   20  NK *OA* CD / dummy *OA* 
+   20  SB *--* MO / dummy *--* 
+   20  adjunct *conjunct* / dummy *conjunct* 
+   20  MO NMC *NK* / dummy *NK* 
+   20  *OO* ET / *OO* 
+   20  NK *NK* OC / dummy *NK* 
+   20  det mod *obj.p* mod / dummy dummy *obj.p* dummy 
+   20  *VG* SP / *VG* dummy 
+   20  SS *ROOT* VG / dummy *ROOT* dummy 
+   20  *coord* mod dep.coord / *coord* dummy 
+   19  *obj.p* p_obj / *obj.p* dummy 
+   19  NK *OA* OC / dummy *OA* 
+   19  SB MO OC *RC* / *RC* 
+   19  det *obj.p* mod mod / dummy *obj.p* dummy dummy 
+   19  SB *--* OA MO / dummy *--* dummy 
+   19  ** ROOT-VAN-PRED / ** dummy 
+   19  -- NK *NK* / dummy *NK* 
+   19  AT *CJ* / dummy *CJ* 
+   19  NK NK *AG* NK / dummy *AG* 
+   19  OBL *TLOCY* / *TLOCY* 
+   19  *ET* UA / *ET* 
+   19  *obj.p* a_obj / *obj.p* dummy 
+   19  ATT ATT *ATT* / dummy *ATT* 
+   19  CJ *PA* CJ / *PA* 
+   19  NK *DA* AG / dummy *DA* 
+   19  *dep* dep_cpd obj.p / *dep* dummy 
+   19  *OA* MNR / *OA* dummy 
+   19  *mod* coord / *mod* 
+   19  PNC *NK* PAR / *NK* 
+   19  DA *OC* / *OC* 
+   19  *CJ* OA / *CJ* dummy 
+   19  NK *PD* MNR / dummy *PD* 
+   19  adjunct *subj* adjunct / dummy *subj* 
+   19  CJ *PA* CJ / *PA* dummy 
+   19  MO OA MO *OC* / dummy *OC* 
+   19  ** -- -- / ** dummy dummy 
+   19  det *suj* mod mod / dummy *suj* 
+   18  *obj* dep / *obj* 
+   18  CD *NK* / *NK* 
+   18  *suj* mod mod mod / *suj* dummy 
+   18  PUNCT *APPEND* PUNCT / *APPEND* 
+   18  *COORD* CONJ / *COORD* dummy 
+   18  adjunct *subj* / *subj* 
+   18  DET ATT ATT *SUBJ* / *SUBJ* 
+   18  MO *CJ* NK / *CJ* 
+   18  *ats* de_obj / *ats* 
+   18  DT *SS* ET / dummy *SS* 
+   18  suj *root* obj / dummy *root* 
+   18  NK *AG* NK / *AG* dummy 
+   18  MO MO OA *OC* / dummy *OC* 
+   18  NK *NK* CJ / dummy *NK* 
+   18  AG *OA* / *OA* 
+   18  SS *ROOT* SP / dummy *ROOT* dummy 
+   18  DET ATT ATT *OBL* / *OBL* 
+   18  ATT *LOCY* / *LOCY* 
+   18  det *suj* dep_cpd / dummy *suj* dummy 
+   18  MO *SB* / *SB* 
+   18  mod mod *mod* / *mod* 
+   18  *subj* comp / *subj* 
+   18  *mod* dep / *mod* 
+   18  *conjunct* comp / *conjunct* dummy 
+   18  *PA* ET / *PA* dummy 
+   18  *dep.coord* dep / *dep.coord* dummy 
+   18  MO *CJ* NK / dummy *CJ* 
+   18  NK *NK* MNR / *NK* dummy 
+   18  *SB* APP / *SB* 
+   17  suj *root* mod obj / dummy *root* dummy dummy 
+   17  MODE *MODE* / *MODE* 
+   17  NK *SB* OC / dummy *SB* 
+   17  *PD* CD / *PD* 
+   17  *obj* mod.rel / *obj* 
+   17  -- *MO* / *MO* 
+   17  *--* NK / *--* dummy 
+   17  *OC* MO / *OC* 
+   17  NK *NK* APP / dummy *NK* 
+   17  SB *--* OA MO / dummy *--* 
+   17  NK NK *CJ* / dummy *CJ* 
+   17  ATT *TFROM* / *TFROM* 
+   17  det *root* mod / dummy *root* 
+   17  *AA* UA / *AA* dummy 
+   17  MO OA PM *OC* / *OC* 
+   17  MO OP *OC* / *OC* 
+   17  *obj.p* dep_cpd dep_cpd dep / *obj.p* dummy 
+   17  ATT ATT *SUBJ* / dummy *SUBJ* 
+   17  PD *OC* / *OC* 
+   17  NK *NK* OP / dummy *NK* 
+   17  DA *OC* / dummy *OC* 
+   17  PM *OC* / *OC* 
+   16  mod det *obj* / *obj* 
+   16  NK *OA* MNR / *OA* dummy 
+   16  *adjunct* comp_fin / *adjunct* 
+   16  *app* ne / *app* 
+   16  det *suj* dep coord / dummy *suj* dummy 
+   16  SB *--* MO MO / dummy *--* dummy 
+   16  ATT ATT *OBL* / dummy *OBL* 
+   16  DT DT *SS* / dummy dummy *SS* 
+   16  *de_obj* obj.p coord / *de_obj* dummy 
+   16  AT *OO* / dummy *OO* 
+   16  *obj.p* mod obj / *obj.p* dummy dummy 
+   16  NK *NK* MNR / dummy *NK* dummy 
+   16  mod *obj.p* / *obj.p* 
+   16  DET NE *ATT* / dummy *ATT* 
+   16  NK *NK* MNR / *NK* 
+   16  NK *NK* AG / *NK* 
+   16  MO MO MO *OC* / dummy dummy *OC* 
+   16  *KA* UA / *KA* 
+   16  *ats* a_obj / *ats* 
+   16  JU SB *--* OC / dummy dummy *--* 
+   16  *CJ* MNR / *CJ* dummy 
+   16  *CJ* SB OC / *CJ* dummy 
+   16  DT *SP* / dummy *SP* 
+   16  NK NK NK *NK* / dummy dummy dummy *NK* 
+   16  NK NK *NK* RC / dummy dummy *NK* 
+   16  *MNR* NK CD / *MNR* 
+   16  *OA* CD / *OA* 
+   16  SB PD *RC* / *RC* 
+   16  det *obj.p* mod mod / dummy *obj.p* 
+   16  OC *--* SB / dummy *--* dummy 
+   16  *KA* UA / *KA* dummy 
+   16  *ATT* COORD / *ATT* 
+   16  *p_obj* obj.p coord / *p_obj* dummy 
+   16  *suj* mod mod / *suj* dummy 
+   16  SS *UA* OO / dummy *UA* dummy 
+   16  AA *DT* / dummy *DT* 
+   16  DET ATT *OBJ* / dummy *OBJ* 
+   16  *SB* MO / *SB* 
+   16  suj *mod* ats / *mod* dummy 
+   16  CP SB OC *SB* / *SB* 
+   16  mod *obj.p* mod / dummy *obj.p* 
+   16  CM *MO* / *MO* 
+   16  ATT *COORD* / dummy *COORD* 
+   16  *adjunct* mwe / *adjunct* 
+   15  DET NE *OBL* / *OBL* 
+   15  adjunct *subj* adjunct / *subj* 
+   15  *dep* obj.p dep / *dep* dummy 
+   15  det *obj.cpl* / dummy *obj.cpl* 
+   15  *obj.p* obj.p / *obj.p* dummy 
+   15  conjunct *coord* conjunct / *coord* dummy 
+   15  PNC *SB* APP / *SB* 
+   15  MO SB *MO* / dummy dummy *MO* 
+   15  DET *ROOT-VAN-SUBJ* / dummy *ROOT-VAN-SUBJ* 
+   15  DET NE *ATT* / *ATT* 
+   15  NK *NK* MNR MNR / dummy *NK* 
+   15  *MO* NK AC / *MO* 
+   15  *subj* ne / *subj* 
+   15  *NK* MNR / *NK* dummy 
+   15  aux.pass *obj* mod / *obj* dummy 
+   15  MO OA MO *OC* / *OC* 
+   15  NK *SB* APP / dummy *SB* 
+   15  det *obj* dep coord / dummy *obj* dummy 
+   15  SB *OC* PD / dummy *OC* dummy 
+   15  OC *--* SB / *--* 
+   15  OA MO MO *OC* / dummy *OC* 
+   15  *subj* app / *subj* 
+   15  det *obj* dep mod.rel / dummy *obj* dummy 
+   15  conjunct *pred* conjunct / *pred* dummy 
+   15  OBJ *INF* / *INF* 
+   15  suj *mod.rel* mod obj / *mod.rel* dummy dummy 
+   15  CM NK *CC* / dummy *CC* 
+   15  NK -- *NK* / *NK* 
+   15  *OC* SB OC / *OC* dummy 
+   15  suj aux.tps *root* obj / *root* dummy 
+   15  *VG* OA / *VG* dummy 
+   15  *OA* RC / *OA* 
+   15  *dep* dep_cpd dep_cpd dep_cpd obj.p / *dep* dummy 
+   15  NK *SB* PG / dummy *SB* dummy 
+   15  *SB* CJ / *SB* 
+   15  *TA* PA / *TA* 
+   15  det *obj* coord / dummy *obj* dummy 
+   15  OA MO MO *OC* / *OC* 
+   15  NK *SB* AG APP / dummy *SB* 
+   15  *OA* IF / *OA* 
+   15  SB *--* OA / *--* dummy 
+   14  NK *SB* PG / dummy *SB* 
+   14  det *obj.p* dep_cpd dep / dummy *obj.p* dummy dummy 
+   14  DT *OO* ET / dummy *OO* 
+   14  suj *root* ats / *root* dummy 
+   14  NK NK *SB* APP / dummy dummy *SB* 
+   14  CP OA PM *MO* / *MO* 
+   14  *obj.p* de_obj / *obj.p* dummy 
+   14  *--* SB PD / *--* dummy 
+   14  CJ *SP* CJ / *SP* dummy 
+   14  det *obj.p* dep_cpd dep_cpd mod / dummy *obj.p* dummy 
+   14  MODE *ATT* / dummy *ATT* 
+   14  *det* dep_cpd dep_cpd / *det* 
+   14  det mod *suj* mod / dummy dummy *suj* 
+   14  *SUBJ* CONJ / *SUBJ* 
+   14  *mod* mod coord / *mod* dummy 
+   14  det *obj.p* dep coord / dummy *obj.p* dummy 
+   14  NK *NK* PAR / dummy *NK* 
+   14  *obj.p* dep_cpd mod / *obj.p* dummy 
+   14  *obj.p* ponct mod ponct / *obj.p* dummy dummy 
+   14  MO *MO* NK / dummy *MO* dummy 
+   14  OC *CJ* / *CJ* 
+   14  CM *MO* NK / *MO* 
+   14  mod suj *root* mod obj / *root* dummy dummy 
+   14  *obj* de_obj / *obj* dummy 
+   14  *SB* NK PAR / *SB* 
+   14  *SB* PG / *SB* 
+   14  *obj.p* dep mod.rel / *obj.p* dummy 
+   14  *mod* obj.p arg / *mod* dummy 
+   14  NK *CJ* AG / dummy *CJ* dummy 
+   14  MO MO OA *OC* / dummy dummy *OC* 
+   14  CM *CC* NK / *CC* 
+   14  *dep.coord* dep_cpd / *dep.coord* 
+   14  *PD* CC / *PD* 
+   14  SS *ROOT* OA / dummy *ROOT* dummy 
+   14  *--* CJ / *--* 
+   14  det *obj.p* mod dep / dummy *obj.p* dummy 
+   14  *obj.p* dep_cpd dep_cpd dep_cpd / *obj.p* dummy 
+   14  NMC *NK* NK / *NK* 
+   14  NK NK *AG* RC / dummy dummy *AG* 
+   14  det *obj.p* dep ponct mod ponct / dummy *obj.p* dummy 
+   14  *mod* dep dep / *mod* dummy 
+   14  SB *CJ* OC / dummy *CJ* dummy 
+   14  NK *OA* OP / dummy *OA* 
+   14  *AA* HD / *AA* 
+   14  DET ATT ATT *OBL* / dummy *OBL* 
+   14  *PA* UA / *PA* dummy 
+   14  MO MO MO MO *OC* / *OC* 
+   14  det *suj* dep mod.rel / dummy *suj* dummy 
+   14  NUM *ATT* / *ATT* 
+   13  MO MO *CJ* / dummy dummy *CJ* 
+   13  MS *UA* +F / *UA* dummy 
+   13  SS *UA* VG / dummy *UA* dummy 
+   13  det *suj* mod dep / dummy *suj* 
+   13  CP SB OC *MO* / dummy *MO* 
+   13  NK *CJ* AG / dummy *CJ* 
+   13  NK NK NK *AG* / dummy dummy *AG* 
+   13  MO *OC* MO / *OC* 
+   13  det *ats* mod / dummy *ats* dummy 
+   13  *obj* ats / *obj* dummy 
+   13  suj mod *root* mod obj / dummy *root* dummy dummy 
+   13  NK *NK* MNR RC / dummy *NK* 
+   13  *ats* dep / *ats* 
+   13  det *root* dep / dummy *root* dummy 
+   13  MS *ROOT* +F / *ROOT* 
+   13  *CJ* MO / *CJ* dummy 
+   13  MO *--* SB MO / dummy *--* dummy 
+   13  NK *OA* PG / dummy *OA* 
+   13  obj suj *mod.rel* mod / *mod.rel* dummy 
+   13  AA *SP* / dummy *SP* 
+   13  NK NK *OA* RC / dummy dummy *OA* 
+   13  CJ CJ / 
+   13  PNC *NK* CD / *NK* 
+   13  OA *CJ* / dummy *CJ* 
+   13  NK NK *PD* AG / dummy dummy *PD* 
+   13  NK *SB* PAR / dummy *SB* 
+   13  det *obj* dep / dummy *obj* 
+   13  *OO* UA / *OO* 
+   13  det mod *obj.p* mod / dummy dummy *obj.p* 
+   13  *conjunct* comp / *conjunct* 
+   13  *OA* RE / *OA* 
+   13  NK *OA* AG MNR / dummy *OA* 
+   13  *dep* obj.p obj.p / *dep* dummy 
+   13  MO OC *OC* / *OC* 
+   13  ATT *DAT* / *DAT* 
+   13  SB *--* OC CD / dummy *--* dummy 
+   13  NK -- NK *NK* / dummy *NK* 
+   13  *VG* AA / *VG* dummy 
+   13  SB *--* MO OA / dummy *--* dummy dummy 
+   13  SS *ET* OO / dummy *ET* dummy 
+   13  MO *OC* OC / *OC* 
+   13  DA OA *OC* / *OC* 
+   13  NK NK *CJ* CD / dummy dummy *CJ* 
+   13  MO *--* SB PD / dummy *--* dummy 
+   13  *NK* APP / *NK* 
+   13  DET *SUBJ* / *SUBJ* 
+   13  mod suj *root* ats / dummy *root* dummy 
+   12  NK NK *NK* NK / dummy *NK* dummy 
+   12  SB OC *CJ* / *CJ* 
+   12  suj aux.tps *root* obj mod / dummy *root* dummy 
+   12  mod *dep.coord* / dummy *dep.coord* 
+   12  *comp* adjunct adjunct / *comp* 
+   12  *subj* adjunct adjunct / *subj* 
+   12  MO *OA* / *OA* 
+   12  *DT* HD / *DT* 
+   12  SB *--* MO PD / dummy *--* dummy dummy 
+   12  DT AT *SP* / dummy dummy *SP* 
+   12  MO MO *CJ* / *CJ* 
+   12  *NK* PAR / *NK* 
+   12  *mod* obj mod / *mod* dummy 
+   12  SB *--* MO OC / dummy *--* dummy dummy 
+   12  *obj.p* dep_cpd dep / *obj.p* dummy dummy 
+   12  *--* APP / *--* 
+   12  *SUBJ* COORD / *SUBJ* 
+   12  SB *CJ* PD / dummy *CJ* dummy 
+   12  suj *root* mod obj mod / dummy *root* dummy dummy 
+   12  NK NK *NK* AG / dummy *NK* 
+   12  -- *--* -- / dummy *--* dummy 
+   12  NK *SB* AG MNR / dummy *SB* dummy dummy 
+   12  *mod* dep.coord / *mod* dummy 
+   12  obj suj *mod.rel* obj / *mod.rel* dummy 
+   12  OA PM *RE* / *RE* 
+   12  conjunct *coord* conjunct / *coord* 
+   12  det *obj.p* mod mod.rel / dummy *obj.p* dummy 
+   12  *ats* dep / *ats* dummy 
+   12  NK NK *SB* AG / dummy dummy *SB* dummy 
+   12  NK *CJ* CJ / *CJ* 
+   12  SB OA MO *RC* / dummy *RC* 
+   12  NK *CJ* NK / *CJ* 
+   12  *obj.p* mod mod / *obj.p* 
+   12  SB MO *RC* / dummy dummy *RC* 
+   12  conjunct *comp* conjunct / *comp* dummy 
+   12  *ET* IF / *ET* 
+   12  det *obj.p* dep_cpd dep_cpd dep / dummy *obj.p* dummy 
+   12  *obj* dep.coord / *obj* dummy 
+   12  DT *SP* / *SP* 
+   12  SB OC *SB* / *SB* 
+   12  SB *--* PD CJ / dummy *--* dummy 
+   12  *PD* MO / *PD* 
+   12  SB *CJ* MO / dummy *CJ* dummy 
+   12  *obj.p* dep_cpd dep_cpd mod / *obj.p* dummy 
+   12  mod suj *root* obj / dummy *root* 
+   12  -- *APP* -- / *APP* dummy 
+   11  SBP *OC* / *OC* 
+   11  ATT *APPEND* / *APPEND* 
+   11  det *obj.p* mod coord / dummy *obj.p* dummy 
+   11  DT *DT* / *DT* 
+   11  MS *ROOT* MS / *ROOT* 
+   11  suj *mod.rel* mod / *mod.rel* dummy 
+   11  *SB* CC / *SB* 
+   11  NK *OG* / dummy *OG* 
+   11  OA OP *OC* / *OC* 
+   11  NK *--* MNR / dummy *--* dummy 
+   11  SB *--* OC CJ / dummy *--* dummy dummy 
+   11  -- *PAR* -- / dummy *PAR* dummy 
+   11  NK *PD* / *PD* 
+   11  mod suj *root* ats mod / dummy *root* dummy 
+   11  NE *COORD* / dummy *COORD* 
+   11  NK *OA* AG / *OA* 
+   11  NK NK *OA* / *OA* 
+   11  AA *AA* / *AA* 
+   11  AG *SB* NK / *SB* 
+   11  mod suj *root* obj / *root* 
+   11  MO *--* SB MO / dummy *--* 
+   11  *obj.p* ats / *obj.p* dummy 
+   11  mod suj *root* ats / *root* dummy 
+   11  CJ *SS* CJ / *SS* 
+   11  mod *dep* obj.p / *dep* dummy 
+   11  SB *--* OA CD / dummy *--* dummy 
+   11  OA MO PM *RE* / *RE* 
+   11  NK NK *NK* CD / dummy dummy *NK* 
+   11  -- *CJ* CJ -- / *CJ* 
+   11  mod *obj.p* obj / *obj.p* dummy 
+   11  ATT *TO* / *TO* 
+   11  PM *MO* / *MO* 
+   11  NK *APP* AG / dummy *APP* dummy 
+   11  MO MO *PD* / dummy *PD* 
+   11  *mod* mod dep / *mod* 
+   11  *ats* mod / *ats* 
+   11  *PG* NK / *PG* dummy 
+   11  DT AT *OO* ET / dummy dummy *OO* 
+   11  MO NK NK *SB* / dummy dummy *SB* 
+   11  MO NK *SB* AG / dummy dummy *SB* 
+   11  suj *root* ats obj / dummy *root* dummy 
+   11  MO *SB* / dummy *SB* 
+   11  det *obj* / *obj* 
+   11  mod suj *root* obj mod / *root* dummy 
+   11  NK NK *AG* NK / dummy *AG* dummy 
+   11  NG *NK* / *NK* 
+   11  MO *OC* MO / dummy *OC* 
+   11  *comp* ne / *comp* 
+   11  *VG* OO AA / *VG* dummy dummy 
+   11  adjunct *obj* adjunct / dummy *obj* 
+   11  DA MO *OC* / *OC* 
+   11  DET ATT ATT *ATT* / dummy *ATT* 
+   11  *ET* UA / *ET* dummy 
+   11  NK NK *AG* AG / dummy dummy *AG* 
+   11  ATT ATT *COORD* / *COORD* 
+   11  det *obj* mod mod / dummy *obj* dummy dummy 
+   11  det *mod* / *mod* 
+   11  TA IG DT *CJ* / *CJ* 
+   11  MO PD *OC* / dummy *OC* 
+   11  *obj* comp / *obj* 
+   11  *ROOT-VAN-CONJ* ATT / *ROOT-VAN-CONJ* 
+   11  det mod *ats* / dummy dummy *ats* 
+   11  NE *SUBJ* / *SUBJ* 
+   11  mod det / dummy 
+   11  DA *PD* / *PD* 
+   11  *AA* HD HD PA / *AA* dummy dummy 
+   11  DT *SS* ET / dummy *SS* dummy 
+   11  aux.pass *obj* / *obj* 
+   11  OA MO MO *OC* / dummy dummy *OC* 
+   11  obj *obj.p* / *obj.p* 
+   11  suj aux.tps *root* obj / dummy *root* dummy 
+   11  *--* SB MO OC / *--* dummy 
+   11  *ES* UA / *ES* dummy 
+   10  suj mod *mod.rel* obj / *mod.rel* dummy 
+   10  SS *MS* SP / dummy *MS* dummy 
+   10  PNC *CJ* CD / *CJ* 
+   10  mod *mod* obj.p / *mod* 
+   10  *obj* dep / *obj* dummy 
+   10  CJ *OO* CJ / *OO* dummy 
+   10  subj conjunct *pred* conjunct / *pred* dummy 
+   10  mod suj aux.tps *root* obj mod / dummy *root* dummy 
+   10  DET *COORD* / *COORD* 
+   10  DT DT *PA* / dummy dummy *PA* 
+   10  *SP* ET / *SP* 
+   10  obj suj *mod.rel* / *mod.rel* 
+   10  *--* MO / *--* dummy 
+   10  *pred* obj / *pred* dummy 
+   10  *obj.p* dep_cpd mod / *obj.p* 
+   10  *mod* p_obj mod / *mod* dummy 
+   10  *VG* RA / *VG* dummy 
+   10  NK NK *NK* AG MNR / dummy dummy *NK* 
+   10  MO *OP* NK / *OP* 
+   10  NK *NK* NK / dummy *NK* dummy 
+   10  *mod* dep_cpd dep_cpd / *mod* dummy dummy 
+   10  NK NK NK *SB* / dummy dummy dummy *SB* 
+   10  *obj.p* mod mod.rel / *obj.p* dummy 
+   10  suj *mod.rel* de_obj / *mod.rel* dummy 
+   10  det *obj.p* mod mod.rel / dummy *obj.p* 
+   10  obj *obj.p* mod / *obj.p* dummy 
+   10  NK *NK* AG / *NK* dummy 
+   10  det *obj.p* mod dep / dummy *obj.p* 
+   10  *mod* dep_cpd dep_cpd obj.cpl / *mod* dummy 
+   10  *obj* dep_cpd / *obj* 
+   10  MO *PD* MO / *PD* 
+   10  adjunct *obj* / *obj* 
+   10  ATT *ATT* CONJ / *ATT* dummy 
+   10  *MO* NK CJ / *MO* 
+   10  SS *ROOT* VG / dummy *ROOT* 
+   10  mod *mod* mod / *mod* dummy 
+   10  ATT *ROOT* SUBJ / *ROOT* dummy 
+   10  det *dep.coord* dep dep / dummy *dep.coord* dummy 
+   10  mod det *obj* / dummy *obj* 
+   10  PD *--* MO SB / dummy *--* dummy 
+   10  det *obj.p* dep_cpd mod / dummy *obj.p* dummy 
+   10  *obj* mod obj / *obj* dummy 
+   10  MO *MO* RE / *MO* 
+   10  suj *obj.cpl* mod / *obj.cpl* dummy 
+   10  SS *UA* SP / dummy *UA* dummy 
+   10  mod suj *mod.rel* ats / *mod.rel* dummy 
+   10  MO *NK* CJ / dummy *NK* 
+   10  NK NK *SB* AG / dummy *SB* 
+   10  SB OA *RC* / dummy *RC* 
+   10  *obj.p* obj a_obj / *obj.p* dummy 
+   10  mod suj *obj.cpl* obj / *obj.cpl* dummy 
+   10  OA *OC* MO / dummy *OC* 
+   10  suj *mod.rel* obj / *mod.rel* 
+   10  DET *OBL* / *OBL* 
+   10  *mod* mod dep / *mod* dummy dummy 
+   10  MO NG *OC* / *OC* 
+   10  *conjunct* obj / *conjunct* 
+   10  *VG* OO OA / *VG* dummy dummy 
+   10  conjunct *subj* conjunct / *subj* 
+   10  conjunct *adjunct* conjunct / *adjunct* 
+   10  suj *root* mod obj / *root* dummy dummy 
+   10  AC *MNR* NK / *MNR* 
+   10  *coord* dep_cpd dep_cpd dep_cpd dep / *coord* 
+   10  *mod* dep_cpd dep / *mod* dummy dummy 
+   10  suj *obj.cpl* ats / dummy *obj.cpl* dummy 
+   10  NK NK *OA* MNR / dummy dummy *OA* dummy 
+   10  AT *PA* ET / dummy *PA* 
+   10  *PD* OC / *PD* 
+   10  det *obj.p* dep / dummy *obj.p* 
+   10  DT *CJ* / dummy *CJ* 
+   10  *comp* adjunct / *comp* dummy 
+   10  MO MO *MO* / *MO* 
+   10  NK NK NK *NK* / *NK* 
+   10  *dep.coord* obj mod / *dep.coord* dummy 
+   10  MO NK *SB* / dummy dummy *SB* 
+   10  DET *COORD* CONJ / dummy *COORD* 
+   10  SB MO MO *RC* / dummy dummy *RC* 
+   10  NK NK *NK* MNR / dummy *NK* 
+   10  NK NK *APP* / dummy dummy *APP* 
+   10  mod suj *root* mod obj / *root* dummy 
+   10  *NK* OP / *NK* 
+   10  mod det *obj.p* / *obj.p* 
+   10  mod *ato* / *ato* 
+   10  *ne* ne / *ne* 
+   10  CP SB OA *MO* / dummy dummy *MO* 
+   10  det *obj* dep_cpd dep_cpd dep / dummy *obj* dummy 
+   10  suj *dep.coord* obj / dummy *dep.coord* dummy 
+   10  det *suj* dep_cpd dep_cpd mod / dummy *suj* dummy 
+   10  det *obj* mod mod / dummy *obj* dummy 
+   10  adjunct *adjunct* adjunct / dummy *adjunct* 
+   10  NK *AG* PG / dummy *AG* 
+    9  *COORD* INF / *COORD* dummy 
+    9  NK PNC *NK* / *NK* 
+    9  OP *OC* / dummy *OC* 
+    9  *--* SB OC CJ / *--* dummy dummy 
+    9  -- *CJ* / *CJ* 
+    9  *OO* IF / *OO* 
+    9  MO *--* SB MO MO / dummy *--* dummy 
+    9  SB *--* MO OA / dummy *--* 
+    9  aff *obj* mod / *obj* dummy 
+    9  *VG* VG / *VG* dummy 
+    9  *--* SB PD / *--* 
+    9  SB MO OA *RC* / dummy dummy dummy *RC* 
+    9  *ats* obj.cpl / *ats* dummy 
+    9  *MO* CJ / *MO* 
+    9  *CJ* UA / *CJ* 
+    9  *suj* mod mod mod / *suj* 
+    9  suj *root* obj mod / *root* dummy 
+    9  PNC *NK* APP / *NK* 
+    9  PUNCT *APPEND* PUNCT / *APPEND* dummy 
+    9  CP SB MO *MO* / dummy *MO* 
+    9  det *obj.p* dep_cpd mod / dummy *obj.p* dummy dummy 
+    9  *COORD* CONJ / *COORD* 
+    9  CM *CC* / dummy *CC* 
+    9  *mod* dep_cpd mod / *mod* 
+    9  *AA* HD / *AA* dummy 
+    9  *comp_inf* obj / *comp_inf* 
+    9  *obj.p* obj mod mod / *obj.p* dummy 
+    9  MO NK *OA* MNR / dummy dummy *OA* 
+    9  *suj* coord / *suj* dummy 
+    9  suj *root* mod ats mod / dummy *root* dummy dummy 
+    9  *suj* mod.rel / *suj* 
+    9  SB *--* MO CD / dummy *--* dummy 
+    9  det mod / dummy 
+    9  *NK* AG MNR / *NK* 
+    9  det *suj* coord / dummy *suj* dummy 
+    9  NK *DA* MNR / dummy *DA* dummy 
+    9  *mod* mod mod / *mod* 
+    9  SS *UA* VG / *UA* dummy 
+    9  *obj.p* obj / *obj.p* 
+    9  det *obj* dep_cpd / dummy *obj* 
+    9  SS *MS* OO / dummy *MS* dummy 
+    9  det mod *ats* dep / dummy dummy *ats* dummy 
+    9  NK NK *OA* CD / dummy dummy *OA* 
+    9  DET ATT ATT *SUBJ* / dummy *SUBJ* 
+    9  OA *--* SB / dummy *--* dummy 
+    9  *--* NK CJ / *--* 
+    9  MO *--* SB / dummy *--* 
+    9  det *mod* coord / dummy *mod* dummy 
+    9  suj aux.tps *root* mod obj / *root* dummy 
+    9  *CJ* MO / *CJ* 
+    9  det *obj* mod mod / dummy *obj* 
+    9  subj *pred* comp / dummy *pred* dummy 
+    9  SB *--* MO MO / dummy *--* 
+    9  *adjunct* ne / *adjunct* 
+    9  MO NK *OA* / dummy dummy *OA* 
+    9  *obj.p* mod mod.rel / *obj.p* 
+    9  SB MO MO *RC* / dummy *RC* 
+    9  NK *PAR* / *PAR* 
+    9  DT *AA* / dummy *AA* 
+    9  *mod* obj.p dep / *mod* dummy 
+    9  MO OA MO *OC* / dummy dummy *OC* 
+    9  SBP MO *NK* / *NK* 
+    9  det *obj.p* dep_cpd dep_cpd dep_cpd / dummy *obj.p* dummy 
+    9  PNC *SB* MNR / *SB* 
+    9  NK *SB* NK / dummy *SB* 
+    9  *MS* SS / *MS* dummy 
+    9  *OC* SB OC / *OC* dummy dummy 
+    9  det *obj* dep / *obj* dummy 
+    9  NK -- NK *OA* / dummy *OA* 
+    9  OA NG *OC* / *OC* 
+    9  *dep.coord* p_obj / *dep.coord* dummy 
+    9  *dep* dep_cpd dep_cpd obj.p / *dep* 
+    9  conjunct *pred* conjunct / *pred* 
+    9  NK NK *PD* MNR / dummy dummy *PD* 
+    9  *CJ* AG / *CJ* dummy 
+    9  *SB* PAR / *SB* 
+    9  OA SB *RC* / dummy dummy *RC* 
+    9  PNC *CJ* CJ / *CJ* 
+    9  DA OA *OC* / dummy dummy *OC* 
+    9  suj aux.pass *obj.cpl* mod / *obj.cpl* dummy 
+    9  mod det *suj* / dummy *suj* 
+    9  *obj.p* mod mod mod / *obj.p* dummy 
+    9  *comp* obj / *comp* dummy 
+    9  SB *--* MO / *--* dummy 
+    9  *det* dep / *det* 
+    9  SB MO *RC* / dummy *RC* 
+    9  NK *OA* NK / *OA* 
+    9  SB *--* PD / *--* 
+    9  obj *obj* / *obj* 
+    9  DT *TA* / dummy *TA* 
+    9  *obj* coord / *obj* dummy 
+    9  *AA* HD UA / *AA* 
+    9  det mod *mod* / *mod* 
+    9  adjunct *pred* obj / dummy *pred* dummy 
+    9  *ES* IF / *ES* 
+    9  mod *mod* a_obj / *mod* dummy 
+    9  NK NK NK *NK* / dummy dummy *NK* 
+    8  det mod *mod* mod / dummy dummy *mod* 
+    8  *APP* MNR / *APP* dummy 
+    8  SB *--* MO SVP / dummy *--* dummy dummy 
+    8  MO *--* SB OC / dummy *--* dummy dummy 
+    8  *mod* dep_cpd dep_cpd obj.p / *mod* dummy dummy 
+    8  *PAR* CJ / *PAR* 
+    8  suj *dep.coord* obj / *dep.coord* dummy 
+    8  suj *obj.cpl* de_obj / *obj.cpl* dummy 
+    8  MO MO OP *OC* / *OC* 
+    8  mod dep det *obj.p* / dummy *obj.p* 
+    8  *ATT* CONJ / *ATT* 
+    8  DET *ATT* CONJ / dummy *ATT* 
+    8  *ATT* INF / *ATT* dummy 
+    8  suj *obj.cpl* obj mod / *obj.cpl* dummy 
+    8  det *dep.coord* dep_cpd / dummy *dep.coord* dummy 
+    8  ATT *SUBJ* CONJ / *SUBJ* dummy 
+    8  *PAR* NK CJ / *PAR* 
+    8  *OO* ET / *OO* dummy 
+    8  *dep.coord* dep_cpd / *dep.coord* dummy 
+    8  *coord* dep_cpd dep / *coord* 
+    8  TLOCY *ATT* / *ATT* 
+    8  *SP* PA / *SP* dummy 
+    8  SUBJ OBJ *ATT* / *ATT* 
+    8  ATT *ATT-VAN-SUBJ* / *ATT-VAN-SUBJ* 
+    8  MO MO MO *OC* / dummy dummy dummy *OC* 
+    8  SB *--* OA MO MO / dummy *--* dummy 
+    8  *CJ* MO MO / *CJ* dummy dummy 
+    8  *suj* dep / *suj* 
+    8  *pred* comp_fin / *pred* 
+    8  MO *--* / dummy *--* 
+    8  det *ats* mod.rel / dummy *ats* 
+    8  suj *mod.rel* a_obj / *mod.rel* dummy 
+    8  ATT *PRED* / dummy *PRED* 
+    8  MO *CJ* NK / *CJ* dummy 
+    8  PNC PNC PNC *NK* / *NK* 
+    8  suj aux.pass *root* mod / *root* dummy 
+    8  NK *AG* APP / dummy *AG* 
+    8  *root* mod mod / *root* 
+    8  SS *ET* / dummy *ET* 
+    8  adjunct subj *pred* comp_inf / *pred* 
+    8  DA *NK* / *NK* 
+    8  MO *--* SB MO OC / dummy *--* 
+    8  *--* OC SB / *--* dummy 
+    8  NK NK *NK* RC / *NK* 
+    8  MO *NK* CD / dummy *NK* 
+    8  ATT *ROOT-VAN-SUBJ* / dummy *ROOT-VAN-SUBJ* 
+    8  NK NK *AG* APP / dummy dummy *AG* 
+    8  RE *SB* / *SB* 
+    8  *TA* HD / *TA* dummy 
+    8  MO *--* MO SB / dummy *--* dummy 
+    8  MO SBP *NK* / *NK* 
+    8  subj *pred* comp_inf / *pred* 
+    8  *adjunct* comp_fin / *adjunct* dummy 
+    8  adjunct *adjunct* adjunct / *adjunct* 
+    8  SB *CJ* OA / dummy *CJ* dummy 
+    8  MO OA *CJ* / dummy *CJ* 
+    8  suj *root* mod obj / *root* dummy 
+    8  SB *--* MO PD / *--* dummy 
+    8  MO MO MO MO *OC* / dummy *OC* 
+    8  MO *--* OA SB / dummy *--* dummy 
+    8  *ROOT-VAN-CONJ* ATT / *ROOT-VAN-CONJ* dummy 
+    8  ATT *OBJ* CONJ / *OBJ* dummy 
+    8  suj *root* obj mod mod / dummy *root* dummy 
+    8  ** ROOT-VAN-SUBJ / ** 
+    8  *CJ* NK CD / *CJ* 
+    8  OBL *INF* / *INF* 
+    8  *SS* IF / *SS* 
+    8  SS *ET* OA / dummy *ET* dummy 
+    8  aux.tps *mod* suj / *mod* dummy 
+    8  *CJ* MO OA / *CJ* dummy 
+    8  MO MO *OC* MO / *OC* 
+    8  CJ *AT* CJ / *AT* 
+    8  *dep.coord* dep_cpd dep_cpd / *dep.coord* dummy 
+    8  conjunct *adjunct* conjunct / *adjunct* dummy 
+    8  DT *SS* ET / *SS* 
+    8  ATT *SUBJ* COORD / dummy *SUBJ* 
+    8  DT *PA* ET / *PA* dummy 
+    8  NK *SB* OP / dummy *SB* dummy 
+    8  *CJ* OA MO / *CJ* dummy 
+    8  suj *mod.rel* obj mod / *mod.rel* dummy 
+    8  mod det *mod* / dummy *mod* 
+    8  SS *MS* VG / dummy *MS* dummy 
+    8  *root* det ponct ponct / *root* 
+    8  NK *OA* APP / dummy *OA* 
+    8  *obj* obj.cpl coord / *obj* dummy 
+    8  *CJ* AG / *CJ* 
+    8  NK *CJ* RC / dummy *CJ* 
+    8  NK *NK* NK MNR / *NK* dummy dummy 
+    8  AA *ROOT* SS VG / *ROOT* dummy 
+    8  det *obj.p* ponct mod ponct / dummy *obj.p* dummy dummy 
+    8  det *obj* mod coord / dummy *obj* dummy 
+    8  det *obj* mod mod.rel / dummy *obj* 
+    8  MO MO *PD* / dummy dummy *PD* 
+    8  SB *--* / dummy *--* 
+    8  DET *COORD* COORD / dummy *COORD* 
+    8  SB *--* SVP / dummy *--* dummy 
+    8  SB *--* OA MO MO / dummy *--* 
+    8  NK NK *NK* PG / dummy dummy *NK* 
+    8  det *dep.coord* mod dep / dummy *dep.coord* dummy dummy 
+    8  SB *--* OA / dummy *--* 
+    8  MO *--* SB MO OA / dummy *--* dummy dummy 
+    8  DT *OO* ET / *OO* 
+    8  conjunct conjunct conjunct / 
+    8  obj *pred* subj / dummy *pred* 
+    8  -- *PAR* NK -- / *PAR* 
+    8  NK NK *NK* APP / dummy dummy *NK* 
+    8  CM NMC *CC* / dummy *CC* 
+    8  mod det *obj.p* dep / dummy *obj.p* dummy 
+    8  mod *mod* p_obj / *mod* dummy 
+    8  suj *root* obj / *root* 
+    8  CM NK *MO* / dummy *MO* 
+    8  NK -- *SB* / *SB* 
+    8  det *suj* dep_cpd dep / dummy *suj* dummy dummy 
+    8  suj mod *obj.cpl* mod obj / dummy *obj.cpl* dummy dummy 
+    8  *root* mod dep mod / *root* dummy dummy 
+    8  OBL OBL *ATT* / dummy *ATT* 
+    8  det *ats* mod / dummy *ats* 
+    8  *VG* TA / *VG* dummy 
+    8  DET *ATT* COORD / dummy *ATT* 
+    8  SS *ET* RA / dummy *ET* dummy 
+    8  *+F* OO / *+F* dummy 
+    8  SB MO OA *RC* / dummy *RC* 
+    8  CM *CC* CD / *CC* 
+    8  dep *root* ponct ponct / *root* 
+    8  NK *NK* PG MNR / dummy *NK* 
+    8  *AG* PA / *AG* dummy 
+    8  *ATT-VAN-CONJ* ATT / *ATT-VAN-CONJ* dummy 
+    8  *ats* coord / *ats* dummy 
+    8  *adjunct* adjunct / *adjunct* dummy 
+    8  *OC* OC / *OC* dummy 
+    8  *APP* AG / *APP* 
+    8  NK NK *NK* AG / *NK* 
+    8  NMC NMC NMC *NK* / dummy dummy *NK* 
+    8  *COORD-VAN-CONJ* ATT / *COORD-VAN-CONJ* dummy 
+    8  SS *MS* SP / *MS* dummy 
+    8  NK NK *SB* PAR / dummy dummy *SB* 
+    8  *mod* a_obj mod / *mod* dummy 
+    8  SB *--* SVP OC / dummy *--* dummy 
+    8  MO *OC* OC / dummy *OC* 
+    8  *SS* HD / *SS* 
+    8  *pred* comp_inf / *pred* 
+    8  suj *root* mod / dummy *root* dummy 
+    7  MO *--* MO SB / dummy *--* dummy dummy 
+    7  det *obj.p* mod dep mod / dummy *obj.p* dummy dummy 
+    7  subj *pred* comp_fin / dummy *pred* 
+    7  OC *--* EP MO / *--* dummy dummy 
+    7  AT *PA* / *PA* 
+    7  det *suj* coord dep / dummy *suj* dummy 
+    7  det *mod* mod.rel / dummy *mod* 
+    7  subj *pred* refl comp / dummy *pred* dummy 
+    7  *OBL* CONJ / *OBL* dummy 
+    7  MO *OP* NK / dummy *OP* 
+    7  *dep.coord* mod obj / *dep.coord* dummy dummy 
+    7  det *suj* mod mod.rel / dummy *suj* 
+    7  ATT *OBL* COORD / *OBL* 
+    7  *VG* PL OO / *VG* dummy dummy 
+    7  *comp_inf* obj / *comp_inf* dummy 
+    7  ATT *OBL* CONJ / *OBL* 
+    7  SUBJ *ATT* OBL / *ATT* dummy 
+    7  OP *PD* / *PD* 
+    7  DET NE *COORD* / *COORD* 
+    7  *coord* mod / *coord* 
+    7  DT *PA* ET / dummy *PA* dummy 
+    7  AG *NK* / dummy *NK* 
+    7  det *obj.p* dep_cpd / *obj.p* 
+    7  suj *obj.cpl* obj / *obj.cpl* 
+    7  det *obj.cpl* dep / dummy *obj.cpl* dummy 
+    7  *de_obj* obj.p arg / *de_obj* dummy 
+    7  MO NK *CJ* / dummy dummy *CJ* 
+    7  NK *APP* AG / dummy *APP* 
+    7  *dep.coord* dep_cpd dep_cpd obj.p / *dep.coord* dummy 
+    7  DT DT *OO* / dummy dummy *OO* 
+    7  ATT ATT *OBJ* / dummy *OBJ* 
+    7  NK NK *AG* AG / dummy *AG* 
+    7  mod suj *root* mod / *root* dummy 
+    7  MO MO *NG* / *NG* 
+    7  det *ats* dep / dummy *ats* 
+    7  -- *PAR* -- / *PAR* dummy 
+    7  subj *pred* obj / dummy *pred* 
+    7  *dep* obj / *dep* dummy 
+    7  ATT *ATT-VAN-PRED* / *ATT-VAN-PRED* 
+    7  ATT *COORD-VAN-PRED* / *COORD-VAN-PRED* 
+    7  MO *MO* CD / dummy *MO* 
+    7  DT AT *PA* ET / dummy dummy *PA* 
+    7  NK NK *PD* RC / dummy dummy *PD* 
+    7  mod suj *root* ats mod / dummy *root* dummy dummy 
+    7  NK *OA* MNR / *OA* 
+    7  *de_obj* obj.cpl / *de_obj* dummy 
+    7  *dep* obj.p coord / *dep* 
+    7  MO *--* SB MO OA / *--* dummy 
+    7  NK -- *NK* AG / *NK* dummy 
+    7  SB *--* DA SVP OC / dummy *--* dummy dummy 
+    7  AG *NK* NK / *NK* 
+    7  *det* coord / *det* 
+    7  SB *--* MO CJ / dummy *--* dummy 
+    7  NE *SUBJ* COORD / dummy *SUBJ* 
+    7  obj *mod.rel* suj / *mod.rel* dummy 
+    7  det *obj* coord dep / dummy *obj* dummy 
+    7  -- *NK* MNR / *NK* dummy 
+    7  ATT *COORD* COORD / *COORD* 
+    7  DT *RA* / *RA* 
+    7  *suj* mod mod / *suj* 
+    7  MODE *COORD* / *COORD* 
+    7  NK NK NK *NK* / dummy *NK* 
+    7  DET ATT ATT ATT *ATT* / *ATT* 
+    7  CD *NK* / dummy *NK* 
+    7  det mod *obj* mod / dummy dummy *obj* dummy 
+    7  -- *NK* MNR / *NK* 
+    7  *OBL* CONJ / *OBL* 
+    7  det *suj* dep_cpd / *suj* 
+    7  *mod* p_obj / *mod* 
+    7  mod mod suj *root* obj / *root* dummy 
+    7  mod suj aux.tps *root* obj / dummy *root* dummy 
+    7  det mod *mod* mod / dummy dummy *mod* dummy 
+    7  aff *obj.p* / *obj.p* 
+    7  MO *--* SB MO OC / dummy *--* dummy 
+    7  *MO* MO / *MO* dummy 
+    7  OBJ DET *OBJ* / dummy *OBJ* 
+    7  ATT *PRED* / *PRED* 
+    7  NK NK NK *SB* / dummy dummy *SB* 
+    7  DET *ATT-VAN-SUBJ* / dummy *ATT-VAN-SUBJ* 
+    7  adjunct adjunct *obj* / dummy dummy *obj* 
+    7  -- *--* CJ -- / *--* 
+    7  suj *obj.cpl* mod obj / *obj.cpl* dummy 
+    7  OO *VG* / *VG* 
+    7  PD *--* SB / dummy *--* 
+    7  adjunct adjunct *comp* / dummy dummy *comp* 
+    7  suj *obj.cpl* mod obj / dummy *obj.cpl* dummy dummy 
+    7  suj *obj.cpl* mod obj / *obj.cpl* dummy dummy 
+    7  suj *root* mod ats / dummy *root* dummy dummy 
+    7  SB *--* OC CD / dummy *--* dummy dummy 
+    7  DET ATT *ROOT-VAN-SUBJ* / dummy *ROOT-VAN-SUBJ* 
+    7  SB *--* MO OC / *--* dummy 
+    7  CP OC PM *MO* / *MO* 
+    7  NK *--* -- / dummy *--* 
+    7  de_obj suj *mod.rel* ats / *mod.rel* dummy 
+    7  PD PM *OC* / *OC* 
+    7  NK *DA* RC / dummy *DA* 
+    7  NE *COORD* COORD / *COORD* 
+    7  aff *obj* / *obj* 
+    7  *CJ* SB OC / *CJ* 
+    7  *OA* APP / *OA* 
+    7  det *dep.coord* dep_cpd / dummy *dep.coord* 
+    7  -- SB *OC* PD / dummy dummy *OC* dummy 
+    7  ATT *OBL* CONJ / *OBL* dummy 
+    7  ATT *FROM* / *FROM* 
+    7  det *obj.p* mod dep dep / dummy *obj.p* dummy dummy 
+    7  det *obj.p* coord dep / dummy *obj.p* dummy 
+    7  det mod *mod* dep / dummy dummy *mod* dummy 
+    7  suj aux.tps mod *root* obj / *root* dummy 
+    7  SB *--* MO MO / *--* dummy dummy 
+    7  *root* det / *root* 
+    7  MO MO MO *PD* / *PD* 
+    7  OBL *COORD* / *COORD* 
+    7  mod suj *mod.rel* obj / *mod.rel* dummy 
+    7  PUNCT *APPEND* PUNCT / dummy *APPEND* dummy 
+    7  MO *--* SB OC / *--* dummy 
+    7  NK NK *SB* NK / dummy *SB* dummy 
+    7  JU *--* SB OC / dummy *--* dummy 
+    7  NK *CJ* NK / *CJ* dummy 
+    7  *MO* PAR / *MO* 
+    7  *obj.p* mod dep dep / *obj.p* dummy dummy 
+    7  MO *--* OA SB MO / dummy *--* 
+    7  suj aux.tps mod *root* obj / dummy *root* dummy 
+    7  SS *ET* VG / dummy *ET* dummy 
+    7  SB OA *RC* / *RC* 
+    7  *NK* MNR MNR / *NK* 
+    7  *obj.p* obj de_obj / *obj.p* dummy 
+    7  OA *--* SB MO / dummy *--* 
+    7  *MO* NK AC / *MO* dummy dummy 
+    7  NK *APP* MNR / dummy *APP* dummy 
+    6  *NK* CD MNR / *NK* 
+    6  suj *root* mod / *root* dummy 
+    6  NK -- *AG* / *AG* 
+    6  *PAR* MO / *PAR* dummy 
+    6  mod suj *root* obj mod / dummy *root* dummy 
+    6  det *obj* mod dep dep / dummy *obj* dummy dummy 
+    6  aff *obj.p* mod / *obj.p* dummy 
+    6  adjunct *conjunct* / *conjunct* 
+    6  det *ats* mod dep / dummy *ats* dummy dummy 
+    6  CP SB OA *OC* / dummy dummy *OC* 
+    6  *MO* SB OC / *MO* dummy 
+    6  NK *AG* CJ / dummy *AG* 
+    6  MO *--* SB PD / dummy *--* 
+    6  *comp* obj / *comp* 
+    6  MO *--* EP MO OA / dummy *--* dummy 
+    6  DT *SP* ET / dummy *SP* 
+    6  NE *SUBJ* COORD / *SUBJ* 
+    6  NK *NK* AG APP / dummy *NK* 
+    6  det *obj.p* mod dep ponct mod ponct / dummy *obj.p* dummy dummy 
+    6  a_obj *obj.p* obj / *obj.p* dummy 
+    6  NK NK *NK* RC / dummy *NK* 
+    6  suj *mod.rel* / *mod.rel* 
+    6  CJ *ROOT* CJ / *ROOT* 
+    6  suj *mod.rel* obj coord / *mod.rel* dummy 
+    6  NK *SB* OP / dummy *SB* 
+    6  mod *mod* a_obj / *mod* 
+    6  DT *TA* / *TA* 
+    6  DT AT *CJ* / dummy dummy *CJ* 
+    6  ** -- -- -- / ** dummy 
+    6  AA *OO* / *OO* 
+    6  *OA* CC / *OA* 
+    6  subj *pred* pd / dummy *pred* dummy 
+    6  SB OA MO *RC* / dummy dummy dummy *RC* 
+    6  *PA* UA / *PA* 
+    6  *RA* RA / *RA* 
+    6  *dep.coord* mod.rel / *dep.coord* 
+    6  MO *--* SB OA / dummy *--* 
+    6  *OA* OC / *OA* 
+    6  *--* SB OC CJ / *--* dummy 
+    6  SB *--* MO MO OC / dummy *--* dummy 
+    6  ATT *ROOT-VAN-SUBJ* / *ROOT-VAN-SUBJ* 
+    6  *dep.coord* mod obj / *dep.coord* dummy 
+    6  *PD* RC / *PD* 
+    6  suj *mod.rel* obj / dummy *mod.rel* dummy 
+    6  *--* EP OC / *--* 
+    6  SB OC *MO* / *MO* 
+    6  AG NK *NK* / dummy *NK* 
+    6  det mod *obj.p* dep mod / dummy dummy *obj.p* dummy 
+    6  suj *obj.cpl* p_obj / *obj.cpl* dummy 
+    6  *mod* dep_cpd dep_cpd dep_cpd / *mod* dummy dummy 
+    6  *INF* OBJ / *INF* dummy 
+    6  CJ / 
+    6  det *obj* mod dep / dummy *obj* 
+    6  *OO* OO / *OO* dummy 
+    6  NK NK *OA* PG / dummy dummy *OA* 
+    6  NK NK *SB* CD / dummy dummy *SB* 
+    6  OBJ *MODE* / *MODE* 
+    6  *APP* CJ / *APP* 
+    6  NK -- NK *AG* / dummy *AG* 
+    6  suj aux.tps *mod.rel* obj / *mod.rel* dummy 
+    6  *coord* dep.coord dep.coord / *coord* 
+    6  subj *pred* / dummy *pred* 
+    6  NK NK *OA* PAR / dummy dummy *OA* 
+    6  ATT *COORD* CONJ / *COORD* 
+    6  DET ATT ATT *COORD* / *COORD* 
+    6  *obj* a_obj / *obj* dummy 
+    6  *mod* obj.p coord / *mod* 
+    6  DT *CJ* ET / dummy *CJ* 
+    6  *MO* AG / *MO* 
+    6  *ats* mod / *ats* dummy 
+    6  NK NK *SB* MNR / dummy *SB* 
+    6  MO SB *RC* / dummy dummy *RC* 
+    6  DET DET *SUBJ* / dummy *SUBJ* 
+    6  SB *--* CJ / dummy *--* dummy 
+    6  mod det dep / dummy dummy 
+    6  -- SB *--* OC / dummy dummy *--* 
+    6  MO *OC* CD / *OC* dummy 
+    6  *dep.coord* mod / *dep.coord* 
+    6  SS *ROOT* VG / *ROOT* 
+    6  FS *ROOT* SP ES / dummy *ROOT* dummy dummy 
+    6  suj aux.tps *root* mod mod / *root* dummy 
+    6  det *mod* dep mod.rel / dummy *mod* dummy 
+    6  DT AT *PA* / *PA* 
+    6  suj aux.tps *root* mod obj mod / *root* dummy 
+    6  *obj.p* dep_cpd mod.rel / *obj.p* 
+    6  SB *--* OA MO MO / dummy *--* dummy dummy 
+    6  adjunct *adjunct* comp / *adjunct* 
+    6  suj *obj.cpl* mod ats / *obj.cpl* dummy dummy 
+    6  *--* SB OC CJ / *--* dummy dummy dummy 
+    6  NK NK *CJ* AG / dummy dummy *CJ* 
+    6  *SS* UA / *SS* 
+    6  ** -- -- -- -- -- / ** dummy dummy dummy dummy dummy 
+    6  *CVC* NK / *CVC* dummy 
+    6  *comp_inf* comp / *comp_inf* 
+    6  *conjunct* obj / *conjunct* dummy 
+    6  *comp_inf* comp / *comp_inf* dummy 
+    6  SS *ET* VG / dummy *ET* 
+    6  PG *SB* / *SB* 
+    6  det mod *dep.coord* / dummy dummy *dep.coord* 
+    6  MO PD *OC* / dummy dummy *OC* 
+    6  *SS* UA / *SS* dummy 
+    6  CP SB PD *MO* / dummy *MO* 
+    6  NK NK *OA* MNR / dummy *OA* 
+    6  det mod *obj* dep mod.rel / dummy dummy *obj* dummy 
+    6  ATT *ROOT-VAN-MODE* / *ROOT-VAN-MODE* 
+    6  *IF* OO OA / *IF* dummy 
+    6  ATT *MODE* CONJ / *MODE* dummy 
+    6  *ROOT* CONJ / *ROOT* 
+    6  conjunct *conjunct* conjunct / *conjunct* dummy 
+    6  det *suj* / *suj* 
+    6  OBJ *COORD* / *COORD* 
+    6  *mod* dep_cpd dep_cpd dep_cpd / *mod* 
+    6  *suj* dep_cpd / *suj* dummy 
+    6  OC *CJ* / dummy *CJ* 
+    6  SUBJ OBL *ROOT* / dummy *ROOT* 
+    6  refl *comp_inf* / dummy *comp_inf* 
+    6  MO NK *SB* MNR / dummy dummy *SB* 
+    6  suj *dep.coord* mod obj / dummy *dep.coord* dummy dummy 
+    6  NK *OA* NK / *OA* dummy 
+    6  MO *CJ* SB / dummy *CJ* dummy 
+    6  MO *--* SB SVP / dummy *--* dummy dummy 
+    6  *SBP* NK / *SBP* dummy 
+    6  SB *OC* PD / dummy *OC* 
+    6  MO *--* SB OA / *--* dummy 
+    6  DET NE *SUBJ* / dummy *SUBJ* 
+    6  SB OA MO MO *RC* / dummy *RC* 
+    6  SB *--* MO PD / dummy *--* 
+    6  NK *PD* CD / dummy *PD* 
+    6  DET ATT ATT *OBJ* / *OBJ* 
+    6  det *obj.p* coord / dummy *obj.p* 
+    6  CP SB PD *MO* / *MO* 
+    6  ATT *COORD-VAN-SUBJ* / *COORD-VAN-SUBJ* 
+    6  *adjunct* refl comp / *adjunct* 
+    6  SS *ET* SP TA / dummy *ET* dummy dummy 
+    6  *CJ* PG / *CJ* dummy 
+    6  NK *NK* CD AG / dummy *NK* 
+    6  *AA* HD PA / *AA* 
+    6  det *root* / dummy *root* 
+    6  NK *APP* NK / *APP* 
+    6  MO *--* SB OA MO / dummy *--* dummy 
+    6  DET *SUBJ* CONJ / dummy *SUBJ* 
+    6  MO *--* SB OA SVP / dummy *--* dummy dummy dummy 
+    6  *obj.p* coord / *obj.p* 
+    6  CP SB *MO* / dummy *MO* 
+    6  adjunct *obj* adjunct / *obj* 
+    6  SB *OC* OA / dummy *OC* dummy 
+    6  mod det *mod* dep / dummy *mod* dummy 
+    6  OC *--* SB MO / *--* 
+    6  suj *dep.coord* ats / dummy *dep.coord* dummy 
+    6  suj aux.tps *obj.cpl* obj / *obj.cpl* dummy 
+    6  PD *--* SB / *--* dummy 
+    6  MO *--* SB PD / dummy *--* dummy dummy 
+    6  NE *OBL* / *OBL* 
+    6  ATT *COORD* COORD / dummy *COORD* 
+    6  *CJ* OA MO / *CJ* dummy dummy 
+    6  *obj* obj coord / *obj* dummy 
+    6  *OBJ* COORD / *OBJ* 
+    6  det mod *obj.p* / *obj.p* 
+    6  SB *--* MO OA SVP / dummy *--* dummy dummy dummy 
+    6  det *mod* dep / dummy *mod* 
+    6  *obj.p* mod dep / *obj.p* dummy 
+    6  conjunct *comp* conjunct / *comp* 
+    6  OBL *MODE* / dummy *MODE* 
+    6  DT AT *DT* / dummy dummy *DT* 
+    6  SB *--* MO OA SVP / dummy *--* dummy dummy 
+    6  *--* SB OC CD / *--* dummy 
+    6  SS *UA* / dummy *UA* 
+    6  det *obj.p* dep_cpd dep_cpd / dummy *obj.p* dummy dummy 
+    6  MODE *PRED* / *PRED* 
+    6  MO SB MO *RC* / dummy *RC* 
+    6  *obj.p* dep_cpd mod / *obj.p* dummy dummy 
+    6  ATT *SUBJ* CONJ / *SUBJ* 
+    6  SB *CJ* / dummy *CJ* 
+    6  OBL DET *OBL* / dummy dummy *OBL* 
+    6  NK *VO* / dummy *VO* 
+    6  SS *ROOT* VG / *ROOT* dummy 
+    6  *obj* mod / *obj* 
+    6  mod det *obj* dep / dummy *obj* dummy 
+    6  OA OP *OC* / dummy *OC* 
+    6  MO SB OC *RC* / *RC* 
+    6  *dep.coord* dep / *dep.coord* 
+    6  *obj* p_obj / *obj* dummy 
+    6  NG MO *MO* / *MO* 
+    6  OP *NK* / *NK* 
+    6  mod det *mod* / *mod* 
+    6  suj *obj.cpl* / *obj.cpl* 
+    6  SB OC *RC* CD / *RC* 
+    6  suj *mod.rel* ats / *mod.rel* dummy 
+    6  SB *--* MO MO OC / dummy *--* dummy dummy 
+    6  aff *obj.p* a_obj / *obj.p* dummy 
+    6  *de_obj* obj.cpl / *de_obj* 
+    6  NK NK *--* RC / dummy dummy *--* 
+    6  det *mod* mod dep / dummy *mod* dummy dummy 
+    6  SB *--* MO CJ / dummy *--* dummy dummy 
+    6  *obj* obj mod mod / *obj* dummy 
+    6  *APP* AG / *APP* dummy 
+    6  suj *root* obj coord / dummy *root* dummy 
+    6  adjunct *adjunct* comp / *adjunct* dummy 
+    6  NK NK *AG* PAR / dummy dummy *AG* 
+    6  *OBL* COORD / *OBL* 
+    6  NK *SB* CJ / dummy *SB* 
+    6  *APP* CD / *APP* 
+    6  suj mod *mod.rel* mod obj / *mod.rel* dummy dummy 
+    6  *SP* UA / *SP* dummy 
+    6  *obj.p* dep_cpd dep_cpd / *obj.p* 
+    6  *obj.p* obj p_obj / *obj.p* dummy 
+    6  TLOCY OBL *ATT* / *ATT* 
+    6  NG *OC* / *OC* 
+    6  SB *CJ* PD / dummy *CJ* 
+    6  adjunct *conjunct* comp / dummy *conjunct* dummy 
+    6  pd *pred* subj / dummy *pred* 
+    6  *NK* NK PAR / *NK* 
+    6  *suj* obj / *suj* dummy 
+    6  *OC* OA / *OC* 
+    6  mod suj *obj.cpl* ats / *obj.cpl* dummy 
+    6  DT AT *SS* / *SS* 
+    6  *adjunct* app / *adjunct* 
+    6  NK *CJ* MNR CJ / dummy *CJ* dummy 
+    6  SB *--* OA MO MO MO / dummy *--* 
+    6  ATT *OBJ* CONJ / *OBJ* 
+    5  CM NK NK *MO* / dummy dummy *MO* 
+    5  *NK* NK MNR / *NK* 
+    5  SS *ROOT* OO / dummy *ROOT* 
+    5  DT *AA* / *AA* 
+    5  aux.tps suj *mod* / *mod* 
+    5  -- SB *--* PD / dummy dummy *--* dummy 
+    5  aff *obj.p* obj / *obj.p* dummy 
+    5  det mod *suj* / *suj* 
+    5  -- PNC *NK* / *NK* 
+    5  JU SB *--* OC / dummy dummy *--* dummy 
+    5  MODE *MODE* / dummy *MODE* 
+    5  *TA* UA / *TA* dummy 
+    5  OBJ *ATT* / dummy *ATT* 
+    5  PNC *OA* / *OA* 
+    5  OA *OC* OC / dummy *OC* 
+    5  OC *--* SB MO / *--* dummy 
+    5  AT *PA* ET / dummy *PA* dummy 
+    5  *PAR* SBP / *PAR* dummy 
+    5  NK *OA* PG / dummy *OA* dummy 
+    5  NK CD *AG* / dummy dummy *AG* 
+    5  *OP* NK CJ / *OP* 
+    5  SUBJ *COORD* OBJ / *COORD* dummy 
+    5  *obj* mod mod / *obj* dummy 
+    5  comp *pred* subj / *pred* 
+    5  dep.coord ponct ponct / 
+    5  *OBJ* CONJ / *OBJ* dummy 
+    5  subj *pred* obj / dummy *pred* dummy 
+    5  *COORD* APPEND COORD / *COORD* 
+    5  *CJ* CD / *CJ* dummy 
+    5  MO *--* SB MO MO / dummy *--* dummy dummy dummy 
+    5  mod suj aux.tps *root* mod obj / *root* dummy 
+    5  subj *conjunct* obj / dummy *conjunct* dummy 
+    5  *de_obj* arg / *de_obj* 
+    5  MO MO *MO* / dummy dummy *MO* 
+    5  mod *dep.coord* / *dep.coord* 
+    5  suj *root* mod ats / dummy *root* dummy 
+    5  SB *--* MO MO PD / dummy *--* dummy 
+    5  *VG* OO AA / *VG* dummy 
+    5  *root* suj / *root* dummy 
+    5  CP SB OC *OC* / dummy *OC* 
+    5  *--* SB / *--* 
+    5  CJ *AT* CJ / dummy *AT* 
+    5  det *mod* mod dep / dummy *mod* dummy 
+    5  NK NK *NK* MNR / *NK* dummy 
+    5  NK NK *OA* RC / dummy *OA* 
+    5  *suj* obj.cpl / *suj* dummy 
+    5  SB *--* PD CJ / dummy *--* 
+    5  CP OA *MO* / dummy *MO* 
+    5  JU MO *--* SB OC / dummy dummy *--* dummy 
+    5  NK *SB* MNR CD / dummy *SB* dummy 
+    5  DT AT *SS* ET / dummy dummy *SS* 
+    5  NE *OBL* / dummy *OBL* 
+    5  *obj.cpl* obj.p / *obj.cpl* 
+    5  DET *ATT* / *ATT* 
+    5  OA *--* SB MO MO / dummy *--* 
+    5  -- *PD* / *PD* 
+    5  *COORD* SUBJ / *COORD* dummy 
+    5  NK NK *CJ* / *CJ* 
+    5  *APP* NK / *APP* 
+    5  DET ATT *SUBJ* CONJ / *SUBJ* dummy 
+    5  DA MO OA *OC* / dummy *OC* 
+    5  *CJ* PD / *CJ* dummy 
+    5  JU SB *--* PD / dummy dummy *--* dummy 
+    5  NK *NK* AG MNR / dummy *NK* dummy dummy 
+    5  OP *--* SB / dummy *--* dummy 
+    5  *conjunct* app / *conjunct* 
+    5  AT *SS* ET / dummy *SS* 
+    5  OA *NK* / *NK* 
+    5  MO MO *NK* / dummy *NK* 
+    5  MO MO *OC* OC / *OC* 
+    5  ATT *ATT-VAN-OBL* / *ATT-VAN-OBL* 
+    5  *SUBJ* CONJ / *SUBJ* dummy 
+    5  det mod *obj.p* dep_cpd / dummy dummy *obj.p* 
+    5  det *mod* dep / *mod* dummy 
+    5  mod suj *root* mod obj / dummy *root* dummy dummy 
+    5  *--* RS / *--* 
+    5  DA OA *OC* / dummy *OC* 
+    5  *UA* PA / *UA* dummy 
+    5  CJ *DT* CJ / *DT* 
+    5  MO *NK* CD / *NK* 
+    5  mod suj *root* de_obj / dummy *root* dummy 
+    5  SB *--* DA / dummy *--* dummy 
+    5  suj aff *obj.cpl* de_obj / dummy dummy *obj.cpl* dummy 
+    5  *mod* mod a_obj / *mod* dummy 
+    5  mod suj mod *root* obj / dummy *root* dummy 
+    5  *CJ* RC / *CJ* 
+    5  SB *--* NG OC / dummy *--* 
+    5  AT *ROOT* / dummy *ROOT* 
+    5  *CJ* OC / *CJ* dummy 
+    5  ATT DET *OBL* / dummy *OBL* 
+    5  *mod* mod obj.p / *mod* dummy 
+    5  MODE *INF* / *INF* 
+    5  *pred* obj / *pred* 
+    5  DET ATT *DAT* / *DAT* 
+    5  mod *mod* coord / *mod* dummy 
+    5  MO NG PM *OC* / *OC* 
+    5  MO OA MO MO *OC* / *OC* 
+    5  SB *--* OA OP / dummy *--* dummy dummy 
+    5  *conjunct* pd / *conjunct* 
+    5  *MNR* RE / *MNR* 
+    5  NK *CJ* OC / dummy *CJ* 
+    5  suj mod *root* obj / dummy *root* dummy 
+    5  *mwe* comp / *mwe* 
+    5  suj aux.tps *mod.rel* obj mod / *mod.rel* dummy 
+    5  *MNR* NK CJ / *MNR* 
+    5  -- NK *OA* / dummy *OA* 
+    5  NK NK NK *AG* / dummy dummy dummy *AG* 
+    5  *OP* NK CD / *OP* 
+    5  *OP* UA / *OP* dummy 
+    5  AMS *PD* / *PD* 
+    5  PNC *CJ* / dummy *CJ* 
+    5  MO NK *SB* / *SB* 
+    5  mod suj *dep.coord* obj / *dep.coord* dummy 
+    5  *AA* HD HD PA / *AA* dummy 
+    5  det *obj.p* mod / *obj.p* dummy 
+    5  *suj* dep.coord / *suj* dummy 
+    5  ATT *SUBJ* CONJ / dummy *SUBJ* dummy 
+    5  SB *--* MO OA MO / dummy *--* dummy dummy 
+    5  SB PD *RC* / dummy *RC* 
+    5  *obj* mod obj mod / *obj* dummy 
+    5  OC *--* SB / dummy *--* 
+    5  *mod* obj coord / *mod* dummy 
+    5  det *obj* dep dep dep / dummy *obj* dummy 
+    5  SB *--* PD CJ / dummy *--* dummy dummy 
+    5  SB *--* MO CD / dummy *--* 
+    5  det *suj* dep ponct mod ponct / dummy *suj* dummy 
+    5  SS *UA* AA / dummy *UA* dummy 
+    5  *obj* obj.p coord / *obj* 
+    5  OA MO *OC* MO / dummy dummy *OC* 
+    5  *obj.p* dep_cpd dep / *obj.p* 
+    5  *obj* dep_cpd dep / *obj* 
+    5  *obj* obj.cpl coord / *obj* 
+    5  OA MO *OC* MO / *OC* 
+    5  *PD* MNR / *PD* 
+    5  *ES* UA / *ES* 
+    5  *obj.p* coord mod / *obj.p* dummy 
+    5  OA *OC* OC / *OC* 
+    5  MO *--* SB OA / *--* dummy dummy 
+    5  suj *mod.rel* mod obj / *mod.rel* dummy 
+    5  suj obj *mod.rel* / *mod.rel* 
+    5  *aux* aglt / *aux* 
+    5  MO *--* SB MO MO / dummy *--* dummy dummy 
+    5  mod *obj.p* mod / *obj.p* dummy 
+    5  NMC *NK* NK / *NK* dummy 
+    5  NK *OA* PAR / dummy *OA* 
+    5  NE *COORD* COORD / dummy *COORD* 
+    5  mod suj *mod.rel* mod / *mod.rel* dummy 
+    5  mwe / 
+    5  *NK* PNC / *NK* 
+    5  *ROOT-VAN-CONJ* COORD / *ROOT-VAN-CONJ* dummy 
+    5  OBJ DET ATT *OBJ* / *OBJ* 
+    5  NK NK *SB* PG / dummy dummy *SB* dummy 
+    5  MO *--* SB OC / *--* 
+    5  SS *MS* VG / dummy *MS* 
+    5  SUBJ OBL *COORD* / *COORD* 
+    5  DET *SUBJ* CONJ / dummy *SUBJ* dummy 
+    5  NK NK *OA* AG / dummy dummy *OA* dummy 
+    5  det *obj* coord / dummy *obj* 
+    5  suj aux.pass *obj.cpl* p_obj / *obj.cpl* dummy 
+    5  NK *NK* RC / *NK* 
+    5  *CJ* UA / *CJ* dummy 
+    5  DET *OBJ* / *OBJ* 
+    5  DET NE *SUBJ* / *SUBJ* 
+    5  *obj.p* mod dep / *obj.p* 
+    5  MO SBP *OC* / *OC* 
+    5  *MO* MNR / *MO* 
+    5  *obj.p* obj.cpl / *obj.p* dummy 
+    5  *OA* PG / *OA* 
+    5  SS *ROOT* OO / *ROOT* dummy 
+    5  DET ATT *OBL* CONJ / *OBL* 
+    5  SB *--* CD / dummy *--* 
+    5  det *mod* dep dep / dummy *mod* dummy 
+    5  NK NK *MO* / dummy dummy *MO* 
+    5  det *suj* dep dep mod / dummy *suj* dummy 
+    5  *cond* aglt / *cond* 
+    5  *dep* det / *dep* 
+    5  *root* coord / *root* dummy 
+    5  suj *obj.cpl* / dummy *obj.cpl* 
+    5  NK NK NK *OA* AG / dummy dummy dummy *OA* 
+    5  det mod *obj* mod / dummy dummy *obj* 
+    5  suj aux.pass *mod* mod / *mod* dummy 
+    5  CJ CJ *PA* CJ / *PA* dummy 
+    5  OC *--* EP / *--* dummy 
+    5  MO *--* SB MO PD / dummy *--* dummy dummy 
+    5  *CJ* ET / *CJ* 
+    5  *pred* aglt obj / *pred* 
+    5  mod *mod* dep / *mod* 
+    5  mod suj *root* ats mod / *root* dummy 
+    5  MO NG *PD* / *PD* 
+    5  NK NK NK *OA* / dummy dummy dummy *OA* 
+    5  DET ATT *COORD* CONJ / *COORD* 
+    5  CP SB MO OA *MO* / dummy dummy dummy *MO* 
+    5  *mod* dep_cpd dep_cpd mod / *mod* dummy 
+    5  SB MO *RC* / *RC* 
+    5  *MS* IF / *MS* 
+    5  *ATT-VAN-CONJ* ATT / *ATT-VAN-CONJ* 
+    5  *MO* MO NK / *MO* 
+    5  -- SB *OC* OC / dummy dummy *OC* dummy 
+    5  mod *obj* / *obj* 
+    5  *SB* PG / *SB* dummy 
+    5  *dep* obj.p arg / *dep* dummy 
+    5  NE *ATT* COORD / dummy *ATT* 
+    5  MNR NK NK *OA* / dummy dummy *OA* 
+    5  MO *--* OA SB OP / dummy *--* dummy dummy 
+    5  MO *SBP* NK / *SBP* 
+    5  *OC* SB OC / *OC* 
+    5  MO *--* SB OC / *--* dummy dummy 
+    5  *PD* CJ / *PD* 
+    5  MO *OC* CD / *OC* 
+    5  MO MO *CJ* / dummy *CJ* 
+    5  *OC* MO / *OC* dummy 
+    5  *obj.p* obj coord / *obj.p* dummy 
+    5  suj *mod* / *mod* 
+    5  suj *root* ats mod mod / dummy *root* dummy dummy 
+    5  OA SB MO *RC* / dummy *RC* 
+    5  *PAR* NK / *PAR* dummy 
+    5  mod suj *root* de_obj / *root* dummy 
+    5  MO *OA* / dummy *OA* 
+    5  NK NK *AG* PG / dummy dummy *AG* 
+    5  *--* PD / *--* 
+    5  mod suj *root* mod obj mod / *root* dummy dummy 
+    5  MO NK *OA* AG / dummy dummy *OA* 
+    5  det *dep.coord* dep_cpd dep_cpd / dummy *dep.coord* dummy 
+    5  MO OA *CJ* / dummy dummy *CJ* 
+    5  SS *UA* SP / *UA* dummy 
+    5  NK *PD* RC / dummy *PD* 
+    5  *mod* mod obj / *mod* dummy dummy 
+    5  MO NK *OA* / dummy *OA* 
+    5  NK *SB* AG MNR / dummy *SB* 
+    5  det *obj* mod dep / dummy *obj* dummy 
+    5  NK NK *APP* AG / dummy dummy *APP* 
+    5  -- NK *MO* / dummy *MO* 
+    5  NK PNC *SB* / *SB* 
+    5  suj mod *dep.coord* mod obj / dummy *dep.coord* dummy dummy 
+    5  MO NK *SB* MNR / dummy dummy *SB* dummy 
+    5  *adjunct* obj / *adjunct* 
+    5  CM NK *CC* / dummy dummy *CC* 
+    5  MO *--* SB / *--* dummy 
+    5  NK *OA* OP / dummy *OA* dummy 
+    5  mod suj aux.tps mod *root* obj / *root* dummy 
+    5  *coord* dep.coord dep.coord / *coord* dummy dummy 
+    5  *adjunct* adjunct adjunct / *adjunct* 
+    5  MO *APP* NK / *APP* 
+    5  *--* CD / *--* 
+    5  *MODE* CONJ / *MODE* 
+    5  *dep.coord* de_obj / *dep.coord* dummy 
+    5  MODE MODE *ATT* / *ATT* 
+    5  det *obj* dep_cpd dep / dummy *obj* dummy dummy 
+    5  SB OP *RC* / dummy *RC* 
+    5  DET ATT ATT *OBJ* / dummy *OBJ* 
+    5  dep.coord dep.coord / 
+    5  det mod *obj.p* mod.rel / dummy dummy *obj.p* 
+    5  *dep.coord* mod mod / *dep.coord* dummy 
+    5  adjunct *conjunct* obj / dummy *conjunct* dummy 
+    5  suj aux.pass *obj.cpl* / *obj.cpl* 
+    5  MO *MO* NK CD / dummy *MO* 
+    5  *CJ* SB OC / *CJ* dummy dummy 
+    5  MO NK NK *SB* / dummy dummy dummy *SB* 
+    5  suj aux.pass mod *root* p_obj / *root* dummy 
+    5  mod det *suj* dep / dummy *suj* dummy 
+    5  conjunct *obj* conjunct / *obj* 
+    5  MO DA *OC* / dummy *OC* 
+    5  CJ *ET* CJ / *ET* dummy 
+    5  suj *dep.coord* obj mod / dummy *dep.coord* dummy 
+    5  suj *root* de_obj / *root* dummy 
+    5  OA MO *CJ* / dummy dummy *CJ* 
+    5  NK NK PNC *NK* / *NK* 
+    5  JU *--* SB OC / dummy *--* 
+    5  *OO* PT / *OO* 
+    5  OA SB MO MO *RC* / dummy dummy *RC* 
+    5  AT *SS* / *SS* 
+    5  det *suj* dep_cpd dep_cpd dep_cpd / dummy *suj* dummy 
+    5  CJ *CJ* CJ / *CJ* dummy 
+    5  *obj.p* dep_cpd dep_cpd / *obj.p* dummy dummy 
+    5  NMC NMC *NK* / dummy dummy *NK* 
+    5  det mod mod *obj.p* / dummy dummy *obj.p* 
+    5  EP *--* OA / dummy *--* dummy 
+    5  MO *--* OA SB / dummy *--* 
+    5  *coord* mod dep.coord / *coord* 
+    5  SBP MO *OC* / dummy *OC* 
+    5  MO SB OA *RC* / dummy *RC* 
+    5  *obj* mod obj / *obj* dummy dummy 
+    5  NK *SB* MNR APP / dummy *SB* 
+    5  AG NK *SB* / dummy *SB* 
+    5  *--* MO SB OC / *--* dummy 
+    5  ATT *OBL* COORD / dummy *OBL* 
+    5  NK NK *--* MNR / dummy dummy *--* dummy 
+    5  NK *OA* CJ / dummy *OA* 
+    5  -- SB OC *RC* -- / *RC* 
+    5  suj mod *root* mod obj / *root* dummy dummy 
+    5  SB *--* OA MO MO / dummy *--* dummy dummy dummy 
+    5  *dep.coord* a_obj / *dep.coord* dummy 
+    5  *SB* CD MNR / *SB* 
+    5  obj *obj.p* de_obj / *obj.p* dummy 
+    5  suj *root* p_obj / dummy *root* dummy 
+    5  NK *PD* MNR / dummy *PD* dummy 
+    5  NK *AMS* / dummy *AMS* 
+    5  ATT ATT *ROOT-VAN-SUBJ* / dummy *ROOT-VAN-SUBJ* 
+    5  *MO* NK CD / *MO* dummy 
+    5  NK *SB* MNR / *SB* 
+    5  SP *ROOT* SS / dummy *ROOT* dummy 
+    5  subj *pred* comp / dummy *pred* 
+    5  -- SB *--* OC / dummy dummy *--* dummy 
+    5  *ATT-VAN-CONJ* COORD / *ATT-VAN-CONJ* 
+    5  *app* app / *app* 
+    5  MS *UA* +F / *UA* 
+    5  NUM *ATT* / dummy *ATT* 
+    5  ATT ATT ATT *OBJ* / *OBJ* 
+
+
+  5 focus words where most of the errors occur:
+
+             | any  | head | dep  | both
+  -----------+------+------+------+------
+  de / ADP   | 3501 |  803 | 3501 |  803
+  der / DET  | 2384 |  356 | 2384 |  356
+  die / DET  | 2146 |  245 | 2146 |  245
+  la / DET   | 2000 |  175 | 2000 |  175
+  und / CONJ | 1812 | 1620 | 1812 | 1620
+  -----------+------+------+------+------
+
+
+  one-token preceeding contexts where most of the errors occur:
+
+  CPOS     | any  | head | dep  | both  ||  word                | any  | head | dep  | both
+  ---------+------+------+------+-------++----------------------+------+------+------+-----
+  NOUN     | 40687 | 23387 | 40687 | 23387  ||  , / .               | 11634 | 7777 | 11634 | 7777
+  ADP      | 23457 | 8553 | 23456 | 8552  ||  de / ADP            | 3457 |  907 | 3457 |  907
+  DET      | 22410 | 9598 | 22410 | 9598  ||  der / DET           | 2382 | 1408 | 2382 | 1408
+  ---------+------+------+------+-------++----------------------+------+------+------+-----
+
+
+  two-token preceeding contexts where most of the errors occur:
+
+  CPOS     | any  | head | dep  | both  ||  word                | any  | head | dep  | both
+  ---------+------+------+------+-------++----------------------+------+------+------+-----
+  DET+NOUN | 14110 | 6834 | 14110 | 6834  ||  de / ADP + la / DET |  604 |  114 |  604 |  114
+  NOUN+ADP | 11094 | 4140 | 11094 | 4140  ||  .S + Die / DET      |  498 |  102 |  498 |  102
+  .S+.S    | 9572 | 3689 | 9572 | 3689  ||  de / ADP + l' / DET |  403 |   74 |  403 |   74
+  ---------+------+------+------+-------++----------------------+------+------+------+-----
+
+
+  one-token following contexts where most of the errors occur:
+
+  CPOS     | any  | head | dep  | both  ||  word                | any  | head | dep  | both
+  ---------+------+------+------+-------++----------------------+------+------+------+-----
+  NOUN     | 49229 | 16951 | 49226 | 16948  ||  , / .               | 11225 | 6312 | 11225 | 6312
+  .        | 26549 | 15113 | 26549 | 15113  ||  . / .               | 8357 | 4841 | 8357 | 4841
+  VERB     | 21550 | 12711 | 21550 | 12711  ||  de / ADP            | 3345 | 1202 | 3345 | 1202
+  ---------+------+------+------+-------++----------------------+------+------+------+-----
+
+
+  two-token following contexts where most of the errors occur:
+
+  CPOS     | any  | head | dep  | both  ||  word                | any  | head | dep  | both
+  ---------+------+------+------+-------++----------------------+------+------+------+-----
+  DET+NOUN | 13565 | 7406 | 13565 | 7406  ||  . / . + .E          | 8178 | 4731 | 8178 | 4731
+  NOUN+.   | 12420 | 4502 | 12418 | 4500  ||  de / ADP + la / DET |  580 |  180 |  580 |  180
+  NOUN+ADP | 10762 | 2693 | 10762 | 2693  ||  de / ADP + l' / DET |  389 |  120 |  389 |  120
+  ---------+------+------+------+-------++----------------------+------+------+------+-----
+
+
+  Sentence with the highest number of word errors:
+   Sentence 5207 line 104062, 42 head errors, 123 dependency errors, 123 word errors
+
+
+  Sentence with the highest number of head errors:
+   Sentence 760 line 14181, 72 head errors, 117 dependency errors, 117 word errors
+
+
+  Sentence with the highest number of dependency errors:
+   Sentence 5207 line 104062, 42 head errors, 123 dependency errors, 123 word errors
+
+
+  Specific errors, 10 most frequent errors:
+  =========================================
+
+   1. correct head (after the focus word), dependency "dummy" instead of "NK" : 14120 times
+  -----+------+------+------+------+------+------
+    Before    |    Focus    |   After     | Count
+  CPOS   word | CPOS   word | CPOS   word |
+  -----+------+------+------+------+------+------
+       |      |      |      | NOUN |      | 11520
+       |      | DET  |      |      |      | 8315
+       |      | DET  |      | NOUN |      | 6030
+       |      | ADJ  |      |      |      | 4939
+       |      | ADJ  |      | NOUN |      | 4801
+  ADP  |      |      |      |      |      | 3636
+  ADP  |      |      |      | NOUN |      | 2885
+  -----+------+------+------+------+------+------
+
+   2. correct head (after the focus word), dependency "dummy" instead of "det" : 9399 times
+  -----+------+------+------+------+------+------
+    Before    |    Focus    |   After     | Count
+  CPOS   word | CPOS   word | CPOS   word |
+  -----+------+------+------+------+------+------
+       |      | DET  |      |      |      | 9399
+       |      | DET  |      | NOUN |      | 8234
+  ADP  |      | DET  |      |      |      | 4022
+  ADP  |      | DET  |      | NOUN |      | 3571
+       |      | DET  | la   |      |      | 1825
+       |      | DET  | la   | NOUN |      | 1673
+  VERB |      | DET  |      |      |      | 1642
+  VERB |      | DET  |      | NOUN |      | 1394
+  -----+------+------+------+------+------+------
+
+   3. correct head (before the focus word), dependency "dummy" instead of "obj.p" : 8251 times
+  -----+------+------+------+------+------+------
+    Before    |    Focus    |   After     | Count
+  CPOS   word | CPOS   word | CPOS   word |
+  -----+------+------+------+------+------+------
+       |      | NOUN |      |      |      | 7908
+  ADP  |      |      |      |      |      | 4234
+  ADP  |      | NOUN |      |      |      | 3949
+  DET  |      |      |      |      |      | 3437
+  DET  |      | NOUN |      |      |      | 3391
+       |      |      |      | .    |      | 2624
+       |      | NOUN |      | .    |      | 2493
+  -----+------+------+------+------+------+------
+
+   4. correct head (before the focus word), dependency "dummy" instead of "mod" : 4866 times
+  -----+------+------+------+------+------+------
+    Before    |    Focus    |   After     | Count
+  CPOS   word | CPOS   word | CPOS   word |
+  -----+------+------+------+------+------+------
+  NOUN |      |      |      |      |      | 2038
+  VERB |      |      |      |      |      | 1592
+       |      | ADJ  |      |      |      | 1542
+  NOUN |      | ADJ  |      |      |      | 1339
+       |      | ADP  |      |      |      | 1191
+       |      |      |      | .    |      | 1119
+       |      |      |      | ADP  |      | 1065
+  -----+------+------+------+------+------+------
+
+   5. correct head (before the focus word), dependency "dummy" instead of "dep" : 4075 times
+  -----+------+------+------+------+------+------
+    Before    |    Focus    |   After     | Count
+  CPOS   word | CPOS   word | CPOS   word |
+  -----+------+------+------+------+------+------
+       |      | ADP  |      |      |      | 3992
+  NOUN |      |      |      |      |      | 3522
+  NOUN |      | ADP  |      |      |      | 3493
+       |      |      |      | NOUN |      | 2399
+       |      | ADP  |      | NOUN |      | 2398
+  NOUN |      | ADP  |      | NOUN |      | 2153
+       |      | ADP  | de   |      |      | 1845
+  -----+------+------+------+------+------+------
+
+   6. correct head (after the focus word), dependency "dummy" instead of "MO" : 3297 times
+  -----+------+------+------+------+------+------
+    Before    |    Focus    |   After     | Count
+  CPOS   word | CPOS   word | CPOS   word |
+  -----+------+------+------+------+------+------
+       |      | ADV  |      |      |      | 1348
+       |      |      |      | VERB |      | 1013
+       |      | ADP  |      |      |      | 997
+  .S   | .S   |      |      |      |      | 739
+       |      | ADJ  |      |      |      | 557
+       |      |      |      | DET  |      | 527
+  .    |      |      |      |      |      | 521
+  -----+------+------+------+------+------+------
+
+   7. correct head (after the focus word), dependency "dummy" instead of "SB" : 2928 times
+  -----+------+------+------+------+------+------
+    Before    |    Focus    |   After     | Count
+  CPOS   word | CPOS   word | CPOS   word |
+  -----+------+------+------+------+------+------
+       |      | NOUN |      |      |      | 1918
+       |      |      |      | VERB |      | 1817
+       |      | NOUN |      | VERB |      | 1157
+       |      | PRON |      |      |      | 985
+  DET  |      |      |      |      |      | 781
+  DET  |      | NOUN |      |      |      | 764
+  .S   | .S   |      |      |      |      | 716
+  -----+------+------+------+------+------+------
+
+   8. correct head (0), dependency "dummy" instead of "--" : 2754 times
+  -----+------+------+------+------+------+------
+    Before    |    Focus    |   After     | Count
+  CPOS   word | CPOS   word | CPOS   word |
+  -----+------+------+------+------+------+------
+       |      | VERB |      |      |      | 2218
+  NOUN |      |      |      |      |      | 1263
+  NOUN |      | VERB |      |      |      | 1249
+       |      |      |      | DET  |      | 529
+       |      | VERB |      | PRON |      | 526
+       |      | VERB |      | DET  |      | 517
+       |      | NOUN |      |      |      | 472
+  -----+------+------+------+------+------+------
+
+   9. correct head (before the focus word), dependency "dummy" instead of "obj" : 2479 times
+  -----+------+------+------+------+------+------
+    Before    |    Focus    |   After     | Count
+  CPOS   word | CPOS   word | CPOS   word |
+  -----+------+------+------+------+------+------
+       |      | NOUN |      |      |      | 1722
+  DET  |      |      |      |      |      | 1354
+  DET  |      | NOUN |      |      |      | 1342
+       |      |      |      | ADP  |      | 1014
+       |      | NOUN |      | ADP  |      | 868
+  DET  |      |      |      | ADP  |      | 705
+  DET  |      | NOUN |      | ADP  |      | 703
+  -----+------+------+------+------+------+------
+
+  10. head is the focus word instead of 0, dependency "dummy" instead of "--" : 2460 times
+  -----+------+------+------+------+------+------
+    Before    |    Focus    |   After     | Count
+  CPOS   word | CPOS   word | CPOS   word |
+  -----+------+------+------+------+------+------
+       |      | VERB |      |      |      | 2066
+  NOUN |      |      |      |      |      | 978
+  NOUN |      | VERB |      |      |      | 915
+       |      |      |      | PRON |      | 562
+       |      | VERB |      | PRON |      | 558
+  .    |      |      |      |      |      | 552
+  .    |      | VERB |      |      |      | 529
+  -----+------+------+------+------+------+------
+
+
+  Local contexts involved in several frequent errors:
+  ===================================================
+
+
+  -----+------+------+------+------+------
+    Before    |    Focus    |   After     
+  CPOS   word | CPOS   word | CPOS   word 
+  -----+------+------+------+------+------
+  NOUN |      |      |      |      |      
+  -----+------+------+------+------+------
+   5. correct head (before the focus word), dependency "dummy" instead of "dep" : 3522 times
+   4. correct head (before the focus word), dependency "dummy" instead of "mod" : 2038 times
+   8. correct head (0), dependency "dummy" instead of "--" : 1263 times
+  10. head is the focus word instead of 0, dependency "dummy" instead of "--" : 978 times
+
+  -----+------+------+------+------+------
+    Before    |    Focus    |   After     
+  CPOS   word | CPOS   word | CPOS   word 
+  -----+------+------+------+------+------
+       |      | NOUN |      |      |      
+  -----+------+------+------+------+------
+   3. correct head (before the focus word), dependency "dummy" instead of "obj.p" : 7908 times
+   7. correct head (after the focus word), dependency "dummy" instead of "SB" : 1918 times
+   9. correct head (before the focus word), dependency "dummy" instead of "obj" : 1722 times
+   8. correct head (0), dependency "dummy" instead of "--" : 472 times
+
+  -----+------+------+------+------+------
+    Before    |    Focus    |   After     
+  CPOS   word | CPOS   word | CPOS   word 
+  -----+------+------+------+------+------
+       |      | ADJ  |      |      |      
+  -----+------+------+------+------+------
+   1. correct head (after the focus word), dependency "dummy" instead of "NK" : 4939 times
+   4. correct head (before the focus word), dependency "dummy" instead of "mod" : 1542 times
+   6. correct head (after the focus word), dependency "dummy" instead of "MO" : 557 times
+
+  -----+------+------+------+------+------
+    Before    |    Focus    |   After     
+  CPOS   word | CPOS   word | CPOS   word 
+  -----+------+------+------+------+------
+       |      | ADP  |      |      |      
+  -----+------+------+------+------+------
+   5. correct head (before the focus word), dependency "dummy" instead of "dep" : 3992 times
+   4. correct head (before the focus word), dependency "dummy" instead of "mod" : 1191 times
+   6. correct head (after the focus word), dependency "dummy" instead of "MO" : 997 times
+
+  -----+------+------+------+------+------
+    Before    |    Focus    |   After     
+  CPOS   word | CPOS   word | CPOS   word 
+  -----+------+------+------+------+------
+  DET  |      | NOUN |      |      |      
+  -----+------+------+------+------+------
+   3. correct head (before the focus word), dependency "dummy" instead of "obj.p" : 3391 times
+   9. correct head (before the focus word), dependency "dummy" instead of "obj" : 1342 times
+   7. correct head (after the focus word), dependency "dummy" instead of "SB" : 764 times
+
+  -----+------+------+------+------+------
+    Before    |    Focus    |   After     
+  CPOS   word | CPOS   word | CPOS   word 
+  -----+------+------+------+------+------
+  DET  |      |      |      |      |      
+  -----+------+------+------+------+------
+   3. correct head (before the focus word), dependency "dummy" instead of "obj.p" : 3437 times
+   9. correct head (before the focus word), dependency "dummy" instead of "obj" : 1354 times
+   7. correct head (after the focus word), dependency "dummy" instead of "SB" : 781 times
+
+  -----+------+------+------+------+------
+    Before    |    Focus    |   After     
+  CPOS   word | CPOS   word | CPOS   word 
+  -----+------+------+------+------+------
+       |      | VERB |      | PRON |      
+  -----+------+------+------+------+------
+  10. head is the focus word instead of 0, dependency "dummy" instead of "--" : 558 times
+   8. correct head (0), dependency "dummy" instead of "--" : 526 times
+
+  -----+------+------+------+------+------
+    Before    |    Focus    |   After     
+  CPOS   word | CPOS   word | CPOS   word 
+  -----+------+------+------+------+------
+       |      |      |      | ADP  |      
+  -----+------+------+------+------+------
+   4. correct head (before the focus word), dependency "dummy" instead of "mod" : 1065 times
+   9. correct head (before the focus word), dependency "dummy" instead of "obj" : 1014 times
+
+  -----+------+------+------+------+------
+    Before    |    Focus    |   After     
+  CPOS   word | CPOS   word | CPOS   word 
+  -----+------+------+------+------+------
+  ADP  |      |      |      |      |      
+  -----+------+------+------+------+------
+   3. correct head (before the focus word), dependency "dummy" instead of "obj.p" : 4234 times
+   1. correct head (after the focus word), dependency "dummy" instead of "NK" : 3636 times
+
+  -----+------+------+------+------+------
+    Before    |    Focus    |   After     
+  CPOS   word | CPOS   word | CPOS   word 
+  -----+------+------+------+------+------
+  .    |      |      |      |      |      
+  -----+------+------+------+------+------
+  10. head is the focus word instead of 0, dependency "dummy" instead of "--" : 552 times
+   6. correct head (after the focus word), dependency "dummy" instead of "MO" : 521 times
+
+  -----+------+------+------+------+------
+    Before    |    Focus    |   After     
+  CPOS   word | CPOS   word | CPOS   word 
+  -----+------+------+------+------+------
+       |      |      |      | .    |      
+  -----+------+------+------+------+------
+   3. correct head (before the focus word), dependency "dummy" instead of "obj.p" : 2624 times
+   4. correct head (before the focus word), dependency "dummy" instead of "mod" : 1119 times
+
+  -----+------+------+------+------+------
+    Before    |    Focus    |   After     
+  CPOS   word | CPOS   word | CPOS   word 
+  -----+------+------+------+------+------
+  .S   | .S   |      |      |      |      
+  -----+------+------+------+------+------
+   6. correct head (after the focus word), dependency "dummy" instead of "MO" : 739 times
+   7. correct head (after the focus word), dependency "dummy" instead of "SB" : 716 times
+
+  -----+------+------+------+------+------
+    Before    |    Focus    |   After     
+  CPOS   word | CPOS   word | CPOS   word 
+  -----+------+------+------+------+------
+       |      |      |      | VERB |      
+  -----+------+------+------+------+------
+   7. correct head (after the focus word), dependency "dummy" instead of "SB" : 1817 times
+   6. correct head (after the focus word), dependency "dummy" instead of "MO" : 1013 times
+
+  -----+------+------+------+------+------
+    Before    |    Focus    |   After     
+  CPOS   word | CPOS   word | CPOS   word 
+  -----+------+------+------+------+------
+       |      | DET  |      |      |      
+  -----+------+------+------+------+------
+   2. correct head (after the focus word), dependency "dummy" instead of "det" : 9399 times
+   1. correct head (after the focus word), dependency "dummy" instead of "NK" : 8315 times
+
+  -----+------+------+------+------+------
+    Before    |    Focus    |   After     
+  CPOS   word | CPOS   word | CPOS   word 
+  -----+------+------+------+------+------
+       |      |      |      | DET  |      
+  -----+------+------+------+------+------
+   8. correct head (0), dependency "dummy" instead of "--" : 529 times
+   6. correct head (after the focus word), dependency "dummy" instead of "MO" : 527 times
+
+  -----+------+------+------+------+------
+    Before    |    Focus    |   After     
+  CPOS   word | CPOS   word | CPOS   word 
+  -----+------+------+------+------+------
+       |      | VERB |      |      |      
+  -----+------+------+------+------+------
+   8. correct head (0), dependency "dummy" instead of "--" : 2218 times
+  10. head is the focus word instead of 0, dependency "dummy" instead of "--" : 2066 times
+
+  -----+------+------+------+------+------
+    Before    |    Focus    |   After     
+  CPOS   word | CPOS   word | CPOS   word 
+  -----+------+------+------+------+------
+       |      | DET  |      | NOUN |      
+  -----+------+------+------+------+------
+   2. correct head (after the focus word), dependency "dummy" instead of "det" : 8234 times
+   1. correct head (after the focus word), dependency "dummy" instead of "NK" : 6030 times
+
+  -----+------+------+------+------+------
+    Before    |    Focus    |   After     
+  CPOS   word | CPOS   word | CPOS   word 
+  -----+------+------+------+------+------
+       |      |      |      | NOUN |      
+  -----+------+------+------+------+------
+   1. correct head (after the focus word), dependency "dummy" instead of "NK" : 11520 times
+   5. correct head (before the focus word), dependency "dummy" instead of "dep" : 2399 times
+
+  -----+------+------+------+------+------
+    Before    |    Focus    |   After     
+  CPOS   word | CPOS   word | CPOS   word 
+  -----+------+------+------+------+------
+  NOUN |      | VERB |      |      |      
+  -----+------+------+------+------+------
+   8. correct head (0), dependency "dummy" instead of "--" : 1249 times
+  10. head is the focus word instead of 0, dependency "dummy" instead of "--" : 915 times
+
